@@ -13,6 +13,8 @@
     		font-family: PT Mono, Monospace;
     		text-align:center;
     		text-rendering: optimizeLegibility;
+    		margin: 0;
+    		padding: 0;
     	}
 
     	a {
@@ -33,22 +35,23 @@
     	} */
  
       #jb-container {
-        width: auto;
-        margin-bottom: 24px;
-        height: 100%;
-		min-height: 100%;
-		display: flex;
+        width: 320px;
+        align-content: center;
+        height: 600px;
+		position: absolute;
 		flex-direction: column;
         /*border: 1px solid #bcbcbc;*/
+        left: 50%; 
+        top: 50%; 
+        margin-left: -160px; 
+        margin-top: -300px;
       }
       #jb-header {
-        padding: 20px;
         margin-bottom: 20px;
         /*border: 1px solid #bcbcbc;*/
       }
       #jb-content {
         width: 580px;
-        padding: 20px;
         margin-bottom: 20px;
         float: left;
         /*border: 1px solid #bcbcbc;*/
@@ -61,7 +64,6 @@
       }
       #jb-footer {
         clear: both;
-        padding: 20px;
         /*border: 1px solid #bcbcbc;*/
         float: center|bottom;
       }
@@ -105,8 +107,8 @@
 
     </style>
   </head>
-  <body style="height: 100;">
-    <div id="jb-container" >
+  <body style="height: 100vh;">
+    <div id="jb-container" align="center">
       <div id="jb-header">
         <a href="https://instagram.com/miruwox"><img id="logo" src="./Sources/Logo.png"></a>
       </div>
