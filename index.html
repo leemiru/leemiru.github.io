@@ -8,8 +8,8 @@
     	<link href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Sans+KR|PT+Mono" rel="stylesheet">
 
     	@font-face {
- 			font-family: Helvetica Extended;
- 			src: url('./Fonts/Helvetica Extended Light.ttf');
+ 			font-family: PT Mono;
+ 			src: url('./Fonts/PTMONO.ttf');
 		}
 
     	* {
@@ -22,7 +22,7 @@
     		text-decoration-color: black;
     	}
 
-    	body {
+    	/* body {
     		height: auto;
     		align-content: center;
     		position: absolute;
@@ -32,8 +32,8 @@
  			top: 50%;
  			margin-left: -250px;
  			margin-top: -250px;
-    	}
-
+    	} */
+ 
       #jb-container {
         width: auto;
         margin-bottom: 24px;
@@ -64,12 +64,50 @@
         /*border: 1px solid #bcbcbc;*/
         float: center|bottom;
       }
+
+      #logo {
+      	margin-top: 150px;
+      	width: 150px;
+      	height: 150px;
+      	border: 0;
+      }
+
+      #copyright {
+      	font-size: 12px;
+      }
+
+       @media ( max-width: 480px ) {
+
+       /*	body {
+    		height: auto;
+    		align-content: center;
+    		position: absolute;
+			width: 480px;
+ 			height: 480px;
+ 			left: 50%;
+ 			top: 50%;
+ 			margin-left: -240px;
+ 			margin-top: -240px;
+    	} */
+
+       #logo {
+       	margin-top: 100px;
+      	width: 150px;
+      	height: 150px;
+      	border: 0;
+      }
+
+      #copyright {
+      	font-size: 8px;
+      }
+  }
+
     </style>
   </head>
   <body style="height: auto" style="vertical-align: center">
     <div id="jb-container">
       <div id="jb-header">
-        <img src="./Sources/Logo.png" width="150" height="150" border="0" alt="">
+        <img id="logo" src="./Sources/Logo.png">
       </div>
       <!-- <div id="jb-content">
         <h2>Content</h2>
@@ -90,7 +128,7 @@
           <br>
       </div>
       <div id="jb-footer">
-        <p style="font-size: 12px">copyright <b>MIRU</b> all right reserved</p>
+        <p id=copyright>copyright <b>MIRU</b> all right reserved</p>
       </div>
     </div>
   </body>
