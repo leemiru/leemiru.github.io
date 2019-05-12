@@ -18,12 +18,19 @@
 
     <style type="text/css" media="screen">
     	body {
+    		width: 65%;
+    		height: 100%;
+	    }
+	    
+	@media ( max-width: 480px ) {
+	body {
     		width: 100%;
     		height: 100%;
-    	}
+		}
+	    }
     </style>
 </head>
 <body style="text-align: center;">
-	<iframe width="80%" height="80%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/18988186&color=%23414141&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+	<iframe id="soundcloud" width="100%" height="100%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/18988186&color=%23414141&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 </body>
 </html>
