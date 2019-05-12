@@ -1,4 +1,4 @@
-.btn {
+.btncustom {
   position: relative;
 
   display: block;
@@ -18,20 +18,20 @@
   transition: background-color .3s;
 }
 
-.btn:hover, .btn:focus {
-  background-color: #000000;
+.btncustom:hover, .btncustom:focus {
+  background-color: #353535;
 }
 
-.btn > * {
+.btncustom > * {
   position: relative;
 }
 
-.btn span {
+.btncustom span {
   display: block;
   padding: 0px;
 }
 
-.btn:before {
+.btncustom:before {
   content: "";
   
   position: absolute;
@@ -44,16 +44,16 @@
     
   border-radius: 100%;
   
-  background-color: rgba(236, 240, 241, .3);
+  /*background-color: rgba(236, 240, 241, .3);
   
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);*/
 }
 
-.btn:active:before {
+.btncustom:active:before {
   width: 120%;
   padding-top: 120%;
   
@@ -90,7 +90,7 @@ body {
 h2 {
   font-weight: normal;
 }
-
+/*
 .btn.orange {
   background-color: #e67e22;
 }
@@ -105,4 +105,4 @@ h2 {
 
 .btn.red:hover, .btn.red:focus {
   background-color: #c0392b;
-}
+}*/
