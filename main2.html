@@ -56,7 +56,13 @@
         margin-top: 30px;
       }
 
-       @media ( max-width: 991.98px ) {
+      #menuicon {
+        position: relative; 
+        width: 72.5px; 
+        height: 72.5px;
+      }
+
+       @media ( max-width: 575.98px ) {
 
        /*   body {
             height: auto;
@@ -71,8 +77,8 @@
         } */
 
        #logo {
-        width: 72.5px;
-        height: 72.5px;
+        width: 52px;
+        height: 52px;
         background-color: #000000;
         border: 0;
       }
@@ -80,6 +86,13 @@
       #copyright {
         font-size: 8px;
         margin-left: 0px;
+      }
+
+      #menuicon {
+        position: relative; 
+        width: 52px; 
+        height: 52px;
+        margin-top: -10px;
       }
   }
 
@@ -105,7 +118,7 @@
       <a href="index.html"><img id="logo" src="./Sources/Logo_black.png"></a>
     </div>
     
-    <div class="d-inline-block d-xl-none ml-md-0 ml-auto py-3" style="position: relative; width: 72.5px; height: 72.5px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3" style="color: #000;"></span></a></div>
+    <div class="d-inline-block d-xl-none ml-md-0 ml-auto py-3"><a href="#" id=menuicon class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3" style="color: #000;"></span></a></div>
 
     <div class="main-menu">
       <ul class="js-clone-nav">

@@ -598,6 +598,16 @@ h1, h2, h3, h4, h5,
       float: none;
       height: 92.5px !important;
       min-height: 70px; } }
+
+   @media (max-width: 575.98px) {
+    .header-bar {
+      width: 100%;
+      position: relative;
+      padding: 10px;
+      float: none;
+      height: 72.5px !important;
+      min-height: 70px; }
+   }
   .header-bar .site-logo {
     margin-bottom: 30px; }
     @media (max-width: 991.98px) {
