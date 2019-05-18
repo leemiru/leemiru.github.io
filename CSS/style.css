@@ -714,11 +714,10 @@ h1, h2, h3, h4, h5,
       width: 100%;
       -o-object-fit: cover;
       object-fit: cover;
-      height: auto;
-      margin-bottom: 5px; }
+      height: 512px; }
       @media (max-width: 575.98px) {
         .main-content .photos .photo-item img {
-          height: 100vh; } }
+         } }
     .main-content .photos .photo-item:hover:after {
       opacity: 1;
       visibility: visible; }
