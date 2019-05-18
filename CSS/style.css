@@ -4,6 +4,8 @@ body {
   color: gray;
   font-weight: 400;
   font-size: 1rem;
+  padding: 0;
+  margin: 0;
   background: #fff; }
 
 ::-moz-selection {
@@ -436,7 +438,7 @@ h1, h2, h3, h4, h5,
           opacity: 1; }
 
 .site-mobile-menu {
-  width: 300px;
+  width: 200px;
   position: fixed;
   right: 0;
   z-index: 2000;
@@ -578,13 +580,14 @@ h1, h2, h3, h4, h5,
 /* Blocks */
 .header-bar {
   float: left;
-  width: 160px;
+  width: auto;
   height: 100vh;
   min-height: 400px;
+  padding: 10px;
   overflow: auto;
   background: #fff;
-  padding: 30px;
   position: fixed;
+  text-align: center;
   left: 0;
   top: 0; }
   @media (max-width: 991.98px) {
@@ -646,8 +649,8 @@ h1, h2, h3, h4, h5,
 
 .main-content {
   float: right;
-  padding-top: 30px;
-  width: calc(100% - 160px); }
+  padding-top: 10px;
+  width: calc(100% - 99px); }
   @media (max-width: 991.98px) {
     .main-content {
       width: 100%;
@@ -658,12 +661,12 @@ h1, h2, h3, h4, h5,
     margin-left: 0;
     margin-right: 0;
     padding-left: 0;
-    padding-right: 0; }
+    padding-right: 16px; }
     @media (max-width: 991.98px) {
       .main-content .container-fluid {
-        padding-left: 10px;
+        padding-left: 0px;
         padding-top: 0px;
-        padding-right: 10px; } }
+        padding-right: 0px; } }
   .main-content .photos .photo-item {
     position: relative; }
     .main-content .photos .photo-item:after {
@@ -712,10 +715,10 @@ h1, h2, h3, h4, h5,
       -o-object-fit: cover;
       object-fit: cover;
       height: auto;
-      margin-bottom: 0px; }
+      margin-bottom: 5px; }
       @media (max-width: 575.98px) {
         .main-content .photos .photo-item img {
-          height: auto; } }
+          height: 100vh; } }
     .main-content .photos .photo-item:hover:after {
       opacity: 1;
       visibility: visible; }
