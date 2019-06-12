@@ -1,0 +1,15 @@
+//CSS
+.progress-value {
+    background-color: #673ab7;
+    transition: 0.3s all linear;
+    border-radius: 1.25em;
+    height: 16px;
+    display: inline-block;
+    animation: progress 3s ease-in-out forwards;
+    -webkit-animation: progress 3s ease-in-out forwards;
+}
+
+//HTML
+<div class="progress-bar">
+   <span class="progress-value green" style="width: 90%;"></span>
+</div>
