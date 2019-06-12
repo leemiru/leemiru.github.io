@@ -130,14 +130,14 @@
     	}
 
     	body {
-        background-color: #000000; 
-        height: 65vh; 
+        background: linear-gradient(45deg, rgb(35, 35, 35) 0%, rgb(0, 0, 0) 100%);
+        height: 100vh; 
         overflow-y: none;
     		align-content: center;
     	}
 
       #percent {
-        width: ; 
+        width: 0; 
         height: 1px; 
         text-align: right; 
         background-color: #00000000;
@@ -154,10 +154,11 @@
 
       #space {
         height: 30%;
+        visibility: hidden;
       }
  
       #jb-container {
-        height: 60%;
+        height: 53%;
       }
       #jb-links {
         width: auto;
@@ -165,6 +166,7 @@
         /*border: 1px solid #bcbcbc;*/
       }
       #jb-footer {
+        height: 30%
         clear: both;
         /*border: 1px solid #bcbcbc;*/
       }
@@ -172,7 +174,7 @@
       #logo {
         width: 52px; 
         height: 52px; 
-        margin-top: 72px;
+        /*margin-top: 72px;*/
       }
 
       #ago {
@@ -213,10 +215,6 @@
         text-align: left;
       }
 
-      #space {
-        height: 15%;
-      }
-
       #ago {
         width: 100%; 
         margin-bottom: -16px;
@@ -251,10 +249,6 @@
        .counter {
         text-align: left;
       }
-
-      #space {
-        height: 5%;
-      }
     }
  
   }
@@ -262,7 +256,7 @@
     </style>
   </head>
   <body>
-    <h1 id="space"> </h1>
+    <hr id="space"> </hr>
     <div id="jb-container" align="center">
       <div class="counter" style="color: #fff;">
         <div id="ago">
@@ -300,18 +294,18 @@
         </div>
       </div>
     </div>
-    <div id="jb-footer" style="height: 30%; margin-top: 84px;">
-      <div class="percent-wrap">
+    <div class="percent-wrap" style="height: 7%;">
             <div class="hori">
               <div class="percent-default">
                 <div id="percent">
                   <span id="text-percent" style="font-size: 12pt; text-align: right; color: #fff;">100</span>
                   <span class="txt" style="font-size: 12pt; text-align: right; color: #fff; padding-left: 0px;">%</span>
                   <div style="width: 100%; height: 100%; background-image: linear-gradient(90deg, rgb(62, 62, 62) 0%, rgb(255, 255, 255) 100%);"></div>
-                </div>
-              </div>
             </div>
           </div>
+        </div>
+      </div>
+    <div id="jb-footer" >
         <img id="logo" src="./Sources/Logo.png" alt="">
       </div>
   </body>
