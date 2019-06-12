@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>new layout pages</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Sans+KR|PT+Mono" rel="stylesheet">
+	<style type="text/css" media="screen">
+
+		* {
+            font-family: PT Mono, Monospace;
+            text-align:center;
+            text-rendering: optimizeLegibility;
+        	-webkit-font-smoothing: antialiased;
+       		text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+        	-moz-osx-font-smoothing: grayscale;
+        }
+
+		body {
+			background-color: #111;
+			text-align: center;
+		}
+
+		.btncustom {
+		  position: relative;
+
+		  display: block;
+		  margin: 0px auto;
+		  padding: 0;
+
+		  overflow: hidden;
+
+		  border-width: 0;
+		  outline: none;
+		  border-radius: 2px;
+		  box-shadow: 0 1px 4px rgba(0, 0, 0, 0);
+		  
+		  background-color: #00000000;
+		  color: #ecf0f1;
+		  
+		  transition: background-color .3s;
+		}
+
+		.btncustom:hover, .btncustom:focus {
+		  background-color: #353535;
+		}
+
+		.btncustom > * {
+		  position: relative;
+		}
+
+		.btncustom span {
+		  display: block;
+		  padding: 0px;
+		}
+
+		.btncustom:before {
+		  content: "";
+		  
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  
+		  display: block;
+		  width: 0;
+		  padding-top: 0;
+		    
+		  border-radius: 100%;
+		  
+		  /*background-color: rgba(236, 240, 241, .3);
+		  
+		  -webkit-transform: translate(-50%, -50%);
+		  -moz-transform: translate(-50%, -50%);
+		  -ms-transform: translate(-50%, -50%);
+		  -o-transform: translate(-50%, -50%);
+		  transform: translate(-50%, -50%);*/
+		}
+
+		.btncustom:active:before {
+		  width: 120%;
+		  padding-top: 120%;
+		  
+		  transition: width .2s ease-out, padding-top .2s ease-out;
+		}
+	</style>
+</head>
+<body>
+	<a href="main.html"><button class="waves-effect waves-light btncustom" type="button"><span><img id="logo" style="width: 128px; height: 128px; background-color: #00000000;" src="./Sources/Logo.png"></span></button></a>
+
+</body>
+</html>
