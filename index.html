@@ -15,7 +15,7 @@
     <meta property="og:url" content="https://leemiru.github.io" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="MIRU" />
-    <meta property="og:description" content="masterpieces. - 반갑습니다. 이미루입니다." />
+    <meta property="og:description" content="이미루." />
     <meta property="og:image" content="./Sources/ogthumbnail.png" />
 	  
     <link rel=" shortcut icon" href="./Sources/favicon.ico">
@@ -32,6 +32,8 @@
 
     <script language="JavaScript">   
       var ddaytimer = setInterval (dayGap, 1000)
+      var countMax = 0;
+      var count = 0;  // 추가
       function dayGap () {
         //디데이 구하기
         var dday = new Date("November 20, 2020 00:00:00");//디데이
@@ -81,10 +83,17 @@
 
           //복무 퍼센트 구하기
           var percent = 100 * (da/669);
-          document.getElementById("text-percent").innerHTML = parseInt(percent);
+          countMax = percent;
+          //var count
+
+      }
+      var bbarIncrease = setInterval(barIncrease, 10)
+      function barIncrease() {
+        if (count < countMax - 1) count+=1.5;
+          document.getElementById("text-percent").innerHTML = parseInt(count);
 
           //document.getElementById("percent").innerHTML = percent;
-          document.getElementById("percent").style.width = percent + "%";
+          document.getElementById("percent").style.width = count - 1 + "%";
 
       }
 </script>
@@ -105,9 +114,9 @@
     		font-family: "font", Monospace;
     		text-align:center;
     		text-rendering: optimizeLegibility;
-		-webkit-font-smoothing: antialiased;
-		text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-		-moz-osx-font-smoothing: grayscale;
+		    -webkit-font-smoothing: antialiased;
+		    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+		    -moz-osx-font-smoothing: grayscale;
     		margin: 0;
     		padding: 0;
     	}
