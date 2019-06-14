@@ -34,7 +34,12 @@
       var ddaytimer = setInterval (dayGap, 1000)
       var countMax = 0;
       var count = 0;  // 추가
+
       function dayGap () {
+        //Opacity 투명도 설정
+        document.getElementById("jb-container").style.opacity = "1";
+        document.getElementById("text-percent").style.opacity = "1";
+
         //디데이 구하기
         var dday = new Date("November 20, 2020 00:00:00");//디데이
         var ddayChange = dday.getTime();
@@ -86,14 +91,18 @@
           countMax = percent;
           //var count
 
+          //document.getElementById("text-percent").innerHTML = parseInt(percent);
+          // document.getElementById("percent-text").style.opacity = "0";
+          document.getElementById("percent").style.width = percent+ "%";
+
       }
       var bbarIncrease = setInterval(barIncrease, 10)
       function barIncrease() {
-        if (count < countMax - 1) count+=1.5;
-          document.getElementById("text-percent").innerHTML = parseInt(count);
+        if (count < countMax) count+=countMax/50;
+          document.getElementById("text-percent").innerHTML = parseInt(count) + "%";
 
           //document.getElementById("percent").innerHTML = percent;
-          document.getElementById("percent").style.width = count - 1 + "%";
+          //document.getElementById("percent").style.width = count - 1 + "%";
 
       }
 </script>
@@ -176,6 +185,7 @@
       }
  
       #jb-container {
+        opacity: 0;
         height: 53%;
       }
       #jb-links {
@@ -206,6 +216,16 @@
 
       #left {
       width: 100%; 
+      }
+
+      .progress-value {
+        /*background-color: #673ab7;*/
+        transition: 0.5s all ease-in-out;
+        /*border-radius: 1.25em;*/ 
+        /*height: 16px;*/ 
+        /*display: inline-block;*/
+        animation: progress 3s ease-in-out forwards;
+        -webkit-animation: progress 3s ease-in-out forwards;
       }
 
       @media ( max-width: 480px ) {
@@ -288,29 +308,29 @@
 
     </style>
   </head>
-  <body>
+  <body class="progress-value">
     <hr id="space"> </hr>
-    <div id="jb-container" align="center">
+    <div id="jb-container" class="progress-value" align="center">
       <div class="counter" style="color: #fff;">
         <div id="ago">
-          <span id="time-aday" class="num">000</span>
-          <span class="num_sub">:</span>
-          <span id="time-ahour" class="num_sub">00</span>
-          <span class="num_sub">:</span>
-          <span id="time-aminute" class="num_sub">00</span>
-          <span class="num_sub">:</span>
-          <span id="time-asecond" class="num_sub">00</span>
-          <span class="txt">ago.</span>
+          <span id="time-aday" class="num progress-value">000</span>
+          <span class="num_sub progress-value">:</span>
+          <span id="time-ahour" class="num_sub progress-value">00</span>
+          <span class="num_sub progress-value">:</span>
+          <span id="time-aminute" class="num_sub progress-value">00</span>
+          <span class="num_sub progress-value">:</span>
+          <span id="time-asecond" class="num_sub progress-value">00</span>
+          <span class="txt progress-value">ago.</span>
         </div>
         <div id="left">
-          <span id="time-day" class="num">669</span>
-          <span class="num_sub">:</span>
-          <span id="time-hour" class="num_sub">00</span>
-          <span class="num_sub">:</span>
-          <span id="time-minute" class="num_sub">00</span>
-          <span class="num_sub">:</span>
-          <span id="time-second" class="num_sub">00</span>
-          <span class="txt">left.</span>
+          <span id="time-day" class="num progress-value">669</span>
+          <span class="num_sub progress-value">:</span>
+          <span id="time-hour" class="num_sub progress-value">00</span>
+          <span class="num_sub progress-value">:</span>
+          <span id="time-minute" class="num_sub progress-value">00</span>
+          <span class="num_sub progress-value">:</span>
+          <span id="time-second" class="num_sub progress-value">00</span>
+          <span class="txt progress-value">left.</span>
         </div>
       </div>
       <br>
@@ -331,9 +351,9 @@
       <div class="percent-wrap" style="margin-bottom: 42px;">
             <div class="hori">
               <div class="percent-default">
-                <div id="percent">
-                  <span id="text-percent" style="font-size: 12pt; text-align: right; color: #fff;">100</span>
-                  <span class="txt" style="font-size: 12pt; text-align: right; color: #fff; padding-left: 0px;">%</span>
+                <div id="percent" class="progress-value">
+                  <span id="text-percent" class="progress-value" style="font-size: 12pt; text-align: right; color: #fff; opacity: 0;">100</span>
+                  <!-- <span class="txt" style="font-size: 12pt; text-align: right; color: #fff; padding-left: 0px;"></span> -->
                   <div style="width: 100%; height: 100%; background-image: linear-gradient(90deg, rgb(62, 62, 62) 0%, rgb(255, 255, 255) 100%);"></div>
             </div>
           </div>
