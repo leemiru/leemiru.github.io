@@ -1,0 +1,228 @@
+@font-face
+{
+  src: url("../Fonts/font.ttf") format('truetype');
+  font-family: "font";
+}
+        
+p
+{
+    font-family: "font";
+}
+
+* {
+	font-family: "font", Monospace;
+	text-align:center;
+	text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration:none;
+	text-decoration-color: black;
+  	font-size: 12pt;
+}
+
+
+html, body {
+    background: linear-gradient(45deg, rgb(35, 35, 35) 0%, rgb(0, 0, 0) 100%);
+    height: 100vh; 
+    width: 100%;
+	  align-content: center;
+    position: fixed;
+    text-align: center;
+    overflow: hidden;
+}
+
+#space {
+  height: 30%;
+  visibility: hidden;
+}
+
+/*class*/
+.num {
+  font-size: 52pt;
+}
+
+.num_sub {
+  font-size: 52pt;
+}
+
+.txt {
+  font-size: 32pt; 
+  padding-left: 8px;
+}
+
+.counter {
+  text-align: center;
+}
+
+.miru-menu-button {
+	color: #fff; 
+	font-size: 14pt;
+}
+
+.press{
+	text-decoration: underline;
+}
+
+/*id*/
+#percent {
+  width: 0; 
+  height: 1px; 
+  text-align: right; 
+  background-color: #00000000;
+}
+
+#content {
+  text-decoration: none; 
+  border: outset;
+  padding: 8px;
+  border-width: 0.5px;
+  border-color: #fff;
+  color: #fff;
+}
+
+#miru-container {
+  opacity: 1;
+  height: 53%;
+}
+
+#miru-header {
+  opacity: 1;
+  width: auto;
+  right: 50%;
+  height: 20%;
+}
+
+#miru-links {
+  width: auto;
+  align-content: center;
+  /*border: 1px solid #bcbcbc;*/
+}
+
+#miru-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  /*border: 1px solid #bcbcbc;*/
+}
+
+#miru-big-logo {
+  width: 96px; 
+  height: 96px; 
+  margin-top: 24px;
+  /*margin-top: 72px;*/
+}
+
+#miru-small-logo {
+  width: 52px; 
+  height: 52px; 
+  /*margin-top: 72px;*/
+}
+
+#ago {
+width: 100%; 
+margin-bottom: -32px;
+}
+
+#left {
+width: 100%; 
+}
+
+.progress-value {
+  /*background-color: #673ab7;*/
+  transition: 0.5s all ease-in-out;
+  /*border-radius: 1.25em;*/ 
+  /*height: 16px;*/ 
+  /*display: inline-block;*/
+  animation: progress 3s ease-in-out forwards;
+  -webkit-animation: progress 3s ease-in-out forwards;
+}
+
+@media ( max-width: 480px ) {
+
+  #space {
+        height: 20%;
+        visibility: hidden;
+      }
+      
+      .num {
+        font-size: 30pt;
+      }
+
+      .num_sub {
+        font-size: 30pt;
+      }
+
+      .txt {
+        font-size: 28pt; 
+        padding-left: 8px;
+      }
+
+      #content {
+        text-decoration: none; 
+        border: outset;
+        padding: 8px;
+        border-width: 0.5px;
+        font-size: 11pt;
+        border-color: #fff;
+        color: #fff;
+      }
+
+       .counter {
+        text-align: left;
+      }
+
+      #ago {
+        width: 100%; 
+        margin-bottom: -16px;
+      }
+
+      #space {
+        height: 25%;
+        visibility: hidden;
+      }
+ 
+    }
+
+@media ( max-width: 320px ) {
+      
+      .num {
+        font-size: 24pt;
+      }
+
+      .num_sub {
+        font-size: 24pt;
+      }
+
+      .txt {
+        font-size: 24pt; 
+        padding-left: 8px;
+      }
+
+      #content {
+        text-decoration: none; 
+        border: outset;
+        padding: 8px;
+        border-width: 0.5px;
+        font-size: 11pt;
+        border-color: #fff;
+        color: #fff;
+      }
+
+       .counter {
+        text-align: left;
+      }
+
+      #space {
+        height: 20%;
+        visibility: hidden;
+      }
+    }
+ 
+  }
