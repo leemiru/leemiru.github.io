@@ -10,7 +10,7 @@ p
 }
 
 * {
-	font-family: "font", Monospace;
+	font-family: "font", Sans-Serif;
 	text-align:center;
 	text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -28,13 +28,14 @@ a {
 
 
 html, body {
-    background: linear-gradient(45deg, rgb(35, 35, 35) 0%, rgb(0, 0, 0) 100%);
+    background: linear-gradient(45deg, rgb(25, 25, 25) 0%, rgb(0, 0, 0) 100%);
     height: 100vh; 
     width: 100%;
 	  align-content: center;
     position: fixed;
     text-align: center;
     overflow: hidden;
+    color: #fff;
 }
 
 #space {
@@ -60,13 +61,23 @@ html, body {
   text-align: center;
 }
 
-.miru-menu-button {
-	color: #fff; 
-	font-size: 14pt;
+.menu-button {
+	color: #ffffff60; 
+	font-size: 12pt;
+}
+
+.title {
+  color: #fff; 
+  font-size: 12pt;
+}
+
+.desc {
+  color: #ffffff60; 
+  font-size: 9pt;
 }
 
 .press{
-	text-decoration: underline;
+  color: #fff;
 }
 
 /*id*/
@@ -86,25 +97,25 @@ html, body {
   color: #fff;
 }
 
-#miru-container {
+#container {
   opacity: 1;
   height: 53%;
 }
 
-#miru-header {
+#header {
   opacity: 1;
   width: auto;
   right: 50%;
   height: 20%;
 }
 
-#miru-links {
+#links {
   width: auto;
   align-content: center;
   /*border: 1px solid #bcbcbc;*/
 }
 
-#miru-footer {
+#footer {
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -112,17 +123,21 @@ html, body {
   /*border: 1px solid #bcbcbc;*/
 }
 
-#miru-big-logo {
-  width: 96px; 
-  height: 96px; 
-  margin-top: 24px;
+#big-logo {
+  width: 84px; 
+  height: 84px; 
+  margin-top: 18px;
   /*margin-top: 72px;*/
 }
 
-#miru-small-logo {
+#small-logo {
   width: 52px; 
   height: 52px; 
   /*margin-top: 72px;*/
+}
+
+#copyright {
+  font-size: 9pt;
 }
 
 #ago {
@@ -134,7 +149,7 @@ margin-bottom: -32px;
 width: 100%; 
 }
 
-.progress-value {
+.transition-ani {
   /*background-color: #673ab7;*/
   transition: 0.5s all ease-in-out;
   /*border-radius: 1.25em;*/ 
@@ -142,6 +157,16 @@ width: 100%;
   /*display: inline-block;*/
   animation: progress 3s ease-in-out forwards;
   -webkit-animation: progress 3s ease-in-out forwards;
+}
+
+.thumb-port {
+  width: 320px;
+  height: auto;
+}
+
+.thumb-land {
+  width: 480px;
+  height: auto;
 }
 
 @media ( max-width: 480px ) {

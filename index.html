@@ -38,9 +38,7 @@
       var count = 0;  // 추가
 
       function dayGap () {
-        //Opacity 투명도 설정
-        document.getElementById("jb-container").style.opacity = "1";
-        document.getElementById("text-percent").style.opacity = "1";
+        
 
         //디데이 구하기
         var dday = new Date("November 20, 2020 00:00:00");//디데이
@@ -96,6 +94,9 @@
           //document.getElementById("text-percent").innerHTML = parseInt(percent);
           // document.getElementById("percent-text").style.opacity = "0";
           document.getElementById("percent").style.width = percent+ "%";
+          //Opacity 투명도 설정
+          document.getElementById("container").style.opacity = "1";
+          document.getElementById("text-percent").style.opacity = "1";
 
       }
       var bbarIncrease = setInterval(barIncrease, 10)
@@ -110,34 +111,34 @@
 </script>
 
   </head>
-  <body class="progress-value">
+  <body class="transition-ani">
     <hr id="space"> </hr>
-    <div id="jb-container" class="progress-value" align="center">
+    <div id="container" style="opacity: 0;" class="transition-ani" align="center">
       <div class="counter" style="color: #fff;">
         <div id="ago">
-          <span id="time-aday" class="num progress-value">000</span>
-          <span class="num_sub progress-value">:</span>
-          <span id="time-ahour" class="num_sub progress-value">00</span>
-          <span class="num_sub progress-value">:</span>
-          <span id="time-aminute" class="num_sub progress-value">00</span>
-          <span class="num_sub progress-value">:</span>
-          <span id="time-asecond" class="num_sub progress-value">00</span>
-          <span class="txt progress-value">ago.</span>
+          <span id="time-aday" class="num transition-ani">000</span>
+          <span class="num_sub transition-ani">:</span>
+          <span id="time-ahour" class="num_sub transition-ani">00</span>
+          <span class="num_sub transition-ani">:</span>
+          <span id="time-aminute" class="num_sub transition-ani">00</span>
+          <span class="num_sub transition-ani">:</span>
+          <span id="time-asecond" class="num_sub transition-ani">00</span>
+          <span class="txt transition-ani">ago.</span>
         </div>
         <div id="left">
-          <span id="time-day" class="num progress-value">669</span>
-          <span class="num_sub progress-value">:</span>
-          <span id="time-hour" class="num_sub progress-value">00</span>
-          <span class="num_sub progress-value">:</span>
-          <span id="time-minute" class="num_sub progress-value">00</span>
-          <span class="num_sub progress-value">:</span>
-          <span id="time-second" class="num_sub progress-value">00</span>
-          <span class="txt progress-value">left.</span>
+          <span id="time-day" class="num transition-ani">669</span>
+          <span class="num_sub transition-ani">:</span>
+          <span id="time-hour" class="num_sub transition-ani">00</span>
+          <span class="num_sub transition-ani">:</span>
+          <span id="time-minute" class="num_sub transition-ani">00</span>
+          <span class="num_sub transition-ani">:</span>
+          <span id="time-second" class="num_sub transition-ani">00</span>
+          <span class="txt transition-ani">left.</span>
         </div>
       </div>
       <br>
       <br>
-      <div id="miru-links">
+      <div id="links">
           <a href="https://instagram.com/miruwox">Instagram,</a>
           <a style="margin-left: 8px;" href="https://soundcloud.com/leemiru">Soundcloud,</a>
           <a style="margin-left: 8px;" href="https://j97770.blog.me">Blog</a>
@@ -145,23 +146,23 @@
           <br>
           <br>
           <br>
-          <a id="content" href="https://j97770.blog.me/221552179184">기록 : '0524 - 0528 : 네번째 휴가' ></a>
+          <a id="content" href="https://j97770.blog.me/221579787026">기록 : '0618 - 0622 : 다섯번째 휴가' ></a>
         </div>
       </div>
     </div>
-    <div id="miru-footer" >
+    <div id="footer" >
       <div class="percent-wrap" style="margin-bottom: 42px;">
             <div class="hori">
               <div class="percent-default">
-                <div id="percent" class="progress-value">
-                  <span id="text-percent" class="progress-value" style="font-size: 12pt; text-align: right; color: #fff; opacity: 0;">100</span>
+                <div id="percent" class="transition-ani">
+                  <span id="text-percent" class="transition-ani" style="font-size: 12pt; text-align: right; color: #fff; opacity: 0;">100</span>
                   <!-- <span class="txt" style="font-size: 12pt; text-align: right; color: #fff; padding-left: 0px;"></span> -->
                   <div style="width: 100%; height: 100%; background-image: linear-gradient(90deg, rgb(62, 62, 62) 0%, rgb(255, 255, 255) 100%);"></div>
             </div>
           </div>
         </div>
       </div>
-        <a class="miru-menu-button press" href="./new.html"><img id="miru-small-logo" src="./Sources/Logo.png" alt=""></a>
+        <a class="menu-button" href="./new.html"><img id="small-logo" src="./Sources/Logo.png" alt=""></a>
       </div>
   </body>
 </html>
