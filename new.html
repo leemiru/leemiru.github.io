@@ -32,28 +32,54 @@
       
 </script>
   </head>
-  <body style="background: linear-gradient(0deg, rgb(20, 20, 20) 0%, rgb(0, 0, 0) 100%);">
-    <div id="header" align="center">
-    	<a class="menu-button" href="./index.html"><img id="big-logo" src="./Sources/Logo.png" alt=""></a>
-    	<br>
-    	<a class="menu-button press" href="">about,</a>
-    	<a class="menu-button" href="" style="margin-left: 12px;">portfolio, </a>
-    	<a class="menu-button" href="" style="margin-left: 12px;">footage</a>
-    	<br>
-    	<img src="./Sources/menu_divider.png" style="width: 300px; height: 2.5px; margin-top: 18px;">
+  <body>
+    <div id="header" class="transition-ani">
+        <div id="header-bar">
+            <a class="menu-button" href="./index.html" style="float: left; margin-top: 24px;"><img id="big-logo" src="./Sources/Logo.png" alt=""></a>
+        <br>
+        <div id="menu" style="float: right;">
+            <a class="menu-button press" href="">Graphics,</a>
+            <a class="menu-button" href="" style="margin-left: 12px;">Videos, </a>
+            <a class="menu-button" href="" style="margin-left: 12px;">UI</a>
+        </div>
+        <br>
+        </div>
     </div>
-    <div class="transition-ani" style="width: 100%; height: 100%;" align="center">
-        <span>
+    <div id="gallery" style="width: 100%; height: calc(100% - 232px); align-content: left; padding-top: 116px; padding-bottom: 116px; overflow-y: auto;" class="transition-ani" >
+        <span class="item">
+            <a href="./index.html"><img class="thumb-port" src="./images/posts/2019/190609-kyeryong/190609-kyeryong.jpg" alt=""></a>
+            <br>
+            <a class="title" href="./index.html">계룡 전산 한마당</a>
+            <br>
+            <a class="desc" href="./index.html">2019. 06.</a>
+            <br>
+            <br>
+        </span>
+        <span class="item">
+            <a href="./index.html"><img class="thumb-port" src="./images/posts/2019/190521-sunrise/190521-sunrise.jpg" alt=""></a>
+            <br>
+            <a class="title" href="./index.html">일출</a>
+            <br>
+            <a class="desc" href="./index.html">2019. 05.</a>
+            <br>
+            <br>
+        </span>
+        <span class="item">
             <a href="./index.html"><img class="thumb-port" src="./images/posts/2019/190502-skytospace/190502-skytospace.jpg" alt=""></a>
             <br>
             <a class="title" href="./index.html">하늘로 우주로</a>
             <br>
             <a class="desc" href="./index.html">2019. 05.</a>
+            <br>
+            <br>
         </span>
+
         
     </div>
-    <div id="footer" style="margin-bottom: 18px;" >
-        <span id="copyright" style="color: #ffffff50;">copyright <b>MIRU</b> all right reserved.</span>
+    <div id="footer" class="transition-ani">
+        <div id="footer-bar">
+            <span id="copyright" style="color: #ffffff50; float: left; height: 100%;">copyright <b>MIRU</b> all right reserved.</span>
+        </div>
       </div>
   </body>
 </html>
