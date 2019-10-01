@@ -23,8 +23,14 @@ p
 a {
 	text-decoration:none;
 	text-decoration-color: black;
+  color: #fff;
   	font-size: 12pt;
 }
+
+a:hover, a:focus {
+  color: #59b7ff;
+}
+
 
 
 html, body {
@@ -43,9 +49,23 @@ html, body {
   visibility: hidden;
 }
 
+#preview{
+  z-index: 4000;
+  position:absolute;
+  border:0px solid #ccc;
+  background:#333;
+  padding:1px;
+  display:none;
+  color:#fff;
+      }
+
 /*class*/
 .item {
-  margin-bottom: 16px;
+  width: 30px;
+  height: auto;
+  max-height: 250px;
+  align-content:center;
+  margin: 16px;
 }
 
 .num {
@@ -74,6 +94,7 @@ html, body {
   color: #fff; 
   font-size: 12pt;
   margin-bottom: 8px;
+  text-decoration: none;
 }
 
 .desc {
@@ -209,8 +230,9 @@ width: 100%;
 }
 
 .thumb-port {
-  width: 320px;
+  width: auto;
   height: auto;
+  max-height: 420px;
   margin-bottom: 8px;
 }
 
@@ -225,6 +247,42 @@ width: 100%;
   #space {
         height: 20%;
         visibility: hidden;
+      }
+
+      #header {
+        opacity: 1;
+        vertical-align: center;
+        width: 100%;
+        height: 96px; 
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 100) 100%);
+        position: fixed; 
+      }
+
+      #header-bar {
+        height: 100%;
+        bottom: 50;
+        align-content: center;
+        padding-top: 12px;
+        padding-right: 32px;
+        padding-left: 32px;
+      }
+
+      #footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        opacity: 1;
+        height: 96px; 
+      }
+
+      #footer-bar {
+        height: 100%;
+        bottom: 50;
+        align-content: center;
+        padding-top: 56px;
+        padding-right: 32px;
+        padding-left: 32px;
       }
       
       .num {
