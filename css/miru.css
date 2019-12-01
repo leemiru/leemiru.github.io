@@ -61,11 +61,11 @@ html, body {
 
 /*class*/
 .item {
-  width: 30px;
+  width: 100%
   height: auto;
   max-height: 250px;
   align-content:center;
-  margin: 16px;
+  display: table;
 }
 
 .num {
@@ -230,9 +230,10 @@ width: 100%;
 }
 
 .thumb-port {
-  width: auto;
+  width: 100%;
+  max-width: 850px;
   height: auto;
-  max-height: 420px;
+
   margin-bottom: 8px;
 }
 
