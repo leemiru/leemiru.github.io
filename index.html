@@ -15,7 +15,7 @@
     <meta property="og:url" content="https://leemiru.github.io" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="MIRU" />
-    <meta property="og:description" content="이미루." />
+    <meta property="og:description" content="이미루" />
     <meta property="og:image" content="./Sources/ogthumbnail.png" />
 	  
     <link rel=" shortcut icon" href="./Sources/favicon.ico">
@@ -32,7 +32,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <link rel="stylesheet" href="./css/miru.css"> 
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
   </head>
   <body class="transition-ani">
     <div id="header" class="transition-ani">
@@ -40,15 +40,19 @@
             <a class="menu-button" href="./index.html" style="float: left; margin-top: 26px;"><img id="big-logo" src="./Sources/Logo.png" alt=""></a>
         <br>
         <div id="menu" style="float: right;">
-            <a class="menu-button" href="" style="margin-left: 12px;">About,</a>
-            <a class="menu-button press" href="" style="margin-left: 12px;">Graphics,</a>
+            <a class="menu-button" href="./about.html" style="margin-left: 12px;">About,</a>
+            <a class="menu-button" href="" style="margin-left: 12px;">Graphics,</a>
             <a class="menu-button" href="" style="margin-left: 12px;">Videos, </a>
-            <a class="menu-button" href="" style="margin-left: 12px;">UI</a>
         </div>
         <br>
         </div>
+        <div id="footer" class="transition-ani">
+          <div id="footer-bar">
+              <span id="copyright" style="color: #ffffff50; float: left; height: 100%;">copyright <b>MIRU</b> all right reserved.</span>
+          </div>
+        </div>
     </div>
-    <div class="transition-ani" id="gallery" style="opacity: 1; width: 100%; height: 100%; align-content: center; padding-top: 116px; padding-bottom: 116px; overflow-y: auto; ">
+    <div class="transition-ani" id="gallery" style="opacity: 0; width: 100%; height: 100%; align-content: center; padding-top: 136px; padding-bottom: 116px; overflow-y: auto; ">
 
         <div class="counter" style="color: #fff;">
         <div id="ago">
@@ -84,7 +88,7 @@
           <br>
           <br>
           <div style="width: 100%; vertical-align: center;">
-            <a id="content" href="https://j97770.blog.me/221607947027">기록 : '0723 - 0727 : 여섯번째 휴가' ></a> 
+            <a id="content" href="https://j97770.blog.me/221607947027">기록 : '1106 - 1110 : 아홉번째 휴가' ></a> 
           <br>
           <br> 
           <br> 
@@ -109,84 +113,85 @@
               <button class="btn active" onclick="gridView()"><i class="fa fa-th-large"></i></button>
         </div>
 
-        <div class="column">
-            <a href="./images/posts/2019/190817-vsp/orig1.jpg"><img class="thumb-port thumbnail" src="./images/posts/2019/190817-vsp/thumb.jpg" alt=""></a>
-            <br>
-            <a class="title" href="./images/posts/2019/190817-vsp/orig1.jpg">Vinyl Still Playing</a>
-            <p class="desc">2019. 06.</p>
-        </div>
+        <div class="colContainer">
 
-        <div class="column">
-            <a href="./images/posts/2019/190521-sunrise/orig.jpg"><img class="thumb-port thumbnail" src="./images/posts/2019/190521-sunrise/thumb.jpg" alt=""></a>
-            <br>
-            <a class="title" href="./images/posts/2019/190817-vsp/orig1.jpg">일출</a>
-            <p class="desc">2019. 05.</p>
-        </div>
-
-        <div class="column">
-            <a href="./images/posts/2019/190609-kyeryong/orig.jpg"><img class="thumb-port thumbnail" src="./images/posts/2019/190609-kyeryong/thumb.jpg" alt=""></a>
-            <br>
-            <a class="title" href="./images/posts/2019/190817-vsp/orig1.jpg">계룡 전산 한마당</a>
-            <p class="desc">2019. 05.</p>
+          <div id="poster" class="column">
+              <a href="./posts/graphic/2019/vsp.html"><img class="thumb-port thumbnail" src="./images/posts/2019/190817-vsp/thumb.jpg" alt=""></a>
+              <br>
+              <a class="title" href="./posts/graphic/2019/vsp.html">Vinyl Still Playing</a>
+              <p class="desc">2019. 06.</p>
           </div>
 
-        <div class="column">
-            <a href="./images/posts/2019/190502-skytospace/orig.jpg"><img class="thumb-port thumbnail" src="./images/posts/2019/190502-skytospace/thumb.jpg" alt=""></a>
-            <br>
-            <a class="title" href="./images/posts/2019/190817-vsp/orig1.jpg">하늘로 우주로</a>
-            <p class="desc">2019. 04.</p>
-        </div>
+          <div id="poster" class="column">
+              <a href="./images/posts/2019/190521-sunrise/orig.jpg"><img class="thumb-port thumbnail" src="./images/posts/2019/190521-sunrise/thumb.jpg" alt=""></a>
+              <br>
+              <a class="title" href="./images/posts/2019/190817-vsp/orig1.jpg">일출</a>
+              <p class="desc">2019. 05.</p>
+          </div>
 
-    <div id="footer" class="transition-ani">
-        <div id="footer-bar">
-            <span id="copyright" style="color: #ffffff50; float: left; height: 100%;">copyright <b>MIRU</b> all right reserved.</span>
+          <div id="poster" class="column">
+              <a href="./images/posts/2019/190609-kyeryong/orig.jpg"><img class="thumb-port thumbnail" src="./images/posts/2019/190609-kyeryong/thumb.jpg" alt=""></a>
+              <br>
+              <a class="title" href="./images/posts/2019/190817-vsp/orig1.jpg">계룡 전산 한마당</a>
+              <p class="desc">2019. 05.</p>
+            </div>
+
+          <div id="poster" class="column">
+              <a href="./images/posts/2019/190502-skytospace/orig.jpg"><img class="thumb-port thumbnail" src="./images/posts/2019/190502-skytospace/thumb.jpg" alt=""></a>
+              <br>
+              <a class="title" href="./images/posts/2019/190817-vsp/orig1.jpg">하늘로 우주로</a>
+              <p class="desc">2019. 04.</p>
+          </div>
+
         </div>
       </div>
 
-
       <script>
-          var ddaytimer = setInterval (dayGap, 1000)
-      var countMax = 0;
-      var count = 0;  // 추가
+        //Opacity 투명도 설정
+        document.getElementById("gallery").style.opacity = "1";
 
-      function dayGap () {
+        var ddaytimer = setInterval (dayGap, 1000)
+        var countMax = 0;
+        var count = 0;  // 추가
+
+        function dayGap () {
+          
+
+          //디데이 구하기
+          var dday = new Date("November 20, 2020 00:00:00");//디데이
+          var ddayChange = dday.getTime();
+          var nowday = new Date();//현재
+          nowday = nowday.getTime();//밀리세컨드 단위변환
+          var distance = ddayChange - nowday;//디데이에서 현재까지 뺀다.
         
+          var d = Math.floor(distance / (1000 * 60 * 60 * 24));//일
+          var h = Math.floor((distance / (1000*60*60)) % 24);//시간
+          var m = Math.floor((distance / (1000*60)) % 60);//분
+          var s = Math.floor((distance / 1000) % 60);//초
 
-        //디데이 구하기
-        var dday = new Date("November 20, 2020 00:00:00");//디데이
-        var ddayChange = dday.getTime();
-        var nowday = new Date();//현재
-        nowday = nowday.getTime();//밀리세컨드 단위변환
-        var distance = ddayChange - nowday;//디데이에서 현재까지 뺀다.
-       
-        var d = Math.floor(distance / (1000 * 60 * 60 * 24));//일
-        var h = Math.floor((distance / (1000*60*60)) % 24);//시간
-        var m = Math.floor((distance / (1000*60)) % 60);//분
-        var s = Math.floor((distance / 1000) % 60);//초
-
-        document.getElementById("time-day").innerHTML = d;
-        document.getElementById("time-hour").innerHTML = h;
-        document.getElementById("time-minute").innerHTML = m;
-        document.getElementById("time-second").innerHTML = s;
+          document.getElementById("time-day").innerHTML = d;
+          document.getElementById("time-hour").innerHTML = h;
+          document.getElementById("time-minute").innerHTML = m;
+          document.getElementById("time-second").innerHTML = s;
 
 
-        //지난날 구하기 
-        var aday = new Date("January 21, 2019 14:00:00");//남은날
+          //지난날 구하기 
+          var aday = new Date("January 21, 2019 14:00:00");//남은날
 
-        var adayChange = aday.getTime();
+          var adayChange = aday.getTime();
 
-        var adistance = adayChange - nowday;//남은날에서 현재까지 뺀다.
+          var adistance = adayChange - nowday;//남은날에서 현재까지 뺀다.
 
-        //음수가 도출되므로 '-'를 곱함
-        var da = Math.floor(adistance / (-1000 * 60 * 60 * 24));//일
-        var ha = Math.floor((adistance / (-1000*60*60)) % 24);//시간
-        var ma = Math.floor((adistance / (-1000*60)) % 60);//분
-        var sa = Math.floor((adistance / -1000) % 60);//초
+          //음수가 도출되므로 '-'를 곱함
+          var da = Math.floor(adistance / (-1000 * 60 * 60 * 24));//일
+          var ha = Math.floor((adistance / (-1000*60*60)) % 24);//시간
+          var ma = Math.floor((adistance / (-1000*60)) % 60);//분
+          var sa = Math.floor((adistance / -1000) % 60);//초
 
-        document.getElementById("time-aday").innerHTML = da;
-        document.getElementById("time-ahour").innerHTML = ha;
-        document.getElementById("time-aminute").innerHTML = ma;
-        document.getElementById("time-asecond").innerHTML = sa;
+          document.getElementById("time-aday").innerHTML = da;
+          document.getElementById("time-ahour").innerHTML = ha;
+          document.getElementById("time-aminute").innerHTML = ma;
+          document.getElementById("time-asecond").innerHTML = sa;
 
           // if (distance <= 0) {//당일넘어섰을때, dday로 변경
           //     document.getElementById("dday-timer").innerHTML = "D-day";
@@ -247,7 +252,7 @@
                 });
             });
 
-          // Get the elements with class="column"
+            // Get the elements with class="column"
             var elements = document.getElementsByClassName("column");
 
             // Declare a loop variable
@@ -262,8 +267,9 @@
 
             // Grid View
             function gridView() {
+              //document.getElementById("poster").style.display = "none";
               for (i = 0; i < elements.length; i++) {
-                elements[i].style.width = "33.3%";
+                elements[i].style.width = "";
               }
             }
 
