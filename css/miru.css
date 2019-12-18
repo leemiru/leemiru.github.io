@@ -50,7 +50,7 @@ html, body {
   visibility: hidden;
 }
 
-#preview{
+#preview {
   z-index: 4000;
   position:absolute;
   border:0px solid #ccc;
@@ -59,6 +59,11 @@ html, body {
   display:none;
   color:#fff;
       }
+
+#menu {
+  float: right;
+  margin-top: 0.5em;
+}
 
 /*class*/
 .item {
