@@ -22,7 +22,7 @@ function moveTop(){
      $('html, body').animate({scrollTop : 0}, 500);
   }
 
-//¸Þ´º ¹öÆ°À» ´­·¶À» ¶§ Ã³¸®
+//ï¿½Þ´ï¿½ ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ Ã³ï¿½ï¿½
 var menu = 0;
 function toggleMenu(e) {
 	if (menu == 0) {
@@ -40,7 +40,7 @@ function showMenu() {
 			$menu.css('z-index', '2');
 			//$('#main-logo').css('filter', 'invert(1)');
 			$header.css('background', 'none');
-			//scrollÇÏ¸é¼­ ÀÛ¾ÆÁø ³ðµéÀ» ¿ø·¡´ë·Î µ¹·Á³õÀÚ.
+			//scrollï¿½Ï¸é¼­ ï¿½Û¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 			resetHeader();
 		}, 1);
 		menu = 1;
@@ -59,37 +59,17 @@ function hideMenu() {
 	// $hamburger.classList.removeClass('is-active');
 }
 
-
-//º¹¹«ÀÏ¼ö ±¸ÇÏ´Â ºÎºÐ
-// var ddaytimer = setInterval (dayGap, 1000)
-// var countMax = 0;
-// function dayGap () {
-//        //µðµ¥ÀÌ ±¸ÇÏ±â
-// 		 var dday = new Date("November 20, 2020 00:00:00");//µðµ¥ÀÌ
-//        var ddayChange = dday.getTime();
-//        var nowday = new Date();//ÇöÀç
-//        nowday = nowday.getTime();//¹Ð¸®¼¼ÄÁµå ´ÜÀ§º¯È¯
-//        var distance = ddayChange - nowday;//µðµ¥ÀÌ¿¡¼­ ÇöÀç±îÁö »«´Ù.
-     
-//        var d = Math.floor(distance / (1000 * 60 * 60 * 24));//ÀÏ
-//        var h = Math.floor((distance / (1000*60*60)) % 24);//½Ã°£
-//        var m = Math.floor((distance / (1000*60)) % 60);//ºÐ
-//        var s = Math.floor((distance / 1000) % 60);//ÃÊ
-
-//        document.getElementById("single-notice").innerHTML = d + 'd ' + h + 'h ' + m + 'm ' + s + 's';
-// }
-
 $(function () {
 	
-	//ÆÐ·²·°½º ½ºÅ©·Ñ, ÁÜ
+	//ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å©ï¿½ï¿½, ï¿½ï¿½
 	var ref = 100;
 	var scroll, zoom;
 	
-	// ½ºÅ©·Ñ ½Ã¿¡ Çì´õ ¼û±è; 
+	// ï¿½ï¿½Å©ï¿½ï¿½ ï¿½Ã¿ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½; 
 	var didScroll;
 	var lastScrollTop = 0; 
-	var delta = 5; // µ¿ÀÛÀÇ ±¸ÇöÀÌ ½ÃÀÛµÇ´Â À§Ä¡ 
-	var navbarHeight = $header.outerHeight(); // ¿µÇâÀ» ¹ÞÀ» ¿ä¼Ò¸¦ ¼±ÅÃ
+	var delta = 5; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÛµÇ´ï¿½ ï¿½ï¿½Ä¡ 
+	var navbarHeight = $header.outerHeight(); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ï¿½
 	
 	$(window).scroll(function (event) {
 		didScroll = true;
@@ -99,7 +79,7 @@ $(function () {
 		zoom = ref + scroll/30
 	 });
 	 
-	 //½ºÅ©·Ñ ½Ã¿¡ Çì´õ ¼û±è
+	 //ï¿½ï¿½Å©ï¿½ï¿½ ï¿½Ã¿ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	 setInterval(function() {
 		 if (didScroll) {
 			 hasScrolled();
@@ -112,7 +92,7 @@ $(function () {
 		 if (Math.abs(lastScrollTop - scroll) <= delta)
 		 return;
 		 
-		 //scroll À§Ä¡°¡ 100 ³»¿ÜÀÏ¶§¿¡ °øÁö Åä±Û
+		 //scroll ï¿½ï¿½Ä¡ï¿½ï¿½ 100 ï¿½ï¿½ï¿½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 		 if (scroll > 100) {
 			 $notice.css('opacity', '0');
 		 } else if (scroll < 100) {
@@ -120,15 +100,15 @@ $(function () {
 		 }
 		 
 		 if (scroll > lastScrollTop && scroll > navbarHeight) {
-			 //Scroll Down ½ÃÀÇ µ¿ÀÛ
+			 //Scroll Down ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			 $logo.css('width', '32px');
 	
 			 $hamburger.css('margin-right', '22px');
 			 $hamburger.css('margin-top', '-12px');
 			 $hamburger.css('transform', 'scale(0.5)');
-		 } else if ((scroll + 150 /*iOSµî ÀÏºÎ OSÀÇ ¿À¹ö½ºÅ©·Ñ±â´É°ú Ãæµ¹ÇÔÀ» ¹æÁöÇÏ±â À§ÇÔ*/ ) + $(window).height() < $(document).height()) {
+		 } else if ((scroll + 150 /*iOSï¿½ï¿½ ï¿½Ïºï¿½ OSï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å©ï¿½Ñ±ï¿½É°ï¿½ ï¿½æµ¹ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½*/ ) + $(window).height() < $(document).height()) {
 			 
-			 //Scroll Up ½ÃÀÇ µ¿ÀÛ
+			 //Scroll Up ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			 $logo.css('width', '48px');
 			 
 			 $hamburger.css('margin-right', '30px');

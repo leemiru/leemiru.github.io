@@ -28,7 +28,7 @@ a {
 }
 
 * {
-	font-family: "Helvetica", "KopubWorldDotum", sans-serif;
+	font-family: "Helvetica", "KopubWorldDotum", "Noto Sans KR", sans-serif;
 	font-weight: 500;
 	animation-name: init;
 	animation-duration: 300ms;
