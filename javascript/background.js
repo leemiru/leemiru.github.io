@@ -1,3 +1,17 @@
+var count = 1,
+      allocations = new Array(1, 2, 3, 6, 9, 8, 7, 4),
+      animate = setInterval(function () {
+        $("#loader b").css("background", "white");
+        $("#loader b:nth-child(" + allocations[count] + ")").css(
+          "background",
+          "black"
+        );
+        count++;
+        if (count == 8) {
+          count = 1;
+        }
+      }, 150);
+
 $(function(){
 	includeLayout();
 }); 
@@ -17,7 +31,7 @@ function includeLayout(){
 }
 
 function completeLoad() {
-	// setTimeout(function(){
-	// 	$overlay_load.fadeOut('slow');
-	// }, 1500);
+	setTimeout(function(){
+		$overlay_load.fadeOut('slow');
+	}, 1500);
 }

@@ -5,27 +5,6 @@ var $notice = $('.single-notice');
 var $menu = $('#menu-overlay');
 var $header = $('#main-header');
 
-// $(function(){
-// 	includeLayout();
-// }); 
-
-// function includeLayout(){ 
-// 	var includeArea = $('[data-include]'); 
-// 	var self, url; 
-// 	$.each(includeArea, function() { 
-// 		self = $(this); 
-// 		url = self.data("include"); 
-// 		self.load(url, function() { 
-// 			self.removeAttr("data-include"); 
-// 		}); 
-// 	}); 
-	
-// 	completeLoad();
-// }
-
-// function completeLoad() {
-// 	$overlay_load.fadeOut('fast');
-// }
 
 function resetHeader() {
 	$logo.css('width', '48px');
@@ -45,14 +24,6 @@ function moveTop(){
 
 //메뉴 버튼을 눌렀을 때 처리
 var menu = 0;
-// $hamburger.click(function(e) {
-// 	e.currentTarget.classList.toggle('is-active');
-// 	if (menu == 0) {
-// 		showMenu();
-// 	} else if (menu == 1) {
-// 		hideMenu();
-// 	}
-// })
 function toggleMenu(e) {
 	if (menu == 0) {
 		showMenu();
@@ -90,23 +61,23 @@ function hideMenu() {
 
 
 //복무일수 구하는 부분
-var ddaytimer = setInterval (dayGap, 1000)
-var countMax = 0;
-function dayGap () {
-       //디데이 구하기
-		 var dday = new Date("November 20, 2020 00:00:00");//디데이
-       var ddayChange = dday.getTime();
-       var nowday = new Date();//현재
-       nowday = nowday.getTime();//밀리세컨드 단위변환
-       var distance = ddayChange - nowday;//디데이에서 현재까지 뺀다.
+// var ddaytimer = setInterval (dayGap, 1000)
+// var countMax = 0;
+// function dayGap () {
+//        //디데이 구하기
+// 		 var dday = new Date("November 20, 2020 00:00:00");//디데이
+//        var ddayChange = dday.getTime();
+//        var nowday = new Date();//현재
+//        nowday = nowday.getTime();//밀리세컨드 단위변환
+//        var distance = ddayChange - nowday;//디데이에서 현재까지 뺀다.
      
-       var d = Math.floor(distance / (1000 * 60 * 60 * 24));//일
-       var h = Math.floor((distance / (1000*60*60)) % 24);//시간
-       var m = Math.floor((distance / (1000*60)) % 60);//분
-       var s = Math.floor((distance / 1000) % 60);//초
+//        var d = Math.floor(distance / (1000 * 60 * 60 * 24));//일
+//        var h = Math.floor((distance / (1000*60*60)) % 24);//시간
+//        var m = Math.floor((distance / (1000*60)) % 60);//분
+//        var s = Math.floor((distance / 1000) % 60);//초
 
-       document.getElementById("single-notice").innerHTML = d + 'd ' + h + 'h ' + m + 'm ' + s + 's';
-}
+//        document.getElementById("single-notice").innerHTML = d + 'd ' + h + 'h ' + m + 'm ' + s + 's';
+// }
 
 $(function () {
 	
@@ -126,13 +97,6 @@ $(function () {
 		//Parallax Zoom
 		scroll = $(window).scrollTop()
 		zoom = ref + scroll/30
-		//$ban.css('transform', "scale("+zoom/100 + ')')
-		
-		// if (scroll < 1) {
-		// 	$('#single-notice').css('display', 'none');
-		// } else {
-		// 	$('#single-notice').css('display', 'inline-block');
-		// }
 	 });
 	 
 	 //스크롤 시에 헤더 숨김
@@ -176,15 +140,3 @@ $(function () {
 	 }
 	 
 });
-
-//전체적인 웹페이지를 매끄럽게 만들기위한 과정
-function menuProjects(){
-	hideMenu();
-	$('#block-projects').css('display', 'block');
-	$('#block-main').css('display', 'none');
-}
-
-function Home() {
-	$('#block-projects').css('display', 'none');
-	$('#block-main').css('display', 'block');
-}
