@@ -1,301 +1,274 @@
-$('.slider').each(function() {
-  var $this = $(this);
-  var $group = $this.find('.slide_group');
-  var $slides = $this.find('.slide');
-  var bulletArray = [];
-  var currentIndex = 0;
-  var timeout;
+
+	
+	/*======작업물 나열 구간======*/
+	allProjects();
+	
+	// function allProjects() {
+	// 	let masterpieces = 6; //작품의 최신 개수로 업데이트
+	// 	let count = masterpieces + 1;
+	// 	const wrapper = $('#swiper-projects-all');
+	// 	for (count>1; count--;) {
+	// 		if (count>0) {
+	// 			const slide = document.createElement('div');
+	// 			wrapper.append(slide);
+	// 			slide.className="swiper-slide";
+				
+	// 			const picture = document.createElement('div');
+	// 			slide.append(picture);
+				
+	// 			picture.className="picture";
+	// 			// picture.id = "picture-" + count;
+				
+	// 			const img = document.createElement('img');
+	// 			picture.append(img);
+				
+	// 			img.id = "picture-" + count;
+				
+	// 			$('#picture-'+count).attr('src', './images/posts/19-'+ count +'/thumb.png');
+	// 			$('#picture-'+count).attr('href', './images/posts/19-'+ count +'/desc.html');
+	// 			var title = $('#picture-'+count);
+				
+	// 			//JSON Array
+	// 			// var jsondata = '../images/posts/19-'+ count +'/data.json';
+	// 			// $.getJSON(jsondata, function(title) { return (data) => {
+	// 			// 	title.html('<p class="image-frame-title">'+JSON.stringify(data.index)+'</p>');
+	// 			// }}(title));;
+				
+	// 		}
+	// 	}
+		
+	// }
+	
+	function allProjects() {
+		let masterpieces = 6; //작품의 최신 개수로 업데이트
+		let count = masterpieces + 1;
+		const gallery = $('#gallery');
+		for (count>1; count--;) {
+			if (count>0) {
+				const frame = document.createElement('div');
+				gallery.append(frame);
+				frame.className="project-frame";
+				
+				const sub = document.createElement('a');
+				frame.append(sub);
+				
+				sub.className="image-frame";
+				sub.id = "image-" + count;
+				
+				// $('#image-'+count).attr('src', './images/posts/19-'+ count +'/thumb.png');
+				$('#image-'+count).css('background', 'url("./images/posts/19-'+ count +'/thumb.png") center no-repeat');
+				$('#image-'+count).attr('href', './images/posts/19-'+ count +'/desc.html');
+				var title = $('#image-'+count);
+				
+				//JSON Array
+				var jsondata = './images/posts/19-'+ count +'/data.json';
+				$.getJSON(jsondata, function(title) { return (data) => {
+					title.html('<p class="image-frame-title">'+JSON.stringify(data.index)+'</p>');
+				}}(title));;
+				
+			}
+		}
+		
+	}
   
-  function move(newIndex) {
-    var animateLeft, slideLeft;
-    
-    advance();
-    
-    if ($group.is(':animated') || currentIndex === newIndex) {
-      return;
-    }
-    
-    bulletArray[currentIndex].removeClass('active');
-    bulletArray[newIndex].addClass('active');
-	 
-    if (newIndex > currentIndex) {
-      slideLeft = '100%';
-      animateLeft = '-100%';
-    } else {
-      slideLeft = '-100%';
-      animateLeft = '100%';
-    }
-    
-    $slides.eq(newIndex).css({
-      display: 'block',
-      left: slideLeft
-    });
-    $group.animate({
-      left: animateLeft
-    }, function() {
-      $slides.eq(currentIndex).css({
-        display: 'none'
-      });
-      $slides.eq(newIndex).css({
-        left: 0
-      });
-      $group.css({
-        left: 0
-      });
-      currentIndex = newIndex;
-    });
-  }
-  
-  function advance() {
-    clearTimeout(timeout);
-    timeout = setTimeout(function() {
-      if (currentIndex < ($slides.length - 1)) {
-        move(currentIndex + 1);
-      } else {
-        move(0);
-      }
-    }, 4000);
-  }
-  
-  $('.next_btn').on('click', function() {
-    if (currentIndex < ($slides.length - 1)) {
-      move(currentIndex + 1);
-    } else {
-      move(0);
-    }
-  });
-  
-  $('.previous_btn').on('click', function() {
-    if (currentIndex !== 0) {
-      move(currentIndex - 1);
-    } else {
-      move(3);
-    }
-  });
-  
-  $.each($slides, function(index) {
-    var $button = $('<a class="slide_btn">&bull;</a>');
-    
-    if (index === currentIndex) {
-      $button.addClass('active');
-    }
-    $button.on('click', function() {
-      move(index);
-    }).appendTo('.slide_buttons');
-    bulletArray.push($button);
-  });
-  
-  advance();
+var swiperH = new Swiper('.swiper-container-h', {
+	spaceBetween: 0,
+	freeMode: true,
+	cssMode: true,
+	mousewheel: true,
+	keyboard: true,
+	pagination: {
+		el: '.swiper-pagination-h',
+		direction: 'vertical',
+		slidesPerView: 'auto',
+		freeMode: true,
+		clickable: true,
+	},
+});
+var swiperV = new Swiper('.swiper-container-v', {
+	direction: 'vertical',
+	spaceBetween: 0,
+	cssMode: true,
+	mousewheel: true,
+	keyboard: true,
+	pagination: {
+		el: '.swiper-pagination-v',
+		clickable: true,
+	},
 });
 
+//main canvas animation
 
-/*
-var c = document.getElementById("c");
-var ctx = c.getContext("2d");
-var cH;
-var cW;
-var bgColor = "#020202";
-var animations = [];
-var circles = [];
+let canvas = document.querySelector("canvas");
 
-var colorPicker = (function() {
-  var colors = ["#202020", "#FFFFFF", "#000000", "#CCCCCC"];
-  var index = 0;
-  function next() {
-    index = index++ < colors.length-1 ? index : 0;
-    return colors[index];
-  }
-  function current() {
-    return colors[index]
-  }
-  return {
-    next: next,
-    current: current
-  }
-})();
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
-function removeAnimation(animation) {
-  var index = animations.indexOf(animation);
-  if (index > -1) animations.splice(index, 1);
+let c = canvas.getContext("2d");
+
+let mouse = {
+    x: undefined,
+    y: undefined
 }
 
-function calcPageFillRadius(x, y) {
-  var l = Math.max(x - 0, cW - x);
-  var h = Math.max(y - 0, cH - y);
-  return Math.sqrt(Math.pow(l, 2) + Math.pow(h, 2));
-}
+let maxRadiusSmall = 5;
+let maxRadius = 7;
+let maxRadiusLarge = 10;
+let rangeExtraSmall = 30;
+let rangeSmall = 70;
+let rangeMedium = 200;
+let rangeLarge = 350;
+let rangeExtraLarge = 500;
+let rangeExtraXLarge = 600;
+let displacement = 0;
+let halfWidth = window.innerWidth / 2;
+let halfHeight = window.innerHeight / 2;
 
-function addClickListeners() {
-  document.addEventListener("touchstart", handleEvent);
-  document.addEventListener("mousedown", handleEvent);
-};
+let minRadius = 2;
+let growSpeed = 1;
 
-function handleEvent(e) {
-    if (e.touches) { 
-      e.preventDefault();
-      e = e.touches[0];
-    }
-    var currentColor = colorPicker.current();
-    var nextColor = colorPicker.next();
-    var targetR = calcPageFillRadius(e.pageX, e.pageY);
-    var rippleSize = Math.min(200, (cW * .4));
-    var minCoverDuration = 750;
-    
-    var pageFill = new Circle({
-      x: e.pageX,
-      y: e.pageY,
-      r: 0,
-      fill: nextColor
-    });
-    var fillAnimation = anime({
-      targets: pageFill,
-      r: targetR,
-      duration:  Math.max(targetR / 2 , minCoverDuration ),
-      easing: "easeOutQuart",
-      complete: function(){
-        bgColor = pageFill.fill;
-        removeAnimation(fillAnimation);
-      }
-    });
-    
-    var ripple = new Circle({
-      x: e.pageX,
-      y: e.pageY,
-      r: 0,
-      fill: currentColor,
-      stroke: {
-        width: 3,
-        color: currentColor
-      },
-      opacity: 1
-    });
-    var rippleAnimation = anime({
-      targets: ripple,
-      r: rippleSize,
-      opacity: 0,
-      easing: "easeOutExpo",
-      duration: 900,
-      complete: removeAnimation
-    });
-    
-    var particles = [];
-    for (var i=0; i<32; i++) {
-      var particle = new Circle({
-        x: e.pageX,
-        y: e.pageY,
-        fill: currentColor,
-        r: anime.random(24, 48)
-      })
-      particles.push(particle);
-    }
-    var particlesAnimation = anime({
-      targets: particles,
-      x: function(particle){
-        return particle.x + anime.random(rippleSize, -rippleSize);
-      },
-      y: function(particle){
-        return particle.y + anime.random(rippleSize * 1.15, -rippleSize * 1.15);
-      },
-      r: 0,
-      easing: "easeOutExpo",
-      duration: anime.random(1000,1300),
-      complete: removeAnimation
-    });
-    animations.push(fillAnimation, rippleAnimation, particlesAnimation);
-}
+let colorArray = [
+    "#111111"//,
+     // "#C700E8",
+     // "#9A0EFF",
+     // "#4800E8",
+     // "#0A00FF"
+]
 
-function extend(a, b){
-  for(var key in b) {
-    if(b.hasOwnProperty(key)) {
-      a[key] = b[key];
-    }
-  }
-  return a;
-}
-
-var Circle = function(opts) {
-  extend(this, opts);
-}
-
-Circle.prototype.draw = function() {
-  ctx.globalAlpha = this.opacity || 1;
-  ctx.beginPath();
-  ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false);
-  if (this.stroke) {
-    ctx.strokeStyle = this.stroke.color;
-    ctx.lineWidth = this.stroke.width;
-    ctx.stroke();
-  }
-  if (this.fill) {
-    ctx.fillStyle = this.fill;
-    ctx.fill();
-  }
-  ctx.closePath();
-  ctx.globalAlpha = 1;
-}
-
-var animate = anime({
-  duration: Infinity,
-  update: function() {
-    ctx.fillStyle = bgColor;
-    ctx.fillRect(0, 0, cW, cH);
-    animations.forEach(function(anim) {
-      anim.animatables.forEach(function(animatable) {
-        animatable.target.draw();
-      });
-    });
-  }
+window.addEventListener("mousemove", (event) => {
+    mouse.x = event.x;
+    mouse.y = event.y;
 });
 
-var resizeCanvas = function() {
-  cW = window.innerWidth;
-  cH = window.innerHeight;
-  c.width = cW * devicePixelRatio;
-  c.height = cH * devicePixelRatio;
-  ctx.scale(devicePixelRatio, devicePixelRatio);
-};
+window.addEventListener("resize", () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
-(function init() {
-  resizeCanvas();
-  if (window.CP) {
-    // CodePen's loop detection was causin' problems
-    // and I have no idea why, so...
-    window.CP.PenTimer.MAX_TIME_IN_LOOP_WO_EXIT = 6000; 
-  }
-  window.addEventListener("resize", resizeCanvas);
-  addClickListeners();
-  if (!!window.location.pathname.match(/fullcpgrid/)) {
-    startFauxClicking();
-  }
-  handleInactiveUser();
-})();
+    init();
+});
 
-function handleInactiveUser() {
-  var inactive = setTimeout(function(){
-    fauxClick(cW/2, cH/2);
-  }, 2000);
-  
-  function clearInactiveTimeout() {
-    clearTimeout(inactive);
-    document.removeEventListener("mousedown", clearInactiveTimeout);
-    document.removeEventListener("touchstart", clearInactiveTimeout);
-  }
-  
-  document.addEventListener("mousedown", clearInactiveTimeout);
-  document.addEventListener("touchstart", clearInactiveTimeout);
+function Circle(x, y, dx, dy, radius) {
+    let randomColor = colorArray[Math.floor(Math.random() * colorArray.length)];
+    this.x = x;
+    this.y = y;
+    this.dx = dx;
+    this.dy = dy;
+    this.radius = radius;
+    this.minRadius = radius;
+    //this.color = randomColor;
+    //this.color = colorArray[Math.floor(Math.random() * colorArray.length)];
+    this.color = "#111111";
+
+    this.draw = () => {
+        c.beginPath();
+        c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+        //c.rect(this.x, this.y, this.radius * 1.5, this.radius * 1.5);
+        c.fillStyle = this.color;
+        c.fill();
+      //
+        c.shadowColor = "#111111";
+        c.shadowOffsetX = 0;
+        c.shadowOffsetY = 0;
+        c.shadowBlur = 0;
+    }
+    
+    this.update = () => {
+    
+            // interactivity - grow / shrink
+           if (mouse.x - this.x < rangeSmall && mouse.x - this.x > -rangeSmall 
+                && mouse.y - this.y < rangeSmall && mouse.y - this.y > -rangeSmall && $('#tm-circles:hover').length != 0) {
+                    if (this.radius < maxRadiusLarge){
+                        this.radius += growSpeed;
+                    } else if (this.radius > maxRadiusLarge){
+                        this.radius -= growSpeed;
+                    }
+            } else if (mouse.x - this.x < rangeMedium && mouse.x - this.x > -rangeMedium 
+                && mouse.y - this.y < rangeMedium && mouse.y - this.y > -rangeMedium && $('#tm-circles:hover').length != 0) {
+                    if (this.radius < maxRadius){
+                        this.radius += growSpeed;
+                    } else if (this.radius > maxRadius){
+                        this.radius -= growSpeed;
+                    }
+            } else if (mouse.x - this.x < rangeLarge && mouse.x - this.x > -rangeLarge 
+                && mouse.y - this.y < rangeLarge && mouse.y - this.y > -rangeLarge && $('#tm-circles:hover').length != 0) {
+                    if (this.radius < maxRadiusSmall){
+                        this.radius += growSpeed;
+                    } else if (this.radius > maxRadiusSmall){
+                        this.radius -= growSpeed;
+                    }
+            } 
+            else if (this.radius > this.minRadius){
+                this.radius -= growSpeed;
+            }
+      
+           // change colors
+      
+             if (mouse.x - this.x > rangeExtraLarge || mouse.x - this.x < -rangeExtraLarge || mouse.y - this.y > rangeExtraLarge || mouse.y - this.y < -rangeExtraLarge && $('#tm-circles:hover').length != 0) {
+              this.color = "#111111";
+            } else if (mouse.x - this.x > rangeLarge || mouse.x - this.x < -rangeLarge || mouse.y - this.y > rangeLarge || mouse.y - this.y < -rangeLarge) {
+              this.color = "#222222";
+            }  else if (mouse.x - this.x > rangeMedium || mouse.x - this.x < -rangeMedium || mouse.y - this.y > rangeMedium || mouse.y - this.y < -rangeMedium) {
+              this.color = "#444444";
+            }   else if (mouse.x - this.x > rangeSmall || mouse.x - this.x < -rangeSmall || mouse.y - this.y > rangeSmall || mouse.y - this.y < -rangeSmall) {
+              this.color = "#777777";
+            }  else if (mouse.x - this.x > rangeExtraSmall || mouse.x - this.x < -rangeExtraSmall || mouse.y - this.y > rangeExtraSmall || mouse.y - this.y < -rangeExtraSmall) {
+              this.color = "#aaaaaa";
+            }  
+
+//             let originalPos = this.x;
+      
+//           // change positions 
+//             if (mouse.x - this.x > rangeLarge) {
+//               while (displacement > this.x - originalPos){
+//                 this.x += 1;
+//               } 
+//             }
+
+            this.draw();
+      
+    }
 }
 
-function startFauxClicking() {
-  setTimeout(function(){
-    fauxClick(anime.random( cW * .2, cW * .8), anime.random(cH * .2, cH * .8));
-    startFauxClicking();
-  }, anime.random(200, 900));
+let circleArray = [];
+
+function init() {
+    circleArray = [];
+    for (let i = 0; i < 800; i++) {
+        //let radius = Math.random() * 3 + 1;
+      let radius = 4;
+        //let x = Math.random() * (innerWidth - radius * 2) + radius;
+        //let y = Math.random() * (innerHeight - radius * 2) + radius;
+        let dx = (Math.random() - 0.5) * 2;
+        let dy = (Math.random() - 0.5) * 2;
+
+      for (let j = 0; j<20; j++){
+          circleArray.push(new Circle(i*55 + 45, j*55 + 45, dx, dy, radius));
+      }
+    }
 }
 
-function fauxClick(x, y) {
-  var fauxClick = new Event("mousedown");
-  fauxClick.pageX = x;
-  fauxClick.pageY = y;
-  document.dispatchEvent(fauxClick);
-  }
-  */
+//console.log(circleArray);
+
+function animate() {
+    requestAnimationFrame(animate);
+    c.clearRect(0,0, innerWidth, innerHeight);
+    for (let i = 0; i < circleArray.length; i++) {
+        circleArray[i].update();
+    }
+  
+//   canvas.addEventListener('mouseleave', function() {
+//         c.clearRect(0,0, innerWidth, innerHeight);
+//     for (let i = 0; i < circleArray.length; i++) {
+//         circleArray[i].radius = 2;
+//     }
+// });
+}
+
+init();
+
+
+animate();
+
+// while(mouse.x < canvas.width && mouse.y < canvas.height){
+//   animate();
+// }
