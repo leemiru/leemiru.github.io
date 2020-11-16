@@ -20,8 +20,11 @@
                 <div class="swiper-wrapper">
                   <div class="swiper-slide center-align" id="page-welcome">
                       <div class="page-container" id="page-welcome-container">
-                        <p id="page-welcome-head">fix on my own</p>
-                        <p id="page-welcome-desc">Finally the sun is out.</p>
+                        <div id="page-welcome-area">
+                          <p id="page-welcome-head">fix on my own</p>
+                          <p id="page-welcome-desc">Finally the sun is out.</p>
+                        </div>
+                        <p id="page-welcome-desc"><i class="fa fa-hand-o-right" id="page-welcome-hand-o-right"></i></p>
                       </div>
                       <canvas id="dottest"></canvas>
                     </div>
@@ -32,10 +35,13 @@
           </div>
 
           <div class="swiper-slide">
-            <div class="masonry" id="gallery">
-
+            <div class="swiper-container swiper-container-v-projects">
+              <div class="swiper-wrapper">
+                <div class="masonry" id="gallery"></div>
+              </div>
             </div>
           </div>
+        </div>
         <!-- ### end of the gallery definition ### -->
           </div>
         </div>
@@ -65,7 +71,7 @@
 				sub.id = "image-" + count;
 				
 				// $('#image-'+count).attr('src', './images/posts/19-'+ count +'/thumb.png');
-				$('#image-'+count).attr('src', './images/posts/19-'+ count +'/thumb.png');
+        $('#image-'+count).attr('src', './images/posts/19-'+ count +'/thumb.png');
         $('#project-'+count).attr('href', './images/posts/19-'+ count +'/desc.html');
 				var title = $('#image-'+count);
 				
@@ -106,6 +112,13 @@ var swiperV = new Swiper('.swiper-container-v', {
 		el: '.swiper-pagination-v',
 		clickable: true,
 	},
+});
+var swiperVProjects = new Swiper('.swiper-container-v-projects', {
+	direction: 'vertical',
+  spaceBetween: 0,
+	cssMode: true,
+	mousewheel: true,
+	keyboard: true,
 });
 
 function goHome(){
