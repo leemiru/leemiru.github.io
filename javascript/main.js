@@ -8,7 +8,6 @@ root.appendChild(cursor)
 
 var timer;
 
-
 root.addEventListener('mousemove', (e) => {
 	cursor.classList.add('moving')
 	setPosition(cursor, e)

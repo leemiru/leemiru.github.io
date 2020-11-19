@@ -29,11 +29,12 @@ function includeLayout(){
 		}); 
 	}); 
 	
-	completeLoad();
+	//completeLoad();
 }
 
 function completeLoad() {
 	setTimeout(function(){
 		$overlay_load.fadeOut('slow');
+		$overlay_load.remove();
 	}, 1500);
 }

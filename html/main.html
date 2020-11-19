@@ -5,7 +5,7 @@
         <!-- Swiper -->
         <div class="swiper-container swiper-container-h">
           <div class="swiper-wrapper">
-            <div class="swiper-slide center-align" id="swiper-main">
+            <div class="swiper-slide" id="swiper-main">
               <footer class="footer">
                 <div class="cont-footer">
                   <div class="cont-footer-right">
@@ -19,14 +19,12 @@
               <div class="swiper-container swiper-container-v">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide center-align" id="page-welcome">
+                    <canvas id="dottest"></canvas>
                       <div class="page-container" id="page-welcome-container">
                         <div id="page-welcome-area">
-                          <p id="page-welcome-head">fix on my own</p>
-                          <p id="page-welcome-desc">Finally the sun is out.</p>
+                          <p id="page-welcome-hand-o-right-container"><i class="fa fa-hand-o-right" id="page-welcome-hand-o-right"></i></p>
                         </div>
-                        <p id="page-welcome-desc"><i class="fa fa-hand-o-right" id="page-welcome-hand-o-right"></i></p>
                       </div>
-                      <canvas id="dottest"></canvas>
                     </div>
                   <div class="swiper-slide center-align">about</div>
                   <div class="swiper-slide center-align">contact</div>
@@ -37,6 +35,11 @@
           <div class="swiper-slide">
             <div class="swiper-container swiper-container-v-projects">
               <div class="swiper-wrapper">
+                <div class="page-container" id="page-welcome-container">
+                  <div id="page-welcome-area">
+                    <p id="page-welcome-hand-o-left-container"><i class="fa fa-hand-o-left" id="page-welcome-hand-o-left"></i></p>
+                  </div>
+                </div>
                 <div class="masonry" id="gallery"></div>
               </div>
             </div>
@@ -56,7 +59,8 @@
 		let masterpieces = 6; //작품의 최신 개수로 업데이트
     let count = masterpieces + 1;
     let year = 20;
-		const gallery = $('#gallery');
+    const gallery = $('#gallery');
+
 		for (count>1; count--;) {
 			if (count>0) {
         const frame = document.createElement('a');
@@ -91,7 +95,11 @@ var swiperH = new Swiper('.swiper-container-h', {
 	// freeMode: true,
 	cssMode: true,
 	mousewheel: true,
-	keyboard: true,
+  keyboard: true,
+  navigation: {
+        nextEl: '#page-welcome-hand-o-right-container',
+        prevEl: '#page-welcome-hand-o-left-container',
+      },
 	pagination: {
 		el: '.swiper-pagination-h',
 		direction: 'vertical',
@@ -139,9 +147,6 @@ class Dots {
     this.balloon = this.baseRadius * 8;
     this.areaOfInfluence = 256;
 
-	this.color = "#888888";
-	this.focusColor = "#ffffff";
-
     const init = this.init.bind(this);
     const getRadii = this.getRadii.bind(this);
     
@@ -155,7 +160,7 @@ class Dots {
 
   generateDots() {
     const { canvas, gap } = this;
-	const r = this.baseRadius;
+    const r = this.baseRadius;
     let dots = [];
 
     canvas.width = window.innerWidth;
@@ -182,12 +187,16 @@ class Dots {
     const yDiff = Math.abs(y - clientY);
     const distance = Math.sqrt((xDiff * xDiff) + (yDiff * yDiff));
 
+    // var $dottest = $('#dottest');
+    // var style='radial-gradient(circle 500px at '+ clientX +'px '+  clientY +'px,'+ 'red' + ',transparent)';
+    // $dottest.css('background', style);
+
     dot.r = baseRadius;
 
     if (distance < areaOfInfluence) {
       dot.r = this.scale(distance, 0, areaOfInfluence, balloon, baseRadius);
+      
       if (dot.r >= balloon) {
-
       }
     }
 
@@ -207,10 +216,7 @@ class Dots {
     dots.forEach(dot => {
       const { x, y, r } = dot;
       context.beginPath();
-	  context.arc(x, y, r, 0, 2 * Math.PI);
-    var my_gradient = context.createRadialGradient(mouse.x, mouse.y, 500, mouse.x + 500, mouse.y + 500, 1000);
-    my_gradient.addColorStop(0, "red");
-    my_gradient.addColorStop(1, "#555555");
+	  context.arc(x, y, r, 0, 4 * Math.PI);
     context.fillStyle = "#ffffff";
 	  context.fill();
     });
