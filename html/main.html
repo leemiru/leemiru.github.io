@@ -21,14 +21,18 @@
                   <div class="swiper-slide center-align" id="page-welcome">
                       <div class="page-container" id="page-welcome-container">
                         <div id="page-welcome-area" style="display: flex; justify-content: center; align-items: center;">
-                          <div style="width: 256px; height: auto;">
-                            <a href="/images/posts/20-1/post.html"><img src="/images/posts/20-1/poster.svg" style="border-radius: 2.5px;"/></a>
-                            <p>Merry Christmas</p>
+                          <div class="post-thumb">
+                            <a onClick="openPost('20-2')"><img src="/images/posts/20-2/poster.svg" style="border-radius: 2.5px;"/></a>
+                            <p>2021</p>
+                          </div>
+                          <div class="post-thumb">
+                            <a onClick="openPost('20-1')"><img src="/images/posts/20-1/poster.svg" style="border-radius: 2.5px;"/></a>
+                            <p>Digital Christmas</p>
                           </div>
                           <p id="page-welcome-hand-o-right-container"><i class="fa fa-hand-o-right" id="page-welcome-hand-o-right"></i></p>
                         </div>
                       </div>
-                      <canvas id="dottest"></canvas>
+                      <!-- <canvas id="dottest"></canvas> -->
                     </div>
                   <div class="swiper-slide center-align">about</div>
                   <div class="swiper-slide center-align">contact</div>
@@ -44,7 +48,7 @@
                     <p id="page-welcome-hand-o-left-container"><i class="fa fa-hand-o-left" id="page-welcome-hand-o-left"></i></p>
                   </div>
                 </div>
-                <div class="masonry" id="gallery"></div>
+                <!-- <div class="masonry" id="gallery"></div> -->
               </div>
             </div>
           </div>
@@ -135,192 +139,193 @@ var swiperVProjects = new Swiper('.swiper-container-v-projects', {
 
 function goHome(){
   swiperH.slideTo(0, 0);
-	swiperV.slideTo(0, 0);
+  swiperV.slideTo(0, 0);
+  closePost();
 }
 
 //main canvas animation
 // console.clear();
 
-class Dots {
-  constructor(canvasId) {
-    this.dots = [];
-    this.canvas = document.getElementById(canvasId);
-    this.context = this.canvas.getContext("2d");
-    this.baseRadius = 1;
-    this.gap = this.baseRadius * 48;
-    this.balloon = this.baseRadius * 8;
-    this.areaOfInfluence = 256;
+// class Dots {
+//   constructor(canvasId) {
+//     this.dots = [];
+//     this.canvas = document.getElementById(canvasId);
+//     this.context = this.canvas.getContext("2d");
+//     this.baseRadius = 1;
+//     this.gap = this.baseRadius * 48;
+//     this.balloon = this.baseRadius * 8;
+//     this.areaOfInfluence = 256;
 
-    const init = this.init.bind(this);
-    const getRadii = this.getRadii.bind(this);
+//     const init = this.init.bind(this);
+//     const getRadii = this.getRadii.bind(this);
     
-    init();
-    windowResize().listen(init);
+//     init();
+//     windowResize().listen(init);
     
-    document.addEventListener("mousemove", e =>
-      requestAnimationFrame(() => getRadii(e))
-    );
-  }
+//     document.addEventListener("mousemove", e =>
+//       requestAnimationFrame(() => getRadii(e))
+//     );
+//   }
 
-  generateDots() {
-    const { canvas, gap } = this;
-    const r = this.baseRadius;
-    let dots = [];
+//   generateDots() {
+//     const { canvas, gap } = this;
+//     const r = this.baseRadius;
+//     let dots = [];
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+//     canvas.width = window.innerWidth;
+//     canvas.height = window.innerHeight;
 
-    for (let x = 0; x < canvas.width + r; x += gap) {
-      for (let y = 0; y < canvas.height + r; y += gap) {
-        dots.push({ x, y, r });
-      }
-    }
+//     for (let x = 0; x < canvas.width + r; x += gap) {
+//       for (let y = 0; y < canvas.height + r; y += gap) {
+//         dots.push({ x, y, r });
+//       }
+//     }
     
-    return dots;
-  }
+//     return dots;
+//   }
   
-  scale (num, in_min, in_max, out_min, out_max) {
-    return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
-  }
+//   scale (num, in_min, in_max, out_min, out_max) {
+//     return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+//   }
 
-  setRadius(dot, e) {
-    const { areaOfInfluence, baseRadius, balloon } = this;
-    const { x, y } = dot;
-    const { clientX, clientY } = e;
-    const xDiff = Math.abs(x - clientX);
-    const yDiff = Math.abs(y - clientY);
-    const distance = Math.sqrt((xDiff * xDiff) + (yDiff * yDiff));
+//   setRadius(dot, e) {
+//     const { areaOfInfluence, baseRadius, balloon } = this;
+//     const { x, y } = dot;
+//     const { clientX, clientY } = e;
+//     const xDiff = Math.abs(x - clientX);
+//     const yDiff = Math.abs(y - clientY);
+//     const distance = Math.sqrt((xDiff * xDiff) + (yDiff * yDiff));
 
-    // var $dottest = $('#dottest');
-    // var style='radial-gradient(circle 500px at '+ clientX +'px '+  clientY +'px,'+ 'white' + ',transparent)';
-    // $dottest.css('background', style);
+//     // var $dottest = $('#dottest');
+//     // var style='radial-gradient(circle 500px at '+ clientX +'px '+  clientY +'px,'+ 'white' + ',transparent)';
+//     // $dottest.css('background', style);
 
-    dot.r = baseRadius;
+//     dot.r = baseRadius;
 
-    if (distance < areaOfInfluence) {
-      dot.r = this.scale(distance, 0, areaOfInfluence, balloon, baseRadius);
+//     if (distance < areaOfInfluence) {
+//       dot.r = this.scale(distance, 0, areaOfInfluence, balloon, baseRadius);
       
-      if (dot.r >= balloon) {
-      }
-    }
+//       if (dot.r >= balloon) {
+//       }
+//     }
 
-    return dot;
-  }
+//     return dot;
+//   }
 
-  redraw() {
-    const { canvas, context, dots } = this;
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    var mouse = { x: 0, y: 0 };
-    addEventListener("mousemove", function(event) {
-    //event.preventDefault();
-    mouse.x = event.pageX;
-    mouse.y = event.pageY;
-    });
+//   redraw() {
+//     const { canvas, context, dots } = this;
+//     context.clearRect(0, 0, canvas.width, canvas.height);
+//     var mouse = { x: 0, y: 0 };
+//     addEventListener("mousemove", function(event) {
+//     //event.preventDefault();
+//     mouse.x = event.pageX;
+//     mouse.y = event.pageY;
+//     });
 
-    dots.forEach(dot => {
-      const { x, y, r } = dot;
-      context.beginPath();
-	  context.arc(x, y, r, 0, 4 * Math.PI);
-    context.fillStyle = "#ffffff";
-	  context.fill();
-    });
-  }
+//     dots.forEach(dot => {
+//       const { x, y, r } = dot;
+//       context.beginPath();
+// 	  context.arc(x, y, r, 0, 4 * Math.PI);
+//     context.fillStyle = "#ffffff";
+// 	  context.fill();
+//     });
+//   }
 
-  getRadii(e) {
-    const setRadius = this.setRadius.bind(this);
-    this.dots = this.dots.map(dot => setRadius(dot, e));
-    this.redraw();
-  }
+//   getRadii(e) {
+//     const setRadius = this.setRadius.bind(this);
+//     this.dots = this.dots.map(dot => setRadius(dot, e));
+//     this.redraw();
+//   }
 
-  init() {
-    this.dots = this.generateDots();
-    this.redraw();
-  }
-}
+//   init() {
+//     this.dots = this.generateDots();
+//     this.redraw();
+//   }
+// }
 
-const dots = new Dots("dottest");
+// const dots = new Dots("dottest");
 
-/**
- * Performant window resize event listener
- * @return {object}
- *
- * @usage
- *     import windowResize from './window-resize';
- *     windowResize.listen(() => {
- *         ...
- *     });
- */
-function windowResize() {
-  const windowResize = {
-    callbacks: [],
-    running: false,
+// /**
+//  * Performant window resize event listener
+//  * @return {object}
+//  *
+//  * @usage
+//  *     import windowResize from './window-resize';
+//  *     windowResize.listen(() => {
+//  *         ...
+//  *     });
+//  */
+// function windowResize() {
+//   const windowResize = {
+//     callbacks: [],
+//     running: false,
 
-    /**
-     * Add the event listener
-     * @return {undefinied}
-     */
-    init() {
-      window.addEventListener("resize", windowResize.resize, {
-        passive: true
-      });
-    },
+//     /**
+//      * Add the event listener
+//      * @return {undefinied}
+//      */
+//     init() {
+//       window.addEventListener("resize", windowResize.resize, {
+//         passive: true
+//       });
+//     },
 
-    /**
-     * Loop through callbacks and run them
-     * @return {undefinied}
-     */
-    runCallbacks() {
-      windowResize.callbacks.forEach(callback => {
-        callback();
-      });
+//     /**
+//      * Loop through callbacks and run them
+//      * @return {undefinied}
+//      */
+//     runCallbacks() {
+//       windowResize.callbacks.forEach(callback => {
+//         callback();
+//       });
 
-      windowResize.running = false;
-    },
+//       windowResize.running = false;
+//     },
 
-    /**
-     * Event listener method
-     * @return {undefinied}
-     */
-    resize() {
-      if (!windowResize.running) {
-        windowResize.running = true;
+//     /**
+//      * Event listener method
+//      * @return {undefinied}
+//      */
+//     resize() {
+//       if (!windowResize.running) {
+//         windowResize.running = true;
 
-        if (window.requestAnimationFrame) {
-          window.requestAnimationFrame(() => windowResize.runCallbacks());
-        } else {
-          setTimeout(() => windowResize.runCallbacks(), 100);
-        }
-      }
-    },
+//         if (window.requestAnimationFrame) {
+//           window.requestAnimationFrame(() => windowResize.runCallbacks());
+//         } else {
+//           setTimeout(() => windowResize.runCallbacks(), 100);
+//         }
+//       }
+//     },
 
-    /**
-     * Add a callback to the callbacks array
-     * @return {undefinied}
-     */
-    addCallback(callback) {
-      if (callback) {
-        windowResize.callbacks.push(callback);
-      }
-    },
+//     /**
+//      * Add a callback to the callbacks array
+//      * @return {undefinied}
+//      */
+//     addCallback(callback) {
+//       if (callback) {
+//         windowResize.callbacks.push(callback);
+//       }
+//     },
 
-    /**
-     * Test whether or not any callbacks have been registered yet
-     * @return {Boolean}
-     */
-    hasCallbacks() {
-      return windowResize.callbacks.length > 0;
-    }
-  };
+//     /**
+//      * Test whether or not any callbacks have been registered yet
+//      * @return {Boolean}
+//      */
+//     hasCallbacks() {
+//       return windowResize.callbacks.length > 0;
+//     }
+//   };
 
-  return {
-    // public method to add additional callback
-    listen: callback => {
-      if (!windowResize.hasCallbacks()) {
-        windowResize.init();
-      }
-      windowResize.addCallback(callback);
-    }
-  };
-}
+//   return {
+//     // public method to add additional callback
+//     listen: callback => {
+//       if (!windowResize.hasCallbacks()) {
+//         windowResize.init();
+//       }
+//       windowResize.addCallback(callback);
+//     }
+//   };
+// }
 
 	</script>
