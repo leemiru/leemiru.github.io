@@ -1,147 +1,126 @@
-	<div class="container" id="main-container">
-		<!--================Contents Showing Area================-->
-		<div id="main-contents">
-			<div class="banner-container">
-        <!-- Swiper -->
-        <div class="swiper-container swiper-container-h">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide" id="swiper-main">
-              <footer class="footer">
-                <div class="cont-footer">
-                  <div class="cont-footer-right">
-                    <!-- Add Pagination -->
-                    <div class="pagination-wrapper vert">
-                      <div class="swiper-pagination swiper-pagination-v"></div>
-                    </div>
-                  </div>
-                </div>
-              </footer>
-              <div class="swiper-container swiper-container-v">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide center-align" id="page-welcome">
-                      <div class="page-container" id="page-welcome-container">
-                        <div id="page-welcome-area" style="display: flex; justify-content: center; align-items: center;">
-                          <div class="post-thumb">
-                            <a onClick="openPost('20-2')"><img src="/images/posts/20-2/poster.svg" style="border-radius: 2.5px;"/></a>
-                            <p>2021</p>
-                          </div>
-                          <div class="post-thumb">
-                            <a onClick="openPost('20-1')"><img src="/images/posts/20-1/poster.svg" style="border-radius: 2.5px;"/></a>
-                            <p>Digital Christmas</p>
-                          </div>
-                          <p id="page-welcome-hand-o-right-container"><i class="fa fa-hand-o-right" id="page-welcome-hand-o-right"></i></p>
-                        </div>
-                      </div>
-                      <!-- <canvas id="dottest"></canvas> -->
-                    </div>
-                  <div class="swiper-slide center-align">about</div>
-                  <div class="swiper-slide center-align">contact</div>
-                </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="swiper-container swiper-container-v-projects">
-              <div class="swiper-wrapper">
-                <div class="page-container" id="page-welcome-container">
-                  <div id="page-welcome-area">
-                    <p id="page-welcome-hand-o-left-container"><i class="fa fa-hand-o-left" id="page-welcome-hand-o-left"></i></p>
-                  </div>
-                </div>
-                <!-- <div class="masonry" id="gallery"></div> -->
-              </div>
-            </div>
+<div class="container" id="main-container">
+  <!--================Contents Showing Area================-->
+  <div id="main-contents">
+    <footer class="footer">
+      <div class="cont-footer">
+        <div class="cont-footer-right">
+          <!-- Add Pagination -->
+          <div class="pagination-wrapper vert">
+            <div class="swiper-pagination swiper-pagination-v"></div>
           </div>
         </div>
-        <!-- ### end of the gallery definition ### -->
+      </div>
+    </footer>
+    <div class="swiper-container swiper-container-gallery">
+
+      <div class="gallery-navigation">
+        <div class="gallery-prev"><i class="fa fa-hand-o-left"></i></div>
+        <div class="gallery-next"><i class="fa fa-hand-o-right"></i></div>
+      </div>
+
+      <div class="swiper-wrapper gallery-new">
+
+        <div class="swiper-slide project-slide" id="swiper-projects">
+          <div onClick="openPost('new-year-2021')">
+            <img src="/images/posts/new-year-2021/poster.svg" />
+            <p>Happy New Year - 2021</p>
           </div>
         </div>
-			</div>
-		</div>
-	<script src="../javascript/jquery-3.5.1.min.js"></script>
-	<script>
-	/*======작업물 나열 구간======*/
-	allProjects();
-  
-  function allProjects() {
-		let masterpieces = 6; //작품의 최신 개수로 업데이트
-    let count = masterpieces + 1;
-    let year = 20;
-    const gallery = $('#gallery');
 
-		for (count>1; count--;) {
-			if (count>0) {
-        const frame = document.createElement('a');
-        frame.className="project-frame"
-        frame.id= "project-" + count;
-				gallery.append(frame);
-				
-				const sub = document.createElement('img');
-				frame.append(sub);
-				
-        sub.className="item";
-				sub.id = "image-" + count;
-				
-				// $('#image-'+count).attr('src', './images/posts/19-'+ count +'/thumb.png');
-        $('#image-'+count).attr('src', './images/posts/19-'+ count +'/thumb.png');
-        $('#project-'+count).attr('href', './images/posts/19-'+ count +'/desc.html');
-				var title = $('#image-'+count);
-				
-				//JSON Array
-				var jsondata = './images/posts/19-'+ count +'/data.json';
-				$.getJSON(jsondata, function(title) { return (data) => {
-					title.html(JSON.stringify(data.index));
-				}}(title));;
-				
-			}
-		}
-		
-  }
+        <div class="swiper-slide project-slide" id="swiper-projects">
+          <div onClick="openPost('digital-christmas')">
+            <img src="/images/posts/digital-christmas/poster.svg" />
+            <p>Digital Christmas</p>
+          </div>
+        </div>
 
-var swiperH = new Swiper('.swiper-container-h', {
-	spaceBetween: 0,
-	// freeMode: true,
-	cssMode: true,
-	mousewheel: true,
-  keyboard: true,
-  navigation: {
-        nextEl: '#page-welcome-hand-o-right-container',
-        prevEl: '#page-welcome-hand-o-left-container',
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/javascript/jquery-3.5.1.min.js"></script>
+<script>
+  /*======작업물 나열 구간======*/
+  // allProjects();
+
+  // function allProjects() {
+  //   let masterpieces = 6; //작품의 최신 개수로 업데이트
+  //   let count = masterpieces + 1;
+  //   let year = 20;
+  //   const gallery = $('#gallery');
+
+  //   for (count > 1; count--;) {
+  //     if (count > 0) {
+  //       const frame = document.createElement('a');
+  //       frame.className = "project-frame"
+  //       frame.id = "project-" + count;
+  //       gallery.append(frame);
+
+  //       const sub = document.createElement('img');
+  //       frame.append(sub);
+
+  //       sub.className = "item";
+  //       sub.id = "image-" + count;
+
+  //       // $('#image-'+count).attr('src', './images/posts/19-'+ count +'/thumb.png');
+  //       $('#image-' + count).attr('src', './images/posts/19-' + count + '/thumb.png');
+  //       $('#project-' + count).attr('href', './images/posts/19-' + count + '/desc.html');
+  //       var title = $('#image-' + count);
+
+  //       //JSON Array
+  //       var jsondata = './images/posts/19-' + count + '/data.json';
+  //       $.getJSON(jsondata, function (title) {
+  //         return (data) => {
+  //           title.html(JSON.stringify(data.index));
+  //         }
+  //       }(title));;
+
+  //     }
+  //   }
+
+  // }
+  var swiperV = new Swiper('.swiper-container-v', {
+    direction: 'vertical',
+    spaceBetween: 0,
+    cssMode: true,
+    mousewheel: true,
+    keyboard: true,
+    pagination: {
+      el: '.swiper-pagination-v',
+      clickable: true,
+    },
+  });
+
+  var swiperProjects = new Swiper(".swiper-container-gallery", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    mousewheel: true,
+    keyboard: true,
+    coverflowEffect: {
+      rotate: 20,
+      stretch: 0,
+      depth: 500,
+      modifier: 1,
+      slideShadows: false
+    },
+    pagination: {
+      el: '.swiper-pagination-h',
+      direction: 'vertical',
+      slidesPerView: 'auto',
+      clickable: true,
+    },
+    navigation: {
+        nextEl: '.gallery-next',
+        prevEl: '.gallery-prev',
       },
-	pagination: {
-		el: '.swiper-pagination-h',
-		direction: 'vertical',
-		slidesPerView: 'auto',
-		clickable: true,
-    renderBullet: function (index, className) {
-          return '<span class="' + className + '">' + (index + 1) + '</span>';
-        },
-	},
-});
-var swiperV = new Swiper('.swiper-container-v', {
-	direction: 'vertical',
-	spaceBetween: 0,
-	cssMode: true,
-	mousewheel: true,
-	keyboard: true,
-	pagination: {
-		el: '.swiper-pagination-v',
-		clickable: true,
-	},
-});
-var swiperVProjects = new Swiper('.swiper-container-v-projects', {
-	direction: 'vertical',
-  spaceBetween: 0,
-	cssMode: true,
-	mousewheel: true,
-	keyboard: true,
-});
+  });
 
-function goHome(){
-  swiperH.slideTo(0, 0);
-  swiperV.slideTo(0, 0);
-  closePost();
-}
+  function goHome() {
+    // swiperV.slideTo(0, 0);
+    closePost();
+  }
 
 //main canvas animation
 // console.clear();
@@ -158,10 +137,10 @@ function goHome(){
 
 //     const init = this.init.bind(this);
 //     const getRadii = this.getRadii.bind(this);
-    
+
 //     init();
 //     windowResize().listen(init);
-    
+
 //     document.addEventListener("mousemove", e =>
 //       requestAnimationFrame(() => getRadii(e))
 //     );
@@ -180,10 +159,10 @@ function goHome(){
 //         dots.push({ x, y, r });
 //       }
 //     }
-    
+
 //     return dots;
 //   }
-  
+
 //   scale (num, in_min, in_max, out_min, out_max) {
 //     return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 //   }
@@ -204,7 +183,7 @@ function goHome(){
 
 //     if (distance < areaOfInfluence) {
 //       dot.r = this.scale(distance, 0, areaOfInfluence, balloon, baseRadius);
-      
+
 //       if (dot.r >= balloon) {
 //       }
 //     }
@@ -328,4 +307,4 @@ function goHome(){
 //   };
 // }
 
-	</script>
+</script>
