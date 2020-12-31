@@ -17,6 +17,10 @@ a {
   color: white;
 }
 
+body {
+	overflow: hidden;
+}
+
 * {
   font-family: "Helvetica", "KopubWorldDotum", "Noto Sans KR", sans-serif;
   font-weight: 500;
@@ -66,8 +70,9 @@ a {
   top: 100%;
   /* animation-name: postModalopen; */
   animation-duration: 0.25s;
-  animation-timing-function: ease-out;
+  animation-timing-function: ease-in-out;
   animation-iteration-count: 1;
+  background-color: white;
 }
 
 #postModal > .modal-container {
@@ -83,11 +88,13 @@ a {
 
 @keyframes postModalopen {
   0% {
-    top: 100%;
+	top: 100%;
+	opacity: 0;
   }
 
   100% {
-    top: 0%;
+	top: 0%;
+	opacity: 1;
   }
 }
 
@@ -105,13 +112,13 @@ a {
 
 @keyframes postModalclose {
   0% {
-    border-radius: 100%;
-    top: 0%;
+	top: 0%;
+	opacity: 1;
   }
 
   100% {
-    border-radius: 0%;
-    top: 100%;
+	top: 100%;
+	opacity: 0;
   }
 }
 
