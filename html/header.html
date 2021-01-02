@@ -1,12 +1,13 @@
 	<header class="header" id="main-header">
 		<div class="cont-header">
 			<div class="cont-header-left">
-			<a onclick="goHome()" class="main-logo"><img id="main-logo-image" src="/data/image/logo.svg"></img></a>
+			<a onclick="goHome()" class="btn main-logo"><img id="main-logo-image" src="/data/image/logo.svg"></img></a>
 			<!-- <h5 class="single-notice" id="single-notice">how much days i left?</h5> -->
 			</div>
 			<div class="cont-header-right">
+				<div class="btn action" id="btn-close" onclick="closePost()"><i class="fa fa-close"></i></div>
 				<!-- Add Pagination -->
-				<div class="pagination-wrapper">
+				<div class="pagination-wrapper" id="gallery-pagination">
 					<div class="swiper-pagination swiper-pagination-h"></div>
 				</div>
 		</div>
