@@ -23,7 +23,7 @@
 
         <div class="swiper-slide project-slide" id="swiper-projects">
           <div onClick="openPost('new-year-2021')">
-            <img src="/images/posts/new-year-2021/thumb.png" />
+            <img src="/images/posts/new-year-2021/poster.svg" />
             <p>Happy New Year - 2021</p>
           </div>
           <div class="glow" /></div>
@@ -31,7 +31,7 @@
 
         <div class="swiper-slide project-slide" id="swiper-projects">
           <div onClick="openPost('digital-christmas')">
-            <img src="/images/posts/digital-christmas/thumb.png" />
+            <img src="/images/posts/digital-christmas/poster.svg" />
             <p>Digital Christmas</p>
           </div>
         </div>
@@ -116,18 +116,6 @@
   //   }
 
   // }
-  var swiperV = new Swiper('.swiper-container-v', {
-    direction: 'vertical',
-    spaceBetween: 0,
-    cssMode: true,
-    mousewheel: true,
-    keyboard: true,
-    pagination: {
-      el: '.swiper-pagination-v',
-      clickable: true,
-    },
-  });
-
   var swiperProjects = new Swiper(".swiper-container-gallery", {
     effect: "coverflow",
     grabCursor: false,

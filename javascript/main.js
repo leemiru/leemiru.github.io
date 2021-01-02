@@ -25,8 +25,23 @@
 
 
 function openPost(url) {
+	$('#postframe').attr('onload', 'upPost(this)');
 	$('#postframe').attr('src', '/images/posts/'+url+'/post.html');
 
+	// $('#postModal').css('animation-name', 'postModalopen');
+	// $('#postModal').css('top', '0%');
+
+	// $('#block-main').css('animation-name', 'postModalopenbg');
+	// $('#block-main').css('opacity', '0');
+
+	// $('#gallery-pagination').css('display', 'none');
+	
+	// $('#btn-close').css('display', 'inline-block');
+
+	// console.log(url + ' post opened');
+  }
+
+  function upPost() {
 	$('#postModal').css('animation-name', 'postModalopen');
 	$('#postModal').css('top', '0%');
 
@@ -37,7 +52,7 @@ function openPost(url) {
 	
 	$('#btn-close').css('display', 'inline-block');
 
-	console.log(url + ' post opened');
+	console.log('post opened');
   }
 
 function closePost() {
@@ -51,9 +66,9 @@ function closePost() {
 
 	$('#btn-close').css('display', 'none');
 
-	setTimeout(function(){
-		$('#postframe').attr('src', ' ');
-	},200);
+	// setTimeout(function(){
+	// 	$('#postframe').attr('src', ' ');
+	// },200);
 
 	console.log('post closed');
   }
