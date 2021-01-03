@@ -32,6 +32,9 @@ function upPost() {
   $("#postModal").css("animation-name", "postModalopen");
   $("#postModal").css("top", "0%");
 
+  $('.header').css('background-color', 'rgba(0, 0, 0, 0');
+  $('.footer').css('background-color', 'rgba(0, 0, 0, 0');
+
   $("#block-main").css("animation-name", "postModalopenbg");
   $("#block-main").css("opacity", "0");
 
@@ -46,6 +49,9 @@ function upPost() {
 function closePost() {
   $("#postModal").css("animation-name", "postModalclose");
   $("#postModal").css("top", "100%");
+
+  $('.header').css('background-color', 'rgba(0, 0, 0, 0.9');
+  $('.footer').css('background-color', 'rgba(0, 0, 0, 0.9');
 
   $("#block-main").css("animation-name", "postModalclosebg");
   $("#block-main").css("opacity", "1");
@@ -83,11 +89,11 @@ $(window).scroll(function () {
 
   //header는 스크롤을 바닥에 닿자마자 반전
   if ($height > $body - 30) {
-	  $('.body').css('background-color', '#fff');
+    $(".body").css("background-color", "#fff");
     $(".header").css("filter", "invert(1)");
-	$("#gallery-pagination").css("display", "none");
+    $("#gallery-pagination").css("display", "none");
   } else {
-	$('.body').css('background-color', '#000');
+    $(".body").css("background-color", "#000");
     $(".header").css("filter", "invert(0)");
     $("#gallery-pagination").css("display", "flex");
     $("#btn-intro").text("⍗");
