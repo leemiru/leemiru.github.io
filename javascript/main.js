@@ -83,9 +83,11 @@ $(window).scroll(function () {
 
   //header는 스크롤을 바닥에 닿자마자 반전
   if ($height > $body - 30) {
+	  $('.body').css('background-color', '#fff');
     $(".header").css("filter", "invert(1)");
 	$("#gallery-pagination").css("display", "none");
   } else {
+	$('.body').css('background-color', '#000');
     $(".header").css("filter", "invert(0)");
     $("#gallery-pagination").css("display", "flex");
     $("#btn-intro").text("⍗");

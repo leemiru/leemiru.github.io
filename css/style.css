@@ -30,7 +30,7 @@ body {
 }
 
 .body {
-  background-color: #fff;
+  background-color: #000;
 }
 
 .body::before {
@@ -162,6 +162,10 @@ body {
   transition: filter 200ms;
   background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: invert(0) blur(20px);
+  -webkit-backdrop-filter: invert(0) blur(20px);
+  -moz-backdrop-filter: invert(0) blur(20px);
+  -ms-backdrop-filter: invert(0) blur(20px);
+  -o-backdrop-filter: invert(0) blur(20px);
 }
 
 
@@ -241,6 +245,10 @@ body {
   transition: filter 200ms;
   background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: invert(0) blur(20px);
+  -webkit-backdrop-filter: invert(0) blur(20px);
+  -moz-backdrop-filter: invert(0) blur(20px);
+  -ms-backdrop-filter: invert(0) blur(20px);
+  -o-backdrop-filter: invert(0) blur(20px);
 }
 
 .cont-footer {
