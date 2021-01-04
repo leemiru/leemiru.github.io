@@ -8,12 +8,18 @@ var $postframe;
 var $body;
 
 function openPost(url) {
-  $("#postframe").attr("onload", "upPost(this)");
-  $("#postframe").attr("src", "/images/posts/" + url + "/post.html");
+  $("body").addClass("lock-position");
+
+  $("#loadingModal").addClass("active");
+
+  setTimeout(function () {
+    $("#postframe").attr("onload", "upPost(this)");
+    $("#postframe").attr("src", "/images/posts/" + url + "/post.html");
+  }, 1500);
 }
 
 function upPost() {
-  $("body").addClass("lock-position");
+	$("#loadingModal").removeClass("active");
 
   $("#postModal").css("animation-name", "postModalopen");
   $("#postModal").css("top", "0%");
@@ -68,26 +74,25 @@ $(window).scroll(function () {
   //header는 스크롤을 바닥에 닿자마자 반전
   if ($height > $body - 30) {
     $(".cont-header").css("filter", "invert(1) hue-rotate(180deg)");
-	$("#gallery-pagination").css("display", "none");
-	$(".header").addClass('blur');
+    $("#gallery-pagination").css("display", "none");
+    $(".header").addClass("blur");
   } else {
     $(".body").css("background-color", "#000");
     $(".cont-header").css("filter", "invert(0)");
     $("#gallery-pagination").css("display", "flex");
-	$("#btn-intro").text("⍗");
-	$(".header").removeClass('blur');
+    $("#btn-intro").text("⍗");
+    $(".header").removeClass("blur");
   }
 
   //footer는 스크롤을 시작하자마자 반전
   if ($height > 60) {
-	$(".cont-footer").css("filter", "invert(1)  hue-rotate(180deg)");
-	$(".footer").addClass('blur');
-	$("#btn-intro").text("⍐");
-	stopBounce();
-	
+    $(".cont-footer").css("filter", "invert(1)  hue-rotate(180deg)");
+    $(".footer").addClass("blur");
+    $("#btn-intro").text("⍐");
+    stopBounce();
   } else {
-	$(".cont-footer").css("filter", "invert(0)");
-	$(".footer").removeClass('blur');
+    $(".cont-footer").css("filter", "invert(0)");
+    $(".footer").removeClass("blur");
   }
 
   $("#main-logo-image").css("transform", "rotateX(" + deg + "deg)");
@@ -98,7 +103,6 @@ function gotoIntro() {
   var $body = $("#main-contents").height();
 
   if ($height < $body) {
-
     $("html, body").animate(
       { scrollTop: $("#intro-contents").offset().top },
       500
@@ -109,5 +113,5 @@ function gotoIntro() {
 }
 
 function stopBounce() {
-	$("#btn-intro").css("animation-iteration-count", "1");
+  $("#btn-intro").css("animation-iteration-count", "1");
 }

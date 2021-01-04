@@ -135,6 +135,32 @@ a {
   60% {transform: translateY(-7.5px);}
 } 
 
+#loadingModal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+  display: block;
+  top: 0;
+  z-index: -99999;
+  transition: opacity 300ms;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#loadingModal.active {
+  z-index: 99999;
+  opacity: 1;
+}
+
+#loadingModal > .modal-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /*classes*/
 .container {
   width: 100%;
