@@ -8,18 +8,13 @@ var $postframe;
 var $body;
 
 function openPost(url) {
-  $("body").addClass("lock-position");
-
   $("#loadingModal").addClass("active");
-
-  setTimeout(function () {
-    $("#postframe").attr("onload", "upPost(this)");
-    $("#postframe").attr("src", "/images/posts/" + url + "/post.html");
-  }, 1500);
+  $("#postframe").attr("onload", "upPost(this)");
+  $("#postframe").attr("src", "/images/posts/" + url + "/post.html");
 }
 
 function upPost() {
-	$("#loadingModal").removeClass("active");
+  $("#loadingModal").removeClass("active");
 
   $("#postModal").css("animation-name", "postModalopen");
   $("#postModal").css("top", "0%");
@@ -30,6 +25,10 @@ function upPost() {
 
   $("#btn-close").css("display", "inline-block");
   $("#btn-intro").css("display", "none");
+
+  setTimeout(function() {
+	$("body").addClass("lock-position");
+  }, 500);
 
   console.log("post opened");
 }

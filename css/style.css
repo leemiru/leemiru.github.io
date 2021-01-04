@@ -30,6 +30,7 @@ a {
 
 .body.lock-position {
   overflow: hidden;
+  position: fixed;
   touch-action: none;
   -ms-touch-action: none;
 }
