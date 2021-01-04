@@ -7,6 +7,14 @@ var $main;
 var $postframe;
 var $body;
 
+function goHome() {
+    // swiperV.slideTo(0, 0);
+    $("html, body").animate(
+    { scrollTop: 0 }, 500);
+    closePost();
+    console.log('Home clicked');
+  }
+
 function openPost(url) {
   $("#loadingModal").addClass("active");
   $("#postframe").attr("onload", "upPost(this)");
