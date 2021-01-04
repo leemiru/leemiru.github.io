@@ -24,18 +24,12 @@ a {
   color: white;
 }
 
-body {
-  overflow: visible;
-  /* background-color: #000; */
-}
-
 .body {
   background-color: #000;
 }
 
 .body.lock-position {
-  position: sticky;
-  position: hidden;
+  overflow: hidden;
   touch-action: none;
   -ms-touch-action: none;
 }
@@ -51,10 +45,6 @@ body {
   z-index: 0;
   opacity: 0.3;
   /* background-image: url('/images/background.gif'); */
-}
-
-.light {
-  filter: invert(1);
 }
 
 #block-main {
@@ -303,8 +293,11 @@ body {
 }
 
 /*main contents area*/
-#main-contents{
-  height: 100%;
+#main-contents,
+#intro-contents{
+  position: sticky;
+  top: 0;
+  height: 100vh;
   width: 100%;
 }
 
@@ -515,7 +508,7 @@ body {
   }
 
   .contents-container {
-    overflow: hidden;
+    /* overflow: hidden; */
     padding-left: 32px;
     padding-right: 32px;
     padding-top: 64px;

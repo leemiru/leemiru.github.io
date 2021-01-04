@@ -58,12 +58,12 @@ $(window).scroll(function () {
   }
 
   if ($height < 0) {
-    deg == 0;
+    height == 0;
   }
 
   //gallery Parallax;
-//   $("#swiper-gallery").css("transform", "translateY(" + $height / 1.75 + "px)");
-//   $("#swiper-gallery").css("opacity", 100 - $height / 10 + "%");
+  $("#swiper-gallery").css("transform", "translateY(" + $height / 1.75 + "px)");
+  $("#swiper-gallery").css("opacity", 100 - $height / 10 + "%");
 
   //header는 스크롤을 바닥에 닿자마자 반전
   if ($height > $body - 30) {
