@@ -12,9 +12,4 @@ function includeLayout(){
 			self.removeAttr("data-include"); 
 		}); 
 	}); 
-	
-	//completeLoad();
-}
-
-function completeLoad() {
 }

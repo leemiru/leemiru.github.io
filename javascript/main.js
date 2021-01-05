@@ -7,13 +7,16 @@ var $main;
 var $postframe;
 var $body;
 
+window.onload = function() {
+  startLoadFile();
+};
+
 function goHome() {
-    // swiperV.slideTo(0, 0);
-    $("html, body").animate(
-    { scrollTop: 0 }, 500);
-    closePost();
-    console.log('Home clicked');
-  }
+  // swiperV.slideTo(0, 0);
+  $("html, body").animate({ scrollTop: 0 }, 500);
+  closePost();
+  console.log("Home clicked");
+}
 
 function openPost(url) {
   $("#loadingModal").addClass("active");
@@ -34,8 +37,8 @@ function upPost() {
   $("#btn-close").css("display", "inline-block");
   $("#btn-intro").css("display", "none");
 
-  setTimeout(function() {
-	$("body").addClass("lock-position");
+  setTimeout(function () {
+    $("body").addClass("lock-position");
   }, 500);
 
   console.log("post opened");
@@ -121,4 +124,40 @@ function gotoIntro() {
 
 function stopBounce() {
   $("#btn-intro").css("animation-iteration-count", "1");
+}
+
+//프로젝트 이미지 불러오기
+function startLoadFile() {
+  $.ajax({
+    url: "/images/posts/projects.json",
+    type: "GET",
+    dataType: "json",
+    success: function (data) {
+      createImages(data);
+    },
+  });
+}
+
+// JSON 포멧 데이터 처리
+function createImages(objImageInfo) {
+  var projects = objImageInfo.projects;
+  var strDOM = "";
+  for (var i = 0; i < projects.length; i++) {
+    // N번째 이미지 정보를 구하기
+    var image = projects[i];
+
+    // N번째 이미지 패널을 생성
+    strDOM += '<div class="swiper-slide project-slide" id="swiper-projects">';
+    strDOM += "<div onclick='openPost(" + '"' + image.id + '"' + ")''>";
+    strDOM += '   <img class="swiper-lazy" src="'+ image.thumb +'" alt="'+ image.type + ' / ' + image.name +'" />';
+    strDOM += '   <p class="project-title">' + image.name + "</p>";
+    strDOM += ' </div>';
+    strDOM += '</div>';
+  }
+
+  // 이미지 컨테이너에 생성한 이미지 패널들을 추가하기
+  var $galleryContainer = $("#gallery-container");
+  $galleryContainer .append(strDOM);
+
+  swiperProjects.init();
 }

@@ -201,6 +201,8 @@ a {
   -moz-backdrop-filter: blur(10px);
   -ms-backdrop-filter: blur(10px);
   -o-backdrop-filter: blur(10px);
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
 }
 
 .footer {
@@ -333,6 +335,7 @@ a {
 }
 
 .contents-container {
+  min-height: 100vh;
   padding-left: 42px;
   padding-right: 42px;
   padding-top: 80px;
@@ -395,14 +398,16 @@ a {
 }
 
 .project-slide > div > img {
-  border-radius: 5px;
+  border-radius: 0px;
   object-fit: contain;
   min-height: 256px;
   /* box-shadow: 0 15px 150px 0px black; */
   width: 100%;
 }
 
-.swiper-container-v {
+.project-title {
+  font-size: 16px;
+  color: white;
 }
 
 .swiper-slide {

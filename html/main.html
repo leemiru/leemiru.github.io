@@ -9,162 +9,36 @@
         <div class="gallery-next"><i class="fa fa-hand-o-right"></i></div>
       </div>
 
-      <div class="swiper-wrapper gallery">
-
-        <div class="swiper-slide project-slide" id="swiper-projects">
-          <div onClick="openPost('new-year-2021')">
-            <img src="/images/posts/new-year-2021/poster.svg" />
-            <p>Happy New Year - 2021</p>
-          </div>
-          <div class="glow" /></div>
-        </div>
-
-        <div class="swiper-slide project-slide" id="swiper-projects">
-          <div onClick="openPost('digital-christmas')">
-            <img src="/images/posts/digital-christmas/poster.svg" />
-            <p>Digital Christmas</p>
-          </div>
-        </div>
-
-        <div class="swiper-slide project-slide" id="swiper-projects">
-          <div onClick="openPost('gyeryong-it-2')">
-            <img src="/images/posts/gyeryong-it-2/thumb.png" />
-            <p>계룡 전산 한마당 2</p>
-          </div>
-        </div>
-
-        <div class="swiper-slide project-slide" id="swiper-projects">
-          <div onClick="openPost('vinyl-still-playin')">
-            <img src="/images/posts/vinyl-still-playin/thumb.png" />
-            <p>Vinyl still playin</p>
-          </div>
-        </div>
-
-        <div class="swiper-slide project-slide" id="swiper-projects">
-          <div onClick="openPost('sunrise')">
-            <img src="/images/posts/sunrise/thumb.png" />
-            <p>Sunrise</p>
-          </div>
-        </div>
-
-        <div class="swiper-slide project-slide" id="swiper-projects">
-          <div onClick="openPost('gyeryong-it')">
-            <img src="/images/posts/gyeryong-it/thumb.png" />
-            <p>계룡 전산 한마당</p>
-          </div>
-        </div>
-
-        <div class="swiper-slide project-slide" id="swiper-projects">
-          <div onClick="openPost('sky-space')">
-            <img src="/images/posts/sky-space/thumb.png" />
-            <p>하늘로 우주로</p>
-          </div>
-        </div>
+      <div class="swiper-wrapper gallery" id="gallery-container">
 
       </div>
-      <div class="bouncing_ball">
-        <div class="ball"></div>
-      </div>
-    </section>
+  </section>
 
-    <section id="intro-contents" style="background-color: white;">
-      <div class="contents-container">
-        <div style="min-height: 100%; padding-left: 8px; padding-right: 8px; background-color: black; line-height: 1.7;">
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-        contents are working in progress<br>
-      </div>
-      </div>
-    </section>
-  </main>
+  <section id="intro-contents" style="background-color: white;">
+    <div class="contents-container">
+      <p class="contents-title">Portfolios</p>
+      <p class="contents-title">Portraits</p>
+    </div>
+    <style>
+      .contents-title {
+        width: 100%;
+        height: 24px;
+        border-bottom: 1px solid #000;
+        color: #000;
+        font-size: 18px;
+        line-height: 0.6;
+      }
+    </style>
+  </section>
+</main>
 </div>
-<script src="/javascript/jquery-3.5.1.min.js"></script>
+<!-- <script src="/javascript/jquery-3.5.1.min.js"></script> -->
+<script src="/javascript/swiper-bundle.min.js"></script>
 <script>
-  /*======작업물 나열 구간======*/
-  // allProjects();
 
-  // function allProjects() {
-  //   let masterpieces = 6; //작품의 최신 개수로 업데이트
-  //   let count = masterpieces + 1;
-  //   let year = 20;
-  //   const gallery = $('#gallery');
-
-  //   for (count > 1; count--;) {
-  //     if (count > 0) {
-  //       const frame = document.createElement('a');
-  //       frame.className = "project-frame"
-  //       frame.id = "project-" + count;
-  //       gallery.append(frame);
-
-  //       const sub = document.createElement('img');
-  //       frame.append(sub);
-
-  //       sub.className = "item";
-  //       sub.id = "image-" + count;
-
-  //       // $('#image-'+count).attr('src', './images/posts/19-'+ count +'/thumb.png');
-  //       $('#image-' + count).attr('src', './images/posts/19-' + count + '/thumb.png');
-  //       $('#project-' + count).attr('href', './images/posts/19-' + count + '/desc.html');
-  //       var title = $('#image-' + count);
-
-  //       //JSON Array
-  //       var jsondata = './images/posts/19-' + count + '/data.json';
-  //       $.getJSON(jsondata, function (title) {
-  //         return (data) => {
-  //           title.html(JSON.stringify(data.index));
-  //         }
-  //       }(title));;
-
-  //     }
-  //   }
-
-  // }
   var swiperProjects = new Swiper(".swiper-container-gallery", {
+    init: false,
+    lazy: true,
     effect: "coverflow",
     grabCursor: false,
     centeredSlides: true,
@@ -191,4 +65,5 @@
       prevEl: '.gallery-prev',
     },
   });
+  
 </script>
