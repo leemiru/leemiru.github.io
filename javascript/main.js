@@ -7,10 +7,6 @@ var $main;
 var $postframe;
 var $body;
 
-window.onload = function() {
-  startLoadFile();
-};
-
 function goHome() {
   // swiperV.slideTo(0, 0);
   $("html, body").animate({ scrollTop: 0 }, 500);

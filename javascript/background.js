@@ -1,5 +1,6 @@
 $(function(){
 	includeLayout();
+	startLoadFile();
 }); 
 
 function includeLayout(){ 
