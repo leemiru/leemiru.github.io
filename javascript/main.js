@@ -57,6 +57,7 @@ function closePost() {
   console.log("post closed");
 }
 
+
 $(window).scroll(function () {
   var $height = $(window).scrollTop();
   var $body = $(".body").height();
@@ -74,7 +75,7 @@ $(window).scroll(function () {
   }
 
   //gallery Parallax;
-  $("#swiper-gallery").css("transform", "translateY(" + $height / 1.75 + "px)");
+  $("#swiper-gallery").css("transform", "translateY(-" + $height / 3 + "px)");
   $("#swiper-gallery").css("opacity", 100 - $height / 10 + "%");
 
   //header는 스크롤을 바닥에 닿자마자 반전
@@ -145,15 +146,22 @@ function createImages(objImageInfo) {
     // N번째 이미지 패널을 생성
     strDOM += '<div class="swiper-slide project-slide" id="swiper-projects">';
     strDOM += "<div onclick='openPost(" + '"' + image.id + '"' + ")''>";
-    strDOM += '   <img class="swiper-lazy" src="'+ image.thumb +'" alt="'+ image.type + ' / ' + image.name +'" />';
+    strDOM +=
+      '   <img class="swiper-lazy" src="' +
+      image.thumb +
+      '" alt="' +
+      image.type +
+      " / " +
+      image.name +
+      '" />';
     strDOM += '   <p class="project-title">' + image.name + "</p>";
-    strDOM += ' </div>';
-    strDOM += '</div>';
+    strDOM += " </div>";
+    strDOM += "</div>";
   }
 
   // 이미지 컨테이너에 생성한 이미지 패널들을 추가하기
   var $galleryContainer = $("#gallery-container");
-  $galleryContainer .append(strDOM);
+  $galleryContainer.append(strDOM);
 
   swiperProjects.init();
 }

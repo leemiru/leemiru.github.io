@@ -191,7 +191,11 @@ a {
   height: 80px;
   position: fixed;
   z-index: 999;
-  /* transition: all 200ms; */
+  transition: filter 250ms;
+  -webkit-transition: filter 250ms;
+  -ms-transition: filter 250ms;
+  -moz-transition: filter 250ms;
+  -o-transition: filter 250ms;
 }
 
 .blur {
@@ -215,6 +219,11 @@ a {
   align-items: center;
   width: 100%;
   height: calc(100% - 8px);
+  transition: filter 250ms;
+  -webkit-transition: filter 250ms;
+  -ms-transition: filter 250ms;
+  -moz-transition: filter 250ms;
+  -o-transition: filter 250ms;
   /* background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)); */
 }
 
@@ -265,6 +274,10 @@ a {
   width: calc(100% / 3);
   align-items: center;
   padding-left: 42px;
+}
+
+.cont-header .cont-header-center {
+  text-align: center;
 }
 
 .cont-footer .cont-footer-left > #copyright {
@@ -346,7 +359,8 @@ a {
 .swiper-container {
   width: 100%;
   height: 100%;
-  position: sticky;
+  position: fixed;
+  top: 0;
 }
 
 .swiper-wrapper.gallery {
