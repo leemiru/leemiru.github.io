@@ -199,7 +199,7 @@ a {
 }
 
 .footer {
-  padding-bottom: env(safe-area-inset-bottom - 8px);
+  padding-bottom: calc(env(safe-area-inset-bottom) - 16px);
 }
 
 .blur {
