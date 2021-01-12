@@ -83,6 +83,8 @@ $(window).scroll(function () {
     $(".cont-header").css("filter", "invert(1) hue-rotate(180deg)");
     $("#gallery-pagination").css("display", "none");
     $(".header").addClass("blur");
+
+    //화면이 펼쳐지면 인디케이터가 멈춤
     stopBounce();
   } else {
     $(".body").css("background-color", "#000");
