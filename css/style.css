@@ -198,6 +198,14 @@ a {
   -o-transition: filter 250ms;
 }
 
+.footer {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.header {
+  padding-top: env(safe-area-inset-bottom);
+}
+
 .blur {
   background-color: rgba(255, 255, 255, 0.75) !important;
   backdrop-filter: saturate(360%) blur(30px);
