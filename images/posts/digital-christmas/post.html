@@ -12,6 +12,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="300x300" href="/images/logo_black.png" />
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="/javascript/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
   </head>
 
 <body class="post-container">
@@ -7454,11 +7455,10 @@
         </g>
       </g>
     </svg>
-    <p>Merry Christmas! - MIRU</p>
   </div>
 </body>
 <style>
-  body {
+  .post-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7468,26 +7468,14 @@
     padding: 0;
   }
 
-  body>div {
+  .post-container>.post {
     width: 620px;
   }
 
-  svg {
+  img, svg {
     width: 100%;
     box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.3);
   }
-
-  p {
-    font-family: serif;
-    color: silver;
-    text-shadow: 15px 15px 2px 0px sienna;
-    font-size: 11pt;
-    font-weight: bold;
-    margin-top: 16pt;
-    display: none;
-  }
-
-  @media screen and (max-width: 800px) {}
 
   #candle:nth-of-type(even),
   #ball:nth-of-type(odd),

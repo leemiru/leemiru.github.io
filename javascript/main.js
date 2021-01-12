@@ -79,10 +79,11 @@ $(window).scroll(function () {
   $("#swiper-gallery").css("opacity", 100 - $height / 10 + "%");
 
   //header는 스크롤을 바닥에 닿자마자 반전
-  if ($height > $body - 40) {
+  if ($height >= $body - 48) {
     $(".cont-header").css("filter", "invert(1) hue-rotate(180deg)");
     $("#gallery-pagination").css("display", "none");
     $(".header").addClass("blur");
+    stopBounce();
   } else {
     $(".body").css("background-color", "#000");
     $(".cont-header").css("filter", "invert(0)");
@@ -92,11 +93,10 @@ $(window).scroll(function () {
   }
 
   //footer는 스크롤을 시작하자마자 반전
-  if ($height > 40) {
+  if ($height >= 48) {
     $(".cont-footer").css("filter", "invert(1)  hue-rotate(180deg)");
     $(".footer").addClass("blur");
     $("#btn-intro").text("⍐");
-    stopBounce();
   } else {
     $(".cont-footer").css("filter", "invert(0)");
     $(".footer").removeClass("blur");

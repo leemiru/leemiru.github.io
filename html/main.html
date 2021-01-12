@@ -26,15 +26,14 @@
     }
 
     #container {
-      width: 100vw;
+      width: 100%;
 
       display: flex;
       overflow: auto;
-      margin-left: -42px;
     }
 
     #flex-scroll {
-      padding: 0px 42px;
+      padding: 0px 0px;
 
       display: flex;
       align-items: center;
@@ -46,36 +45,38 @@
       width: 256px;
       height: 180px;
       margin-right: 2px;
+      border: 1px solid #000;
     }
 
     .box:nth-child(3n-2) {
-      background-color: #EF5350;
+      background-color: #000;
     }
 
     .box:nth-child(3n-1) {
-      background-color: #2E7D32;
+      background-color: #fff;
     }
 
     .box:nth-child(3n) {
-      background-color: #03A9F4;
+      background-color: #888;
     }
 
     .box3 {
       width: 256px;
       height: 360px;
       margin-right: 2px;
+      border: 1px solid #000;
     }
 
     .box3:nth-child(3n-1) {
-      background-color: #6050ef;
+      background-color: #000;
     }
 
     .box3:nth-child(3n) {
-      background-color: #7d2e48;
+      background-color: #fff;
     }
 
     .box3:nth-child(3n-2) {
-      background-color: #f4f003;
+      background-color: #888;
     }
 
     #welcome-msg {
@@ -124,6 +125,9 @@
         <p class="title-3">Hello!<br>MiRu Lee, working as a Designer.</p>
         <p style="font-size: 14px;">Got me throung below contents</p>
       </div>
+    </div>
+
+    <div style="background: linear-gradient(90deg, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00); width: 80%; height: 4px; margin: 0 auto;">
     </div>
 
     <div class="contents-container">
@@ -266,16 +270,16 @@
   $('.cont-footer-center').hover(function () {
     var $height = $(window).scrollTop();
 
-    if ($height < 80) {
+    if ($height < 48) {
       $("html, body").animate(
-        { scrollTop: 80 },
+        { scrollTop: 48 },
         200
       );
     }
   }, function () {
     var $height = $(window).scrollTop();
 
-    if ($height <= 80) {
+    if ($height <= 48) {
       $("html, body").animate(
         { scrollTop: 0 },
         200
