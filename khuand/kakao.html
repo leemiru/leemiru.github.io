@@ -203,6 +203,7 @@
         font-size: 14px;
         height: 24px;
         align-items: center;
+        justify-content: left;
         padding: 16px;
         padding-top: 12px;
         padding-bottom: 12px;
@@ -212,7 +213,7 @@
         color: #ffce00;
         transition: all 200ms;
         margin-bottom: 8px;
-        /* border-top-left-radius: 200px; */
+        border-top-left-radius: 100px;
         border: 1px solid #1d1d1d;
         animation-name: init;
         animation-timing-function: ease-out;
@@ -221,14 +222,17 @@
 
     }
 
-    .link-left::before {
+    /* .link-left::before {
         content: url('./bubbletail.svg');
         width: 16px;
         height: 16px;
+        display: flex;
+        justify-self: start
+        align-items: baseline;
         position: absolute;
         margin-left: -21px;
         margin-top: 33px;
-    }
+    } */
 
     .help {
         cursor: pointer;
