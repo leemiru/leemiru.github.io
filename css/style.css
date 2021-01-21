@@ -28,6 +28,15 @@ a {
   background-color: #000;
 }
 
+.logo-layer {
+  transition: all 200ms;
+}
+
+.logo-layer:hover,
+.logo-layer:focus {
+  fill: slategray;
+}
+
 .body.lock-position {
   overflow: hidden;
   position: fixed;

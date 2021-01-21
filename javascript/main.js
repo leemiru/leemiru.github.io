@@ -17,7 +17,7 @@ function goHome() {
 function openPost(url) {
   $("#loadingModal").addClass("active");
   $("#postframe").attr("onload", "upPost(this)");
-  $("#postframe").attr("src", "/images/posts/" + url + "/post.html");
+  $("#postframe").attr("src", url);
 }
 
 function upPost() {
@@ -148,7 +148,7 @@ function createImages(objImageInfo) {
 
     // N번째 이미지 패널을 생성
     strDOM += '<div class="swiper-slide project-slide" id="swiper-projects">';
-    strDOM += "<div onclick='openPost(" + '"' + image.id + '"' + ")''>";
+    strDOM += "<div onclick='openPost(" + '"' + image.url + '"' + ")''>";
     strDOM +=
       '   <img class="swiper-lazy" src="' +
       image.thumb +
