@@ -48,7 +48,42 @@
             <a href="https://open.kakao.com/o/sBD4h4Pc" class="link-left">환경조경디자인학과</a>
         </div>
         <div class="logo-container">
+            <p class="help" onclick="help()">사용에 문제가 있나요?</p>
             <img class="logo" src="./logo.svg" />
+        </div>
+    </div>
+
+    <div class="modal-container">
+        <div class="modal" style="overflow: auto;">
+            <p class="title" style="font-size: 28px">문제가 있나요?</p>
+            <p class="desc">링크 클릭 및 접속에 문제가 있다면 <br>아래 카카오톡 아이디 및 링크를 직접 복사해서 이용해주세요.</p>
+            <p class="desc"><b style="font-size: 18px">[도예학과]</b><br>
+                카카오톡 아이디 : <br>cqdw4954<br>
+                <br>
+                <br>
+                <b style="font-size: 18px">[디지털콘텐츠학과]</b><br>
+                오픈 카카오톡 링크: <br>https://open.kakao.com/o/sQJpq4Pc<br>
+                <br><br>
+                <b style="font-size: 18px">[산업디자인학과]</b><br>
+                오픈 카카오톡 링크: <br>https://open.kakao.com/o/s1dPYDOc<br>
+                <br><br>
+                <b style="font-size: 18px">[시각디자인학과]</b><br>
+                카카오톡 아이디: <br>kw161728 / sseyeons<br>
+                <br><br>
+                <b style="font-size: 18px">[연극영화학과]</b><br>
+                카카오톡 채널: <br>http://pf.kakao.com/_Tsxlfxb<br>
+                <br><br>
+                
+                <b style="font-size: 18px">[의류디자인학과]</b><br>
+                오픈 카카오톡 링크: <br>https://open.kakao.com/o/sn7BTNKc<br>
+                <br><br>
+                
+                <b style="font-size: 18px">[포스트모던음악학과]</b><br>
+                오픈 카카오톡 링크: <br>https://open.kakao.com/o/seQlCyQc<br>
+                <br><br>
+                <b style="font-size: 18px">[환경조경디자인학과]</b><br>
+                오픈 카카오톡 링크: <br>https://open.kakao.com/o/sBD4h4Pc<br>
+                </p>
         </div>
     </div>
 </body>
@@ -64,9 +99,24 @@
         document.body.removeChild(tempElem);
         alert('카카오톡 아이디가 복사되었습니다. 카카오톡에서 직접 친구추가 해주세요.')
     }
+
+    function help() {
+        $('.modal-container').css('display', 'block');
+
+    }
 </script>
 
 <style>
+    .modal-container {
+        display: none;
+        position: fixed;
+        top: 0;
+        background: #ffce00;
+        color: #1d1d1d;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+    }
     body {
         background-color: #ffce00;
         padding-left: 16px;
@@ -74,6 +124,7 @@
         font-family: 'Noto Sans', 'Noto Sans KR', sans-serif;
         letter-spacing: -0.5px;
         max-width: 520px;
+        color: #1d1d1d;
         margin: auto;
     }
 
@@ -84,6 +135,7 @@
         bottom: 8px;
         right: 8px;
         justify-content: flex-end;
+        align-items: center;
     }
 
     .logo {
@@ -143,17 +195,49 @@
         padding-bottom: 12px;
         font-weight: bold;
         border-radius: 1000px;
-        background-color: black;
+        background-color: #1d1d1d;
         color: #ffce00;
         transition: all 200ms;
         margin-bottom: 8px;
         border-top-left-radius: 200px;
-        border: 1px solid black;
+        border: 1px solid #1d1d1d;
         animation-name: init;
         animation-timing-function: ease-out;
         animation-duration: 500ms;
         animation-iteration-count: 1;
 
+    }
+
+    .help {
+        cursor: pointer;
+        width: fit-content;
+        text-decoration: none;
+        display: flex;
+        font-size: 14px;
+        height: 12px;
+        align-items: center;
+        padding: 16px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-weight: bold;
+        border-radius: 1000px;
+        color: #1d1d1d;
+        transition: all 200ms;
+        margin-bottom: 8px;
+        /* border-top-right-radius: 200px; */
+        border: 1px solid #1d1d1d;
+        animation-name: init;
+        animation-timing-function: ease-out;
+        animation-duration: 500ms;
+        animation-iteration-count: 1;
+
+    }
+
+    .help:focus, .help:hover {
+        transform: scale(1.1);
+        background-color: #1d1d1d;
+        border: 1px solid  #ffce00;
+        color: #ffce00;
     }
 
     @keyframes init {
