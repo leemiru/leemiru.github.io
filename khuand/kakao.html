@@ -147,6 +147,7 @@
         width: 48px;
         height: 48px;
         text-align: right;
+        margin-top: 5px;
     }
 
     .main-container {
@@ -211,13 +212,22 @@
         color: #ffce00;
         transition: all 200ms;
         margin-bottom: 8px;
-        border-top-left-radius: 200px;
+        /* border-top-left-radius: 200px; */
         border: 1px solid #1d1d1d;
         animation-name: init;
         animation-timing-function: ease-out;
         animation-duration: 500ms;
         animation-iteration-count: 1;
 
+    }
+
+    .link-left::before {
+        content: url('./bubbletail.svg');
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        margin-left: -21px;
+        margin-top: 33px;
     }
 
     .help {
