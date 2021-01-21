@@ -518,7 +518,7 @@ a {
 
 svg {
   width: 100%;
-  box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.3); */
 }
 
 /* on medium laptop */
