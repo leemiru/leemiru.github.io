@@ -107,6 +107,12 @@
 </script>
 
 <style>
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
     .modal-container {
         display: none;
         position: fixed;
@@ -118,7 +124,10 @@
         overflow: auto;
     }
     body {
+        background-image: url('./khulogo.svg');
         background-color: #ffce00;
+        background-position: center;
+        background-repeat: no-repeat;
         padding-left: 16px;
         padding-right: 16px;
         display: flex;
@@ -227,7 +236,7 @@
         width: 16px;
         height: 16px;
         display: flex;
-        justify-self: start
+        justify-self: start;
         align-items: baseline;
         position: absolute;
         margin-left: -21px;
