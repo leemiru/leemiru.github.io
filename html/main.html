@@ -27,7 +27,6 @@
 
     #container {
       width: 100%;
-
       display: flex;
       overflow: auto;
     }
@@ -35,6 +34,22 @@
     #welcome-msg {
       display: flex;
       justify-content: space-between;
+    }
+
+    #about {
+      padding-top: 0;
+    }
+
+    #about>div {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #about>div>.logo {
+      margin: 0 16px;
+      transition: all 200ms;
     }
 
     #logs {
@@ -51,14 +66,8 @@
       line-height: 6;
     }
 
-    .logs-list::after {
-      content: " ";
-      width: 100%;
-      height: 100vh;
-    }
-
     .item {
-      width: calc(100%/4 - 1.5%);
+      width: calc(100%/4 - 2%);
       height: auto;
       text-align: left;
       display: inline-block;
@@ -66,22 +75,32 @@
       cursor: pointer;
       transition: 200ms all;
     }
+
+    .item:nth-of-type(3n) {
+      width: calc(100%/4 - 4%);
+    }
+
+    .item:nth-of-type(5n) {
+      width: calc(100%/4 - 1%);
+    }
+
     .item:hover {
       transform: scale(1.05);
     }
 
     .item>img {
       display: block;
-      width: 100%;
+      width: calc(100% - 2px);
       height: auto;
       object-fit: contain;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
       border: 1px solid rgba(0, 0, 0, 0.25);
     }
 
     .item-desc {
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
 
     .column {
@@ -104,16 +123,35 @@
       color: #1d1d1d;
     }
 
+    .left {
+      text-align: left;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .right {
+      text-align: right;
+    }
+
     .white.invert {
+      width: min-content;
       color: #1d1d1d;
       background-color: #fff;
       padding: 0 2px;
+      margin-left: 4px;
+      line-height: 1.2;
     }
 
     .black.invert {
+      width: min-content;
       color: #fff;
       background-color: #1d1d1d;
       padding: 0 2px;
+      margin-left: 4px;
+      line-height: 1.2;
+
     }
 
     .title,
@@ -121,6 +159,8 @@
       line-height: 1.5;
       margin: 0;
       padding: 0;
+      word-break: keep-all;
+      white-space: pre-line;
     }
 
     .title.small {
@@ -170,10 +210,24 @@
         display: inline-block;
       }
 
+      .item:nth-of-type(3n) {
+        width: 100%;
+      }
+
+      .item:nth-of-type(5n) {
+        width: 100%;
+      }
+
+      #about>div>.logo {
+        width: 32px;
+        height: 32px;
+        margin: 0 12px;
+      }
+
     }
   </style>
 
-  <section id="intro-contents" style="background-color: white;">
+  <section id="intro-contents" style="background-color: white; min-height: 100vh;">
     <div class="contents-container" id="welcome-msg">
 
       <div class="column ko">
@@ -185,6 +239,16 @@
         <p class="title large black">Hello World!<br>MiRu Lee, as a Designer.</p>
         <p class="letter medium black" style="margin-top: 24px;">Get to know me by watching my works below.</p>
       </div>
+
+    </div>
+
+    <div class="contents-container" id="about">
+      <div>
+        <img src="/contents/about/b4mblogo.svg" class="logo" />
+        <img src="/contents/about/khulogo.svg" class="logo" />
+        <img src="/khuand/logo.svg" class="logo" />
+        <img src="/contents/about/pflogo.svg" class="logo" />
+      </div>
     </div>
 
     <div class="contents-container" id="logs">
@@ -194,6 +258,7 @@
       </ul>
 
     </div>
+
   </section>
 </main>
 </div>
@@ -219,7 +284,7 @@
       slideShadows: true
     },
     autoplay: {
-      delay: 3000,
+      delay: 4000,
       disableOnInteraction: false,
     },
     pagination: {

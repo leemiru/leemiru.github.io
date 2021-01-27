@@ -14,7 +14,6 @@ function goHome() {
 }
 
 function openPost(url) {
-  $("html, body").animate({ scrollTop: 0 }, 500);
   $("#loadingModal").addClass("active");
   $("#postframe").attr("onload", "upPost(this)");
   $("#postframe").attr("src", url);
@@ -33,9 +32,12 @@ function upPost() {
   $("#btn-close").css("display", "inline-block");
   $("#btn-intro").css("display", "none");
 
-  setTimeout(function () {
-    $("body").addClass("lock-position");
-  }, 500);
+  $("html, body").ontouchend = (e) => {
+    e.preventDefault();
+};
+  // setTimeout(function () {
+  //   $("body").addClass("lock-position");
+  // }, 500);
 }
 
 function closePost() {
@@ -51,7 +53,7 @@ function closePost() {
 
   $("#btn-intro").css("display", "inline-block");
 
-  $("body").removeClass("lock-position");
+  // $("body").removeClass("lock-position");
 }
 
 $(window).scroll(function () {
@@ -200,7 +202,7 @@ function createLogs(objImageInfo) {
       strDOM += '<div class="item-desc">'
     strDOM += '<p class="letter medium black">' + image.name + "</p>";
     strDOM +=
-      '<p class="letter medium black invert">' +
+      '<p class="letter small black invert right">' +
       image.type +
       ", " +
       image.year +
