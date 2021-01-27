@@ -8,13 +8,13 @@ var $postframe;
 var $body;
 
 function goHome() {
-  // swiperV.slideTo(0, 0);
   $("html, body").animate({ scrollTop: 0 }, 500);
   closePost();
   console.log("Home clicked");
 }
 
 function openPost(url) {
+  $("html, body").animate({ scrollTop: 0 }, 500);
   $("#loadingModal").addClass("active");
   $("#postframe").attr("onload", "upPost(this)");
   $("#postframe").attr("src", url);
@@ -36,8 +36,6 @@ function upPost() {
   setTimeout(function () {
     $("body").addClass("lock-position");
   }, 500);
-
-  console.log("post opened");
 }
 
 function closePost() {
@@ -54,9 +52,7 @@ function closePost() {
   $("#btn-intro").css("display", "inline-block");
 
   $("body").removeClass("lock-position");
-  console.log("post closed");
 }
-
 
 $(window).scroll(function () {
   var $height = $(window).scrollTop();
@@ -107,7 +103,6 @@ $(window).scroll(function () {
   $("#main-logo-image").css("transform", "rotateX(" + deg + "deg)");
 });
 
-
 function gotoIntro() {
   var $height = $(window).scrollTop();
   var $body = $("#main-contents").height();
@@ -129,22 +124,31 @@ function stopBounce() {
 //프로젝트 이미지 불러오기
 function startLoadFile() {
   $.ajax({
-    url: "/images/posts/projects.json",
+    url: "/contents/gallery/gallery.json",
     type: "GET",
     dataType: "json",
     success: function (data) {
-      createImages(data);
+      createGallery(data);
+    },
+  });
+
+  $.ajax({
+    url: "/contents/portfolio/portfolio.json",
+    type: "GET",
+    dataType: "json",
+    success: function (data) {
+      createLogs(data);
     },
   });
 }
 
 // JSON 포멧 데이터 처리
-function createImages(objImageInfo) {
-  var projects = objImageInfo.projects;
+function createGallery(objImageInfo) {
+  var gallery = objImageInfo.gallery;
   var strDOM = "";
-  for (var i = 0; i < projects.length; i++) {
+  for (var i = 0; i < gallery.length; i++) {
     // N번째 이미지 정보를 구하기
-    var image = projects[i];
+    var image = gallery[i];
 
     // N번째 이미지 패널을 생성
     strDOM += '<div class="swiper-slide project-slide" id="swiper-projects">';
@@ -166,5 +170,45 @@ function createImages(objImageInfo) {
   var $galleryContainer = $("#gallery-container");
   $galleryContainer.append(strDOM);
 
-  swiperProjects.init();
+  try {
+    swiperProjects.init();
+  } catch (error) {
+    console.log("Swiper Reloaded");
+    startLoadFile();
+  }
+}
+
+// JSON 포멧 데이터 처리
+function createLogs(objImageInfo) {
+  var logs = objImageInfo.logs;
+  var strDOM = "";
+  for (var i = 0; i < logs.length; i++) {
+    // N번째 이미지 정보를 구하기
+    var image = logs[i];
+
+    // N번째 이미지 패널을 생성
+    strDOM += '<li class="item" onclick="openPost(' + "'" + image.url + "'" + ')">';
+    strDOM +=
+      '<img src="' +
+      image.thumb +
+      '" alt="' +
+      image.type +
+      ' / ' +
+      image.name +
+      '"/>';
+
+      strDOM += '<div class="item-desc">'
+    strDOM += '<p class="letter medium black">' + image.name + "</p>";
+    strDOM +=
+      '<p class="letter medium black invert">' +
+      image.type +
+      ", " +
+      image.year +
+      "</p>";
+    strDOM += "</div></li>";
+  }
+
+  // 이미지 컨테이너에 생성한 이미지 패널들을 추가하기
+  var $portfolioContainer = $("#logs-list");
+  $portfolioContainer.append(strDOM);
 }

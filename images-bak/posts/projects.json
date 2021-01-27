@@ -1,0 +1,93 @@
+{ "projects" : [
+
+    {
+        "name" : "KHU '&' 2021 NEWBIES UI",
+        "type" : "ui",
+        "id" : "2021-khuand",
+        "year" : "2021",
+        "month" : "1",
+        "url" : "/khuand/kakao.html",
+        "thumb" : "/images/posts/khuand-newbies/thumb.svg"
+    },
+
+    {
+        "name" : "Happy New Year! - 2021",
+        "type" : "poster",
+        "id" : "new-year-2021",
+        "year" : "2021",
+        "month" : "1",
+        "url" : "/images/posts/new-year-2021/post.html",
+        "thumb" : "/images/posts/new-year-2021/poster.svg"
+    },
+
+    {
+        "name" : "Digital Christmas",
+        "type" : "poster",
+        "id" : "digital-christmas",
+        "year" : "2020",
+        "month" : "12",
+        "url" : "/images/posts/digital-christmas/post.html",
+        "thumb" : "/images/posts/digital-christmas/poster.svg"
+    },
+
+    {
+        "name" : "계룡 전산 한마당 2",
+        "type" : "poster",
+        "id" : "gyeryong-it-2",
+        "year" : "2019",
+        "month" : "10",
+        "url" : "/images/posts/gyeryong-it-2/post.html",
+        "thumb" : "/images/posts/gyeryong-it-2/thumb.png"
+    },
+
+    {
+        "name" : "Vinyl Still Playin",
+        "type" : "poster",
+        "id" : "vinyl-still-playin",
+        "year" : "2020",
+        "month" : "12",
+        "url" : "/images/posts/vinyl-still-playin/post.html",
+        "thumb" : "/images/posts/vinyl-still-playin/thumb.png"
+    },
+
+    {
+        "name" : "일출",
+        "type" : "poster",
+        "id" : "sunrise",
+        "year" : "2019",
+        "month" : "6",
+        "url" : "/images/posts/sunrise/post.html",
+        "thumb" : "/images/posts/sunrise/thumb.png"
+    },
+
+    {
+        "name" : "계룡 전산 한마당",
+        "type" : "poster",
+        "id" : "gyeryong-it",
+        "year" : "2019",
+        "month" : "5",
+        "url" : "/images/posts/gyeryong-it/post.html",
+        "thumb" : "/images/posts/gyeryong-it/thumb.png"
+    },
+
+    {
+        "name" : "하늘로 우주로",
+        "type" : "poster",
+        "id" : "sky-space",
+        "year" : "2019",
+        "month" : "3",
+        "url" : "/images/posts/sky-space/post.html",
+        "thumb" : "/images/posts/sky-space/thumb.png"
+    },
+
+    {
+        "name" : "Oasis",
+        "type" : "albumcover",
+        "id" : "oasis",
+        "year" : "2019",
+        "month" : "1",
+        "url" : "/images/posts/oasis/post.html",
+        "thumb" : "/images/posts/oasis/thumb.jpg"
+    }
+
+]}
