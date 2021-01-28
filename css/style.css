@@ -90,6 +90,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 99;
   top: 100%;
   /* animation-name: postModalopen; */
   animation-duration: 0.25s;
@@ -102,14 +103,16 @@ a {
 #postModal > .modal-container {
   width: 100%;
   height: 100%;
-  overflow: auto;
+  overflow: visible;
 }
 
 #postModal > .modal-container > iframe {
   width: 100%;
   height: 100%;
-  border: none;
-  overflow: auto;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 @keyframes postModalopen {
@@ -333,7 +336,42 @@ a {
 .btn#btn-close {
   font-size: 20px;
   font-weight: bold;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
+  backdrop-filter: blur(400px);
+  z-index: 999099;
+  background-color: rgba(0, 0, 0, 0);
   display: none;
+}
+
+#word {
+  text-align: center;
+  white-space: nowrap;
+  font-size: 14px;
+  background: #000;
+}
+
+#word:after {
+  content: "|";
+  font-size: 16px;
+  color: #fff;
+  position: relative;
+  animation: flicker 500ms infinite;
+  animation-timing-function: steps(2);
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .cont-header .cont-header-left,
@@ -442,6 +480,22 @@ a {
   font-size: 18px;
 }
 
+.swiper-slide > div > img {
+  transition: filter 150ms;
+  filter: brightness(0.25) saturate(0.5);
+}
+
+.swiper-slide > div > img:hover,
+.swiper-slide > div > img:focus {
+  transition: filter 150ms;
+  filter: brightness(0.75) saturate(1);
+}
+
+.swiper-slide-active > div > img {
+  transition: filter 500ms;
+  filter: brightness(1);
+}
+
 .gallery-navigation {
   display: flex;
   justify-content: space-between;
@@ -482,6 +536,12 @@ a {
   max-width: 520px;
   height: fit-content;
   cursor: pointer;
+  transition: all 200ms;
+}
+
+.loading {
+  transition: all 200ms;
+  filter: saturate(0);
 }
 
 .project-slide > div > img {
@@ -536,7 +596,7 @@ a {
 }
 
 .swiper-pagination-bullet:hover {
-  transform: rotate(45deg);
+  transform: rotate(-22.5deg);
 }
 
 .swiper-pagination-bullet:focus {
@@ -544,8 +604,8 @@ a {
 }
 
 .swiper-pagination-bullet-active {
-  margin: 0 5px;
-  transform: rotate(45deg);
+  margin: 0 2.5px;
+  transform: rotate(-22.5deg);
 }
 
 /* Poster Display Style */

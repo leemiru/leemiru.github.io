@@ -14,13 +14,15 @@ function goHome() {
 }
 
 function openPost(url) {
-  $("#loadingModal").addClass("active");
+  $.lockBody();
+  // $("#loadingModal").addClass("active");
   $("#postframe").attr("onload", "upPost(this)");
   $("#postframe").attr("src", url);
+  $(this).addClass('loading');
 }
 
 function upPost() {
-  $("#loadingModal").removeClass("active");
+  // $("#loadingModal").removeClass("active");
 
   $("#postModal").css("animation-name", "postModalopen");
   $("#postModal").css("top", "0%");
@@ -28,13 +30,14 @@ function upPost() {
   $("#block-main").css("opacity", "0");
 
   $("#gallery-pagination").css("display", "none");
+  $("#word").css("display", "none");
 
-  $("#btn-close").css("display", "inline-block");
+  $("#btn-close").css("display", "flex");
   $("#btn-intro").css("display", "none");
 
-  $("html, body").ontouchend = (e) => {
-    e.preventDefault();
-};
+  // $("html, body").ontouchend = (e) => {
+  //   e.preventDefault();
+  // };
   // setTimeout(function () {
   //   $("body").addClass("lock-position");
   // }, 500);
@@ -48,10 +51,14 @@ function closePost() {
   $("#block-main").css("opacity", "1");
 
   $("#gallery-pagination").css("display", "flex");
+  $("#word").css("display", "inline-block");
 
   $("#btn-close").css("display", "none");
 
   $("#btn-intro").css("display", "inline-block");
+
+  $(".project-slide").removeClass('loading');
+  $.unlockBody();
 
   // $("body").removeClass("lock-position");
 }
@@ -80,6 +87,7 @@ $(window).scroll(function () {
   if ($height >= $body - 48) {
     $(".cont-header").css("filter", "invert(1) hue-rotate(180deg)");
     $("#gallery-pagination").css("display", "none");
+    $("#word").css("display", "none");
     $(".header").addClass("blur");
 
     //화면이 펼쳐지면 인디케이터가 멈춤
@@ -88,6 +96,7 @@ $(window).scroll(function () {
     $(".body").css("background-color", "#000");
     $(".cont-header").css("filter", "invert(0)");
     $("#gallery-pagination").css("display", "flex");
+    $("#word").css("display", "inline-block");
     $("#btn-intro").text("⍗");
     $(".header").removeClass("blur");
   }
@@ -153,8 +162,13 @@ function createGallery(objImageInfo) {
     var image = gallery[i];
 
     // N번째 이미지 패널을 생성
-    strDOM += '<div class="swiper-slide project-slide" id="swiper-projects">';
-    strDOM += "<div onclick='openPost(" + '"' + image.url + '"' + ")''>";
+    strDOM += '<div class="swiper-slide project-slide" id="' + image.id + '">';
+    strDOM +=
+      "<div onclick='openPost(" +
+      '"' +
+      image.url +
+      '"' +
+      ");'>";
     strDOM +=
       '   <img class="swiper-lazy" src="' +
       image.thumb +
@@ -189,17 +203,26 @@ function createLogs(objImageInfo) {
     var image = logs[i];
 
     // N번째 이미지 패널을 생성
-    strDOM += '<li class="item" onclick="openPost(' + "'" + image.url + "'" + ')">';
+    strDOM +=
+      '<li class="item" ' +
+      'id="' +
+      image.id +
+      '"' +
+      'onclick="openPost(' +
+      "'" +
+      image.url +
+      "'" +
+      ');">';
     strDOM +=
       '<img src="' +
       image.thumb +
       '" alt="' +
       image.type +
-      ' / ' +
+      " / " +
       image.name +
       '"/>';
 
-      strDOM += '<div class="item-desc">'
+    strDOM += '<div class="item-desc">';
     strDOM += '<p class="letter medium black">' + image.name + "</p>";
     strDOM +=
       '<p class="letter small black invert right">' +
@@ -212,5 +235,84 @@ function createLogs(objImageInfo) {
 
   // 이미지 컨테이너에 생성한 이미지 패널들을 추가하기
   var $portfolioContainer = $("#logs-list");
-  $portfolioContainer.append(strDOM);
+  try {
+    $portfolioContainer.append(strDOM);
+  } catch (error) {
+    console.log("Logs Contents Reloaded");
+    startLoadFile();
+  }
+}
+
+var words = ["hello", "try scroll down", "there's a bigger me"],
+  part,
+  i = 0,
+  offset = 0,
+  len = words.length,
+  forwards = true,
+  skip_count = 0,
+  skip_delay = 50,
+  speed = 25;
+
+var wordflick = function () {
+  setInterval(function () {
+    if (forwards) {
+      if (offset >= words[i].length) {
+        ++skip_count;
+        if (skip_count == skip_delay) {
+          forwards = false;
+          skip_count = 0;
+        }
+      }
+    } else {
+      if (offset == 0) {
+        forwards = true;
+        i++;
+        offset = 0;
+        if (i >= len) {
+          i = 0;
+        }
+      }
+    }
+    part = words[i].substr(0, offset);
+    if (skip_count == 0) {
+      if (forwards) {
+        offset++;
+      } else {
+        offset--;
+      }
+    }
+    $("#word").text(part);
+  }, speed);
+};
+
+// prevent body scroll
+var $docEl = $('html, body'),
+  $wrap = $('.body'),
+  $scrollTop;
+
+$.lockBody = function() {
+  if(window.pageYOffset) {
+      $scrollTop = window.pageYOffset;
+      $wrap.css({
+          top: - ($scrollTop)
+      });
+  }
+  $docEl.css({
+      height: "100%",
+      overflow: "hidden"
+  });
+}
+
+$.unlockBody = function() {
+  $docEl.css({
+      height: "",
+      overflow: ""
+  });
+  $wrap.css({
+      top: ''
+  });
+  window.scrollTo(0, $scrollTop);
+  window.setTimeout(function () {
+      $scrollTop = null;
+  }, 0);
 }

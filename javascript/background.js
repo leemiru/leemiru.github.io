@@ -1,6 +1,7 @@
 $(function(){
 	includeLayout();
 	startLoadFile();
+	wordflick();
 }); 
 
 function includeLayout(){ 
