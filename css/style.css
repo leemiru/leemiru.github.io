@@ -479,7 +479,7 @@ a {
   text-align: center;
   font-size: 18px;
 }
-
+/* 
 .swiper-slide > div > img {
   transition: filter 150ms;
   filter: brightness(0.25) saturate(0.5);
@@ -494,7 +494,7 @@ a {
 .swiper-slide-active > div > img {
   transition: filter 500ms;
   filter: brightness(1);
-}
+} */
 
 .gallery-navigation {
   display: flex;
