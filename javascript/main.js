@@ -15,14 +15,14 @@ function goHome() {
 
 function openPost(url) {
   $.lockBody();
-  // $("#loadingModal").addClass("active");
+  $("#loadingModal").addClass("active");
   $("#postframe").attr("onload", "upPost(this)");
   $("#postframe").attr("src", url);
   $(this).addClass('loading');
 }
 
 function upPost() {
-  // $("#loadingModal").removeClass("active");
+  $("#loadingModal").removeClass("active");
 
   $("#postModal").css("animation-name", "postModalopen");
   $("#postModal").css("top", "0%");
@@ -34,13 +34,6 @@ function upPost() {
 
   $("#btn-close").css("display", "flex");
   $("#btn-intro").css("display", "none");
-
-  // $("html, body").ontouchend = (e) => {
-  //   e.preventDefault();
-  // };
-  // setTimeout(function () {
-  //   $("body").addClass("lock-position");
-  // }, 500);
 }
 
 function closePost() {
@@ -59,8 +52,6 @@ function closePost() {
 
   $(".project-slide").removeClass('loading');
   $.unlockBody();
-
-  // $("body").removeClass("lock-position");
 }
 
 $(window).scroll(function () {
