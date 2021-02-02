@@ -627,6 +627,23 @@ svg {
   /* box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.3); */
 }
 
+@media (max-width: 3840px) {
+  .cont-footer, .cont-header {
+    max-width: 2160px;
+  }
+  .contents-container {
+    max-width: 2160px;
+  }
+}
+
+@media (max-width: 2160px) {
+  .cont-footer, .cont-header {
+    max-width: 1440px;
+  }
+  .contents-container {
+    max-width: 1440px;
+  }
+
 /* on iPad Pro*/
 @media (max-width: 1280px) {
   .project-slide {

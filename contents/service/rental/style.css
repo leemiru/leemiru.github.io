@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+
+    font-family: "Noto Sans KR", sans-serif;
+    color: white;
+    font-style: normal;
+    color: #666666;
+    letter-spacing: -0.5px;
+}
+
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: #f6f5ef;
+    overflow-x: hidden;
+}
+
+.mainWrap {
+
+}
+
+.cont-header {
+    width: 100%;
+    max-width: 1440px;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    /* border-bottom: 2px solid #ff7576; */
+}
+
+.cont-header > .cont-header-left {
+    width: 70%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 16px;
+}
+
+.cont-header > .cont-header-right {
+    width: 30%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 16px;
+}
+
+.header-title {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #ff7576;
+}
+
+.logoWrap {
+    width: 48px;
+    height: 48px;
+}
+
+.cont-header > .cont-header-left > .textWrap {
+    padding-left: 16px;
+}
+
+.cont-header > .cont-header-right > .actionWrap > span {
+    display: inline-block;
+    width: 32px;
+}
+
+.cont-header > .cont-header-right > .actionWrap > span > i {
+    color: #ff7576;
+    font-size: 24px;
+    text-align: right;
+    cursor: pointer;
+}
+
+/* / */
+
+.btn {
+    cursor: pointer;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    font-weight: bolder;
+    box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.1), -10px -10px 15px 0px rgba(255, 255, 255, 1);
+    transition: 200ms all;
+    font-size: 16px;
+    text-align: center;
+}
+
+.btn:hover {
+    box-shadow: 5px 5px 10px 0px rgba(255, 255, 255, 0.2), -5px -5px 10px 0px rgba(0, 0, 0, 0.02), inset -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
+    inset 7px 7px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn:focus {
+    box-shadow: 5px 5px 10px 0px rgba(255, 255, 255, 1), -5px -5px 10px 0px rgba(0, 0, 0, 0.1), inset 0px 0px 15px 0px rgba(255, 117, 118, 0.5);
+    background-color: rgba(255, 117, 118, 0.2);
+}
+
+.btn.red {
+    /* border: 2px solid #ff7576; */
+    color: #ff7576;
+    padding: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+/*  */
+
+.cont-main {
+    padding-top: 52px;
+}
+
+.welcomeWrap {
+    padding: 16px;
+}
+
+.title {
+    font-weight: bolder;
+    font-size: 36px;
+    color: #ff7576;
+    word-break: keep-all;
+    letter-spacing: -2.5px;
+    line-height: 1.2;
+}
+
+.desc {
+    margin-left: 2px;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.itemList {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    list-style: none;
+    padding: 0;
+}
+
+.itemList > .itemWrap {
+    width: calc(100%/4 - 40px);
+    padding: 0;
+    text-align: left;
+    /* background-color: #ff7576; */
+}
+
+.itemList > .itemWrap:hover {
+    filter: brightness(0.9);
+}
+
+.itemList > .itemWrap > .item-imageWrap > .item-image {
+    width: 100%;
+    height: 354px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.itemList > .itemWrap > .item-descWrap {
+    padding: 8px 16px 16px;
+}
+
+.itemList > .itemWrap > .item-descWrap > .item-title {
+    font-size: 16px;
+    color: #ff7576;
+}
+
+.itemList > .itemWrap > .item-descWrap > .item-desc {
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+.categoryWrap > ul {
+    padding-left: 16px;
+    padding-right: 16px;;
+    /* width: 100%; */
+    display: flex;
+    justify-content: left;
+    list-style: none;
+    /* flex-wrap: wrap; */
+    overflow: auto;
+}
+
+.categoryWrap > ul > .category-item {
+    min-width: 64px;
+}
+
+
+@media (max-width: 480px) {
+    .itemList > .itemWrap {
+        width: 100%;
+        padding: 0;
+        /* background-color: #ff7576; */
+    }
+
+    .categoryWrap > ul {
+        padding-left: 16px;
+        padding-right: 16px;;
+        /* width: 100%; */
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        /* flex-wrap: wrap; */
+        overflow: auto;
+    }
+}
