@@ -1,0 +1,146 @@
+<html>
+
+<head>
+
+  <head>
+    <meta charset="euc-kr" />
+    <title>Following Eyes</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="apple-touch-icon-precomposed" sizes="300x300" href="/images/poster.svg" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <!-- <script src="/javascript/main.js"></script> -->
+  </head>
+
+<body class="post-container">
+  <div class="post">
+    <div id="monster"></div>
+  </div>
+</body>
+<style>
+  .post-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000 !important;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .post-container>.post {
+    width: 620px;
+    height: 960px;
+  }
+
+  img,
+  svg {
+    width: 100%;
+    box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.3);
+  }
+
+  .eb {
+    position: absolute;
+    background: white;
+  }
+
+  .ir {
+    position: absolute;
+    background: #0c1b23;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -ms-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+  #monster {
+    position: relative;
+    display: block;
+    width: 500px;
+    height: 500px;
+    background: url("https://f.cl.ly/items/1n2v2W04241C1n0h093s/monsterbase.png") no-repeat center center;
+  }
+</style>
+
+<script>
+  var addEye = function (ebRadius, irRadius, x, y, offset, parent) {
+
+    var a, apx, apy, eb, ir,
+      eid = "eb_" + new Date().valueOf(),
+      rr = ebRadius - irRadius - offset;
+
+    function build() {
+      drawEye();
+      document.addEventListener("mousemove", mouseMove, true);
+    }
+
+    function dummy() {
+      console.log("dummy");
+    }
+
+    function drawEye() {
+      p = document.getElementById(parent) || document.body;
+
+      // Eyeball
+      eb = document.createElement("div");
+      eb.id = eid;
+      eb.className = "eb";
+      eb.style.borderRadius = ebRadius + "px";
+      eb.style.left = (x - ebRadius) + "px";
+      eb.style.top = (y - ebRadius) + "px";
+      eb.style.width = eb.style.height = (ebRadius * 2) + "px";
+      p.appendChild(eb);
+
+      // Iris
+      ir = document.createElement("div");
+      ir.className = "ir";
+      ir.style.borderRadius = irRadius + "px";
+      ir.style.left = (x - irRadius) + "px";
+      ir.style.top = (y - irRadius) + "px";
+      ir.style.width = ir.style.height = (irRadius * 2) + "px";
+      p.appendChild(ir);
+
+      apx = x; // TODO
+      apy = y; // TODO
+    }
+
+    function mouseMove(e) {
+      console.log(e)
+      e.x = e.x || e.clientX;
+      e.y = e.y || e.clientY;
+      a = Math.atan2(e.y - apy, e.x - apx);
+      if (dist(apx, apy, e.x, e.y) < rr) {
+        ir.style.left = e.x - irRadius + "px"
+        ir.style.top = e.y - irRadius + "px"
+      } else {
+        ir.style.left = apx - irRadius + (Math.cos(a) * rr) + "px"
+        ir.style.top = apy - irRadius + (Math.sin(a) * rr) + "px"
+      }
+    }
+
+    function dist(x1, y1, x2, y2) {
+      return (Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2)));
+    }
+
+    build();
+  };
+
+
+  window.onload = function (e) {
+    new addEye(56, 12, 278, 285, 2, "monster");
+    new addEye(27, 8, 186, 312, 2, "monster");
+    new addEye(16, 5, 198, 256, 2, "monster");
+    new addEye(21, 6, 159, 235, 2, "monster");
+    new addEye(41, 9, 204, 178, 2, "monster");
+    new addEye(22, 6, 277, 193, 2, "monster");
+    new addEye(22, 7, 326, 157, 2, "monster");
+    new addEye(32, 9, 353, 215, 2, "monster");
+    new addEye(14, 4, 398, 258, 2, "monster");
+    new addEye(30, 7, 373, 306, 2, "monster");
+  }
+</script>
+
+</html>

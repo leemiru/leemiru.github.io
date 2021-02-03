@@ -230,7 +230,7 @@ function createLogs(objImageInfo) {
     $portfolioContainer.append(strDOM);
   } catch (error) {
     console.log("Logs Contents Reloaded");
-    startLoadFile();
+    $portfolioContainer.append(strDOM);
   }
 }
 
