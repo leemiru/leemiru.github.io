@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  color: #fff;
+
+  font-family: "Helvetica", "KopubWorldDotum", sans-serif;
+}
+
+body {
+  margin: auto auto;
+  max-width: 1920px;
+  max-height: 1080px;
+  /* min-width: 1280px; */
+  min-height: 960px;
+
+  display: flex;
+  align-items: center;
+}
+
+.blue {
+    color: #43d5f8;
+}
+
+.dark {
+    color: #2b2e34;
+}
+
+.main-container {
+  width: 100%;
+  height: 100%;
+  margin-top: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2b2e34;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), inset 0 0 5px 2px rgba(255, 255, 255, 0.05);
+}
+
+.main-container > .ad-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container > .ad-container > p {
+  width: 100%;
+  height: 100%;
+  min-height: 960px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container > .login-container {
+  width: 576px;
+  padding: 0 56px;
+  height: fit-content;
+}
+
+.login-container > .logo-container {
+    width: 100%;
+    margin-bottom: 146px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container > .input-container {
+    width: 100%;
+    margin-bottom: 146px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.login-container > .input-container > .input-wrap {
+    width: 100%;
+    background-color: rgba(29, 29, 29, 0.4);
+    border-radius: 20px;
+    margin-bottom: 16px;
+}
+
+.login-container > .input-container > .input-wrap > input {
+    width: calc(100% - 64px);
+    transition: box-shadow 200ms;
+    height: 64px;
+    padding-left: 32px;
+    padding-right: 32px;
+    display: block;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.login-container > .input-container > .input-wrap > input::placeholder {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+
+
+.login-container > .input-container > .input-wrap > input:hover,
+.login-container > .input-container > .input-wrap > input:focus
+ {
+    box-shadow: inset 0 0 0px 1px rgba(67, 213, 248, 1);
+}
+
+.login-container > .input-container > .help-text {
+    width: 100%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.2);
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 100ms;
+    font-size: 14px;
+}
+
+.login-container > .input-container > .help-text:hover,
+.login-container > .input-container > .help-text:focus
+ {
+    color: rgba(67, 213, 248, 1);
+}
+
+
+.login-container > .input-container > .input-wrap > input:first-child{
+    border-bottom: 3px solid  #2b2e34;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.login-container > .input-container > .input-wrap > input:nth-child(2){
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+
+.applogo {
+    max-width: 144px;
+    max-height: 144px;
+    min-width: 144px;
+    min-height: 144px;
+    object-fit: contain;
+    background-color: #fff;
+    border-radius: 25%;
+}
+
+.btn {
+    cursor: pointer;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    font-weight: bolder;
+    box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.2), -10px -10px 15px 0px rgba(255, 255, 255, 0.05);
+    transition: 200ms box-shadow, 200ms background-color;
+    /* transition: 200ms color; */
+    font-size: 16px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0);
+    margin: 25px 0;
+}
+
+.btn.single {
+    display: block;
+    width: 100%;
+}
+
+.btn:hover {
+    box-shadow: 5px 5px 10px 0px rgba(255, 255, 255, 0.05), -5px -5px 10px 0px rgba(0, 0, 0, 0.2), inset -7px -7px 20px 0 rgba(255, 255, 255, 0.1),
+    inset 7px 7px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+.btn:focus {
+    box-shadow: 5px 5px 10px 0px rgba(255, 255, 255, 0.05), -5px -5px 10px 0px rgba(0, 0, 0, 0.2), inset -7px -7px 20px 0 rgba(255, 255, 255, 0.1),
+    inset 7px 7px 20px 0 rgba(0, 0, 0, 0.05);
+    background-color: rgba(67, 213, 248, 0.2);;
+}
