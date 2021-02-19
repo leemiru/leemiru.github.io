@@ -1,13 +1,10 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 551.33 267.03">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #fff;
-        fill-rule: evenodd;
-      }
-    </style>
-  </defs>
-  <g id="Layer_2" data-name="Layer 2">
-    <path class="cls-1" d="M0,0,222.23.58l51.43,52.59L327.1.58H551.33V267.77L330.25,267l-.12-154.52L172.14,267l-156-155.8L15.22,267H.09Z"/>
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 551.3 267" style="enable-background:new 0 0 551.3 267;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+</style>
+<polygon class="st0" points="551.3,0 327.1,0 273.7,52.6 222.2,0 0,0 0,91.2 0,91.2 0,267.2 20.4,267.2 20.4,115.6 20.4,115.6 
+	172.1,267.2 327.1,115.6 327.1,267.2 410.9,267.2 410.9,267.2 551.3,267.2 "/>
 </svg>

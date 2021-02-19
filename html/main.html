@@ -85,7 +85,8 @@
     }
 
     .item:hover {
-      transform: scale(1.05);
+      transform: scale(1.015) translateY(5px);
+      
     }
 
     .item>img {
@@ -95,6 +96,13 @@
       object-fit: contain;
       margin-bottom: 4px;
       border: 1px solid rgba(0, 0, 0, 0.25);
+      transition: box-shadow 100ms;
+
+    }
+
+    .item>img:hover {
+      box-shadow: 0 10px 0px 30px rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(30px);
     }
 
     .item-desc {
