@@ -1,6 +1,16 @@
 { "gallery" : [
 
     {
+        "name" : "your WRLD<br>boymeetswrld",
+        "type" : "albumcover",
+        "id" : "yourwrld",
+        "year" : "2021",
+        "month" : "3",
+        "url" : "/contents/gallery/your-wrld/post.html",
+        "thumb" : "/contents/gallery/your-wrld/thumb.jpg"
+    },
+
+    {
         "name" : "KHU '&' 2021 NEWBIES UI",
         "type" : "ui",
         "id" : "2021-khuand",
