@@ -1,0 +1,367 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+  line-height: 1.6;
+  font-family: aktiv-grotesk-extended, "Apple SD Gothic Neo", "Noto Sans KR",
+    sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  word-break: keep-all;
+}
+
+body {
+}
+
+.mainWrap {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.flex {
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  /* flex-wrap: wrap; */
+}
+
+.flex.aligncenter {
+  align-items: center;
+}
+
+.flex.spacebetween {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.flex.spacebetween > .text {
+  width: 100%;
+}
+
+input {
+  width: calc(100% - 18px);
+  height: 28px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 8px;
+}
+
+select {
+  display: inline-block;
+  width: 100%;
+  padding-right: 4px;
+  height: 44px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 8px;
+}
+
+select::content {
+  color: gray;
+}
+textarea {
+  width: calc(100% - 16px) !important;
+  height: 150px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 8px;
+  resize: none;
+}
+
+/* 헤더 */
+.mainHeader {
+  position: fixed;
+  width: 100%;
+  max-width: 1080px;
+  height: fit-content;
+  margin: 0 auto;
+  z-index: 99999;
+  /* background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); */
+}
+
+.mainHeader::after {
+  content: " ";
+  display: inline-block;
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(
+    to Bottom,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.mainHeader > .header-container {
+  width: 100%;
+  max-width: 1080px;
+  height: 100%;
+  padding-top: 30px;
+  padding-bottom: 24px;
+}
+
+.mainHeader > .header-container > ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 13px;
+}
+
+.mainHeader > .header-container > ul > li {
+  height: 100%;
+  width: 100%;
+}
+
+.mainHeader > .header-container > ul > li > img.logo {
+  width: 100px;
+  filter: invert(1);
+  object-fit: contain;
+}
+
+/* 푸터 */
+.mainFooter {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 48px;
+  padding-bottom: 90px;
+}
+
+.mainFooter > .footer-container {
+  line-height: 1.8;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  padding-top: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.mainFooter > .footer-container > p {
+  font-size: 11px;
+  color: rgba(150, 150, 150, 1);
+}
+
+.mainContainer {
+  padding-top: 128px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* 결제하기 */
+.payment-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.payment-container > .products {
+  width: 100%;
+  margin-right: 32px;
+  position: sticky;
+  top: 92px;
+  max-width: 640px;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-wrapper {
+  max-width: 640px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.payment-container > .products > ul > li > img, 
+.payment-container > .products img {
+    width: 100%;
+    object-fit: contain;
+    /* border: 1px solid rgba(0, 0, 0, 0.15); */
+}
+
+/* .payment-container > .poster > .swiper-container {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+} */
+
+.payment-container > .content > .input-container {
+  margin-top: 16px;
+}
+
+.payment-container > .content > .input-container > div {
+  height: 46px;
+  margin-bottom: 8px;
+}
+
+.payment-container > .content > .input-container input,
+.payment-container > .content > .input-container select {
+  margin-bottom: 8px;
+}
+
+.input-number-wrapper button .input-number-wrapper button:hover,
+.input-number-wrapper button:active,
+.input-number-wrapper button:focus {
+  outline: none;
+}
+
+.input-number-wrapper button:hover,
+.input-number-wrapper button:active {
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.payment-container > .content > .input-container > #total {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  margin-top: 16px;
+  padding-top: 16px;
+}
+
+.payment-container > .content > .input-container > form > #agreezone {
+  display: flex;
+  align-items: flex;
+  justify-content: left;
+  margin: 16px 0;
+}
+
+.payment-container > .content > .input-container > form > #agreezone > input {
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  margin-right: 8px;
+}
+
+.payment-container
+  > .content
+  > .input-container
+  > form
+  > #agreezone
+  > div
+  > input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.payment-container
+  > .content
+  > .input-container
+  > form
+  > #agreezone
+  > div
+  > input[type="checkbox"]
+  + label {
+  font-size: 13px;
+}
+
+.payment-container > .content > ul {
+  display: flex;
+  align-items: flex-end;
+  /* flex-wrap: wrap; */
+  margin-top: 30px;
+  justify-content: space-evenly;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.payment-container > .content > ul > input[type="radio"] {
+  display: none;
+}
+
+.payment-container > .content > ul > input[type="radio"] + label {
+  min-width: 155px;
+  width: calc(100% / 3 - 50px);
+  /* max-width: 150px; */
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
+  justify-content: space-around;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  margin: 0 2px;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 6px;
+}
+
+.payment-container > .content > ul > input[type="radio"]:hover + label {
+  background-color: #eee;
+}
+
+.payment-container > .content > ul > input[type="radio"]:focus + label,
+.payment-container > .content > ul > input[type="radio"]:active + label,
+.payment-container > .content > ul > input[type="radio"]:checked + label {
+  border-color: #f68027;
+}
+
+.payment-container > .content > ul > input[type="radio"] + label > img {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+}
+
+.payment-container > .content > ul > input[type="radio"] + label > p {
+  color: #000000;
+  font-size: 12px;
+}
+
+.paybutton {
+  width: 100%;
+  height: 40px;
+  background: #000;
+  color: #fff;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 480px) {
+  .mainContainer {
+    padding-top: 96px;
+  }
+
+  .payment-container {
+    flex-wrap: wrap;
+  }
+
+  .payment-container > .products {
+    width: 100%;
+    margin-right: 0px;
+    position: relative;
+    top: 0;
+    margin-bottom: 16px;
+  }
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B4MB exclusive</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'nzy6ngm',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+</head>
+
+<body>
+    <div class="mainWrap">
+        <header class="mainHeader">
+            <div class="header-container">
+                <ul>
+                    <li>
+                        <img class="logo" src="./src/logo.png" alt="로고" />
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main class="mainContainer">
+            <div class="payment-container">
+                <div class="products">
+                    <!-- Swiper -->
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="./src/thumb/hoodie-front.jpg" alt="티셔츠" /></div>
+                            <div class="swiper-slide"><img src="./src/thumb/hoodie-back.jpg" alt="티셔츠" /></div>
+                        </div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next" style="filter: saturate(0);"></div>
+                        <div class="swiper-button-prev" style="filter: saturate(0);"></div>
+                    </div>
+                    <!-- <ul>
+                        <li>
+                            <img src="./src/thumb/hoodie-front.jpg" alt="티셔츠" />
+                        </li>
+                        <li>
+                            <img src="./src/thumb/hoodie-back.jpg" alt="티셔츠" />
+                        </li>
+                    </ul> -->
+                </div>
+                <div class="content">
+                    <p class="title">B4MB Special Exclusive</p>
+                    <p class="text" style="margin-top: 32px; font-size: 14px;">
+                        환영합니다.<br>
+                        본 페이지는 B4MB 공식 관계자로부터<br><b style="font-weight: 800;">Special Exclusive</b> 자격을 받은 고객 대상 전용 주문
+                        사이트입니다.<br><br>
+                        아래에 정보를 입력해주시면, 해당 정보를 토대로 상품이 제작되어 영업일 5-7일 이내에 기재해주신 주소로 배송됩니다.
+                    </p>
+
+                    <div class="input-container">
+                        <form id="contact" action="" method="post">
+                            <fieldset>
+                                <input placeholder="성명" type="text" name="name" tabindex="1" required autofocus>
+                            </fieldset>
+                            <fieldset>
+                                <input placeholder="이메일" type="email" name="email" tabindex="2" required>
+                            </fieldset>
+                            <fieldset>
+                                <input placeholder="연락처" type="tel" name="phone" tabindex="3" required>
+                            </fieldset>
+                            <fieldset>
+                                <select placeholder="사이즈" name="size" tabindex="4" required>
+                                    <option value="none" selected="selected">사이즈를 선택해주세요</option>
+                                    <option value="s">S (90)</option>
+                                    <option value="m">M (95)</option>
+                                    <option value="l">L (100)</option>
+                                    <option value="xl">XL (105)</option>
+                                    <option value="2xl">2XL (110)</option>
+                            </fieldset>
+                            <fieldset>
+                                <input placeholder="배송받을 주소" type="text" name="address" tabindex="5" required>
+                            </fieldset>
+                            <fieldset>
+                                <textarea placeholder="기타 요청사항을 입력해주세요." name="extra" tabindex="6" required></textarea>
+                            </fieldset>
+                            <fieldset id="agreezone">
+                                <input type="checkbox" id="agreement" name="agreement" value="agree" tabindex="7"
+                                    required>
+                                <label class="text" for="agreement">위의 기재한 상품, 배송정보가 확실합니다.</label>
+                            </fieldset>
+                            <fieldset>
+                                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending"
+                                    class="paybutton">SEND</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="mainFooter">
+            <div class="footer-container">
+                <p><b style="font-weight: 700;">B4MBOO STUDIO</b>
+                </p>
+                <p><b>주소:</b> 경기도 용인시 기흥구 덕영대로 1732 경희대학교국제캠퍼스</p>
+                <p>
+                    <b>개인정보보호 책임자:</b> 이미루
+                </p>
+                <p>©Copyright 2021 B4MBOO STUDIO. ALL RIGHTS RESERVED</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+<!-- Swiper JS -->
+<script src="../javascript/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+
+</html>
