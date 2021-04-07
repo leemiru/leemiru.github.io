@@ -52,6 +52,10 @@ body {
 input {
   width: calc(100% - 18px);
   height: 28px;
+  background-color: #fff;
+  outline: none;
+  box-shadow: none;
+  border-radius: 0;
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 8px;
 }
@@ -60,7 +64,11 @@ select {
   display: inline-block;
   width: 100%;
   padding-right: 4px;
+  background-color: #fff;
+  outline: none;
+  box-shadow: none;
   height: 44px;
+  border-radius: 0;
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 8px;
 }
@@ -350,6 +358,14 @@ textarea {
 @media screen and (max-width: 480px) {
   .mainContainer {
     padding-top: 96px;
+  }
+
+  .mainHeader > .header-container {
+    width: 100%;
+    max-width: 1080px;
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 16px;
   }
 
   .payment-container {
