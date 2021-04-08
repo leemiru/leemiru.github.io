@@ -12,7 +12,7 @@
     <title>B4MB exclusive</title>
     <link rel="apple-touch-icon-precomposed" sizes="300x300" href="./src/square-logo.png" />
     <meta property="og:url" content="https://www.leemiru.com/b4mboo/exclusive.html">
-    <meta property="og:title" content="B4MB Special Exclusive">
+    <meta property="og:title" content="B4MB Special Access">
     <meta property="og:type" content="website">
     <meta property="og:image" content="./src/square-logo.png">
     <meta property="og:description" content="특별한 사람들을 위해 준비했습니다.">
@@ -81,11 +81,15 @@
                         사이트입니다.<br><br>
                         아래에 정보를 입력해주시면, 해당 정보를 토대로 상품이 제작되어 영업일 5-7일 이내에 기재해주신 주소로 배송됩니다.
                     </p>
+                    <br>
+
+                    <p class="text" style="font-weight: 600;">B4MB Hoodie Black </p>
+                    <p class="text">XXX,XXX원</p>
 
                     <div class="input-container">
                         <form id="contact" action="" method="post">
                             <fieldset>
-                                <input placeholder="성명" type="text" name="name" tabindex="1" required autofocus>
+                                <input placeholder="성명" type="text" name="name" tabindex="1" required>
                             </fieldset>
                             <fieldset>
                                 <input placeholder="이메일" type="email" name="email" tabindex="2" required>
@@ -108,13 +112,13 @@
                             <fieldset>
                                 <textarea placeholder="기타 요청사항을 입력해주세요." name="extra" tabindex="6" required></textarea>
                             </fieldset>
-                            <fieldset id="agreezone">
+                            <!-- <fieldset id="agreezone">
                                 <input type="checkbox" id="agreement" name="agreement" value="agree" tabindex="7"
                                     required>
-                                <label class="text" for="agreement">위의 기재한 상품, 배송정보가 확실합니다.</label>
-                            </fieldset>
+                                <label class="text" for="agreement" style="font-size: 14px">개인정보 수집 동의</label>
+                            </fieldset> -->
                             <fieldset>
-                                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending"
+                                <button name="submit" type="submit" id="pay-submit"
                                     class="paybutton">SEND</button>
                             </fieldset>
                         </form>
@@ -122,11 +126,49 @@
                 </div>
             </div>
         </main>
+        <div class="modalWrap">
+            <div class="confirm-modal">
+                <div class="title-container">
+                    <p class="title">주문정보 확인</p>
+                </div>
+                <ul>
+                    <li class="flex">
+                        <span class="subtitle">상품명</span><span class="text">B4MB Hoodie Black</span>
+                    </li>
+                    <li class="flex">
+                        <span class="subtitle">가격</span><span class="text">0원</span>
+                    </li>
+                    <li class="flex">
+                        <span class="subtitle">주문자</span><span class="text">이미루</span>
+                    </li>
+                    <li class="flex">
+                        <span class="subtitle">이메일</span><span class="text">leemiru@bamb.ooo</span>
+                    </li>
+                    <li class="flex">
+                        <span class="subtitle">연락처</span><span class="text">010-5033-3336</span>
+                    </li>
+                    <li class="flex">
+                        <span class="subtitle">사이즈</span><span class="text">L (100)</span>
+                    </li>
+                    <li class="flex">
+                        <span class="subtitle">배송받을 주소</span><span class="text">경기도 수원시 영통구 반달로 76, 303호</span>
+                    </li>
+                    <li class="flex">
+                        <span class="subtitle">요청사항</span><span class="text">빠른 배송 부탁드려요</span>
+                    </li>
+                </ul>
+                <div class="flex button-container" style="width: 100%;">
+                    <button class="paybutton invert" id="false">입력한 정보와 다릅니다.</button>
+                    <button name="submit" type="submit" id="contact-submit" data-submit="...Sending"
+                                    class="paybutton">입력한 정보가 맞습니다.</button>
+                </div>
+            </div>
+        </div>
         <footer class="mainFooter">
             <div class="footer-container">
                 <p><b style="font-weight: 700;">B4MBOO STUDIO</b>
                 </p>
-                <p><b>주소:</b> 경기도 용인시 기흥구 덕영대로 1732 경희대학교국제캠퍼스</p>
+                <p><b>주소:</b> 경기도 용인시 기흥구 덕영대로 1732 경희대학교 국제캠퍼스</p>
                 <p>
                     <b>개인정보보호 책임자:</b> 이미루
                 </p>
@@ -141,10 +183,22 @@
 
 <script>
     var swiper = new Swiper('.swiper-container', {
+        loop: true,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
+            
         },
+    });
+
+    $(function() {
+        $('#pay-submit').click(function() {
+            $('.modalWrap').fadeIn('fast').css('display', 'flex');
+        });
+
+        $('#false').click(function() {
+            $('.modalWrap').fadeOut('fast');
+        });
     });
 </script>
 
