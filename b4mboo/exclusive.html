@@ -52,6 +52,15 @@
             </div>
         </header>
         <main class="mainContainer">
+            <div class="intro-container">
+                <p class="title">B4MB Special Exclusive</p>
+                <p class="text" style="margin-top: 16px; font-size: 14px;">
+                    환영합니다.<br>
+                    본 페이지는 B4MB 공식 관계자로부터<br><b style="font-weight: 800;">Special Exclusive</b> 자격을 받은 고객 대상 전용 주문
+                    사이트입니다.<br><br>
+                    아래에 정보를 입력해주시면, 해당 정보를 토대로 상품이 제작되어 <br>영업일 5-7일 이내에 기재해주신 주소로 배송됩니다.
+                </p>
+            </div>
             <div class="payment-container">
                 <div class="products">
                     <!-- Swiper -->
@@ -74,17 +83,15 @@
                     </ul> -->
                 </div>
                 <div class="content">
-                    <p class="title">B4MB Special Exclusive</p>
-                    <p class="text" style="margin-top: 32px; font-size: 14px;">
-                        환영합니다.<br>
-                        본 페이지는 B4MB 공식 관계자로부터<br><b style="font-weight: 800;">Special Exclusive</b> 자격을 받은 고객 대상 전용 주문
-                        사이트입니다.<br><br>
-                        아래에 정보를 입력해주시면, 해당 정보를 토대로 상품이 제작되어 영업일 5-7일 이내에 기재해주신 주소로 배송됩니다.
-                    </p>
-                    <br>
+                    <p class="product title">B4MB Hoodie Black </p>
+                    <!-- <p class="text">XXX,XXX원</p> -->
+                    <p class="product text">우리의 특별한 사람들을 위한 컬렉션,
+                        B4MB가 여러분을 찾아갑니다. <br>새로운 스타일의 이번 컬렉션은 우리들의 활동에 경의를 표하는 동시에 우리가 걷고 있는 거리에서 영감을 받았습니다.<br>
 
-                    <p class="text" style="font-weight: 600;">B4MB Hoodie Black </p>
-                    <p class="text">XXX,XXX원</p>
+                        유행을 타지 않는 실루엣과 스타일은 B4MB의 간결한 정신을 반영합니다. <br>이번 컬렉션에서는 인류 역사동안 꾸준히 사랑받고 있는 과감하고 눈에 띄는 블랙 & 이와
+                        180도 대비되는 화이트 컬러를 사용해, 결코 잊을 수 없는 첫인상을 남깁니다. <br>거대한 캔버스 중심에 위치한 B4MB, 우리 모두의 미적 감각이 담긴 디테일이 서로
+                        어우러지며 은은하면서도 독보적인 감각을 만들어 냅니다.<br>
+                        강렬한 대조를 이루는 색조와 완성도 높은 디테일을 활용한 고급스러운 레이어로 하루 중 어떤 시간대에서나 독보적인 존재감을 보여줍니다.</p>
 
                     <div class="input-container">
                         <form id="contact" action="" method="post">
@@ -118,8 +125,7 @@
                                 <label class="text" for="agreement" style="font-size: 14px">개인정보 수집 동의</label>
                             </fieldset> -->
                             <fieldset>
-                                <button name="submit" type="submit" id="pay-submit"
-                                    class="paybutton">SEND</button>
+                                <button name="submit" type="submit" id="pay-submit" class="paybutton">SEND</button>
                             </fieldset>
                         </form>
                     </div>
@@ -154,13 +160,14 @@
                         <span class="subtitle">배송받을 주소</span><span class="text">경기도 수원시 영통구 반달로 76, 303호</span>
                     </li>
                     <li class="flex">
-                        <span class="subtitle">요청사항</span><span class="text">빠른 배송 부탁드려요</span>
+                        <span class="subtitle">요청사항</span><span class="text">뒷판 디자인에 제 이름을 커다랗게 써주세요. 뱀부로고보다 크게요. 제가 하고
+                            싶은대로 할 수 있게 해주세요ㅡㅡ</span>
                     </li>
                 </ul>
                 <div class="flex button-container" style="width: 100%;">
                     <button class="paybutton invert" id="false">입력한 정보와 다릅니다.</button>
                     <button name="submit" type="submit" id="contact-submit" data-submit="...Sending"
-                                    class="paybutton">입력한 정보가 맞습니다.</button>
+                        class="paybutton">입력한 정보가 맞습니다.</button>
                 </div>
             </div>
         </div>
@@ -170,7 +177,7 @@
                 </p>
                 <p><b>주소:</b> 경기도 용인시 기흥구 덕영대로 1732 경희대학교 국제캠퍼스</p>
                 <p>
-                    <b>개인정보보호 책임자:</b> 이미루
+                    <b>당신의 기쁜 날을 축하드립니다.</b>
                 </p>
                 <p>©Copyright 2021 B4MBOO STUDIO. ALL RIGHTS RESERVED</p>
             </div>
@@ -187,16 +194,16 @@
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
-            
+
         },
     });
 
-    $(function() {
-        $('#pay-submit').click(function() {
+    $(function () {
+        $('#pay-submit').click(function () {
             $('.modalWrap').fadeIn('fast').css('display', 'flex');
         });
 
-        $('#false').click(function() {
+        $('#false').click(function () {
             $('.modalWrap').fadeOut('fast');
         });
     });
