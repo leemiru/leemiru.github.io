@@ -76,7 +76,7 @@ body {
 
 input {
   width: calc(100% - 18px);
-  height: 28px;
+  height: 24px;
   background-color: #fff;
   outline: none;
   box-shadow: none;
@@ -92,7 +92,7 @@ select {
   background-color: #fff;
   outline: none;
   box-shadow: none;
-  height: 44px;
+  height: 40px;
   border-radius: 0;
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 8px;
@@ -103,7 +103,7 @@ select::content {
 }
 textarea {
   width: calc(100% - 18px) !important;
-  height: 150px;
+  height: 128px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 8px;
   resize: none;

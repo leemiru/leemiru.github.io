@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr.Martens X LEEMIRU</title>
+</head>
+<body>
+    <main class="mainWrap">
+        <div class="postContainer">
+            <img id="bg" src="./bg.png"/>
+            <img id="bgLogo" src="./bglogo.png"/>
+            <p>신발을 클릭해보세요!</p>
+            <a href="https://drmartens.co.kr"><img id="shoes" src="./shoes.png"/></a>
+            <img id="miruLogo" src="./mirulogo.png"/>
+            <img id="drLogo" src="./logo.png"/>
+        </div>
+    </main>
+</body>
+
+<style>
+    .mainWrap {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .postContainer {
+        min-width: 720px;
+        min-height: 720px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        background-color: transparent;
+    }
+
+    p {
+        position: fixed;
+        top: 0;
+        margin-top: 140px;
+        font-size: 20px;
+        font-weight: 900;
+        letter-spacing: -1px;
+
+    }
+
+    a {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+    #bg {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        bottom: 0;
+        object-fit: cover;
+    }
+
+    #bgLogo {
+        width: 100%;
+        height: 100%;
+        max-width: 720px;
+        max-height: 480px;
+        object-fit: contain;
+        position: fixed;
+        top: 50%;
+        margin-top: -240px;
+        
+
+        z-index: 0;
+    }
+
+    #shoes {
+        width: 540px;
+        height: 540px;
+        object-fit: contain;
+        background: transparent;
+        animation: shoesInit 3s infinite;
+        transition: 1s filter, 1s opacity;
+        position: fixed;
+        top: 50%;
+        margin-top: -270px;
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    #shoes:hover,
+    #shoes:active {
+        filter: blur(100px);
+        opacity: 0;
+    }
+
+    @keyframes shoesInit {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    #miruLogo {
+        width: fit-content;
+        height: 50px;
+        object-fit: contain;
+        position: fixed;
+        bottom: 0;
+    }
+
+    #drLogo {
+        width: fit-content;
+        height: 100px;
+        object-fit: contain;
+        position: fixed;
+        top: 0;
+        margin-top: 16px;
+    }
+
+    @media (max-width: 768px) {
+        .mainWrap {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    a {
+        max-width: 375px;
+    }
+
+    .postContainer {
+        min-width: 100%;
+        min-height: 100%;
+        max-width: 375px;
+        max-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url('./bg.png');
+        background-size: cover;
+        background-color: transparent;
+    }
+
+    #bgLogo {
+        max-width: 375px;
+        max-height: 375px;
+        margin-top: -50%;
+
+        z-index: 0;
+    }
+
+    #shoes {
+        width: 85%;
+        top: 50%;
+        margin-top: -42.5%;
+        height: auto;
+        z-index: 1;
+    }
+           
+    }
+</style>
+</html>

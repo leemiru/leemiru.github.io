@@ -94,18 +94,20 @@
                         강렬한 대조를 이루는 색조와 완성도 높은 디테일을 활용한 고급스러운 레이어로 하루 중 어떤 시간대에서나 독보적인 존재감을 보여줍니다.</p>
 
                     <div class="input-container">
-                        <form id="contact" action="" method="post">
+                        <form id="info-form" action="mail.php" method=”POST” enctype=”multipart/form-data”
+                            name=”EmailForm”>
                             <fieldset>
-                                <input placeholder="성명" type="text" name="name" tabindex="1" required>
+                                <input id="input-name" placeholder="성명" type="text" name="name" tabindex="1" required>
                             </fieldset>
                             <fieldset>
-                                <input placeholder="이메일" type="email" name="email" tabindex="2" required>
+                                <input id="input-email" placeholder="이메일" type="email" name="email" tabindex="2"
+                                    required>
                             </fieldset>
                             <fieldset>
-                                <input placeholder="연락처" type="tel" name="phone" tabindex="3" required>
+                                <input id="input-phone" placeholder="연락처" type="tel" name="phone" tabindex="3" required>
                             </fieldset>
                             <fieldset>
-                                <select placeholder="사이즈" name="size" tabindex="4" required>
+                                <select id="input-size" placeholder="사이즈" name="size" tabindex="4" required>
                                     <option value="none" selected="selected">사이즈를 선택해주세요</option>
                                     <option value="s">S (90)</option>
                                     <option value="m">M (95)</option>
@@ -114,10 +116,12 @@
                                     <option value="2xl">2XL (110)</option>
                             </fieldset>
                             <fieldset>
-                                <input placeholder="배송받을 주소" type="text" name="address" tabindex="5" required>
+                                <input id="input-address" placeholder="배송받을 주소" type="text" name="address" tabindex="5"
+                                    required>
                             </fieldset>
                             <fieldset>
-                                <textarea placeholder="기타 요청사항을 입력해주세요." name="extra" tabindex="6" required></textarea>
+                                <textarea id="input-requirement" placeholder="기타 요청사항을 입력해주세요." name="extra"
+                                    tabindex="6" required></textarea>
                             </fieldset>
                             <!-- <fieldset id="agreezone">
                                 <input type="checkbox" id="agreement" name="agreement" value="agree" tabindex="7"
@@ -125,7 +129,8 @@
                                 <label class="text" for="agreement" style="font-size: 14px">개인정보 수집 동의</label>
                             </fieldset> -->
                             <fieldset>
-                                <button name="submit" type="submit" id="pay-submit" class="paybutton">SEND</button>
+                                <!-- <button name="submit" type="submit" id="pay-submit" class="paybutton">SEND</button> -->
+                                <button id="pay-submit" class="paybutton">SEND</button>
                             </fieldset>
                         </form>
                     </div>
@@ -145,23 +150,22 @@
                         <span class="subtitle">가격</span><span class="text">0원</span>
                     </li>
                     <li class="flex">
-                        <span class="subtitle">주문자</span><span class="text">이미루</span>
+                        <span class="subtitle">주문자</span><span class="text" id="val-name"></span>
                     </li>
                     <li class="flex">
-                        <span class="subtitle">이메일</span><span class="text">leemiru@bamb.ooo</span>
+                        <span class="subtitle">이메일</span><span class="text" id="val-email"></span>
                     </li>
                     <li class="flex">
-                        <span class="subtitle">연락처</span><span class="text">010-5033-3336</span>
+                        <span class="subtitle">연락처</span><span class="text" id="val-phone"></span>
                     </li>
                     <li class="flex">
-                        <span class="subtitle">사이즈</span><span class="text">L (100)</span>
+                        <span class="subtitle">사이즈</span><span class="text" id="val-size"></span>
                     </li>
                     <li class="flex">
-                        <span class="subtitle">배송받을 주소</span><span class="text">경기도 수원시 영통구 반달로 76, 303호</span>
+                        <span class="subtitle">배송받을 주소</span><span class="text" id="val-address"></span>
                     </li>
                     <li class="flex">
-                        <span class="subtitle">요청사항</span><span class="text">뒷판 디자인에 제 이름을 커다랗게 써주세요. 뱀부로고보다 크게요. 제가 하고
-                            싶은대로 할 수 있게 해주세요ㅡㅡ</span>
+                        <span class="subtitle">요청사항</span><span class="text" id="val-req"></span>
                     </li>
                 </ul>
                 <div class="flex button-container" style="width: 100%;">
@@ -199,13 +203,48 @@
     });
 
     $(function () {
-        $('#pay-submit').click(function () {
+
+        // $('#pay-submit').click(function () {
+        //     $inputname = $('#input-name').val();
+        //     $inputemail = $('#input-email').val();
+        //     $inputsize = $('#input-size').val();
+        //     $inputphone = $('#input-phone').val();
+        //     $inputaddress = $('#input-address').val();
+        //     $inputreq = $('#input-requirement').val();
+
+        //     $name = $('#val-name').text($inputname);
+        //     $email = $('#val-email').text($inputemail);
+        //     $size = $('#val-size').text($inputsize);
+        //     $phone = $('#val-phone').text($inputphone);
+        //     $address = $('#val-address').text($inputaddress);
+        //     $req = $('#val-requirement').text($inputreq);
+
+        //     $('.modalWrap').fadeIn('fast').css('display', 'flex');
+        // });
+
+        function paymodal() {
+            $inputname = $('#input-name').val();
+            $inputemail = $('#input-email').val();
+            $inputsize = $('#input-size').val();
+            $inputphone = $('#input-phone').val();
+            $inputaddress = $('#input-address').val();
+            $inputreq = $('#input-requirement').val();
+
+            $name = $('#val-name').text($inputname);
+            $email = $('#val-email').text($inputemail);
+            $size = $('#val-size').text($inputsize);
+            $phone = $('#val-phone').text($inputphone);
+            $address = $('#val-address').text($inputaddress);
+            $req = $('#val-requirement').text($inputreq);
+
             $('.modalWrap').fadeIn('fast').css('display', 'flex');
-        });
+        }
 
         $('#false').click(function () {
             $('.modalWrap').fadeOut('fast');
         });
+
+
     });
 </script>
 
