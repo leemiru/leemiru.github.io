@@ -126,16 +126,6 @@
         "month" : "3",
         "url" : "/contents/gallery/sky-space/post.html",
         "thumb" : "/contents/gallery/sky-space/thumb.png"
-    },
-
-    {
-        "name" : "Oasis",
-        "type" : "albumcover",
-        "id" : "oasis",
-        "year" : "2019",
-        "month" : "1",
-        "url" : "/contents/gallery/oasis/post.html",
-        "thumb" : "/contents/gallery/oasis/thumb.jpg"
     }
 
 ]}
