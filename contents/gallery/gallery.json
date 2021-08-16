@@ -1,4 +1,32 @@
 { "gallery" : [
+    {
+        "name" : "광복 제76주년",
+        "type" : "poster",
+        "id" : "b4mb0815",
+        "year" : "2021",
+        "month" : "8",
+        "url" : "/contents/gallery/b4mb0815/post.html",
+        "thumb" : "/contents/gallery/b4mb0815/thumb.jpg"
+    },
+    {
+        "name" : "NAKED",
+        "type" : "poster",
+        "id" : "b4mbnaked",
+        "year" : "2021",
+        "month" : "7",
+        "url" : "/contents/gallery/b4mbnaked/post.html",
+        "thumb" : "/contents/gallery/b4mbnaked/thumb.jpg"
+    },
+
+    {
+        "name" : "B4MB Identities<br>B4MB",
+        "type" : "poster",
+        "id" : "b4mbdiscs",
+        "year" : "2021",
+        "month" : "6",
+        "url" : "/contents/gallery/b4mbdiscs/post.html",
+        "thumb" : "/contents/gallery/b4mbdiscs/thumb.jpg"
+    },
 
     {
         "name" : "DMSChallenge<br>Dr. Martens",

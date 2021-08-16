@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B4MB</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'nzy6ngm',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+</head>
+
+<body>
+    <div class="notimodal">
+        해당 컨텐츠는 PC 환경에서 재생가능합니다.<br>PC로 접속 부탁드립니다.
+    </div>
+    <div class="wrapper">
+        <a href="https://instagram.com/leemiru" target="_blank">
+            <div class="adwrapper">
+                <div class="ad miru">
+                    <div class="layer light"></div>
+                    <div class="layer light light-2"></div>
+                    <!-- <div class="layer layer-1"></div>
+                <div class="layer layer-2"></div>
+                <div class="layer layer-3"></div> -->
+                </div>
+                <p class="me">leemiru</p>
+            </div>
+        </a>
+
+        <a href="https://instagram.com/curvesign" target="_blank">
+            <div class="adwrapper">
+                <div class="ad curvesign">
+                    <div class="layer light"></div>
+                    <div class="layer light light-2"></div>
+                    <!-- <div class="layer layer-1"></div>
+                <div class="layer layer-2"></div>
+                <div class="layer layer-3"></div> -->
+                </div>
+                <p class="me">curvesign</p>
+            </div>
+        </a>
+
+
+
+        <a href="https://instagram.com/thxalotlot" target="_blank">
+            <div class="adwrapper">
+                <div class="ad moon">
+                    <div class="layer light"></div>
+                    <div class="layer light light-2"></div>
+                    <!-- <div class="layer layer-1"></div>
+                <div class="layer layer-2"></div>
+                <div class="layer layer-3"></div> -->
+                </div>
+                <p class="me">thxalotot</p>
+            </div>
+        </a>
+
+
+        <a href="https://instagram.com/dny_kim" target="_blank">
+            <div class="adwrapper">
+                <div class="ad dny">
+                    <div class="layer light"></div>
+                    <div class="layer light light-2"></div>
+                    <!-- <div class="layer layer-1"></div>
+                <div class="layer layer-2"></div>
+                <div class="layer layer-3"></div> -->
+                </div>
+                <p class="me">dnykim</p>
+            </div>
+        </a>
+
+
+    </div>
+
+    <div class="text-grid">
+        B4MBB4MBB4MB
+    </div>
+
+    <div class="description">
+        <p>
+            <code>B4MB ARTWORK WORKSHOP</code>.
+        </p>
+        <p class="me">artwork by <a href="https://instagram.com/leemiru" target="_blank">@leemiru</a></p>
+    </div>
+</body>
+
+<style>
+    html,
+    body {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    body {
+        font-family: Helvetica, sans-serif;
+        font-size: 18px;
+        line-height: 1.5;
+        margin: 0;
+        color: #fff;
+        /* background: linear-gradient(160deg, rgb(255, 255, 255), rgb(255, 255, 255)) no-repeat; */
+        background: #151515;
+        transition: background 50ms linear;
+    }
+
+    a {
+        color: #56b2ff;
+        text-decoration: none;
+    }
+
+    .wrapper {
+        position: relative;
+        width: 100%;
+        /* max-width: 640px; */
+        height: 100%;
+        align-items: center;
+        display: flex;
+        /* flex-wrap: wrap; */
+        justify-content: center;
+        -webkit-perspective: 800;
+        overflow: visible;
+    }
+
+    .adwrapper {
+        filter: drop-shadow(0px 50px 60px rgba(0, 0, 0, 0.5));
+        cursor: pointer;
+        margin: 0 -72px;
+    }
+
+    .adwrapper .me {
+        text-align: center;
+        /* margin-top: -150px; */
+        opacity: 0;
+        transition: opacity 200ms;
+    }
+
+    .layer {
+        position: absolute;
+        will-change: transform;
+    }
+
+    .ad {
+        position: relative;
+        width: 375px;
+        min-width: 375px;
+        height: 375px;
+        overflow: visible;
+        background: black;
+        -webkit-transform-style: preserve-3d;
+        will-change: transform;
+        box-shadow: 0 60px 100px rgba(0, 0, 0, 0.5);
+        background-repeat: repeat;
+        background-size: cover;
+        background-position: center;
+        clip-path: circle(49.8%);
+        cursor: pointer;
+        transition: margin 300ms ease-out;
+    }
+
+    .ad:hover {
+        animation: rotation infinite 1s;
+        animation-timing-function: linear;
+        margin-top: -100px;
+    }
+
+    @keyframes rotation {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes lightanim {
+        0% {
+            transform: translateX(-1000px) translateY(100px);
+        }
+
+        100% {
+            transform: translateX(1000px) translateY(100px);
+        }
+    }
+
+    .ad.miru {
+        background-image: url("./miru.png");
+    }
+
+    .ad.curvesign {
+        background-image: url("./curvesign.png");
+    }
+
+    .ad.moon {
+        background-image: url("./moon.png");
+    }
+
+    .ad.dny {
+        background-image: url("./dny.png");
+    }
+
+
+    .layer-1,
+    .layer-2,
+    .layer-3 {
+        top: 50%;
+        left: 50%;
+        margin-left: -630px;
+        margin-top: -375px;
+        width: 1260px;
+        height: 750px;
+        transform: scale(0.7);
+        clip-path: circle(49%);
+    }
+
+    .light {
+        top: 50%;
+        left: 50%;
+        margin-left: -640px;
+        margin-top: -500px;
+        width: 1280px;
+        height: 800px;
+        background: radial-gradient(ellipse closest-side at center, #a5a5a5, black);
+        mix-blend-mode: color-dodge;
+        opacity: 0.7;
+        z-index: 3;
+        animation: lightanim 1 ease-in-out 1.5s;
+        transform: translateX(1000px) translateY(100px);
+    }
+
+    .light-2 {
+        z-index: 4;
+        background: radial-gradient(ellipse closest-side at center, white, black);
+        mix-blend-mode: screen;
+        opacity: 0.5;
+    }
+
+    .layer-1 {
+        background-image: url(http://demos.attasi.com/apple-tv/images/breaking-bad-layer-1.jpg);
+    }
+
+    .layer-2 {
+        background-image: url(http://demos.attasi.com/apple-tv/images/breaking-bad-layer-2.png);
+    }
+
+    .layer-3 {
+        background-image: url(http://demos.attasi.com/apple-tv/images/breaking-bad-layer-3.png);
+    }
+
+    .description {
+        position: fixed;
+        bottom: 0;
+        padding-bottom: 70px;
+        height: fit-content;
+        /* background: black; */
+    }
+
+    .description p {
+        max-width: 840px;
+        margin: 1em auto;
+    }
+
+    .description code {
+        font-family: Monaco, monospace;
+        color: #ccc;
+    }
+
+    .me {
+        font-size: 14px;
+    }
+
+
+    .text-grid {
+        font-family: aktiv-grotesk-extended, sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        font-weight: bold;
+        color: #000;
+        --chars: 4;
+        text-transform: uppercase;
+        font-size: calc(70vmin / var(--chars));
+        display: grid;
+        grid-template-columns: repeat(var(--chars), 1.2em);
+        position: fixed;
+        z-index: -99;
+        mix-blend-mode: overlay;
+    }
+
+    .char {
+        --d: max(0.25, var(--distance, 0));
+        opacity: var(--d);
+        display: inline-grid;
+        place-items: center;
+        transform: scale(calc(var(--d) * 1.4));
+        color: #151515;
+        /* transition: color 0.2s linear; */
+    }
+
+    .notimodal {
+        display: none;
+    }
+
+    @media (max-width: 640px) {
+
+        .notimodal {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            background-color: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(100px);
+            -webkit-backdrop-filter: blur(100px);
+            z-index: 9999999999;
+            text-align: center;
+        }
+
+        body {
+            overflow: auto;
+        }
+
+        .wrapper {
+            position: relative;
+            width: 100%;
+            /* max-width: 640px; */
+            height: 100%;
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            /* flex-wrap: wrap; */
+            justify-content: center;
+            -webkit-perspective: 800;
+            overflow: visible;
+            /* padding-top: 100px; */
+            padding-bottom: 100px;
+        }
+
+        .ad {
+            /* margin-bottom: -500px; */
+        }
+
+        .ad:hover {
+            margin: 0;
+        }
+
+        .light {
+            display: none;
+        }
+    }
+
+    .light-2 {
+        display: none;
+    }
+
+    .description {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .layer-1,
+    .layer-2,
+    .layer-3 {
+        display: none;
+    }
+</style>
+
+<script>
+
+    var $body = $('body');
+    var $wrapper = $('.wrapper');
+    var WIDTH = $body.width();
+    var HEIGHT = $body.height();
+    var $ad = $('.adwrapper');
+    var $light = $ad.find('.light');
+    // var $layer1 = $ad.find('.layer-1');
+    // var $layer2 = $ad.find('.layer-2');
+    // var $layer3 = $ad.find('.layer-3');
+
+    if (WIDTH > 640) {
+        $body.on('mousemove', moveAd);
+
+    }
+
+    function moveAd(e) {
+        var xPer = e.clientX / WIDTH;
+        var yPer = e.clientY / HEIGHT;
+
+        var rotateX = 7.5 - (yPer * 10);
+        var rotateY = -7.5 + (xPer * 10);
+
+        $ad.css({
+            transform: 'rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg)'
+        });
+
+        var translateX = -5 + (xPer * 10);
+        var translateY = -5 + (yPer * 10);
+
+        // $layer2.css({
+        //     transform: 'scale(.7) translateX(' + translateX + 'px) translateY(' + translateY + 'px)'
+        // });
+
+        // $layer3.css({
+        //     transform: 'scale(.7) translateX(' + (translateX * 2) + 'px) translateY(' + (translateY * 2) + 'px)'
+        // });
+
+        var lightX = 800 - (xPer * 1600);
+        var lightY = 100 - (yPer * 600);
+
+        $light.css({
+            transform: 'translateX(' + lightX + 'px) translateY(' + lightY + 'px)'
+        });
+
+        // const { clientX, clientY } = event.touches ? event.touches[0] : event;
+        recalculateDistances({ x: e.clientX, y: e.clientY });
+    }
+    const elTextGrid = document.querySelector(".text-grid");
+
+    $('.ad.miru').mouseenter(function () {
+        $body.css('background', '#b00f23');
+        $(this).parent().children('.me').css('opacity', '1');
+    }).mouseleave(function () {
+        $body.css('background', '#151515');
+        $(this).parent().children('.me').css('opacity', '0');
+    });
+
+    $('.ad.curvesign').mouseenter(function () {
+        $body.css('background', '#acd5f0');
+        $(this).parent().children('.me').css('opacity', '1');
+    }).mouseleave(function () {
+        $body.css('background', '#151515');
+        $(this).parent().children('.me').css('opacity', '0');
+    });
+
+    $('.ad.moon').mouseenter(function () {
+        $body.css('background', '#f6682f');
+        $(this).parent().children('.me').css('opacity', '1');
+    }).mouseleave(function () {
+        $body.css('background', '#151515');
+        $(this).parent().children('.me').css('opacity', '0');
+    });
+
+    $('.ad.dny').mouseenter(function () {
+        $body.css('background', '#715a47');
+        $(this).parent().children('.me').css('opacity', '1');
+    }).mouseleave(function () {
+        $body.css('background', '#151515');
+        $(this).parent().children('.me').css('opacity', '0');
+    });
+
+    function splittingLite(el) {
+        let characters = el.innerText
+            .split("")
+            .filter((char) => char !== " ")
+            .map(
+                (char, i) =>
+                    `<span class="char" data-char="${char}" style="--i: ${i}">${char}</span>`
+            );
+        el.innerHTML = characters.join("");
+        el.style.setProperty("--total", characters.length);
+        return el.querySelectorAll(".char");
+    }
+
+    const elCharacters = splittingLite(elTextGrid);
+
+    function getCharMeasurements() {
+        return Array.from(elCharacters, (elChar) => {
+            return {
+                element: elChar,
+                rect: elChar.getBoundingClientRect(),
+                distance: 0
+            };
+        });
+    }
+
+    let charMeasurements = getCharMeasurements();
+
+    window.addEventListener("resize", () => {
+        charMeasurements = getCharMeasurements();
+    });
+
+    function recalculateDistances(mouseCoords) {
+        let containerRect = elTextGrid.getBoundingClientRect();
+        let diagonal = Math.hypot(containerRect.width, containerRect.height);
+        charMeasurements.forEach(({ element, rect }) => {
+            const distance = Math.hypot(
+                rect.left - mouseCoords.x,
+                rect.top - mouseCoords.y
+            );
+            const normalizedDistance = 1 - distance / diagonal;
+            element.style.setProperty(
+                "--distance",
+                Math.max(Math.pow(normalizedDistance, 3), 0)
+            );
+        });
+    }
+</script>
+
+</html>

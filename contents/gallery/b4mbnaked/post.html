@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+  (function (d) {
+    var config = {
+      kitId: 'nzy6ngm',
+      scriptTimeout: 3000,
+      async: true
+    },
+      h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+  })(document);
+</script>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Naked Me</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <div class="post-container">
+    <canvas id="canvas1"></canvas>
+    <canvas id="canvas2"></canvas>
+    <canvas id="canvas3"></canvas>
+    <canvas id="canvas4"></canvas>
+  </div>
+  <!-- <div class="desc-container">
+    <img src="./b4mb-logo.svg" id="logo"/>
+  </div> -->
+
+
+  <!-- <article>
+  This Vanilla JavaScript generative art experiment uses getImageData() method to scan image for pixel information, calculates relative brightness of each area, creates a simple particle system and adjusts speed and opacity of each particle based on brightness of the area the particle is currently moving over.<br>
+</article> -->
+
+  <!-- <footer>Created by <a href="https://www.youtube.com/channel/UCEqc149iR-ALYkGM6TG-7vQ" target='blank'>Frank's Laboratory</a> @2020.
+</footer> -->
+  <!-- partial -->
+  <script src="./script.js"></script>
+
+</body>
+
+</html>
