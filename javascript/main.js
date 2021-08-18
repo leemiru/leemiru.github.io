@@ -114,7 +114,7 @@ function gotoIntro() {
 
   if ($height < $body) {
     $("html, body").animate(
-      { scrollTop: $("#intro-contents").offset().top },
+      { scrollTop: $("#gallery-contents").offset().top },
       500
     );
   } else if ($height >= $body) {
@@ -383,11 +383,19 @@ $.unlockBody = function () {
 };
 
 function showCoverflow() {
+  $("html, body").animate(
+    { scrollTop: $("#gallery-contents").offset().top },
+    500
+  );
   $('#swiper-gallery').css('display', 'block');
   $('#grids-gallery').css('display', 'none');
 }
 
 function showGrids() {
+  $("html, body").animate(
+    { scrollTop: $("#gallery-contents").offset().top },
+    500
+  );
   $('#swiper-gallery').css('display', 'none');
   $('#grids-gallery').css('display', 'flex');
 }
