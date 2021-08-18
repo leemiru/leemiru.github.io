@@ -238,7 +238,7 @@ function createGrids(objImageInfo) {
       strDOM += '<div class="item-desc">';
       strDOM += '<p class="text medium black">' + image.name + "</p>";
       strDOM +=
-        '<p class="text small black invert right">' +
+        '<p class="text small black invert right" style="color:#fff">' +
         image.type +
         ", " +
         image.year +
