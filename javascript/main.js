@@ -18,7 +18,7 @@ function openPost(url) {
   $("#loadingModal").addClass("active");
   $("#postframe").attr("onload", "upPost(this)");
   $("#postframe").attr("src", url);
-  $(this).addClass('loading');
+  $(this).addClass("loading");
 }
 
 function upPost() {
@@ -50,7 +50,7 @@ function closePost() {
 
   $("#btn-intro").css("display", "inline-block");
 
-  $(".project-slide").removeClass('loading');
+  $(".project-slide").removeClass("loading");
   $.unlockBody();
 }
 
@@ -71,25 +71,28 @@ $(window).scroll(function () {
   }
 
   //gallery Parallax;
-  $("#swiper-gallery").css("transform", "translateY(-" + $height / 3 + "px)");
-  $("#swiper-gallery").css("opacity", 100 - $height / 10 + "%");
+  // $("#swiper-gallery").css("transform", "translateY(-" + $height / 3 + "px)");
+  $("#swiper-gallery").css("opacity", 0 + $height / 10 + "%");
 
   //header는 스크롤을 바닥에 닿자마자 반전
   if ($height >= $body - 48) {
     $(".cont-header").css("filter", "invert(1) hue-rotate(180deg)");
-    $("#gallery-pagination").css("display", "none");
+    $("#gallery-pagination").css("display", "flex");
     $("#word").css("display", "none");
     $(".header").addClass("blur");
+
+    $(".mainTab-container").css('display', 'inline-block');
 
     //화면이 펼쳐지면 인디케이터가 멈춤
     stopBounce();
   } else {
     $(".body").css("background-color", "#000");
     $(".cont-header").css("filter", "invert(0)");
-    $("#gallery-pagination").css("display", "flex");
+    $("#gallery-pagination").css("display", "none");
     $("#word").css("display", "inline-block");
     $("#btn-intro").text("⍗");
     $(".header").removeClass("blur");
+    $(".mainTab-container").css('display', 'none');
   }
 
   //footer는 스크롤을 시작하자마자 반전
@@ -125,23 +128,27 @@ function stopBounce() {
 
 //프로젝트 이미지 불러오기
 function startLoadFile() {
+  var $gridsContainer = $("#grids-list");
+  $gridsContainer.html("");
+
   $.ajax({
     url: "/contents/gallery/gallery.json",
     type: "GET",
     dataType: "json",
     success: function (data) {
       createGallery(data);
+      createGrids(data);
     },
   });
 
-  $.ajax({
-    url: "/contents/portfolio/portfolio.json",
-    type: "GET",
-    dataType: "json",
-    success: function (data) {
-      createLogs(data);
-    },
-  });
+  // $.ajax({
+  //   url: "/contents/portfolio/portfolio.json",
+  //   type: "GET",
+  //   dataType: "json",
+  //   success: function (data) {
+  //     createLogs(data);
+  //   },
+  // });
 }
 
 // JSON 포멧 데이터 처리
@@ -154,12 +161,7 @@ function createGallery(objImageInfo) {
 
     // N번째 이미지 패널을 생성
     strDOM += '<div class="swiper-slide project-slide" id="' + image.id + '">';
-    strDOM +=
-      "<div onclick='openPost(" +
-      '"' +
-      image.url +
-      '"' +
-      ");'>";
+    strDOM += "<div onclick='openPost(" + '"' + image.url + '"' + ");'>";
     strDOM +=
       '   <img class="swiper-lazy" src="' +
       image.thumb +
@@ -182,6 +184,78 @@ function createGallery(objImageInfo) {
   } catch (error) {
     console.log("Swiper Reloaded");
     startLoadFile();
+  }
+}
+
+function createGrids(objImageInfo) {
+  var logs = objImageInfo.gallery;
+  var strDOM = "";
+
+  for (var i = 0; i < logs.length; i++) {
+    // N번째 이미지 정보를 구하기
+    var image = logs[i];
+
+    appendList();
+    // if ($("#navAll").is(":checked")) {
+    //   appendList();
+    // }
+
+    // else if ($("#navArtworks").is(":checked")) {
+    //   if (image.type == "poster") {
+    //     appendList();
+    //   } else if (image.type == "albumcover") {
+    //     appendList();
+    //   }
+    // }
+
+    // else if ($("#navProjects").is(":checked")) {
+    //   if (image.type == "ui") {
+    //     appendList();
+    //   }
+    // }
+
+    function appendList() {
+      // N번째 이미지 패널을 생성
+      strDOM +=
+        '<li class="item" ' +
+        'id="' +
+        image.id +
+        '"' +
+        'onclick="openPost(' +
+        "'" +
+        image.url +
+        "'" +
+        ');">';
+      strDOM +=
+        '<img src="' +
+        image.thumb +
+        '" alt="' +
+        image.type +
+        " / " +
+        image.name +
+        '"/>';
+
+      strDOM += '<div class="item-desc">';
+      strDOM += '<p class="text medium black">' + image.name + "</p>";
+      strDOM +=
+        '<p class="text small black invert right">' +
+        image.type +
+        ", " +
+        image.year +
+        "</p>";
+      strDOM += "</div></li>";
+    }
+  }
+
+  // 이미지 컨테이너에 생성한 이미지 패널들을 추가하기
+  var $gridsContainer = $("#grids-list");
+  try {
+    $gridsContainer.append(strDOM);
+
+    // $(".item").css("height", $(".item").width());
+  } catch (error) {
+    console.log("Logs Contents Reloaded");
+    $gridsContainer.append(strDOM);
   }
 }
 
@@ -214,9 +288,9 @@ function createLogs(objImageInfo) {
       '"/>';
 
     strDOM += '<div class="item-desc">';
-    strDOM += '<p class="letter medium black">' + image.name + "</p>";
+    strDOM += '<p class="text medium black">' + image.name + "</p>";
     strDOM +=
-      '<p class="letter small black invert right">' +
+      '<p class="text small black invert right">' +
       image.type +
       ", " +
       image.year +
@@ -225,12 +299,12 @@ function createLogs(objImageInfo) {
   }
 
   // 이미지 컨테이너에 생성한 이미지 패널들을 추가하기
-  var $portfolioContainer = $("#logs-list");
+  var $gridsContainer = $("#logs-list");
   try {
-    $portfolioContainer.append(strDOM);
+    $gridsContainer.append(strDOM);
   } catch (error) {
     console.log("Logs Contents Reloaded");
-    $portfolioContainer.append(strDOM);
+    $gridsContainer.append(strDOM);
   }
 }
 
@@ -277,33 +351,43 @@ var wordflick = function () {
 };
 
 // prevent body scroll
-var $docEl = $('html, body'),
-  $wrap = $('.body'),
+var $docEl = $("html, body"),
+  $wrap = $(".body"),
   $scrollTop;
 
-$.lockBody = function() {
-  if(window.pageYOffset) {
-      $scrollTop = window.pageYOffset;
-      $wrap.css({
-          top: - ($scrollTop)
-      });
+$.lockBody = function () {
+  if (window.pageYOffset) {
+    $scrollTop = window.pageYOffset;
+    $wrap.css({
+      top: -$scrollTop,
+    });
   }
   $docEl.css({
-      height: "100%",
-      overflow: "hidden"
+    height: "100%",
+    overflow: "hidden",
   });
-}
+};
 
-$.unlockBody = function() {
+$.unlockBody = function () {
   $docEl.css({
-      height: "",
-      overflow: ""
+    height: "",
+    overflow: "",
   });
   $wrap.css({
-      top: ''
+    top: "",
   });
   window.scrollTo(0, $scrollTop);
   window.setTimeout(function () {
-      $scrollTop = null;
+    $scrollTop = null;
   }, 0);
+};
+
+function showCoverflow() {
+  $('#swiper-gallery').css('display', 'block');
+  $('#grids-gallery').css('display', 'none');
+}
+
+function showGrids() {
+  $('#swiper-gallery').css('display', 'none');
+  $('#grids-gallery').css('display', 'flex');
 }

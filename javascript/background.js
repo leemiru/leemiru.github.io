@@ -1,7 +1,7 @@
 $(function(){
 	includeLayout();
 	startLoadFile();
-	wordflick();
+	// wordflick();
 }); 
 
 function includeLayout(){ 
@@ -15,3 +15,6 @@ function includeLayout(){
 		}); 
 	}); 
 }
+
+$(document).ready(function() {
+});
