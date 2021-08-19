@@ -19,6 +19,14 @@
   <div class="post">
     <img src="orig.jpg"/>
   </div>
+
+  <div class="postDesc">
+    <p class="title huge">계룡 전산 한마당 Vol.2</p>
+    <p class="text medium bold">2019 / Poster</p>
+    <br>
+    <br>
+    <p class="text">대한민국 공군으로 복무할 당시,<br>소속 부대 병사들끼리 진행했던 IT 컨퍼런스의 행사 포스터이다.</p>
+  </div>
 </body>
 <style>
   body {
@@ -30,133 +38,10 @@
     margin: 0;
     padding: 0;
   }
-
-  body>div {
-    width: 620px;
-  }
-
+  
   img {
     width: 100%;
     box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.3);
   }
-
-  p {
-    font-family: serif;
-    color: silver;
-    text-shadow: 15px 15px 2px 0px sienna;
-    font-size: 11pt;
-    font-weight: bold;
-    margin-top: 16pt;
-    display: none;
-  }
-
-  @media screen and (max-width: 800px) {}
-
-  #candle:nth-of-type(even),
-  #ball:nth-of-type(odd),
-  #box:nth-of-type(even),
-  #stick:nth-of-type(odd) {
-    animation-name: slide;
-    animation-timing-function: ease-out;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-  }
-
-  #candle:nth-of-type(odd),
-  #ball:nth-of-type(even),
-  #box:nth-of-type(odd),
-  #stick:nth-of-type(even) {
-    animation-name: slide;
-    animation-timing-function: ease-out;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-  }
-
-  #snow {
-    opacity: 0;
-    animation-name: down;
-    animation-duration: 10s;
-    animation-delay: 0s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-  }
-
-  #snow2 {
-    opacity: 0;
-    animation-name: down;
-    animation-delay: 5s;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-  }
-
-  @keyframes slide {
-    0% {
-      transform: translateY(0);
-    }
-
-    50% {
-      transform: translateY(-30px);
-    }
-
-    100% {
-      transform: translateY(0px);
-    }
-  }
-
-  @keyframes down {
-    0% {
-      opacity: 1;
-      transform: translateY(-100%) translateX(0px);
-    }
-
-    25% {
-      opacity: 1;
-      transform: translateY(-50%) translateX(-50px);
-    }
-
-    50% {
-      opacity: 1;
-      transform: translateY(-0%) translateX(0px);
-    }
-
-    75% {
-      opacity: 1;
-      transform: translateY(50%) translateX(-50px);
-    }
-
-    100% {
-      opacity: 1;
-      transform: translateY(100%) translateX(0px);
-    }
-  }
 </style>
-<script>
-  const root = document.querySelector('html')
-
-  const snow = $('#snow')
-  // cursor.classList.add('cursor')
-  // root.appendChild(cursor)
-
-  var timer;
-
-  root.addEventListener('mousemove', (e) => {
-    // cursor.classList.add('moving')
-    setPosition(snow, e)
-    clearTimeout(timer);
-    timer = setTimeout(mouseStopped, 1500);
-  })
-
-  function mouseStopped() {
-    // cursor.classList.remove('moving');
-  }
-
-  function setPosition(element, e) {
-    // element.style.transform = `translate(${e.clientX}px, ${e.clientY}px, 0)`
-    element.css('transform', 'scale('+ e.clientX +')');
-  }
-
-
-</script>
-
 </html>
