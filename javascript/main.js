@@ -14,20 +14,26 @@ function goHome() {
 }
 
 function openPost(url) {
-  $.lockBody();
-  $("#loadingModal").addClass("active");
   $("#postframe").attr("onload", "upPost(this)");
+  $('#loadingModal').addClass('active');
+
   $("#postframe").attr("src", url);
   $(this).addClass("loading");
+
+  $("body").css("overflow", "hidden");
 }
 
 function upPost() {
-  $("#loadingModal").removeClass("active");
+  $('#loadingModal').removeClass('active');
+
+  $(".header").addClass("onPost");
+  $(".header").removeClass("blur");
+  $(".footer").addClass("onPost");
+  $(".footer").removeClass("blur");
 
   $("#postModal").css("animation-name", "postModalopen");
-  $("#postModal").css("top", "0%");
-  $("#block-main").css("animation-name", "postModalopenbg");
-  $("#block-main").css("opacity", "0");
+  $("#postModal").css("z-index", "99");
+  $("#postModal").css("opacity", "1");
 
   $("#gallery-pagination").css("display", "none");
   $("#word").css("display", "none");
@@ -38,10 +44,7 @@ function upPost() {
 
 function closePost() {
   $("#postModal").css("animation-name", "postModalclose");
-  $("#postModal").css("top", "100%");
-
-  $("#block-main").css("animation-name", "postModalclosebg");
-  $("#block-main").css("opacity", "1");
+  $("#postModal").css("opacity", "0");
 
   $("#gallery-pagination").css("display", "flex");
   $("#word").css("display", "inline-block");
@@ -50,8 +53,17 @@ function closePost() {
 
   $("#btn-intro").css("display", "inline-block");
 
-  $(".project-slide").removeClass("loading");
-  $.unlockBody();
+  $(".header").removeClass("onPost");
+  $(".header").addClass("blur");
+  $(".footer").removeClass("onPost");
+  $(".footer").addClass("blur");
+
+  $("body").css("overflow", "auto");
+
+  window.setTimeout(function () {
+    $("#postModal").css("z-index", "-99999");
+    $("#postframe").contents().find("body").html("");
+  }, 250);
 }
 
 $(window).scroll(function () {
@@ -72,7 +84,7 @@ $(window).scroll(function () {
 
   //gallery Parallax;
   // $("#swiper-gallery").css("transform", "translateY(-" + $height / 3 + "px)");
-  $("#swiper-gallery").css("opacity", 0 + $height / 10 + "%");
+  $("#gallery-contents > div").css("opacity", 0 + $height / 10 + "%");
 
   //header는 스크롤을 바닥에 닿자마자 반전
   if ($height >= $body - 48) {
@@ -81,7 +93,9 @@ $(window).scroll(function () {
     $("#word").css("display", "none");
     $(".header").addClass("blur");
 
-    $(".mainTab-container").css('display', 'inline-block');
+    $("#gallery-contents > div").css("opacity", "1");
+
+    $(".mainTab-container").css("display", "inline-block");
 
     //화면이 펼쳐지면 인디케이터가 멈춤
     stopBounce();
@@ -92,7 +106,7 @@ $(window).scroll(function () {
     $("#word").css("display", "inline-block");
     $("#btn-intro").text("⍗");
     $(".header").removeClass("blur");
-    $(".mainTab-container").css('display', 'none');
+    $(".mainTab-container").css("display", "none");
   }
 
   //footer는 스크롤을 시작하자마자 반전
@@ -132,7 +146,7 @@ function startLoadFile() {
   $gridsContainer.html("");
 
   $.ajax({
-    url: "/contents/gallery/gallery.json",
+    url: "/assets/gallery/gallery.json",
     type: "GET",
     dataType: "json",
     success: function (data) {
@@ -142,7 +156,7 @@ function startLoadFile() {
   });
 
   // $.ajax({
-  //   url: "/contents/portfolio/portfolio.json",
+  //   url: "/assets/portfolio/portfolio.json",
   //   type: "GET",
   //   dataType: "json",
   //   success: function (data) {
@@ -350,45 +364,14 @@ var wordflick = function () {
   }, speed);
 };
 
-// prevent body scroll
-var $docEl = $("html, body"),
-  $wrap = $(".body"),
-  $scrollTop;
-
-$.lockBody = function () {
-  if (window.pageYOffset) {
-    $scrollTop = window.pageYOffset;
-    $wrap.css({
-      top: -$scrollTop,
-    });
-  }
-  $docEl.css({
-    height: "100%",
-    overflow: "hidden",
-  });
-};
-
-$.unlockBody = function () {
-  $docEl.css({
-    height: "",
-    overflow: "",
-  });
-  $wrap.css({
-    top: "",
-  });
-  window.scrollTo(0, $scrollTop);
-  window.setTimeout(function () {
-    $scrollTop = null;
-  }, 0);
-};
-
 function showCoverflow() {
   $("html, body").animate(
     { scrollTop: $("#gallery-contents").offset().top },
     500
   );
-  $('#swiper-gallery').css('display', 'block');
-  $('#grids-gallery').css('display', 'none');
+  $("#swiper-gallery").css("display", "block");
+  $("#grids-gallery").css("display", "none");
+  $("#gallery-pagination").css("display", "flex");
 }
 
 function showGrids() {
@@ -396,6 +379,7 @@ function showGrids() {
     { scrollTop: $("#gallery-contents").offset().top },
     500
   );
-  $('#swiper-gallery').css('display', 'none');
-  $('#grids-gallery').css('display', 'flex');
+  $("#swiper-gallery").css("display", "none");
+  $("#grids-gallery").css("display", "flex");
+  $("#gallery-pagination").css("display", "none");
 }
