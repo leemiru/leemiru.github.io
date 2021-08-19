@@ -764,6 +764,10 @@ nav.mainTab {
   transform: rotate(-22.5deg);
 }
 
+#gallery-pagination.hide {
+  display: none !important;
+}
+
 .grids-list {
   width: 100%;
   margin: 0;

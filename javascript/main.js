@@ -371,7 +371,7 @@ function showCoverflow() {
   );
   $("#swiper-gallery").css("display", "block");
   $("#grids-gallery").css("display", "none");
-  $("#gallery-pagination").css("display", "flex");
+  $("#gallery-pagination").removeClass("hide");
 }
 
 function showGrids() {
@@ -381,5 +381,5 @@ function showGrids() {
   );
   $("#swiper-gallery").css("display", "none");
   $("#grids-gallery").css("display", "flex");
-  $("#gallery-pagination").css("display", "none");
+  $("#gallery-pagination").addClass("hide");
 }
