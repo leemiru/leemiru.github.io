@@ -35,7 +35,6 @@ function upPost() {
   $("#postModal").css("z-index", "99");
   $("#postModal").css("opacity", "1");
 
-  $("#gallery-pagination").css("display", "none");
   $("#word").css("display", "none");
 
   $("#btn-close").css("display", "flex");
@@ -46,7 +45,6 @@ function closePost() {
   $("#postModal").css("animation-name", "postModalclose");
   $("#postModal").css("opacity", "0");
 
-  $("#gallery-pagination").css("display", "flex");
   $("#word").css("display", "inline-block");
 
   $("#btn-close").css("display", "none");
@@ -89,24 +87,25 @@ $(window).scroll(function () {
   //header는 스크롤을 바닥에 닿자마자 반전
   if ($height >= $body - 48) {
     $(".cont-header").css("filter", "invert(1) hue-rotate(180deg)");
-    $("#gallery-pagination").css("display", "flex");
     $("#word").css("display", "none");
     $(".header").addClass("blur");
+    $(".mainNav").addClass("blur");
 
     $("#gallery-contents > div").css("opacity", "1");
 
-    $(".mainTab-container").css("display", "inline-block");
+    $(".mainTab").css("display", "inline-block");
 
     //화면이 펼쳐지면 인디케이터가 멈춤
     stopBounce();
   } else {
     $(".body").css("background-color", "#000");
     $(".cont-header").css("filter", "invert(0)");
-    $("#gallery-pagination").css("display", "none");
+
     $("#word").css("display", "inline-block");
     $("#btn-intro").text("⍗");
     $(".header").removeClass("blur");
-    $(".mainTab-container").css("display", "none");
+    $(".mainNav").removeClass("blur");
+    $(".mainTab").css("display", "none");
   }
 
   //footer는 스크롤을 시작하자마자 반전
@@ -122,7 +121,7 @@ $(window).scroll(function () {
   $("#main-logo-image").css("transform", "rotateX(" + deg + "deg)");
 });
 
-function gotoIntro() {
+function gotoGallery() {
   var $height = $(window).scrollTop();
   var $body = $("#main-contents").height();
 
@@ -371,7 +370,6 @@ function showCoverflow() {
   );
   $("#swiper-gallery").css("display", "block");
   $("#grids-gallery").css("display", "none");
-  $("#gallery-pagination").removeClass("hide");
 }
 
 function showGrids() {
@@ -381,5 +379,4 @@ function showGrids() {
   );
   $("#swiper-gallery").css("display", "none");
   $("#grids-gallery").css("display", "flex");
-  $("#gallery-pagination").addClass("hide");
 }
