@@ -2,7 +2,7 @@ var $close;
 var $pagination;
 var $header;
 var $footer;
-var $intro;
+var $gallery;
 var $main;
 var $postframe;
 var $body;
@@ -35,10 +35,10 @@ function upPost() {
   $("#postModal").css("z-index", "99");
   $("#postModal").css("opacity", "1");
 
-  $("#word").css("display", "none");
-
   $("#btn-close").css("display", "flex");
-  $("#btn-intro").css("display", "none");
+  $(".hamburger").css("display", "none");
+
+  $("#btn-gallery").css("display", "none");
 }
 
 function closePost() {
@@ -48,8 +48,9 @@ function closePost() {
   $("#word").css("display", "inline-block");
 
   $("#btn-close").css("display", "none");
+  $(".hamburger").css("display", "flex");
 
-  $("#btn-intro").css("display", "inline-block");
+  $("#btn-gallery").css("display", "inline-block");
 
   $(".header").removeClass("onPost");
   $(".header").addClass("blur");
@@ -87,7 +88,6 @@ $(window).scroll(function () {
   //header는 스크롤을 바닥에 닿자마자 반전
   if ($height >= $body - 48) {
     $(".cont-header").css("filter", "invert(1) hue-rotate(180deg)");
-    $("#word").css("display", "none");
     $(".header").addClass("blur");
     $(".mainNav").addClass("blur");
 
@@ -101,8 +101,7 @@ $(window).scroll(function () {
     $(".body").css("background-color", "#000");
     $(".cont-header").css("filter", "invert(0)");
 
-    $("#word").css("display", "inline-block");
-    $("#btn-intro").text("⍗");
+    $("#btn-gallery").text("⍗");
     $(".header").removeClass("blur");
     $(".mainNav").removeClass("blur");
     $(".mainTab").css("display", "none");
@@ -112,7 +111,7 @@ $(window).scroll(function () {
   if ($height >= 48) {
     $(".cont-footer").css("filter", "invert(1)  hue-rotate(180deg)");
     $(".footer").addClass("blur");
-    $("#btn-intro").text("⍐");
+    $("#btn-gallery").text("⍐");
   } else {
     $(".cont-footer").css("filter", "invert(0)");
     $(".footer").removeClass("blur");
@@ -136,7 +135,7 @@ function gotoGallery() {
 }
 
 function stopBounce() {
-  $("#btn-intro").css("animation-iteration-count", "1");
+  $("#btn-gallery").css("animation-iteration-count", "1");
 }
 
 //프로젝트 이미지 불러오기
