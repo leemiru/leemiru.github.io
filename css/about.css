@@ -1,0 +1,7 @@
+p:is(.title, .text) {
+
+}
+
+footer.footer #btn-gallery {
+  display: none;
+}

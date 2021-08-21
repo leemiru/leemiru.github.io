@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="euc-kr" />
+  <title>MIRU</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <link rel="apple-touch-icon-precomposed" sizes="300x300" href="/assets/logo_black.png" />
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css" />
+  <link rel="stylesheet" href="/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+  <link rel="icon" href="/favicon.ico" />
+  <script src="/javascript/jquery-3.5.1.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="/css/about.css" />
+
+  <script>
+    (function (d) {
+      var config = {
+        kitId: 'nzy6ngm',
+        scriptTimeout: 3000,
+        async: true
+      },
+        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+    })(document);
+  </script>
+
+
+
+</head>
+
+<body class="body">
+  <script src="/javascript/background.js"></script>
+  <header role="header" data-include="/html/header.html"></header>
+  <nav role="nav" data-include="/html/nav.html"></nav>
+  <footer role="footer" data-include="/html/footer.html"></footer>
+
+  <main class="container" id="main-container">
+    <!--================Contents Showing Area================-->
+    <section id="about-contents">
+      <div class="contents-container">
+
+        <svg version="1.1" id="Layer_1" style="transform: scale(1.075);" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 610.7 331.8"
+          style="enable-background:new 0 0 610.7 331.8;" xml:space="preserve">
+          <filter id="distortionFilter">
+            <feTurbulence id="turbolence" type="fractalNoise" baseFrequency="5" numOctaves="10" seed="10"
+              stitchTiles="noStitch" x="0%" y="0%" width="100%" height="100%" result="noise"></feTurbulence>
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="75" xChannelSelector="R" yChannelSelector="B"
+              x="0%" y="0%" width="100%" height="100%" filterUnits="userSpaceOnUse"></feDisplacementMap>
+            <animate xlink:href="#turbolence" attributeName="baseFrequency" dur="10s" keyTimes="0;0.5;1"
+              values="5;5.1;5;" repeatCount="indefinite"></animate>
+          </filter>
+          <style type="text/css">
+            .st0 {
+              fill: #FFFFFF;
+            }
+          </style>
+          <g>
+            <path filter="url(#distortionFilter)" class="st0"
+              d="M580,33v32.5V99v33.4v33.5v33.5v33.5v33.4v32.5h-35.7h-36.8h-36.7H434h-36.7h-36.8h-35.8v-32.5v-33.4v-33.5v-1
+		h-1H287h-1v1v32.5h-35.8h-1v1v32.4h-35.7h-1v1v32.5h-34.8v-32.5v-1h-1H141v-32.4v-1h-1h-35.8v-32.5v-1h-1H66.5h-1v1v33.5v33.4v32.5
+		H30.7v-32.5v-33.4v-33.5v-33.5v-33.5V99V65.5V33h35.8h36.7H140h36.7h36.8h35.7v32.5v1h1h35.7V99v1h1h0.1h36.7h1v-1V66.5h35.8h1v-1
+		V33h35.8H434h36.8h36.7h36.8H580 M581,32h-36.7h-36.8h-36.7H434h-36.7h-36.8v33.5h-36.8V99H287h-0.1V65.5h-36.7V32h-36.7h-36.8H140
+		h-36.8H66.5H29.7v33.5V99v33.4v33.5v33.5v33.5v33.4v33.5h36.8v-33.5v-33.4v-33.5h36.7v33.5H140v33.4h36.7v33.5h36.8v-33.5h36.7
+		v-33.4H287v-33.5h36.7v33.5v33.4v33.5h36.8h36.8H434h36.8h36.7h36.8H581v-33.5v-33.4v-33.5v-33.5v-33.5V99V65.5V32L581,32z" />
+          </g>
+        </svg>
+        <!-- 
+        <svg height="200" width="200">
+          <defs>
+            <filter id="distortionFilter">
+              <feTurbulence id="turbolence" type="fractalNoise" baseFrequency="5" numOctaves="10" seed="10"
+                stitchTiles="noStitch" x="0%" y="0%" width="100%" height="100%" result="noise"></feTurbulence>
+              <feDisplacementMap in="SourceGraphic" in2="noise" scale="50" xChannelSelector="R" yChannelSelector="B"
+                x="0%" y="0%" width="100%" height="100%" filterUnits="userSpaceOnUse"></feDisplacementMap>
+              <animate xlink:href="#turbolence" attributeName="baseFrequency" dur="20s" keyTimes="0;0.5;1"
+                values="5;5.1;5;" repeatCount="indefinite"></animate>
+            </filter>
+          </defs>
+          <circle cx="100" cy="100" r="70" fill="#c72828" filter="url(#distortionFilter)"></circle>
+        </svg> -->
+
+        <div id="basicInfo">
+          <div>
+            <p class="title giant" id="name"
+              style="font-size: 84px; margin-top: -164px; margin-bottom: 36px; line-height: 1.1;">LEE MIRU</p>
+          </div>
+
+          <ul>
+            <p class="title giant">Web Development</p>
+            <p class="title giant">User Experience</p>
+            <p class="title giant">Graphics</p>
+          </ul>
+
+        </div>
+
+        <div style="text-align: center; margin-top: 36px;">
+          <img style="width: 256px; height: 256px; border-radius: 50%; border: 1px solid white; margin-bottom: 16px;" src="assets/about/bio.png" />
+          <p class="title large">keepin' touch in my Instagram!</p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <div id="loadingModal">
+    <div class="loading-spinner"></div>
+  </div>
+</body>
+
+</html>

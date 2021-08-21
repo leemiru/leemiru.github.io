@@ -94,17 +94,19 @@ $(window).scroll(function () {
     $("#gallery-contents > div").css("opacity", "1");
 
     $(".mainTab").css("display", "inline-block");
-
+    $(".body").css("background-color", "#fff");
     //화면이 펼쳐지면 인디케이터가 멈춤
     stopBounce();
   } else {
-    $(".body").css("background-color", "#000");
+    $(".body").css("background-color", "#111");
     $(".cont-header").css("filter", "invert(0)");
 
     $("#btn-gallery").text("⍗");
     $(".header").removeClass("blur");
     $(".mainNav").removeClass("blur");
     $(".mainTab").css("display", "none");
+
+    
   }
 
   //footer는 스크롤을 시작하자마자 반전
@@ -320,47 +322,6 @@ function createLogs(objImageInfo) {
   }
 }
 
-var words = ["hello", "try scroll down", "there's a bigger me"],
-  part,
-  i = 0,
-  offset = 0,
-  len = words.length,
-  forwards = true,
-  skip_count = 0,
-  skip_delay = 50,
-  speed = 25;
-
-var wordflick = function () {
-  setInterval(function () {
-    if (forwards) {
-      if (offset >= words[i].length) {
-        ++skip_count;
-        if (skip_count == skip_delay) {
-          forwards = false;
-          skip_count = 0;
-        }
-      }
-    } else {
-      if (offset == 0) {
-        forwards = true;
-        i++;
-        offset = 0;
-        if (i >= len) {
-          i = 0;
-        }
-      }
-    }
-    part = words[i].substr(0, offset);
-    if (skip_count == 0) {
-      if (forwards) {
-        offset++;
-      } else {
-        offset--;
-      }
-    }
-    $("#word").text(part);
-  }, speed);
-};
 
 function showCoverflow() {
   $("html, body").animate(
