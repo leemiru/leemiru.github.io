@@ -1,20 +1,19 @@
 <nav class="mainNav">
     <ul>
-      <li onclick="$('.mainNav').toggleClass('is-active'); $('.hamburger').toggleClass('is-active');">
-        <a href="/about.html">about();</a>
-      </li>
+      <a href="/about.html" onclick="$('.mainNav').toggleClass('is-active'); $('.hamburger').toggleClass('is-active');">
+        about();
+      </a>
       <li onclick="gotoGallery(); $('.mainNav').toggleClass('is-active'); $('.hamburger').toggleClass('is-active');">
         gallery();
       </li>
       <li onclick="$('.mainNav').toggleClass('is-active'); $('.hamburger').toggleClass('is-active');">
         projects();
       </li>
-      <li onclick="$('.mainNav').toggleClass('is-active'); $('.hamburger').toggleClass('is-active');">
+      <a href="/contact.html" onclick="$('.mainNav').toggleClass('is-active'); $('.hamburger').toggleClass('is-active');">
         contactMe();
-      </li>
-      <li onclick="$('.mainNav').toggleClass('is-active'); $('.hamburger').toggleClass('is-active');">
-        <a href="https://www.b4mb.ooo">B4MB();</a>
-
-      </li>
+      </a>
+      <a href="https://www.b4mb.ooo" onclick="$('.mainNav').toggleClass('is-active'); $('.hamburger').toggleClass('is-active');">
+        B4MB();
+      </a>
     </ul>
   </nav>

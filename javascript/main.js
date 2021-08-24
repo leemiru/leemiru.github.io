@@ -1,75 +1,108 @@
-var $close;
+let $close;
 var $pagination;
-var $header;
-var $footer;
-var $gallery;
+var $header = $('.header');
+var $footer = $('.footer');
+var $hamburger = $('.hamburger');
+var $gallery = $('#gallery-contents > div');
 var $main;
-var $postframe;
-var $body;
+var $postframe = $('#postframe');
+var $postmodal = $('#postModal');
+var $body = $('body');
+var $mainTab = $('.mainTab');
+var $mainNav = $('.mainNav');
+var $contHeader = $('.cont-header');
+var $contFooter = $('.cont-footer');
+var $btnGallery = $('#btn-gallery');
+var $mainLogoImage = $('#main-logo-image');
 
 function goHome() {
+  $header = $('.header');
+  $footer = $('.footer');
+
   $("html, body").animate({ scrollTop: 0 }, 500);
   closePost();
-  console.log("Home clicked");
 }
 
 function openPost(url) {
-  $("#postframe").attr("onload", "upPost(this)");
+  $body = $('body');
+  $postframe = $('#postframe');
+
+  $postframe.attr("onload", "upPost(this)");
   $('#loadingModal').addClass('active');
 
-  $("#postframe").attr("src", url);
+  $postframe.attr("src", url);
   $(this).addClass("loading");
 
-  $("body").css("overflow", "hidden");
+  $body.css("overflow", "hidden");
 }
 
 function upPost() {
+  $header = $('.header');
+  $footer = $('.footer');
+  $hamburger = $('.hamburger');
+  $postmodal = $('#postModal');
+  $btnGallery = $('#btn-gallery');
+
   $('#loadingModal').removeClass('active');
 
-  $(".header").addClass("onPost");
-  $(".header").removeClass("blur");
-  $(".footer").addClass("onPost");
-  $(".footer").removeClass("blur");
+  $header.addClass("onPost");
+  $header.removeClass("blur");
+  $footer.addClass("onPost");
+  $footer.removeClass("blur");
 
-  $("#postModal").css("animation-name", "postModalopen");
-  $("#postModal").css("z-index", "99");
-  $("#postModal").css("opacity", "1");
+  $postmodal.css("animation-name", "postModalopen");
+  $postmodal.css("z-index", "99");
+  $postmodal.css("opacity", "1");
 
   $("#btn-close").css("display", "flex");
-  $(".hamburger").css("display", "none");
+  $hamburger.css("display", "none");
 
-  $("#btn-gallery").css("display", "none");
+  $btnGallery.css("display", "none");
 }
 
 function closePost() {
-  $("#postModal").css("animation-name", "postModalclose");
-  $("#postModal").css("opacity", "0");
+  $body = $('body');
+  $header = $('.header');
+  $footer = $('.footer');
+  $hamburger = $('.hamburger');
+  $postframe = $('#postframe');
+  $postmodal = $('#postModal');
+  $btnGallery = $('#btn-gallery');
 
-  $("#word").css("display", "inline-block");
+  $postmodal.css("animation-name", "postModalclose");
+  $postmodal.css("opacity", "0");
 
   $("#btn-close").css("display", "none");
-  $(".hamburger").css("display", "flex");
+  $hamburger.css("display", "flex");
 
-  $("#btn-gallery").css("display", "inline-block");
+  $btnGallery.css("display", "inline-block");
 
-  $(".header").removeClass("onPost");
-  $(".header").addClass("blur");
-  $(".footer").removeClass("onPost");
-  $(".footer").addClass("blur");
+  $header.removeClass("onPost");
+  $header.addClass("blur");
+  $footer.removeClass("onPost");
+  $footer.addClass("blur");
 
-  $("body").css("overflow", "auto");
+  $body.css("overflow", "auto");
 
   window.setTimeout(function () {
-    $("#postModal").css("z-index", "-99999");
-    $("#postframe").contents().find("body").html("");
+    $postmodal.css("z-index", "-99999");
+    $postframe.contents().find("body").html("");
   }, 250);
 }
 
 $(window).scroll(function () {
   var $height = $(window).scrollTop();
-  var $body = $(".body").height();
-  var result = ($body / $height) * 100;
+  var $bodyHeights = $body.height();
+  var result = ($bodyHeights / $height) * 100;
   var deg = (360 / result) * 100;
+
+  $mainTab = $('.mainTab');
+  $contHeader = $('.cont-header');
+  $contFooter = $('.cont-footer');
+  $btnGallery = $('#btn-gallery');
+  $mainNav = $('.mainNav');
+  $mainLogoImage = $('#main-logo-image');
+  $gallery = $('#gallery-contents > div');
 
   if (deg < 0) {
     deg == 0;
@@ -83,43 +116,43 @@ $(window).scroll(function () {
 
   //gallery Parallax;
   // $("#swiper-gallery").css("transform", "translateY(-" + $height / 3 + "px)");
-  $("#gallery-contents > div").css("opacity", 0 + $height / 10 + "%");
+  $gallery.css("opacity", 0 + $height / 10 + "%");
 
   //header는 스크롤을 바닥에 닿자마자 반전
-  if ($height >= $body - 48) {
-    $(".cont-header").css("filter", "invert(1) hue-rotate(180deg)");
-    $(".header").addClass("blur");
-    $(".mainNav").addClass("blur");
+  if ($height >= $bodyHeights - 48) {
+    $contHeader.css("filter", "invert(1) hue-rotate(180deg)");
+    $header.addClass("blur");
+    $mainNav.addClass("blur");
 
-    $("#gallery-contents > div").css("opacity", "1");
+    $gallery.css("opacity", "1");
 
-    $(".mainTab").css("display", "inline-block");
-    $(".body").css("background-color", "#fff");
+    $mainTab.css("display", "inline-block");
+    $body.css("background-color", "#fff");
     //화면이 펼쳐지면 인디케이터가 멈춤
     stopBounce();
   } else {
-    $(".body").css("background-color", "#111");
-    $(".cont-header").css("filter", "invert(0)");
+    $body.css("background-color", "#111");
+    $contHeader.css("filter", "invert(0)");
 
-    $("#btn-gallery").text("⍗");
-    $(".header").removeClass("blur");
-    $(".mainNav").removeClass("blur");
-    $(".mainTab").css("display", "none");
+    $btnGallery.text("⍗");
+    $header.removeClass("blur");
+    $mainNav.removeClass("blur");
+    $mainTab.css("display", "none");
 
     
   }
 
   //footer는 스크롤을 시작하자마자 반전
   if ($height >= 48) {
-    $(".cont-footer").css("filter", "invert(1)  hue-rotate(180deg)");
-    $(".footer").addClass("blur");
-    $("#btn-gallery").text("⍐");
+    $contFooter.css("filter", "invert(1)  hue-rotate(180deg)");
+    $footer.addClass("blur");
+    $btnGallery.text("⍐");
   } else {
-    $(".cont-footer").css("filter", "invert(0)");
-    $(".footer").removeClass("blur");
+    $contFooter.css("filter", "invert(0)");
+    $footer.removeClass("blur");
   }
 
-  $("#main-logo-image").css("transform", "rotateX(" + deg + "deg)");
+  $mainLogoImage.css("transform", "rotateX(" + deg + "deg)");
 });
 
 function gotoGallery() {
@@ -137,7 +170,7 @@ function gotoGallery() {
 }
 
 function stopBounce() {
-  $("#btn-gallery").css("animation-iteration-count", "1");
+  $btnGallery.css("animation-iteration-count", "1");
 }
 
 //프로젝트 이미지 불러오기
