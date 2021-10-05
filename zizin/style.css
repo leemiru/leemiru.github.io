@@ -90,7 +90,7 @@ main > div {
   transition: filter 100ms;
 }
 
-.dlBtn:hover {
+.dlBtn:active {
   filter: invert(1) hue-rotate(180deg);
 }
 
