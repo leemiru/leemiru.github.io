@@ -88,9 +88,10 @@ main > div {
   max-width: 1024px;
   margin-top: 48px;
   transition: filter 100ms;
+  cursor: pointer;
 }
 
-.dlBtn:active {
+.dlBtn:active, .dlBtn:hover {
   filter: invert(1) hue-rotate(180deg);
 }
 
