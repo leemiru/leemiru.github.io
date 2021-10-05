@@ -18,7 +18,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="/zizin/style.css" />
+  <!-- 
+  <script>
+    (function (d) {
+      var config = {
+        kitId: 'nzy6ngm',
+        scriptTimeout: 3000,
+        async: true
+      },
+        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+    })(document);
+  </script> -->
 
   <script>
     (function (d) {
@@ -31,19 +42,41 @@
     })(document);
   </script>
 
-  
-  
 </head>
 
 <body class="body">
-  <script src="/javascript/background.js"></script>
+  <!-- <script src="/javascript/background.js"></script>
   <header role="header" data-include="/html/header.html"></header>
-  <nav role="nav" data-include="/html/nav.html"></nav>
+  <nav role="nav" data-include="/html/nav.html"></nav> -->
 
-  <main style="display: flex; align-items: center; justify-content: center; position: fixed; top: 50%; margin-top: -30px; left: 50%; margin-left: -120px;">
-    <a href="./Archive Calendar.zip" class="btn" style="width: 240px; height: 60px; font-size: 20px; text-align: center; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #fff; color: #fff; font-weight: 800;">캘린더 다운로드</a>
+  <main>
+
+    <div>
+      <p class="welcomeText">Welcome</p>
+      <div id="toarrow">
+        <span class="welcomeText">to</span>
+        <span class="arrow"><span class="line"></span><svg xmlns="http://www.w3.org/2000/svg" width="98.447"
+            height="110.233" viewBox="0 0 98.447 110.233">
+            <path id="패스_214" data-name="패스 214" d="M-3920.332,4435.35v10.58l-94.145,97.92"
+              transform="translate(4016.279 -4435.35)" fill="none" stroke="#121212" stroke-width="5" />
+          </svg></span>
+      </div>
+
+      <p class="welcomeText">Archive<br>Calendar</p>
+      <a href="./Archive_Calendar.zip" class="dlBtn">Download <svg xmlns="http://www.w3.org/2000/svg" width="62.915"
+          height="76.244" viewBox="0 0 62.915 76.244">
+          <g id="그룹_2950" data-name="그룹 2950" transform="translate(-50.878 -1202.604)">
+            <rect id="사각형_375" data-name="사각형 375" width="5" height="13.325" transform="translate(79.836 1202.604)"
+              fill="#fd4c1e" />
+            <path id="패스_205" data-name="패스 205"
+              d="M84.836,1215.929v37.633l11.73-11.73,3.535,3.535-17.766,17.766L64.57,1245.367l3.535-3.535,11.731,11.73v-37.633H50.878v62.919h62.915v-62.919Z"
+              fill="#fd4c1e" />
+          </g>
+        </svg></a>
+    </div>
   </main>
-  <footer role="footer" data-include="/html/footer.html"></footer>
+  <!-- <footer role="footer" data-include="/html/footer.html"></footer> -->
+  <p class="copyright">Copyright 2021.10. Jin Kim All rights reserved.</p>
 </body>
 
 </html>
