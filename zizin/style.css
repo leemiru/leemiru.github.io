@@ -6,7 +6,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 1194px;
+  /* height: 1194px; */
   max-width: 1024px;
   width: 100%;
   margin: 0 auto;
