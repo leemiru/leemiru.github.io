@@ -2,6 +2,10 @@ body {
   background-color: #fd4c1e;
 }
 
+* {
+  transition: all 100ms;
+}
+
 main {
   display: flex;
   flex-direction: column;
