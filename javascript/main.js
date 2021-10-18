@@ -84,9 +84,11 @@ function closePost() {
 
   $body.css("overflow", "auto");
 
+  $postframe.attr("onload", "");
+
   window.setTimeout(function () {
     $postmodal.css("z-index", "-99999");
-    $postframe.contents().find("body").html("");
+    $postframe.attr('src', 'none');
   }, 250);
 }
 

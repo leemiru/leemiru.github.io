@@ -1,7 +1,7 @@
 { "gallery" : [
     {
         "name" : "R G B",
-        "type" : "poster",
+        "type" : "MediaArt",
         "id" : "rgb",
         "year" : "2021",
         "month" : "9",
@@ -19,7 +19,7 @@
     },
     {
         "name" : "NAKED",
-        "type" : "poster",
+        "type" : "MediaArt",
         "id" : "b4mbnaked",
         "year" : "2021",
         "month" : "7",
@@ -29,7 +29,7 @@
 
     {
         "name" : "B4MB Identities<br>B4MB",
-        "type" : "poster",
+        "type" : "MediaArt",
         "id" : "b4mbdiscs",
         "year" : "2021",
         "month" : "6",
@@ -39,7 +39,7 @@
 
     {
         "name" : "DMSChallenge<br>Dr. Martens",
-        "type" : "poster",
+        "type" : "MediaArt",
         "id" : "drmartens",
         "year" : "2021",
         "month" : "5",

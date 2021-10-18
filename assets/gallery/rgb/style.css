@@ -96,7 +96,4 @@ canvas#js-canvas.is-active {
 }
 
 @media (max-width: 480px) {
-  canvas#js-canvas {
-    width: 100vw;
-  }
 }

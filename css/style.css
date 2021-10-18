@@ -931,6 +931,7 @@ nav.mainTab {
   aspect-ratio: 3 / 4.25;
   object-fit: contain;
   margin-bottom: 4px;
+  cursor: pointer;
   transition: filter 100ms, object-position 3500ms;
 
 }
@@ -943,8 +944,14 @@ nav.mainTab {
 
 .grids-list .item-desc {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 8px;
+}
+
+.grids-list .item-desc .text.medium {
+  line-height: 1.1;
 }
 
 
