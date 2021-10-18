@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>RGB</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.3/dat.gui.min.js"></script>
+  <script>
+    (function (d) {
+      var config = {
+        kitId: 'nzy6ngm',
+        scriptTimeout: 3000,
+        async: true
+      },
+        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+    })(document);
+  </script>
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <!-- <div class="cursor-wrap">
+    <div class="cursor">
+      <div class="cursor-dot"></div>
+    </div>
+  
+    <div class="follower">
+      <div class="follower-circle"></div>
+    </div>
+  </div> -->
+  
+  
+  <div class="canvasContainer">
+    <canvas id="js-canvas"></canvas>
+    <p style="color: #ccc; font-family: aktiv-grotesk-extended, sandoll-gothicneo1, sans-serif; font-weight: 300;">click me!</p>
+    <!-- <audio style="display: none;" controls autoplay>
+      <source src="bgm.mp3" type="audio/mpeg">
+    </audio> -->
+    <!-- <button id="btnRandom" style="">REMIX</button> -->
+  </div>
+
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js'></script>
+  <script src="./script.js"></script>
+
+</body>
+
+</html>

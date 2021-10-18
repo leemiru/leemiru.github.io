@@ -1,10 +1,27 @@
 <main class="container" id="main-container">
   <!--================Contents Showing Area================-->
   <section id="main-contents">
-    <div class="contents-container">
-      <p class="title large">반갑습니다.<br>디자이너 이미루 입니다.</p>
-      <br>
-      <p class="text large">홈페이지는 현재 준비 중이나,<br>얼굴을 마주하지 않고 저를 대변하는 작품들이 이 아래에 있습니다.<br>아래로 스크롤하세요.</p>
+    <div class="contents-container" style="padding: 0; height: 100%;">
+      <div class="swiper mySwiper swiper-h">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Horizontal Slide 1</div>
+          <div class="swiper-slide">
+            <div class="swiper mySwiper2 swiper-v">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">Vertical Slide 1</div>
+                <div class="swiper-slide">Vertical Slide 2</div>
+                <div class="swiper-slide">Vertical Slide 3</div>
+                <div class="swiper-slide">Vertical Slide 4</div>
+                <div class="swiper-slide">Vertical Slide 5</div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+          <div class="swiper-slide">Horizontal Slide 3</div>
+          <div class="swiper-slide">Horizontal Slide 4</div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
     </div>
     <img src="/assets/logo-pixel.svg" style="width: 100%; opacity: 0.05; position: absolute; bottom: 0;" />
   </section>
@@ -14,13 +31,13 @@
 
     <div class="swiper-container swiper-container-gallery" id="swiper-gallery">
 
-      
+
       <div class="gallery-navigation">
         <div class="gallery-prev"><i class="fa fa-hand-o-left"></i></div>
         <!-- Add Pagination -->
-      <div class="pagination-wrapper" id="gallery-pagination">
-        <div class="swiper-pagination swiper-pagination-h"></div>
-      </div>
+        <div class="pagination-wrapper" id="gallery-pagination">
+          <div class="swiper-pagination swiper-pagination-h"></div>
+        </div>
         <div class="gallery-next"><i class="fa fa-hand-o-right"></i></div>
       </div>
 
@@ -39,9 +56,63 @@
   </section>
 </main>
 </div>
+
+<style>
+  #main-contents .swiper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  #main-contents .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  #main-contents .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #main-contents .swiper-v {
+  }
+</style>
+
 <script src="/javascript/swiper-bundle.min.js"></script>
 <script>
-
+  var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 50,
+    // mousewheel: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+  var swiper2 = new Swiper(".mySwiper2", {
+    direction: "vertical",
+    spaceBetween: 50,
+    mousewheel: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
   var swiperProjects = new Swiper(".swiper-container-gallery", {
     init: false,
     lazy: true,

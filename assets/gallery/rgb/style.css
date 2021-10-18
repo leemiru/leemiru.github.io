@@ -1,0 +1,102 @@
+body {
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+}
+
+.canvasContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+canvas#js-canvas {
+  /* border-radius: 7.5px; */
+  /* filter: drop-shadow(0 30px 20px rgba(0, 0, 0, 0.25)); */
+  background-color: #000;
+  cursor: pointer;
+  transition: transform 100ms;
+}
+
+.cursor {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
+  cursor: none;
+  /*transition:transform 50ms ease-out;*/
+  z-index: 999999;
+}
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 100%;
+  /*transition: 0.1s ease-in-out;*/
+}
+
+.follower {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
+  cursor: none;
+  /*transition:transform 100ms ease-out;*/
+  z-index: 999998;
+}
+
+.follower-circle {
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: #fff 1px solid;
+  transition: width 200ms ease-out, height 200ms ease-out;
+}
+.follower-circle--scale {
+  border: #fff 2px solid;
+  width: 80px;
+  height: 80px;
+  background: #fff;
+}
+
+@keyframes initialize {
+  0% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+canvas#js-canvas.is-active {
+  -webkit-animation: fadeOut 0.5s ease-out 1;
+  animation: fadeOut 0.5s ease-out 1;
+}
+
+@keyframes fadeOut {
+  0% {
+    filter: brightness(1);
+  }
+
+  50% {
+    filter: brightness(0);
+  }
+
+  100% {
+    filter: brightness(1);
+  }
+}
+
+@media (max-width: 480px) {
+  canvas#js-canvas {
+    width: 100vw;
+  }
+}
