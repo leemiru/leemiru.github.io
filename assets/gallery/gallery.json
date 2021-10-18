@@ -6,7 +6,8 @@
         "year" : "2021",
         "month" : "9",
         "url" : "/assets/gallery/rgb/post.html",
-        "thumb" : "/assets/gallery/rgb/thumb.png"
+        "thumb" : "/assets/gallery/rgb/thumb.png",
+        "desc" : "가장 기본적인 배열과 중첩으로 만들어낸 각양각색 빛들의 조합"
     },
     {
         "name" : "광복 제76주년",

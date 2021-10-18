@@ -1,49 +1,64 @@
 let $close;
 var $pagination;
-var $header = $('.header');
-var $footer = $('.footer');
-var $hamburger = $('.hamburger');
-var $gallery = $('#gallery-contents > div');
+var $header = $(".header");
+var $footer = $(".footer");
+var $hamburger = $(".hamburger");
+var $gallery = $("#gallery-contents > div");
 var $main;
-var $postframe = $('#postframe');
-var $postmodal = $('#postModal');
-var $body = $('body');
-var $mainTab = $('.mainTab');
-var $mainNav = $('.mainNav');
-var $contHeader = $('.cont-header');
-var $contFooter = $('.cont-footer');
-var $btnGallery = $('#btn-gallery');
-var $mainLogoImage = $('#main-logo-image');
+var $postframe = $("#postframe");
+var $postmodal = $("#postModal");
+var $body = $("body");
+var $mainTab = $(".mainTab");
+var $mainNav = $(".mainNav");
+var $contHeader = $(".cont-header");
+var $contFooter = $(".cont-footer");
+var $btnGallery = $("#btn-gallery");
+var $mainLogoImage = $("#main-logo-image");
 
 function goHome() {
-  $header = $('.header');
-  $footer = $('.footer');
+  $header = $(".header");
+  $footer = $(".footer");
 
   $("html, body").animate({ scrollTop: 0 }, 500);
   closePost();
 }
 
 function openPost(url) {
-  $body = $('body');
-  $postframe = $('#postframe');
+  $body = $("body");
+  $postframe = $("#postframe");
 
   $postframe.attr("onload", "upPost(this)");
-  $('#loadingModal').addClass('active');
+  $("#loadingModal").addClass("active");
 
   $postframe.attr("src", url);
   $(this).addClass("loading");
 
   $body.css("overflow", "hidden");
+
+  // $.ajax({
+  //   url: "/assets/gallery/gallery.json",
+  //   type: "GET",
+  //   dataType: "json",
+  //   success: function (data) {
+  //     insertInfo(data);
+  //   },
+  // });
+
+  // function insertInfo(data) {
+  //   var item = objImageInfo.gallery;
+  //   var image = item[i];
+
+  // }
 }
 
 function upPost() {
-  $header = $('.header');
-  $footer = $('.footer');
-  $hamburger = $('.hamburger');
-  $postmodal = $('#postModal');
-  $btnGallery = $('#btn-gallery');
+  $header = $(".header");
+  $footer = $(".footer");
+  $hamburger = $(".hamburger");
+  $postmodal = $("#postModal");
+  $btnGallery = $("#btn-gallery");
 
-  $('#loadingModal').removeClass('active');
+  $("#loadingModal").removeClass("active");
 
   $header.addClass("onPost");
   $header.removeClass("blur");
@@ -61,13 +76,13 @@ function upPost() {
 }
 
 function closePost() {
-  $body = $('body');
-  $header = $('.header');
-  $footer = $('.footer');
-  $hamburger = $('.hamburger');
-  $postframe = $('#postframe');
-  $postmodal = $('#postModal');
-  $btnGallery = $('#btn-gallery');
+  $body = $("body");
+  $header = $(".header");
+  $footer = $(".footer");
+  $hamburger = $(".hamburger");
+  $postframe = $("#postframe");
+  $postmodal = $("#postModal");
+  $btnGallery = $("#btn-gallery");
 
   $postmodal.css("animation-name", "postModalclose");
   $postmodal.css("opacity", "0");
@@ -88,7 +103,7 @@ function closePost() {
 
   window.setTimeout(function () {
     $postmodal.css("z-index", "-99999");
-    $postframe.attr('src', 'none');
+    $postframe.attr("src", "none");
   }, 250);
 }
 
@@ -98,13 +113,13 @@ $(window).scroll(function () {
   var result = ($bodyHeights / $height) * 100;
   var deg = (360 / result) * 100;
 
-  $mainTab = $('.mainTab');
-  $contHeader = $('.cont-header');
-  $contFooter = $('.cont-footer');
-  $btnGallery = $('#btn-gallery');
-  $mainNav = $('.mainNav');
-  $mainLogoImage = $('#main-logo-image');
-  $gallery = $('#gallery-contents > div');
+  $mainTab = $(".mainTab");
+  $contHeader = $(".cont-header");
+  $contFooter = $(".cont-footer");
+  $btnGallery = $("#btn-gallery");
+  $mainNav = $(".mainNav");
+  $mainLogoImage = $("#main-logo-image");
+  $gallery = $("#gallery-contents > div");
 
   if (deg < 0) {
     deg == 0;
@@ -140,8 +155,6 @@ $(window).scroll(function () {
     $header.removeClass("blur");
     $mainNav.removeClass("blur");
     $mainTab.css("display", "none");
-
-    
   }
 
   //footer는 스크롤을 시작하자마자 반전
@@ -356,7 +369,6 @@ function createLogs(objImageInfo) {
     $gridsContainer.append(strDOM);
   }
 }
-
 
 function showCoverflow() {
   $("html, body").animate(
