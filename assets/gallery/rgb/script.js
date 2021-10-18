@@ -76,8 +76,8 @@ class Point {
 // Basic canvas setup
 const c = document.querySelector("#js-canvas");
 const ctx = c.getContext("2d", { alpha: false });
-let h = c.height = innerHeight/1.3;
-let w = c.width = innerWidth/1.3;
+let h = (c.height = innerHeight / 1.3);
+let w = (c.width = innerWidth / 1.3);
 // let h = (c.height = 594 * 1.5);
 // let w = (c.width = 420 * 1.5);
 const canvasHeight = $("#js-canvas").height();
@@ -87,11 +87,12 @@ const points = [];
 let t = 1;
 
 // Play with this variables
-let scalar = 0.00125;
+let scalar = 0.000125;
 let perLine = 125;
-// const particleSize = Math.max(window.innerHeight, window.innerWidth) / perLine;
-let particleSize = Math.max(innerHeight, innerWidth) / perLine;
-let particleDistance = particleSize / 20;
+let particleSize = Math.max(window.innerHeight, window.innerWidth) / perLine;
+// let particleSize = Math.max(innerHeight, innerWidth) / perLine;
+// let particleDistance = particleSize / 20;
+let particleDistance = 0;
 
 // Generate points instances only once
 function initPoints() {
@@ -181,12 +182,14 @@ $("#js-canvas").click(function () {
   // $("#js-canvas").toggleClass("is-active");
   console.log(scalar, perLine);
 
-    clearPoints();
-    
-    perLine = randomValueFromArray([10, 25, 50, 75, 100, 125, 150]);
+  clearPoints();
 
-    initPoints();
-    // $("#js-canvas").toggleClass("is-active");
+  perLine = randomValueFromArray([10, 25, 50, 75, 100, 125, 150]);
+  particleSize = Math.max(innerHeight, innerWidth) / perLine;
+
+  initPoints();
+  // animate(t);
+  // $("#js-canvas").toggleClass("is-active");
 
   // animate(newScalar);
 });
