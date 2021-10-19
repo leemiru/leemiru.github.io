@@ -298,9 +298,9 @@ function createGrids(objImageInfo) {
         '"/>';
 
       strDOM += '<div class="item-desc">';
-      strDOM += '<p class="text medium black">' + image.name + "</p>";
+      strDOM += '<p class="title small black item-name">' + image.name + "</p>";
       strDOM +=
-        '<p class="text small black invert right" style="color:#fff">' +
+        '<p class="text medium gray">' +
         image.type +
         ", " +
         image.year +
@@ -315,55 +315,6 @@ function createGrids(objImageInfo) {
     $gridsContainer.append(strDOM);
 
     // $(".item").css("height", $(".item").width());
-  } catch (error) {
-    console.log("Logs Contents Reloaded");
-    $gridsContainer.append(strDOM);
-  }
-}
-
-// JSON 포멧 데이터 처리
-function createLogs(objImageInfo) {
-  var logs = objImageInfo.logs;
-  var strDOM = "";
-  for (var i = 0; i < logs.length; i++) {
-    // N번째 이미지 정보를 구하기
-    var image = logs[i];
-
-    // N번째 이미지 패널을 생성
-    strDOM +=
-      '<li class="item" ' +
-      'id="' +
-      image.id +
-      '"' +
-      'onclick="openPost(' +
-      "'" +
-      image.url +
-      "'" +
-      ');">';
-    strDOM +=
-      '<img src="' +
-      image.thumb +
-      '" alt="' +
-      image.type +
-      " / " +
-      image.name +
-      '"/>';
-
-    strDOM += '<div class="item-desc">';
-    strDOM += '<p class="text medium black">' + image.name + "</p>";
-    strDOM +=
-      '<p class="text small black invert right">' +
-      image.type +
-      ", " +
-      image.year +
-      "</p>";
-    strDOM += "</div></li>";
-  }
-
-  // 이미지 컨테이너에 생성한 이미지 패널들을 추가하기
-  var $gridsContainer = $("#logs-list");
-  try {
-    $gridsContainer.append(strDOM);
   } catch (error) {
     console.log("Logs Contents Reloaded");
     $gridsContainer.append(strDOM);
