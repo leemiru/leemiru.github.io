@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플레저</title>
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="./js/background.js"></script> -->
+    <!-- <script src="./js/header.js"></script> -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+</head>
+
+<body>
+    <main class="mainWrap">
+        <div class="home-container">
+            <div class="profile-container">
+                <div class="alert-badge">1</div>
+                <img class="profile-img" alt="프로필 이미지" src="../../src/content/profile.png" />
+                <div class="profile-info">
+                    <p id="name" class="title big bold darkgrey">황정윤 lv.1</p>
+                </div>
+                <button style="margin-left: auto;" id="btnCart" class="btn transparent">
+                    <div class="alert-badge" id="cart">1</div><img alt="장바구니" src="../../src/assets/ic-cart.svg" />
+                </button>
+            </div>
+
+            <div class="content-container" id="lesson-view">
+
+                <div class="content-container" id="lesson-type">
+
+
+                    <ul class="horiList" style="margin-bottom: 0px;" id="lesson-type-list">
+                        <input type="radio" name="lessonType" id="myLocation" />
+                        <label for="myLocation" class="text big" id="myLocation"
+                            style="white-space: nowrap; display: inline-flex; flex-direction: row; align-items: center; justify-content: center;"><img
+                                src="../../src/assets/ic-mylocation.svg"
+                                style="width: 20px; height: 20px; object-fit: contain; margin-right: 4px; margin-top: -2px;" />내
+                            위치</label>
+                        <input type="radio" name="lessonType" id="ski" />
+                        <label for="ski" class="text big" id="type-ski">스키</label>
+
+                        <input type="radio" name="lessonType" id="snowboard" />
+                        <label for="snowboard" class="text big" id="type-snowboard">스노우보드</label>
+
+                        <input type="radio" name="lessonType" id="jujitsu" />
+                        <label for="jujitsu" class="text big" id="type-jujitsu">주짓수</label>
+
+                        <input type="radio" name="lessonType" id="bowling" />
+                        <label for="bowling" class="text big" id="type-bowling">볼링</label>
+
+                        <input type="radio" name="lessonType" id="tennis" />
+                        <label for="tennis" class="text big" id="type-tennis">테니스</label>
+                    </ul>
+                </div>
+
+                <ul class="horiList">
+                    <li class="medium-banner">
+                        <div class="left">
+                            <div class="text big bold">Rossignol Hero<br>World Cup 110<br>W320,000</div>
+                            <button class="btn transparent text big">지금구매 ></button>
+                        </div>
+                        <img alt="상품이미지" src="../../src/content/boots.png" class="banner-product" />
+                    </li>
+
+                    <li class="medium-banner">
+                        <div class="left">
+                            <div class="text big bold">Rossignol Hero<br>World Cup 110<br>W320,000</div>
+                            <button class="btn transparent text big">지금구매 ></button>
+                        </div>
+                        <img alt="상품이미지" src="../../src/content/boots.png" class="banner-product" />
+                    </li>
+
+                    <li class="medium-banner">
+                        <div class="left">
+                            <div class="text big bold">Rossignol Hero<br>World Cup 110<br>W320,000</div>
+                            <button class="btn transparent text big">지금구매 ></button>
+                        </div>
+                        <img alt="상품이미지" src="../../src/content/boots.png" class="banner-product" />
+                    </li>
+                </ul>
+
+
+
+                <div class="content-container" id="recommend-brand">
+                    <div class="section-header">
+                        <p class="title big darkgrey">브랜드</p>
+                        <!-- <button class="btn transparent title medium">더보기</button> -->
+                    </div>
+
+                    <ul class="card-list">
+                        <li>
+                            <img alt="이미지" src="../../src/content/brand.png" class="circle-profile" />
+                            <p class="title black bold">로시뇰</p>
+                            <p class="text black medium">상품 31개</p>
+                            <div class="rate-container">
+                                <p class="text tiny" id="star-rate"><img src="../../src/assets/ic-star-yellow.svg" />
+                                    4.6</p>
+                                <p class="text tiny" id="reviews">34 Reviews</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <img alt="이미지" src="../../src/content/brand.png" class="circle-profile" />
+                            <p class="title black bold">로시뇰</p>
+                            <p class="text black medium">상품 31개</p>
+                            <div class="rate-container">
+                                <p class="text tiny" id="star-rate"><img src="../../src/assets/ic-star-yellow.svg" />
+                                    4.6</p>
+                                <p class="text tiny" id="reviews">34 Reviews</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="content-container" id="recommend-school">
+                    <div class="section-header">
+                        <p class="title big darkgrey">품목</p>
+                        <!-- <button class="btn transparent title medium">더보기</button> -->
+                    </div>
+
+                    <ul class="card-list">
+                        <li>
+                            <img alt="이미지" src="../../src/content/boots.png" class="circle-profile" />
+                            <p class="title black">부츠</p>
+                            <p class="text small bold black ">상품 31개</p>
+                        </li>
+                        <li>
+                            <img alt="이미지" src="../../src/content/boots.png" class="circle-profile" />
+                            <p class="title black">부츠</p>
+                            <p class="text small bold black ">상품 31개</p>
+                        </li>
+                        <li>
+                            <img alt="이미지" src="../../src/content/boots.png" class="circle-profile" />
+                            <p class="title black">부츠</p>
+                            <p class="text small bold black ">상품 31개</p>
+                        </li>
+                        <li>
+                            <img alt="이미지" src="../../src/content/boots.png" class="circle-profile" />
+                            <p class="title black">부츠</p>
+                            <p class="text small bold black ">상품 31개</p>
+                        </li>
+                        <li>
+                            <img alt="이미지" src="../../src/content/boots.png" class="circle-profile" />
+                            <p class="title black">부츠</p>
+                            <p class="text small bold black ">상품 31개</p>
+                        </li>
+                        <li>
+                            <img alt="이미지" src="../../src/content/boots.png" class="circle-profile" />
+                            <p class="title black">부츠</p>
+                            <p class="text small bold black ">상품 31개</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <nav class="mainTab">
+        <div class="mainTab-container">
+            <ul class="mainTab-list">
+                <input type="radio" name="mainNav" id="navHome" class="mainTab-listitem" />
+                <label for="navHome"><img class="mainTab-icon" alt="홈"
+                        src="../../src/assets/tabbar/ic-home.svg" /></label>
+
+                <input type="radio" name="mainNav" id="navShop" checked="true" class="mainTab-listitem" />
+                <label for="navShop"><img class="mainTab-icon" alt="샵"
+                        src="../../src/assets/tabbar/ic-shop.svg" /></label>
+
+                <input type="radio" name="mainNav" id="navSearch" class="mainTab-listitem" />
+                <label for="navSearch"><img class="mainTab-icon" alt="검색"
+                        src="../../src/assets/tabbar/ic-search.svg" /></label>
+
+                <input type="radio" name="mainNav" id="navCommunity" class="mainTab-listitem" />
+                <label for="navCommunity"><img class="mainTab-icon" alt="커뮤니티"
+                        src="../../src/assets/tabbar/ic-community.svg" /></label>
+
+                <input type="radio" name="mainNav" id="navMypage" class="mainTab-listitem" />
+                <label for="navMypage"><img class="mainTab-icon" alt="마이페이지"
+                        src="../../src/assets/tabbar/ic-mypage.svg" /></label>
+
+            </ul>
+        </div>
+    </nav>
+</body>
+
+<script>
+    $('.mainTab-listitem#navHome').click(function () {
+        window.location.href = "../home/home.html";
+    });
+
+    $('.mainTab-listitem#navShop').click(function () {
+        window.location.href = "../shop/shop_home.html";
+    });
+
+    $('.mainTab-listitem#navSearch').click(function () {
+        window.location.href = "../home/search.html";
+    });
+
+    $('.mainTab-listitem#navCommunity').click(function () {
+        window.location.href = "../community/community_home.html";
+    });
+
+    $('.mainTab-listitem#navMypage').click(function () {
+        window.location.href = "../mypage/mypage_home.html";
+    });
+
+    $('#recommend-brand > ul > li').click(function () {
+        window.location.href = "../shop/shop_product.html";
+    });
+
+    $('.medium-banner').click(function () {
+        window.location.href = "../shop/product_detail.html";
+    });
+</script>
+
+</html>

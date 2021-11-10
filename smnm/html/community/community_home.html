@@ -19,21 +19,63 @@
 </head>
 
 <body>
-    <header class="mainHeader">
-        <div class="mainHeader-container">
-            <button id="btn-back" class="btn circle"><img src="../../src/assets/ic-arrow-left.svg" alt="뒤로" /></button>
-            <img alt="Pleisure" class="header-logo" src="../../src/logo-mono.svg" />
-            <span style="opacity: 0;"></span>
-        </div>
-    </header>
     <main class="mainWrap">
-        <div class="home-container withHeader" id="community">
+        <div class="home-container" id="community">
+            <div class="profile-container pd24">
+                <!-- <div class="alert-badge">1</div> -->
+                <img class="profile-img" alt="프로필 이미지" src="../../src/content/profile.png" />
+                <div class="profile-info">
+                    <p id="name" class="title big bold darkgrey">황정윤 lv.1</p>
+                    <p id="membertype" class="text medium">일반회원</p>
+                </div>
+                <!-- <img class="app-logo" alt="Pleisure" src="../../src/logo-dark.svg" /> -->
+                <button class="btn theme" id="btnAdd">추가 <img style="margin-top: -4px;"
+                        src="../../src/assets/ic-plus-circle-filled.svg" /></button>
+            </div>
+
             <div class="content-container">
+
+                <div class="filter pd24">
+                    <ul class="horiList" style="overflow-x: visible; margin-top: 0;">
+                        <input type="radio" name="itemType" id="ski" />
+                        <label for="ski" class="filter-listitem">
+                            스키
+                        </label>
+                        <input type="radio" name="itemType" id="snowboard" />
+                        <label for="snowboard" class="filter-listitem">
+                            스노우보드
+                        </label>
+                        <input type="radio" name="itemType" id="jujitsu" />
+                        <label for="jujitsu" class="filter-listitem">
+                            주짓수
+                        </label>
+                        <input type="radio" name="itemType" id="bowling" />
+                        <label for="bowling" class="filter-listitem">
+                            볼링
+                        </label>
+                        <input type="radio" name="itemType" id="tennis" />
+                        <label for="tennis" class="filter-listitem">
+                            테니스
+                        </label>
+                        <input type="radio" name="itemType" id="boxing" />
+                        <label for="boxing" class="filter-listitem">
+                            복싱
+                        </label>
+                        <input type="radio" name="itemType" id="waterski" />
+                        <label for="waterski" class="filter-listitem">
+                            수상스키
+                        </label>
+                        <input type="radio" name="itemType" id="golf" />
+                        <label for="golf" class="filter-listitem">
+                            골프
+                        </label>
+                    </ul>
+                </div>
 
                 <div class="content-container" id="posts">
                     <div class="section-header pd24">
                         <p class="title big darkgrey">최근게시물</p>
-                        <!-- <button class="btn transparent title medium mint" id="btnViewHots">더보기</button> -->
+                        <a href="community_more_post.html"><button class="btn transparent title medium mint" id="btnViewHots">더보기</button></a>
                     </div>
                     <ul class="postList">
                         <li>
@@ -68,62 +110,15 @@
                             </div>
                             <img src="../../src/assets/ic-bracket-right.svg" />
                         </li>
-                        <li>
-                            <div class="postContainer">
-                                <div class="postCategory"><span>[스키]</span><span>[중고거래]</span></div>
-                                <div class="postTitle">초보는 어떤 스키를 사야하죠?</div>
-                                <div class="postTime">2021/03/08 11:22</div>
-                            </div>
-                            <img src="../../src/assets/ic-bracket-right.svg" />
-                        </li>
-                        <li>
-                            <div class="postContainer">
-                                <div class="postCategory"><span>[스키]</span><span>[중고거래]</span></div>
-                                <div class="postTitle">초보는 어떤 스키를 사야하죠?</div>
-                                <div class="postTime">2021/03/08 11:22</div>
-                            </div>
-                            <img src="../../src/assets/ic-bracket-right.svg" />
-                        </li>
-                        <li>
-                            <div class="postContainer">
-                                <div class="postCategory"><span>[스키]</span><span>[중고거래]</span></div>
-                                <div class="postTitle">초보는 어떤 스키를 사야하죠?</div>
-                                <div class="postTime">2021/03/08 11:22</div>
-                            </div>
-                            <img src="../../src/assets/ic-bracket-right.svg" />
-                        </li>
-                        <li>
-                            <div class="postContainer">
-                                <div class="postCategory"><span>[스키]</span><span>[중고거래]</span></div>
-                                <div class="postTitle">초보는 어떤 스키를 사야하죠?</div>
-                                <div class="postTime">2021/03/08 11:22</div>
-                            </div>
-                            <img src="../../src/assets/ic-bracket-right.svg" />
-                        </li>
-                        <li>
-                            <div class="postContainer">
-                                <div class="postCategory"><span>[스키]</span><span>[중고거래]</span></div>
-                                <div class="postTitle">초보는 어떤 스키를 사야하죠?</div>
-                                <div class="postTime">2021/03/08 11:22</div>
-                            </div>
-                            <img src="../../src/assets/ic-bracket-right.svg" />
-                        </li>
-                        <li>
-                            <div class="postContainer">
-                                <div class="postCategory"><span>[스키]</span><span>[중고거래]</span></div>
-                                <div class="postTitle">초보는 어떤 스키를 사야하죠?</div>
-                                <div class="postTime">2021/03/08 11:22</div>
-                            </div>
-                            <img src="../../src/assets/ic-bracket-right.svg" />
-                        </li>
+
                     </ul>
                 </div>
 
 
-                <!-- <div class="content-container" id="hotContents">
+                <div class="content-container" id="hotContents">
                     <div class="section-header pd24">
                         <p class="title big darkgrey">인기컨텐츠</p>
-                        <button class="btn transparent title medium mint" id="btnViewHots">더보기</button>
+                        <a href="./community_more_popular.html"><button class="btn transparent title medium mint" id="btnViewHots">더보기</button></a>
                     </div>
                     <ul class="horiList pd24">
                         <li>
@@ -152,13 +147,40 @@
                         </li>
 
                     </ul>
-                </div> -->
+                </div>
+
+
+                <ul class="horiList pd24">
+                    <li class="medium-banner">
+                        <div class="left">
+                            <div class="text big bold">Rossignol Hero<br>World Cup 110<br>W320,000</div>
+                            <button class="btn transparent text big">지금구매 ></button>
+                        </div>
+                        <img alt="상품이미지" src="../../src/content/boots.png" class="banner-product" />
+                    </li>
+
+                    <li class="medium-banner">
+                        <div class="left">
+                            <div class="text big bold">Rossignol Hero<br>World Cup 110<br>W320,000</div>
+                            <button class="btn transparent text big">지금구매 ></button>
+                        </div>
+                        <img alt="상품이미지" src="../../src/content/boots.png" class="banner-product" />
+                    </li>
+
+                    <li class="medium-banner">
+                        <div class="left">
+                            <div class="text big bold">Rossignol Hero<br>World Cup 110<br>W320,000</div>
+                            <button class="btn transparent text big">지금구매 ></button>
+                        </div>
+                        <img alt="상품이미지" src="../../src/content/boots.png" class="banner-product" />
+                    </li>
+                </ul>
 
             </div>
         </div>
 
     </main>
-    <!-- <div class="modalWrap">
+    <div class="modalWrap">
         <div class="bottom-modal">
             <div class="modal-container">
                 <div class="title-container pd24">
@@ -259,7 +281,7 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
     <nav class="mainTab">
         <div class="mainTab-container">
             <ul class="mainTab-list">
@@ -316,7 +338,7 @@
     });
 
     $('.mainTab-listitem#navCommunity').click(function() {
-        window.location.href="../cmnty/home.html";
+        window.location.href="../community/community_home.html";
     });
 
     $('.mainTab-listitem#navMypage').click(function() {

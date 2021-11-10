@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플레저</title>
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="./js/background.js"></script> -->
+    <!-- <script src="./js/header.js"></script> -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+</head>
+
+<body>
+    <header class="mainHeader">
+        <div class="mainHeader-container">
+            <button id="btn-back" class="btn circle"><img src="../../src/assets/ic-arrow-left.svg" alt="뒤로" /></button>
+            <img alt="Pleisure" class="header-logo" src="../../src/logo-mono.svg" />
+            <span style="opacity: 0;"></span>
+        </div>
+    </header>
+    <main class="mainWrap">
+        <div class="content-container withHeader" id="productPayment">
+            <ul class="cartList horiList pd24">
+                <li>
+                    <div class="item-title-container">
+                        <div>
+                            <p class="title darkgrey fifteen" id="brandName">Rossignol Hero</p>
+                            <p class="text eleven" id="productName">WorldCup 110 Sc</p>
+                        </div>
+
+                        <div>
+                            <p class="title darkgrey small bold" id="price">W680,000</p>
+                        </div>
+
+                    </div>
+                    <div class="flex center start">
+                        <img alt="상품이미지" src="../../src/content/boots.png" id="productImg" />
+
+
+
+                        <div class="productInfo">
+                            <div class="infoTitle">
+                                <p class="title darkgrey bold">색상</p>
+                                <p class="title darkgrey bold">사이즈</p>
+                                <p class="title darkgrey bold">수량</p>
+                            </div>
+
+                            <div class="infoInput">
+                                <p class="title darkgrey">화이트 / 레드</p>
+                                <div class="select-container">
+                                    <select class="select" id="quantity">
+                                        <option value="275">275cm</option>
+                                        <option value="280">280cm</option>
+                                        <option value="285">285cm</option>
+                                        <option value="290">290cm</option>
+                                    </select>
+                                    <img src="../../src/assets/ic-bracket-down.svg" alt="펼치기" />
+                                </div>
+                                <div class="input-number-wrapper">
+                                    <button class="decrease"><img src="../../../../src/assets/ic-trash.svg"
+                                            alt="빼기" /></button>
+                                    <input type="text" value="0" />
+                                    <button class="increase"><img src="../../../../src/assets/ic-plus.svg"
+                                            alt="더하기" /></button>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="item-title-container">
+                        <div>
+                            <p class="title darkgrey fifteen" id="brandName">Rossignol Hero</p>
+                            <p class="text eleven" id="productName">WorldCup 110 Sc</p>
+                        </div>
+
+                        <div>
+                            <p class="title darkgrey small bold" id="price">W680,000</p>
+                        </div>
+
+                    </div>
+                    <div class="flex center start">
+                        <img alt="상품이미지" id="productImg" />
+
+
+
+                        <div class="productInfo">
+                            <div class="infoTitle">
+                                <p class="title darkgrey bold">색상</p>
+                                <p class="title darkgrey bold">사이즈</p>
+                                <p class="title darkgrey bold">수량</p>
+                            </div>
+
+                            <div class="infoInput">
+                                <p class="title darkgrey">화이트 / 레드</p>
+                                <div class="input-number-wrapper">
+                                    <button class="decrease"><img src="../../../../src/assets/ic-trash.svg"
+                                            alt="빼기" /></button>
+                                    <input type="text" value="0" />
+                                    <button class="increase"><img src="../../../../src/assets/ic-plus.svg"
+                                            alt="더하기" /></button>
+                                </div>
+                                <div class="select-container">
+                                    <select class="select" id="quantity">
+                                        <option value="275">275cm</option>
+                                        <option value="280">280cm</option>
+                                        <option value="285">285cm</option>
+                                        <option value="290">290cm</option>
+                                    </select>
+                                    <img src="../../src/assets/ic-bracket-down.svg" alt="펼치기" />
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="item-title-container">
+                        <div>
+                            <p class="title darkgrey fifteen" id="brandName">Rossignol Hero</p>
+                            <p class="text eleven" id="productName">WorldCup 110 Sc</p>
+                        </div>
+
+                        <div>
+                            <p class="title darkgrey small bold" id="price">W680,000</p>
+                        </div>
+
+                    </div>
+                    <div class="flex center start">
+                        <img alt="상품이미지" id="productImg" />
+
+
+
+                        <div class="productInfo">
+                            <div class="infoTitle">
+                                <p class="title darkgrey bold">색상</p>
+                                <p class="title darkgrey bold">사이즈</p>
+                                <p class="title darkgrey bold">수량</p>
+                            </div>
+
+                            <div class="infoInput">
+                                <p class="title darkgrey">화이트 / 레드</p>
+                                <div class="input-number-wrapper">
+                                    <button class="decrease"><img src="../../../../src/assets/ic-trash.svg"
+                                            alt="빼기" /></button>
+                                    <input type="text" value="0" />
+                                    <button class="increase"><img src="../../../../src/assets/ic-plus.svg"
+                                            alt="더하기" /></button>
+                                </div>
+                                <div class="select-container">
+                                    <select class="select" id="quantity">
+                                        <option value="275">275cm</option>
+                                        <option value="280">280cm</option>
+                                        <option value="285">285cm</option>
+                                        <option value="290">290cm</option>
+                                    </select>
+                                    <img src="../../src/assets/ic-bracket-down.svg" alt="펼치기" />
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="item-title-container">
+                        <div>
+                            <p class="title darkgrey fifteen" id="brandName">Rossignol Hero</p>
+                            <p class="text eleven" id="productName">WorldCup 110 Sc</p>
+                        </div>
+
+                        <div>
+                            <p class="title darkgrey small bold" id="price">W680,000</p>
+                        </div>
+
+                    </div>
+                    <div class="flex center start">
+                        <img alt="상품이미지" id="productImg" />
+
+
+
+                        <div class="productInfo">
+                            <div class="infoTitle">
+                                <p class="title darkgrey bold">색상</p>
+                                <p class="title darkgrey bold">사이즈</p>
+                                <p class="title darkgrey bold">수량</p>
+                            </div>
+
+                            <div class="infoInput">
+                                <p class="title darkgrey">화이트 / 레드</p>
+                                <div class="input-number-wrapper">
+                                    <button class="decrease"><img src="../../../../src/assets/ic-trash.svg"
+                                            alt="빼기" /></button>
+                                    <input type="text" value="0" />
+                                    <button class="increase"><img src="../../../../src/assets/ic-plus.svg"
+                                            alt="더하기" /></button>
+                                </div>
+                                <div class="select-container">
+                                    <select class="select" id="quantity">
+                                        <option value="275">275cm</option>
+                                        <option value="280">280cm</option>
+                                        <option value="285">285cm</option>
+                                        <option value="290">290cm</option>
+                                    </select>
+                                    <img src="../../src/assets/ic-bracket-down.svg" alt="펼치기" />
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="item-title-container">
+                        <div>
+                            <p class="title darkgrey fifteen" id="brandName">Rossignol Hero</p>
+                            <p class="text eleven" id="productName">WorldCup 110 Sc</p>
+                        </div>
+
+                        <div>
+                            <p class="title darkgrey small bold" id="price">W680,000</p>
+                        </div>
+
+                    </div>
+                    <div class="flex center start">
+                        <img alt="상품이미지" id="productImg" />
+
+
+
+                        <div class="productInfo">
+                            <div class="infoTitle">
+                                <p class="title darkgrey bold">색상</p>
+                                <p class="title darkgrey bold">사이즈</p>
+                                <p class="title darkgrey bold">수량</p>
+                            </div>
+
+                            <div class="infoInput">
+                                <p class="title darkgrey">화이트 / 레드</p>
+                                <div class="input-number-wrapper">
+                                    <button class="decrease"><img src="../../../../src/assets/ic-trash.svg"
+                                            alt="빼기" /></button>
+                                    <input type="text" value="0" />
+                                    <button class="increase"><img src="../../../../src/assets/ic-plus.svg"
+                                            alt="더하기" /></button>
+                                </div>
+                                <div class="select-container">
+                                    <select class="select" id="quantity">
+                                        <option value="275">275cm</option>
+                                        <option value="280">280cm</option>
+                                        <option value="285">285cm</option>
+                                        <option value="290">290cm</option>
+                                    </select>
+                                    <img src="../../src/assets/ic-bracket-down.svg" alt="펼치기" />
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="content-container pd24" id="paymentInfo">
+                <div class="section">
+                    <p class="title small darkgrey bold">결제수단</p>
+                    <div class="input-container">
+                        <div>
+                            <p class="title small darkgrey bold" id="cardBrand">AMEX 삼성</p>
+                            <p class="text small" id="cardNum">*******-0921</p>
+                        </div>
+                        <img src="../../src/assets/ic-bracket-right.svg" alt="펼치기" />
+                    </div>
+                </div>
+
+                <div class="section">
+                    <p class="title small darkgrey bold">배송지</p>
+                    <div class="input-container">
+                        <div>
+                            <p class="title small darkgrey" id="shipping">배송지 추가</p>
+                        </div>
+                        <img src="../../src/assets/ic-plus-circle.svg" alt="펼치기" />
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="flex center spacebetween">
+                        <p class="title small darkgrey bold">포인트사용</p>
+                        <p class="title small lightgrey">보유포인트 : 2,200,000</p>
+                    </div>
+
+                    <div class="input-container">
+                        <input class="input transparent" type="number" placeholder="사용할 포인트 입력">
+                        <button class="btnCheck is-active" id="useAll">
+                            <p class="title small lightgrey" id=>전액사용</p>
+                            <span></span>
+                        </button>
+
+                    </div>
+                </div>
+
+                <div class="section">
+                    <p class="title small darkgrey bold">할인코드</p>
+                    <div class="input-container">
+                        <input class="input transparent" placeholder="코드입력">
+                    </div>
+                </div>
+
+                <div class="ordered-total">
+                    <div class="total-listitem">
+                        <p class="title darkgrey">금액</p>
+                        <p class="title darkgrey italic" id="total-price">W3,580,000</p>
+                    </div>
+
+                    <div class="total-listitem">
+                        <p class="title darkgrey">배송비</p>
+                        <p class="title darkgrey italic" id="ship-price">W3,580,000</p>
+                    </div>
+
+                    <div class="total-listitem">
+                        <p class="title darkgrey">할인</p>
+                        <p class="title darkgrey italic" id="sale-price">W3,580,000</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <p class="title small darkgrey bold">요청사항</p>
+                    <div class="input-container">
+                        <textarea class="input transparent" placeholder="요청사항이 있으시면 알려주세요"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-container" id="payment">
+                <div class="totalInfo pd24">
+                    <span>
+                        <p class="title darkgrey small">총합</p>
+                        <p class="title darkgrey big bold">₩3,580,000</p>
+                    </span>
+                    <a href="./product_checkout.html"><button class="btn theme" id="btnPayment">결제</button></a>
+                </div>
+                <p class="text small pd24 lightgrey">마지막단계 입니다. 결제버튼 선택 후 결제가 진행 됩니다.</p>
+            </div>
+        </div>
+    </main>
+</body>
+
+<script>
+
+    const inputWrapperList = document.getElementsByClassName('input-number-wrapper');
+
+    for (let wrapper of inputWrapperList) {
+        const input = wrapper.querySelector('input');
+        const incrementation = +input.step || 1;
+
+        wrapper.querySelector('.increase').addEventListener('click', function () {
+            incInputNumber(input, incrementation);
+        });
+
+        wrapper.querySelector('.decrease').addEventListener('click', function () {
+            incInputNumber(input, "-" + incrementation);
+        });
+    }
+
+    function incInputNumber(input, step) {
+        if (!input.disabled) {
+            let val = +input.value;
+
+            if (isNaN(val)) val = 0;
+            val += +step;
+
+            if (input.max && val > input.max) {
+                val = input.max;
+            } else if (input.min && val < input.min) {
+                val = input.min;
+            } else if (val < 0) {
+                val = 0;
+            }
+
+            input.value = val;
+            input.setAttribute("value", val);
+        }
+    }
+</script>
+
+</html>

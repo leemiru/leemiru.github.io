@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플레저</title>
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="./js/background.js"></script> -->
+    <!-- <script src="./js/header.js"></script> -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+</head>
+
+<body class="whitebg">
+    <header class="mainHeader transparent">
+        <div class="mainHeader-container">
+            <button id="btn-back" class="btn circle"><img src="../../src/assets/ic-arrow-left.svg" alt="뒤로" /></button>
+            <!-- <img alt="Pleisure" src="../../src/logo-mono.svg" /> -->
+            <span style="opacity: 0;"></span>
+        </div>
+    </header>
+    <main class="mainWrap">
+        <div class="content-container withheader" id="product-detail">
+            <div class="title-container">
+                <img src="../../src/content/boots-detail-2.png" alt="상품이미지" />
+            </div>
+
+            <div class="detail-container">
+                <div class="item-title-container pd24">
+                    <p class="title huge black bold">Rossignol Hero<br>WorldCup 110 Sc</p>
+                    <p class="text medium orange italic">₩600,000</p>
+                </div>
+
+                <button class="btn transparent pd24 text big" style="margin: 0 20px;">더 많은 관련 상품 보기</button>
+
+                <div class="tags">
+                    <ul class="horiList pd24">
+                        <li class="tag-listitem">
+                            스키부츠
+                        </li>
+                        <li class="tag-listitem">
+                            남여공용
+                        </li>
+                        <li class="tag-listitem">
+                            중급
+                        </li>
+                        <li class="tag-listitem">
+                            강도 65-110
+                        </li>
+                        <li class="tag-listitem">
+                            비스트
+                        </li>
+                        <li class="tag-listitem">
+                            랑게
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dropdown-container pd24">
+                    <div class="select-container">
+                        <select class="select" id="size">
+                            <option value="std">사이즈</option>
+                            <option value="240">240</option>
+                            <option value="250">250</option>
+                            <option value="260">260</option>
+                            <option value="270">270</option>
+                            <option value="280">280</option>
+                        </select>
+                    </div>
+
+                    <div class="select-container">
+                        <select class="select" id=" color">
+                            <option value="std">색상</option>
+                            <option value="240">1</option>
+                            <option value="250">2</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="item-desc-container">
+                    <ul class="horiList pd24">
+                        <li>
+                            <img src="../../src/content/boots-detail.png" alt="상품이미지" />
+                        </li>
+                        <li>
+                            <img src="../../src/content/boots-detail.png" alt="상품이미지" />
+                        </li>
+                        <li>
+                            <img src="../../src/content/boots-detail.png" alt="상품이미지" />
+                        </li>
+                        <li>
+                            <img src="../../src/content/boots-detail.png" alt="상품이미지" />
+                        </li>
+                        <li>
+                            <img src="../../src/content/boots-detail.png" alt="상품이미지" />
+                        </li>
+
+                    </ul>
+
+                    <p class="text medium black pd24" id="product-desc">듀얼 코어 쉘 기술이 적용된 HERO WORLD CUP 110 SC는
+                        여성 및 소형 운동 선수를 위해 디자인 된 레이스에서 영감을
+                        얻은 97mm 좁은 착용감과 짧은 커프 (SC)를 갖춘 강력한
+                        고성능 부팅 장치입니다.
+                        <br><br>
+                        경주에서 개발 된 혁신적인 새로운 듀얼 코어 구조는 역동적
+                        리바운드 및 플렉스 컨트롤을 제공하여 부팅을 통해 다리를
+                        자연스럽게 확장하여 회전을 통해 향상된 정밀성과 전체
+                        제어력을 제공합니다.
+                    </p>
+                </div>
+
+                <div class="recommend-container">
+                    <p class="title darkgrey pd24">추천상품</p>
+                    <ul class="horiList separate pd24" id="recommend-products">
+                        <li class="item-listitem">
+                            <img src="../../src/content/boots.png" alt="상품이미지" />
+                            <div class="item-info">
+                                <p class="title tiny">Rossignol Hero World Cup 110 Sc.24.5</p>
+                                <p class="text bold orange medium italic">W320,000</p>
+                                <p class="text tiny italic">BHS</p>
+                            </div>
+                        </li>
+                        <li class="item-listitem">
+                            <img src="../../src/content/boots.png" alt="상품이미지" />
+                            <div class="item-info">
+                                <p class="title tiny">Rossignol Hero World Cup 110 Sc.24.5</p>
+                                <p class="text bold orange medium italic">W320,000</p>
+                                <p class="text tiny italic">BHS</p>
+                            </div>
+                        </li>
+                        <li class="item-listitem">
+                            <img src="../../src/content/boots.png" alt="상품이미지" />
+                            <div class="item-info">
+                                <p class="title tiny">Rossignol Hero World Cup 110 Sc.24.5</p>
+                                <p class="text bold orange medium italic">W320,000</p>
+                                <p class="text tiny italic">BHS</p>
+                            </div>
+                        </li>
+                        <li class="item-listitem">
+                            <img src="../../src/content/boots.png" alt="상품이미지" />
+                            <div class="item-info">
+                                <p class="title tiny">Rossignol Hero World Cup 110 Sc.24.5</p>
+                                <p class="text bold orange medium italic">W320,000</p>
+                                <p class="text tiny italic">BHS</p>
+                            </div>
+                        </li>
+                        <li class="item-listitem">
+                            <img src="../../src/content/boots.png" alt="상품이미지" />
+                            <div class="item-info">
+                                <p class="title tiny">Rossignol Hero World Cup 110 Sc.24.5</p>
+                                <p class="text bold orange medium italic">W320,000</p>
+                                <p class="text tiny italic">BHS</p>
+                            </div>
+                        </li>
+                        <li class="item-listitem">
+                            <img src="../../src/content/boots.png" alt="상품이미지" />
+                            <div class="item-info">
+                                <p class="title tiny">Rossignol Hero World Cup 110 Sc.24.5</p>
+                                <p class="text bold orange medium italic">W320,000</p>
+                                <p class="text tiny italic">BHS</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            
+            <div class="flex spacebetween center" id="bottomBtn">
+                <button class="btn dark" id="shoppingcart">장바구니</button>
+                <a style="width: 100%" href="./product_payment.html"><button id="pay" class="btn theme">바로구매</button></a>
+            </div>
+
+        </div>
+    </main>
+
+    <div class="modalWrap"  style="display: none;">
+        <div class="bottom-modal">
+            <div class="modal-container">
+                <div class="title-container pd24">
+                    <p class="title huge bold black">장바구니에 담았습니다.</p>
+                    <button id="close-modal" class="btn transparent"><img
+                            src="../../src/assets/ic-close.svg" /></button>
+                </div>
+
+                <div class="content-container pd24">
+                    <div class="flex spacebetween center">
+                        <button id="close-modal" class="btn dark">계속 쇼핑하기</button>
+                        <button id="btnCart" class="btn dark">장바구니로 가기</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    $(function () {
+        $('#shoppingcart').click(function () {
+            $('.modalWrap').fadeIn('fast');
+        });
+
+        $('#close-modal.btn').click(function () {
+            $('.modalWrap').fadeOut('fast');
+        })
+
+        $('.category-listitem').click(function () {
+            $('.category-listitem').removeClass('is-active');
+            $(this).addClass('is-active');
+
+            const type = $(this).attr('id');
+
+            if (type == 'all') {
+                $('#category-all').css('display', 'block');
+                $('#category-boots').css('display', 'none');
+            } else if (type == 'atomic') {
+                $('#category-boots').css('display', 'block');
+                $('#category-all').css('display', 'none');
+            }
+        });
+
+        $('#btnCart').click(function() {
+            window.location.href="./product_cart.html";
+        });
+    });
+</script>
+
+</html>
