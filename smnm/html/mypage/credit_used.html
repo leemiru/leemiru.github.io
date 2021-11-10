@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플레저</title>
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="./js/background.js"></script> -->
+    <!-- <script src="./js/header.js"></script> -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+</head>
+
+<body class="whitebg">
+    <header class="mainHeader">
+        <div class="mainHeader-container">
+            <button id="btn-back" class="btn circle"><img src="../../src/assets/ic-arrow-left.svg" alt="뒤로" /></button>
+            <img alt="Pleisure" class="header-logo" src="../../src/logo-mono.svg" />
+            <span style="opacity: 0;"></span>
+        </div>
+    </header>
+    <main class="mainWrap">
+        <div class="content-container withHeader" id="creditList">
+
+            <p class="title huge darkgrey pd24 bold" style="padding-top: 24px;">사용내역</p>
+
+            <div class="content-container pd24" id="preference">
+                <ul style="margin-top: 12px;">
+                    <li class="flex spacebetween" style="height: 72px;" id="credit_id">
+                        <p class="title" style="width: 100%; color: #eb5757;">사용</p>
+                        <div style="width: 100%; text-align: left; color: #4f4f4f;">
+                            <p class="text medium" id="usedDate">2021/03/08 11:22</p>
+                            <p class="text medium">사용 후 잔액: <span id="usedLeft">1,000원</span></p>
+                        </div>
+                    </li>
+                    <li class="flex spacebetween" style="height: 72px;" id="credit_id">
+                        <p class="title" style="width: 100%; color: #eb5757;">사용</p>
+                        <div style="width: 100%; text-align: left; color: #4f4f4f;">
+                            <p class="text medium" id="usedDate">2021/03/08 11:22</p>
+                            <p class="text medium">사용 후 잔액: <span id="usedLeft">1,000원</span></p>
+                        </div>
+                    </li>
+                    <li class="flex spacebetween" style="height: 72px;" id="credit_id">
+                        <p class="title" style="width: 100%; color: #eb5757;">사용</p>
+                        <div style="width: 100%; text-align: left; color: #4f4f4f;">
+                            <p class="text medium" id="usedDate">2021/03/08 11:22</p>
+                            <p class="text medium">사용 후 잔액: <span id="usedLeft">1,000원</span></p>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>

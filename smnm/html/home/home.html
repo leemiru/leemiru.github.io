@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플레저</title>
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="./js/background.js"></script> -->
+    <!-- <script src="./js/header.js"></script> -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <main class="mainWrap withTab">
+        <div class="home-container">
+            <div class="profile-container">
+                <div class="alert-badge">1</div>
+                <img class="profile-img" alt="프로필 이미지" src="../../src/content/profile.png" />
+                <div class="profile-info">
+                    <p id="name" class="title medium darkgrey bold"></p>
+                    <!-- 2021.06.22. 카톡에서 등급 삭제 요청 -->
+                    <!-- <p id="membertype" class="text medium">일반회원</p> -->
+                </div>
+                <img class="app-logo" alt="Pleisure" src="../../src/logo-dark.svg" />
+            </div>
+
+            <div class="content-container" id="lesson-view">
+
+                <div class="content-container" id="lesson-type-renew">
+                    <div class="filter light">
+                        <ul class="horiList escpd24 sports-type"
+                            style="overflow-x: scroll; margin-top: 0; padding-bottom: 8px; margin-bottom: -8px !important;">
+                            <input type="radio" name="itemType" id="myLocationHome" />
+                            <label for="myLocationHome" class="filter-listitem">
+                                <img src="../../src/assets/ic-mylocation.svg"
+                                    style="width: 20px; height: 20px; object-fit: contain;" />
+                                내 위치
+                            </label>
+                            <input type="radio" checked="true" name="itemType" id="tennis" value="테니스" />
+                            <label for="tennis" class="filter-listitem">
+                                테니스
+                            </label>
+                            <input type="radio" name="itemType" id="snowboard" value="스노우보드" />
+                            <label for="snowboard" class="filter-listitem">
+                                스노우보드
+                            </label>
+                            <input type="radio" name="itemType" id="jujitsu" value="주짓수" />
+                            <label for="jujitsu" class="filter-listitem">
+                                주짓수
+                            </label>
+                            <input type="radio" name="itemType" id="ski" value="볼링" />
+                            <label for="ski" checked="true" class="filter-listitem">
+                                볼링
+                            </label>
+                            <input type="radio" name="itemType" id="golf" value="골프" />
+                            <label for="golf" class="filter-listitem">
+                                골프
+                            </label>
+                            <input type="radio" name="itemType" id="waterski" value="수상스키" />
+                            <label for="waterski" class="filter-listitem">
+                                수상스키
+                            </label>
+                            <input type="radio" name="itemType" id="wakeboard" value="웨이크보드" />
+                            <label for="wakeboard" class="filter-listitem">
+                                웨이크보드
+                            </label>
+                            <input type="radio" name="itemType" id="wakesurfing" value="웨이크서핑" />
+                            <label for="wakesurfing" class="filter-listitem">
+                                웨이크서핑
+                            </label>
+                        </ul>
+                    </div>
+
+
+                </div>
+
+
+                <div class="welcome-banner" style="margin-bottom: 5px;">
+                    <div style="min-height: 88px; margin-bottom: 5px;" id="lesson-name-div">
+                        <!-- Lesson Viewr Title -->
+                        <!-- <span class="title huge bold darkgrey lesson-name" id="lesson-name"></span><span
+                            class="title huge darkgrey lesson-ment">님의<br>테스 실력은1
+                            발전중이에요!</span> -->
+
+                        <span class="title huge bold lesson-name" id="lesson-name"></span><span
+                            style="line-height: 1.7;" class="title huge lesson-name-info" id="lesson-name-info">님이
+                            원하는<br>테니스
+                            레슨을 바로 만나보세요.</span><br>
+                    </div>
+
+                    <div class="content-container" style="margin-bottom: 15px; display:none" id="ticketDetail">
+
+                        <div class="ticketSwiper" style="margin-top: 8px;" id="lesson-ticket-list-renew">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="ticket-infoContainer">
+                                        <div class="flex">
+                                            <span class="title huge bold" id="lesson-sport-name">내곡테니스장</span>
+                                            <p class="text medium" style="margin-left: 8px;" id="lessonType">1:1 화/목</p>
+                                        </div>
+                                        <div class="flex" style="gap: 8px; margin-top: 12px;">
+                                            <p class="remainCount">잔여횟수</p>
+                                            <p id="remainCount">3/8</p>
+                                        </div>
+                                        <div class="ticketSchedule" style="margin-top: 12px;">
+                                            <div class="flex spacebetween">
+                                                <span>
+                                                    <span class="text small">시간:</span>
+                                                    <span class="text small" id="lessonTime">09:40 -
+                                                        10:00</span>
+                                                </span>
+
+                                                <span>
+                                                    <span class="text small mint">시작일 </span>
+                                                    <span class="text small" id="dateStart">2021/05/24</span>
+                                                </span>
+
+                                            </div>
+                                            <div class="flex spacebetween">
+                                                <span>
+                                                    <span class="text small">위치:</span>
+                                                    <span class="text small" id="lessonLocation">서울시 서초구
+                                                        내곡동 171</span>
+                                                </span>
+
+                                                <span>
+                                                    <span class="text small mint">만료일 </span>
+                                                    <span class="text small" id="dateExp">2021/06/30</span>
+                                                </span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ticket-actionContainer">
+                                        <button class="btn theme white">채팅</button>
+                                        <button class="btn theme white">레슨변경</button>
+                                        <button class="btn theme white">취소</button>
+                                        <button class="btn theme white">전체취소</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="ticket-infoContainer">
+                                        <div class="flex spacebetween">
+                                            <div>
+                                                <div class="flex">
+                                                    <span class="title huge bold" id="lesson-sport-name">테크닉스</span>
+                                                    <p class="text medium" style="margin-left: 8px;" id="lessonType">1:1
+                                                        화/목</p>
+                                                </div>
+                                                <div class="flex" style="gap: 8px; margin-top: 12px;">
+                                                    <p class="remainCount">잔여횟수</p>
+                                                    <p id="remainCount">3/8</p>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+
+                                        <div class="ticketSchedule" style="margin-top: 12px;">
+                                            <div class="flex spacebetween">
+                                                <span>
+                                                    <span class="text small">시간:</span>
+                                                    <span class="text small" id="lessonTime">09:40 -
+                                                        10:00</span>
+                                                </span>
+
+                                                <span>
+                                                    <span class="text small mint">시작일 </span>
+                                                    <span class="text small" id="dateStart">2021/05/24</span>
+                                                </span>
+
+                                            </div>
+                                            <div class="flex spacebetween">
+                                                <span>
+                                                    <span class="text small">위치:</span>
+                                                    <span class="text small" id="lessonLocation">서울시 서초구
+                                                        내곡동 171</span>
+                                                </span>
+
+                                                <span>
+                                                    <span class="text small mint">만료일 </span>
+                                                    <span class="text small" id="dateExp">2021/06/30</span>
+                                                </span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ticket-actionContainer">
+                                        <button class="btn theme white">채팅</button>
+                                        <button class="btn theme white">레슨변경</button>
+                                        <button class="btn theme white">취소</button>
+                                        <button class="btn theme white">전체취소</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="content-container" style="margin-bottom: 15px;" id="ticket">
+
+                        <div class="ticketSwiper" style="margin-top: 8px" id="lesson-ticket-list-renew">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <input type="checkbox" checked="true" name="ticket"
+                                        class="sport-listitem" id="first">
+                                    <label id="first" for="first"><img
+                                            src="../../src/category/ic-tennis.svg"
+                                            alt="테니스" />
+                                        <p id="count">1회</p>
+                                    </label>
+                                </div>
+                                <div class="swiper-slide">
+                                    <input type="checkbox" name="ticket" class="sport-listitem"
+                                        id="second">
+                                    <label id="second" for="second"><img
+                                            src="../../src/category/ic-tennis.svg"
+                                            alt="테니스" />
+                                        <p id="count">2회</p>
+                                    </label>
+                                </div>
+                                <div class="swiper-slide">
+                                    <input type="checkbox" name="ticket" class="sport-listitem"
+                                        id="third">
+                                    <label id="third" for="third"><img
+                                            src="../../src/category/ic-tennis.svg"
+                                            alt="테니스" />
+                                        <p id="count">3회</p>
+                                    </label>
+                                </div>
+                                <div class="swiper-slide">
+                                    <input type="checkbox" name="ticket" class="sport-listitem"
+                                        id="fourth">
+                                    <label id="fourth" for="fourth"><img
+                                            src="../../src/category/ic-tennis.svg"
+                                            alt="테니스" />
+                                        <p id="count">4회</p>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <a href="javascript: void(0)" style="margin-bottom: 15px;"><button id="btn-matchnow"
+                            class="btn theme title black bold big flex spacebetween"
+                            style="color: #272d2e !important; margin-bottom: 15px;">프로그램 바로 추천 <img
+                                src="../../src/assets/ic-arrow-right.svg" /></button></a>
+                </div>
+
+
+
+                <!-- <div class="horiList escpd24 _sBannerList" >
+    <div class="small-banner">
+        <div class="text big bold mint">안전하게 스포츠를 즐기는<br>스포츠보험!</div>
+        <button id="btn-sports-insrances" class="btn transparent text big bold mint">지금 바로 확인 ></button>
+    </div>
+</div> -->
+
+                <!-- <ul class="horiList _mBannerListNew">
+
+                    <li class="medium-banner-renew">
+                        <a>
+                            <img alt="상품이미지"
+                                src="../../src/content/medium-banner-img.png"
+                                class="banner-image" />
+                            <div class="desc-container">
+                                <div class="title huge white bold">지금 가장 HOT🔥한<br>
+                                    레슨을 나도 한번 도전?
+                                </div>
+
+                                <div class="text white medium" style="margin-bottom: 6px;">전화하고
+                                    기다리고.<br>
+                                    마음대로 스케줄에 맞추기 힘들죠?<br>
+                                    지금바로 핫한 코치님들에게 배워보자구요.
+                                </div>
+                            </div>
+
+                        </a>
+
+                    </li>
+
+                    <li class="medium-banner-renew">
+                        <a>
+                            <img alt="상품이미지"
+                                src="../../src/content/medium-banner-img.png"
+                                class="banner-image" />
+                            <div class="desc-container">
+                                <div class="title huge white bold">지금 가장 HOT🔥한<br>
+                                    레슨을 나도 한번 도전?
+                                </div>
+
+                                <div class="text white medium">전화하고 기다리고.<br>
+                                    마음대로 스케줄에 맞추기 힘들죠?<br>
+                                    지금바로 핫한 코치님들에게 배워보자구요.
+                                </div>
+                            </div>
+
+                        </a>
+
+                    </li>
+
+                    <li class="medium-banner-renew">
+                        <a>
+                            <img alt="상품이미지"
+                                src="../../src/content/medium-banner-img.png"
+                                class="banner-image" />
+                            <div class="desc-container">
+                                <div class="title huge white bold">지금 가장 HOT🔥한<br>
+                                    레슨을 나도 한번 도전?
+                                </div>
+
+                                <div class="text white medium">전화하고 기다리고.<br>
+                                    마음대로 스케줄에 맞추기 힘들죠?<br>
+                                    지금바로 핫한 코치님들에게 배워보자구요.
+                                </div>
+                            </div>
+
+                        </a>
+
+                    </li>
+
+                </ul> -->
+
+                <div class="bannerSwiper" id="_mLessonBannerListNew">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <li class="medium-banner-renew">
+                                <a>
+                                    <img alt="상품이미지" src="../../src/content/medium-banner-img.png"
+                                        class="banner-image" />
+                                    <div class="desc-container">
+                                        <div class="title huge white bold">지금 가장 HOT🔥한<br>
+                                            레슨을 나도 한번 도전?
+                                        </div>
+
+                                        <div class="text white medium">전화하고 기다리고.<br>
+                                            마음대로 스케줄에 맞추기 힘들죠?<br>
+                                            지금바로 핫한 코치님들에게 배워보자구요.
+                                        </div>
+                                    </div>
+
+                                </a>
+
+                            </li>
+                        </div>
+                        <div class="swiper-slide">
+                            <li class="medium-banner-renew">
+                                <a>
+                                    <img alt="상품이미지" src="../../src/content/medium-banner-img2.png"
+                                        class="banner-image" />
+                                    <div class="desc-container">
+                                        <div class="title huge white bold">레슨은 열심히 했는데,<br>즐길 곳이
+                                            필요해?😉🥺
+                                        </div>
+
+                                        <div class="text white medium" style="margin-bottom: 6px;">
+                                            걱정 없이
+                                            매 주말!<br>편하게 즐길 수 있어야지.<br>플레져 테니스 클럽 지금 바로 신청.
+                                        </div>
+                                    </div>
+
+                                </a>
+
+                            </li>
+                        </div>
+                        <div class="swiper-slide">
+                            <li class="medium-banner-renew">
+                                <a>
+                                    <img alt="상품이미지" src="../../src/content/medium-banner-img1.png"
+                                        class="banner-image" />
+                                    <div class="desc-container">
+                                        <div class="title huge white bold">정말정말 잘 가르치는<br>
+                                            코치님을 🔦 찾아볼까?
+                                        </div>
+
+                                        <div class="text white medium" style="margin-bottom: 6px;">
+                                            마음대로
+                                            되지
+                                            않는 내
+                                            몸에 극약처방.<br>
+                                            마법처럼 나를 고쳐줄 그분 찾아요!
+                                        </div>
+                                    </div>
+
+                                </a>
+
+                            </li>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="content-container" id="recommend-lesson-renew" style="margin-top: 30px;">
+                    <div class="section-header">
+                        <p class="title huge bold darkgrey">추천 레슨🔥</p>
+                        <button class="btn theme title big" id="btn-match-lessons">더보기</button>
+                    </div>
+
+                    <div class="itemSwiper" style="margin-top: 15px" id="_mLessonListNew">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" id="lesson-1">
+                                <li class="card-listitem-renew">
+                                    <img class="content-image" src="../../src/content/thumb/lesson-img-1.png"
+                                        alt="추천 코치" />
+                                    <div class="desc-container">
+                                        <div class="filter listFilter">
+                                            <ul class="horiList"
+                                                style="overflow-x: scroll; margin-top: 0; padding-bottom: 8px; margin-bottom: -8px !important;">
+                                                <input type="checkbox" checked="true" name="listFilter" checked="true"
+                                                    id="tag1" />
+                                                <label for="tag1" class="filter-listitem">
+                                                    프라임타임
+                                                </label>
+                                                <input type="checkbox" name="listFilter" id="tag2" />
+                                                <label for="tag2" class="filter-listitem">
+                                                    셀럽집합소
+                                                </label>
+                                            </ul>
+                                        </div>
+                                        <p class="title small normal" id="titleLesson">셀럽들의
+                                            집합소<br>반얀트리
+                                            핫 레슨</p>
+                                        <p class="text small bold" id="nameCoach">반얀트리 테니스</p>
+                                        <div class="flex spacebetween" style="align-items: center; width: 100%;">
+                                            <p class="text tiny mint">1.2km</p>
+                                            <p class="text tiny ogPrice">37,000원</p>
+                                        </div>
+                                        <div class="flex spacebetween"
+                                            style="align-items: center; width: 100%; margin-top: -4px;">
+                                            <p class="text tiny mint">18%</p>
+                                            <p class="text small bold">회당: 33,000원</p>
+                                        </div>
+                                    </div>
+
+                                </li>
+                            </div>
+                            <div class="swiper-slide" id="lesson-2">
+                                <li class="card-listitem-renew">
+                                    <img class="content-image" src="../../src/content/thumb/lesson-img-2.png"
+                                        alt="추천 코치" />
+                                    <div class="desc-container">
+                                        <div class="filter listFilter">
+                                            <ul class="horiList"
+                                                style="overflow-x: scroll; margin-top: 0; padding-bottom: 8px; margin-bottom: -8px !important;">
+                                                <input type="checkbox" name="listFilter" id="tag1" />
+                                                <label for="tag1" class="filter-listitem">
+                                                    핫플
+                                                </label>
+                                                <input type="checkbox" name="listFilter" id="tag2" />
+                                                <label for="tag2" class="filter-listitem">
+                                                    반포동
+                                                </label>
+                                                <input type="checkbox" name="listFilter" id="tag3" />
+                                                <label for="tag3" class="filter-listitem">
+                                                    인스타맛집
+                                                </label>
+                                            </ul>
+                                        </div>
+                                        <p class="title small normal" id="titleCoach">나는 아직 못쳐도<br>
+                                            인스타는 프로니까</p>
+                                        <p class="text small bold" id="nameCoach">테니스판타지</p>
+                                        <div class="flex spacebetween" style="align-items: center; width: 100%;">
+                                            <p class="text tiny mint">1.2km</p>
+                                            <!-- <p class="text tiny ogPrice">40,000원</p> -->
+                                        </div>
+                                        <div class="flex spacebetween"
+                                            style="align-items: center; width: 100%; margin-top: -4px;">
+                                            <p class="text tiny mint"></p>
+                                            <p class="text small bold">회당: 35,000원</p>
+                                        </div>
+                                    </div>
+
+                                </li>
+                            </div>
+                            <div class="swiper-slide" id="lesson-4">
+                                <li class="card-listitem-renew">
+                                    <img class="content-image" src="../../src/content/thumb/lesson-img-4.png"
+                                        alt="추천 코치" />
+                                    <div class="desc-container">
+                                        <div class="filter listFilter">
+                                            <ul class="horiList"
+                                                style="overflow-x: scroll; margin-top: 0; padding-bottom: 8px; margin-bottom: -8px !important;">
+                                                <input type="checkbox" checked="true" name="listFilter" id="tag1" />
+                                                <label for="tag1" class="filter-listitem">
+                                                    얼리버드
+                                                </label>
+                                                <input type="checkbox" name="listFilter" id="tag2" />
+                                                <label for="tag2" class="filter-listitem">
+                                                    광진구
+                                                </label>
+                                            </ul>
+                                        </div>
+                                        <p class="title small normal" id="titleCoach">럭셔리 잔디 코트에서
+                                            나만의
+                                            1:1 레슨
+                                        </p>
+                                        <p class="text small bold" id="nameCoach">워커힐 테니스</p>
+                                        <div class="flex spacebetween" style="align-items: center; width: 100%;">
+                                            <p class="text tiny mint">3.7km</p>
+                                            <p class="text tiny ogPrice">41,000원</p>
+                                        </div>
+                                        <div class="flex spacebetween"
+                                            style="align-items: center; width: 100%; margin-top: -4px;">
+                                            <p class="text tiny mint">34%</p>
+                                            <p class="text small bold">회당: 35,000원</p>
+                                        </div>
+                                    </div>
+
+                                </li>
+                            </div>
+                            <div class="swiper-slide" id="lesson-3">
+                                <li class="card-listitem-renew">
+                                    <img class="content-image" src="../../src/content/thumb/lesson-img-3.png"
+                                        alt="추천 코치" />
+                                    <div class="desc-container">
+                                        <div class="filter listFilter">
+                                            <ul class="horiList"
+                                                style="overflow-x: scroll; margin-top: 0; padding-bottom: 8px; margin-bottom: -8px !important;">
+                                                <input type="checkbox" checked="true" name="listFilter" id="tag1" />
+                                                <label for="tag1" class="filter-listitem">
+                                                    선착순
+                                                </label>
+                                                <input type="checkbox" name="listFilter" id="tag2" />
+                                                <label for="tag2" class="filter-listitem">
+                                                    내곡동
+                                                </label>
+                                                <input type="checkbox" name="listFilter" id="tag3" />
+                                                <label for="tag3" class="filter-listitem">
+                                                    인스타맛집
+                                                </label>
+                                            </ul>
+                                        </div>
+                                        <p class="title small normal" id="titleCoach">모여서 즐기는
+                                            테니스<br>야외
+                                            테니스 레슨
+                                        </p>
+                                        <p class="text small bold" id="nameCoach">플레져 테니스</p>
+                                        <div class="flex spacebetween" style="align-items: center; width: 100%;">
+                                            <p class="text tiny mint">3.7km</p>
+                                            <!-- <p class="text tiny ogPrice">60,000원</p> -->
+                                        </div>
+                                        <div class="flex spacebetween"
+                                            style="align-items: center; width: 100%; margin-top: -4px;">
+                                            <p class="text tiny mint"></p>
+                                            <p class="text small bold">회당: 35,000원</p>
+                                        </div>
+                                    </div>
+
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bannerSwiper" style="margin-top: 30px" id="_mCoachBannerListNew">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <li class="medium-banner-renew">
+                                <a>
+                                    <img alt="상품이미지" src="../../src/content/medium-banner-img1.png"
+                                        class="banner-image" />
+                                    <div class="desc-container">
+                                        <div class="title huge white bold">정말정말 잘 가르치는<br>
+                                            코치님을 🔦 찾아볼까?
+                                        </div>
+
+                                        <div class="text white medium" style="margin-bottom: 6px;">
+                                            마음대로
+                                            되지
+                                            않는 내
+                                            몸에 극약처방.<br>
+                                            마법처럼 나를 고쳐줄 그분 찾아요!
+                                        </div>
+                                    </div>
+
+                                </a>
+
+                            </li>
+                        </div>
+                        <div class="swiper-slide">
+                            <li class="medium-banner-renew">
+                                <a>
+                                    <img alt="상품이미지" src="../../src/content/medium-banner-img.png"
+                                        class="banner-image" />
+                                    <div class="desc-container">
+                                        <div class="title huge white bold">지금 가장 HOT🔥한<br>
+                                            레슨을 나도 한번 도전?
+                                        </div>
+
+                                        <div class="text white medium">전화하고 기다리고.<br>
+                                            마음대로 스케줄에 맞추기 힘들죠?<br>
+                                            지금바로 핫한 코치님들에게 배워보자구요.
+                                        </div>
+                                    </div>
+
+                                </a>
+
+                            </li>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-container" id="recommend-coach-renew" style="margin-top: 30px;">
+                    <div class="section-header">
+                        <p class="title huge bold darkgrey">추천 코치❤</p>
+                        <button class="btn theme title big" id="btn-match-coaches">더보기</button>
+                    </div>
+
+                    <div class="itemSwiper" style="margin-top: 15px" id="_mCoachListNew">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" id="coach-1">
+                                <li class="card-listitem-renew">
+                                    <img class="content-image" src="../../src/content/thumb/coach-img-1.png"
+                                        alt="추천 코치" />
+                                    <div class="desc-container">
+                                        <div class="filter listFilter">
+                                            <ul class="horiList"
+                                                style="overflow-x: scroll; margin-top: 0; padding-bottom: 8px; margin-bottom: -8px !important;">
+                                                <input type="checkbox" checked="true" name="listFilter" id="tag1" />
+                                                <label for="tag1" class="filter-listitem">
+                                                    프라임타임
+                                                </label>
+                                                <input type="checkbox" checked="true" name="listFilter" id="tag2" />
+                                                <label for="tag2" class="filter-listitem">
+                                                    선착순
+                                                </label>
+                                                <input type="checkbox" name="listFilter" id="tag3" />
+                                                <label for="tag3" class="filter-listitem">
+                                                    개포동
+                                                </label>
+                                            </ul>
+                                        </div>
+                                        <p class="title small normal" id="titleCoach">나의 테니스를
+                                            차별화<br>시켜주는
+                                            마법사
+                                        </p>
+                                        <p class="text small bold" id="nameCoach">안준범 코치</p>
+                                        <div class="flex spacebetween" style="align-items: center; width: 100%;">
+                                            <p class="text tiny mint">1.2km</p>
+                                            <p class="text tiny ogPrice"></p>
+                                        </div>
+                                        <div class="flex spacebetween"
+                                            style="align-items: center; width: 100%; margin-top: -4px;">
+                                            <p class="text tiny mint"></p>
+                                            <p class="text small bold">회당: 35,000원</p>
+                                        </div>
+                                    </div>
+
+                                </li>
+                            </div>
+                            <div class="swiper-slide" id="coach-2">
+                                <li class="card-listitem-renew">
+                                    <img class="content-image" src="../../src/content/thumb/coach-img-2.png"
+                                        alt="추천 코치" />
+                                    <div class="desc-container">
+                                        <div class="filter listFilter">
+                                            <ul class="horiList"
+                                                style="overflow-x: scroll; margin-top: 0; padding-bottom: 8px; margin-bottom: -8px !important;">
+                                                <input type="checkbox" name="listFilter" id="tag1" />
+                                                <label for="tag1" class="filter-listitem">
+                                                    마포역
+                                                </label>
+                                                <input type="checkbox" name="listFilter" id="tag2" />
+                                                <label for="tag2" class="filter-listitem">
+                                                    도보3분
+                                                </label>
+                                                <input type="checkbox" name="listFilter" id="tag3" />
+                                                <label for="tag3" class="filter-listitem">
+                                                    핫플
+                                                </label>
+                                            </ul>
+                                        </div>
+                                        <p class="title small normal" id="titleCoach">아름다운
+                                            자세까지.<br>시작부터
+                                            남다르게.
+                                        </p>
+                                        <p class="text small bold" id="nameCoach">성주현 코치</p>
+                                        <div class="flex spacebetween" style="align-items: center; width: 100%;">
+                                            <p class="text tiny mint">2.7km</p>
+                                            <p class="text tiny ogPrice">41,000원</p>
+                                        </div>
+                                        <div class="flex spacebetween"
+                                            style="align-items: center; width: 100%; margin-top: -4px;">
+                                            <p class="text tiny mint">34%</p>
+                                            <p class="text small bold">회당: 35,000원</p>
+                                        </div>
+                                    </div>
+
+                                </li>
+                            </div>
+                            <div class="swiper-slide" id="coach-3">
+                                <li class="card-listitem-renew">
+                                    <img class="content-image" src="../../src/content/thumb/coach-img-3.png"
+                                        alt="추천 코치" />
+                                    <div class="desc-container">
+                                        <div class="filter listFilter">
+                                            <ul class="horiList"
+                                                style="overflow-x: scroll; margin-top: 0; padding-bottom: 8px; margin-bottom: -8px !important;">
+                                                <input type="checkbox" checked="true" name="listFilter" id="tag1" />
+                                                <label for="tag1" class="filter-listitem">
+                                                    해피아워
+                                                </label>
+                                                <input type="checkbox" name="listFilter" id="tag2" />
+                                                <label for="tag2" class="filter-listitem">
+                                                    뱅뱅사거리
+                                                </label>
+                                                <input type="checkbox" name="listFilter" id="tag3" />
+                                                <label for="tag3" class="filter-listitem">
+                                                    핫플
+                                                </label>
+                                            </ul>
+                                        </div>
+                                        <p class="title small normal" id="titleCoach">이젠 테니스도
+                                            경제적!<br>미국선출의 핫 레슨.</p>
+                                        <p class="text small bold" id="nameCoach">한경원 코치</p>
+                                        <div class="flex spacebetween" style="align-items: center; width: 100%;">
+                                            <p class="text tiny mint">1.8km</p>
+                                            <p class="text tiny ogPrice">48,000원</p>
+                                        </div>
+                                        <div class="flex spacebetween"
+                                            style="align-items: center; width: 100%; margin-top: -4px;">
+                                            <p class="text tiny mint">20%</p>
+                                            <p class="text small bold">회당: 40,000원</p>
+                                        </div>
+                                    </div>
+
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="content-container" id="recommend-product-renew" style="margin-top: 30px;">
+                    <div class="section-header">
+                        <p class="title huge bold darkgrey">HOT 아이템🔥</p>
+                        <button class="btn theme title big" id="btn-match-item">더보기</button>
+                    </div>
+
+                    <div class="itemSwiper" style="margin-top: 15px" id="_mItemListNew">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <li class="card-listitem-renew">
+                                    <img class="content-image" src="../../src/content/product-banner-img.png"
+                                        alt="추천 코치" />
+                                    <div class="desc-container">
+                                        <p class="title small bold" id="titleProduct">익스트림 투어 NITE
+                                        </p>
+                                        <p class="text small normal" id="nameCoach">헤드</p>
+                                        <div class="flex spacebetween" style="align-items: center; width: 100%;">
+                                            <p class="text tiny">₩ 240,000</p>
+                                            <button class="btn transparent starFavorite"><img
+                                                    src="../../src/assets/ic-star-yellow.svg" /></button>
+                                        </div>
+                                    </div>
+                                </li>
+                            </div>
+                            <div class="swiper-slide">
+                                <li class="card-listitem-renew">
+                                    <img class="content-image" src="../../src/content/product-banner-img1.png"
+                                        alt="추천 코치" />
+                                    <div class="desc-container">
+                                        <p class="title small bold" id="titleProduct">익스트림 NITE 305g
+                                        </p>
+                                        <p class="text small normal" id="nameCoach">헤드</p>
+                                        <div class="flex spacebetween" style="align-items: center; width: 100%;">
+                                            <p class="text tiny">₩ 240,000</p>
+                                            <button class="btn transparent starFavorite"><img
+                                                    src="../../src/assets/ic-star-yellow.svg" /></button>
+                                        </div>
+                                    </div>
+                                </li>
+                            </div>
+                            <div class="swiper-slide">
+                                <li class="card-listitem-renew">
+                                    <img class="content-image" src="../../src/content/product-banner-img.png"
+                                        alt="추천 코치" />
+                                    <div class="desc-container">
+                                        <p class="title small bold" id="titleProduct">익스트림 투어 NITE
+                                        </p>
+                                        <p class="text small normal" id="nameCoach">헤드</p>
+                                        <div class="flex spacebetween" style="align-items: center; width: 100%;">
+                                            <p class="text tiny">₩ 240,000</p>
+                                            <button class="btn transparent starFavorite"><img
+                                                    src="../../src/assets/ic-star-yellow.svg" /></button>
+                                        </div>
+                                    </div>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 
+                <div class="content-container" id="recommend-coach">
+                    <div class="section-header">
+
+                        <p class="title big darkgrey">임시 코치리스트</p>
+                        <button class="btn transparent title medium" id="btn-match-lessons">더보기</button>
+                    </div>
+
+                    <ul class="card-list horiList escpd24 _coachs">
+                    </ul>
+                </div>
+
+                <div class="content-container" id="recommend-school">
+                    <div class="section-header">
+
+                        <p class="title big darkgrey">임시 팀리스트</p>
+                        <button class="btn transparent title medium" id="btn-match-lessons">더보기</button>
+                    </div>
+
+                    <ul class="card-list horiList escpd24 _lessons">
+                    </ul>
+                </div> -->
+
+                <!-- <ul class="horiList _mbBannerList">
+                    
+    <li class="medium-banner">
+        <div class="left">
+            <div class="text big bold">Rossignol Hero<br>World Cup 110<br>W320,000</div>
+            <div class="text big bold mint">지금구매 ></div>
+        </div>
+        <img alt="상품이미지" src="../../src/content/boots.png" class="banner-product" />
+    </li>
+
+    <li class="medium-banner">
+        <div class="left">
+            <div class="text big bold">Rossignol Hero<br>World Cup 110<br>W320,000</div>
+            <div class="text big bold mint">지금구매 ></div>
+        </div>
+        <img alt="상품이미지" src="../../src/content/boots.png" class="banner-product" />
+    </li>
+
+    <li class="medium-banner">
+        <div class="left">
+            <div class="text big bold">Rossignol Hero<br>World Cup 110<br>W320,000</div>
+            <div class="text big bold mint">지금구매 ></div>
+        </div>
+        <img alt="상품이미지" src="../../src/content/boots.png" class="banner-product" />
+    </li>
+    
+                </ul> -->
+
+            </div>
+        </div>
+
+    </main>
+    <nav class="mainTab">
+        <div class="mainTab-container">
+            <ul class="mainTab-list">
+                <input type="radio" name="mainNav" id="navHome" checked="true" class="mainTab-listitem" />
+                <label for="navHome" class="_navHome"><img class="mainTab-icon" alt="홈"
+                        src="../../src/assets/tabbar/ic-home.svg" /></label>
+
+                <!-- <input type="radio" name="mainNav" id="navShop" class="mainTab-listitem" />
+<label for="navShop" class="_navShop"><img class="mainTab-icon" alt="샵"
+        src="../../src/assets/tabbar/ic-shop.svg" /></label> -->
+
+                <input type="radio" name="mainNav" id="navSearch" class="mainTab-listitem" />
+                <label for="navSearch" class="_navSearch"><img class="mainTab-icon" alt="검색"
+                        src="../../src/assets/tabbar/ic-search.svg" /></label>
+
+                <input type="radio" name="mainNav" id="navCommunity" class="mainTab-listitem" />
+                <label for="navCommunity" class="_navCommunity"><img class="mainTab-icon" alt="커뮤니티"
+                        src="../../src/assets/tabbar/ic-community.svg" /></label>
+
+                <input type="radio" name="mainNav" id="navMypage" class="mainTab-listitem" />
+                <label for="navMypage" class="_navMypage"><img class="mainTab-icon" alt="마이페이지"
+                        src="../../src/assets/tabbar/ic-mypage.svg" /></label>
+
+            </ul>
+        </div>
+    </nav>
+    <script>
+        $('.mainTab-listitem#navHome').click(function () {
+            window.location.href = "../home/home.html"; instructor
+        });
+
+        $('.mainTab-listitem#navShop').click(function () {
+            window.location.href = "../shop/shop_home.html";
+        });
+
+        $('.mainTab-listitem#navSearch').click(function () {
+            window.location.href = "../home/search.html";
+        });
+
+        $('.mainTab-listitem#navCommunity').click(function () {
+            window.location.href = "../cmnty/home.html";
+        });
+
+        $('.mainTab-listitem#navMypage').click(function () {
+            window.location.href = "../mypage/mypage_home.html";
+        });
+
+        $('#btn-match-coaches').click(function () {
+            window.location.href = "../instructor/coach_home.html";
+        });
+
+        $('#_mCoachListNew .swiper-slide').click(function () {
+            window.location.href = "../instructor/instructor_coachpage.html";
+        });
+
+        $('#_mCoachBannerListNew .swiper-slide').click(function () {
+            window.location.href = "../instructor/instructor_coachpage.html";
+        });
+
+        $('#_mLessonListNew .swiper-slide').click(function () {
+            window.location.href = "../instructor/instructor_teampage.html";
+        });
+
+        $('#_mLessonBannerListNew .swiper-slide').click(function () {
+            window.location.href = "../instructor/instructor_teampage.html";
+        });
+
+        $('#btn-match-lessons').click(function () {
+            window.location.href = "../instructor/instructor_home.html";
+        });
+
+        //임시 리스트 링크
+        // $('#_mCoachBannerListNew .medium-banner-renew').click(function () {
+        //     window.location.href = 'http://user.pleisure.co:8080/instructor/coach?seq=156&category_seq=3';
+        // });
+
+        // $('#_mLessonBannerListNew .medium-banner-renew').click(function () {
+        //     window.location.href = 'http://user.pleisure.co:8080/instructor/teampage?seq=73&category_seq=3';
+        // });
+
+        // $('#_mCoachListNew .card-listitem-renew').click(function () {
+        //     window.location.href = 'http://user.pleisure.co:8080/instructor/coach?seq=156&category_seq=3';
+        // });
+
+        // $('#_mLessonListNew .card-listitem-renew').click(function () {
+        //     window.location.href = 'http://user.pleisure.co:8080/instructor/teampage?seq=73&category_seq=3';
+        // });
+
+        $('.app-logo').click(function () {
+            $('.content-container#ticketDetail').fadeToggle('fast');
+            $('#lesson-name-div').fadeToggle('fast');
+        })
+
+        
+    </script>
+
+    <script>
+        var bannerSwiper = new Swiper(".bannerSwiper", {
+            spaceBetween: 15,
+        });
+
+        var itemSwiper = new Swiper(".itemSwiper", {
+            spaceBetween: 15,
+            slidesPerView: "auto",
+        });
+
+        var ticketSwiper = new Swiper(".ticketSwiper", {
+            spaceBetween: 10,
+            slidesPerView: "auto",
+        });
+    </script>
+
+</html>

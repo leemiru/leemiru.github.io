@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플레저</title>
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="./js/background.js"></script> -->
+    <!-- <script src="./js/header.js"></script> -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+</head>
+
+<body class="whitebg">
+    <header class="mainHeader">
+        <div class="mainHeader-container">
+            <button id="btn-back" class="btn circle" style="opacity: 0;"><img src="../../src/assets/ic-arrow-left.svg"
+                    alt="뒤로" /></button>
+            <img alt="Pleisure" class="header-logo" src="../../src/logo-mono.svg" />
+            <span style="opacity: 0;"></span>
+        </div>
+    </header>
+    <main class="mainWrap">
+        <div class="content-container pd24 withHeader"
+            style="height: 75vh; display: flex; align-items: center; flex-wrap: wrap; justify-content: center; flex-direction: column;"
+            id="automatchComplete">
+
+            <div class="content-container" id="lessonInfo">
+                <img class="coachProfile" src="../../src/content/profile.png" alt="코치이미지" />
+                <p class="text darkgrey bold medium">양우영 데몬스트레이터<br>
+                    오전 레슨 2시간<br>
+                    09:00~11:00</p>
+            </div>
+
+            <p class="title twenty bold darkgrey" style="text-align: center;">레슨이 접수되었습니다!</p>
+            <p class="text small mint" style="text-align: center; margin-top: 12px;">레슨에 대한 정보는 마이페이지에서<br>
+                확인가능합니다.</p>
+            <br>
+            <br>
+            <div class="flex spacebetween">
+                <button class="btn theme circle" id="btnCall"><img src="../../src/assets/ic-phone.svg"></button>
+                <button class="btn theme circle" id="btnShare"><img src="../../src/assets/ic-share.svg"></button>
+            </div>
+
+
+            <div class="bottom-container">
+                <div class="flex center spacebetween">
+                    <a href="../mypage/mylesson_chat_detail.html" style="width: 100%; margin-right: 4px;"><button
+                            class="btn theme" style="margin: 0; height: 56px;" id="chat">채팅</button></a>
+                    <a href="../home/home.html" style="width: 100%; margin-left: 4px;"><button class="btn light"
+                            style="margin: 0; height: 56px;" id="confirm">확인</button></a>
+                </div>
+                <p class="text eleven grey">결제내역 및 레슨스케줄 변경은 마이페이지에서 가능합니다.</p>
+            </div>
+
+        </div>
+    </main>
+</body>
+
+<script>
+    $('.btnInfo').click(function () {
+        $('.modalWrap').fadeIn('fast');
+    });
+
+    $('.btnClose').click(function () {
+        $('.modalWrap').fadeOut('fast');
+    })
+</script>
+
+</html>

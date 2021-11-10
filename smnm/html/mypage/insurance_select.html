@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플레저</title>
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="./js/background.js"></script> -->
+    <!-- <script src="./js/header.js"></script> -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+</head>
+
+<body class="whitebg">
+    <header class="mainHeader">
+        <div class="mainHeader-container">
+            <button id="btn-back" class="btn circle"><img src="../../src/assets/ic-arrow-left.svg" alt="뒤로" /></button>
+            <img alt="Pleisure" class="header-logo" src="../../src/logo-mono.svg" />
+            <span style="opacity: 0;"></span>
+        </div>
+    </header>
+    <main class="mainWrap">
+        <div class="content-container withHeader pd24">
+            <div class="content-container" id="insuranceList">
+
+                <div class="content-container" id="lesson-type">
+
+                    <ul class="horiList" style="margin-bottom: 0px;" id="lesson-type-list">
+                        <input type="radio" name="lessonType" id="ski"/>
+                            <label for="ski" class="text big" id="type-ski">스키</label>
+
+                            <input type="radio" name="lessonType" id="snowboard"/>
+                            <label for="snowboard" class="text big" id="type-snowboard">스노우보드</label>
+
+                            <input type="radio" name="lessonType" id="jujitsu"/>
+                            <label for="jujitsu" class="text big" id="type-jujitsu">주짓수</label>
+
+                            <input type="radio" name="lessonType" id="bowling"/>
+                            <label for="bowling" class="text big" id="type-bowling">볼링</label>
+                            
+                            <input type="radio" name="lessonType" id="tennis"/>
+                            <label for="tennis" class="text big" id="type-tennis">테니스</label>
+                    </ul>
+                </div>
+
+                <ul>
+                    <li>
+                        <div class="title-container">
+                            <div class="flex">
+                                <img alt="이미지" src="../../src/content/carrot.svg" class="itemType green" />
+                                <p class="title big darkgrey bold">스마트 레저상해보험</p>
+                            </div>
+                            <input type="checkbox" class="switch" id="insuranceId" name="insuranceId"><label for="insuranceId"></label>
+                        </div>
+                        <div class="flex spacebetween">
+                            <div>
+                                <p class="text darkgrey medium">상새하망후유장해 <b>1억원</b><br>
+                                    골절진단비 (치아파절제외) 특약 <b>1억원</b><br>
+                                    상해수술비 <b>1억원</b><br>
+                                    레저활동 중 배상책임<br>
+                                    (자기부담금 2만원)<br>
+                                    레저활동 중 상해후유장해<br> 
+                                    (상해사망 부담보 특별약관)</p>
+                            </div>
+                            <div class="itemTag-container">
+                                <div class="itemType green">Today</div>
+                                <p class="text darkgrey medium">2,500원 / 1일</p>
+                            </div>
+                        </div>
+                        <div class="flex spacebetween">
+                            <div class="itemType green">Today</div>
+                            <button class="btnDetail">상품 상세보기</button>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="title-container">
+                            <div class="flex">
+                                <img alt="이미지" src="../../src/content/carrot.svg" class="itemType green" />
+                                <p class="title big darkgrey bold">스마트 레저상해보험</p>
+                            </div>
+                            <input type="checkbox" class="switch" id="insuranceId" name="insuranceId"><label for="insuranceId"></label>
+                        </div>
+                        <div class="flex spacebetween">
+                            <div>
+                                <p class="text darkgrey medium">상새하망후유장해 <b>1억원</b><br>
+                                    골절진단비 (치아파절제외) 특약 <b>1억원</b><br>
+                                    상해수술비 <b>1억원</b><br>
+                                    레저활동 중 배상책임<br>
+                                    (자기부담금 2만원)<br>
+                                    레저활동 중 상해후유장해<br> 
+                                    (상해사망 부담보 특별약관)</p>
+                            </div>
+                            <div class="itemTag-container">
+                                <div class="itemType orange">Today</div>
+                                <p class="text darkgrey medium">2,500원 / 1일</p>
+                            </div>
+                        </div>
+                        <div class="flex spacebetween">
+                            <div class="itemType green">Today</div>
+                            <button class="btnDetail">상품 상세보기</button>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="title-container">
+                            <div class="flex">
+                                <img alt="이미지" src="../../src/content/carrot.svg" class="itemType green" />
+                                <p class="title big darkgrey bold">스마트 레저상해보험</p>
+                            </div>
+                            <input type="checkbox" class="switch" id="insuranceId" name="insuranceId"><label for="insuranceId"></label>
+                        </div>
+                        <div class="flex spacebetween">
+                            <div>
+                                <p class="text darkgrey medium">상새하망후유장해 <b>1억원</b><br>
+                                    골절진단비 (치아파절제외) 특약 <b>1억원</b><br>
+                                    상해수술비 <b>1억원</b><br>
+                                    레저활동 중 배상책임<br>
+                                    (자기부담금 2만원)<br>
+                                    레저활동 중 상해후유장해<br> 
+                                    (상해사망 부담보 특별약관)</p>
+                            </div>
+                            <div class="itemTag-container">
+                                <div class="itemType green">Today</div>
+                                <p class="text darkgrey medium">2,500원 / 1일</p>
+                            </div>
+                        </div>
+                        <div class="flex spacebetween">
+                            <div class="itemType green">Today</div>
+                            <button class="btnDetail">상품 상세보기</button>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="title-container">
+                            <div class="flex">
+                                <img alt="이미지" src="../../src/content/carrot.svg" class="itemType green" />
+                                <p class="title big darkgrey bold">스마트 레저상해보험</p>
+                            </div>
+                            <input type="checkbox" class="switch" id="insuranceId" name="insuranceId"><label for="insuranceId"></label>
+                        </div>
+                        <div class="flex spacebetween">
+                            <div>
+                                <p class="text darkgrey medium">상새하망후유장해 <b>1억원</b><br>
+                                    골절진단비 (치아파절제외) 특약 <b>1억원</b><br>
+                                    상해수술비 <b>1억원</b><br>
+                                    레저활동 중 배상책임<br>
+                                    (자기부담금 2만원)<br>
+                                    레저활동 중 상해후유장해<br> 
+                                    (상해사망 부담보 특별약관)</p>
+                            </div>
+                            <div class="itemTag-container">
+                                <div class="itemType green">Today</div>
+                                <p class="text darkgrey medium">2,500원 / 1일</p>
+                            </div>
+                        </div>
+                        <div class="flex spacebetween">
+                            <div class="itemType green">Today</div>
+                            <button class="btnDetail">상품 상세보기</button>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="title-container">
+                            <div class="flex">
+                                <img alt="이미지" src="../../src/content/carrot.svg" class="itemType green" />
+                                <p class="title big darkgrey bold">스마트 레저상해보험</p>
+                            </div>
+                            <input type="checkbox" class="switch" id="insuranceId" name="insuranceId"><label for="insuranceId"></label>
+                        </div>
+                        <div class="flex spacebetween">
+                            <div>
+                                <p class="text darkgrey medium">상새하망후유장해 <b>1억원</b><br>
+                                    골절진단비 (치아파절제외) 특약 <b>1억원</b><br>
+                                    상해수술비 <b>1억원</b><br>
+                                    레저활동 중 배상책임<br>
+                                    (자기부담금 2만원)<br>
+                                    레저활동 중 상해후유장해<br> 
+                                    (상해사망 부담보 특별약관)</p>
+                            </div>
+                            <div class="itemTag-container">
+                                <div class="itemType green">Today</div>
+                                <p class="text darkgrey medium">2,500원 / 1일</p>
+                            </div>
+                        </div>
+                        <div class="flex spacebetween">
+                            <div class="itemType green">Today</div>
+                            <button class="btnDetail">상품 상세보기</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+</body>
+
+<script>
+    $('#insuranceList > ul > li').click(function() {
+            window.location.href="./insurance_detail.html";
+        });
+</script>
+
+</html>

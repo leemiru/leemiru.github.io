@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플레저</title>
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="./js/background.js"></script> -->
+    <!-- <script src="./js/header.js"></script> -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+</head>
+
+<body class="whitebg">
+    <main class="mainWrap">
+        <header class="mainHeader">
+            <div class="mainHeader-container">
+                <button id="btn-back" class="btn circle"><img src="../../src/assets/ic-arrow-left.svg" alt="뒤로" /></button>
+                <img alt="Pleisure" class="header-logo" src="../../src/logo-mono.svg" />
+                <span style="opacity: 0;"></span>
+            </div>
+        </header>
+        <div class="content-container withHeader" id="myPage">
+            <div class="content-container" id="preference">
+
+                <div style="margin: 32px auto; width: 100%; text-align: center;">
+                    <button class="btn theme circle" style="position: absolute; margin-left: 84px;"><img src="../../src/assets/ic-plus.svg"/></button>
+                    <img alt="프로필" src="../../src/content/profile.png" class="profileImg" style="width: 105px !important; height: 105px !important; min-width: 105px; min-height: 105px; max-height: 105px; max-width: 105px; margin: 0 auto;" />
+                </div>
+
+                <div class="input-container pd24" style="border-bottom: 1px solid rgba(0, 0, 0, 0.1); margin-bottom: 16px;">
+                    <p class="title grey small dmsans" style="color: #e0e0e0;">이름</p>
+                    <input type="text" class="input transparent" placeholder="이름" style="padding: 0;"/>
+                </div>
+
+                <div class="input-container pd24" style="border-bottom: 1px solid rgba(0, 0, 0, 0.1); margin-bottom: 16px;">
+                    <p class="title grey small dmsans" style="color: #e0e0e0;">이메일</p>
+                    <input type="email" class="input transparent" placeholder="이메일" style="padding: 0;"/>
+                </div>
+
+                <div class="input-container pd24" style="border-bottom: 1px solid rgba(0, 0, 0, 0.1); margin-bottom: 16px;">
+                    <p class="title grey small dmsans" style="color: #4f4f4f;">비밀번호</p>
+                    <input type="password" class="input transparent" placeholder="비밀번호" style="padding: 0; color: #4f4f4f;"/>
+                </div>
+
+                <div class="input-container pd24" style="border-bottom: 1px solid rgba(0, 0, 0, 0.1); margin-bottom: 16px;">
+                    <p class="title grey small dmsans" style="color: #4f4f4f;">비밀번호 확인</p>
+                    <input type="password" class="input transparent" placeholder="이름" style="padding: 0; color: #4f4f4f;"/>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="bottom-container" style="background: none;">
+            <button class="btn theme" id="confirm">수정</button>
+        </div>
+
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플레저</title>
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="./js/background.js"></script> -->
+    <!-- <script src="./js/header.js"></script> -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+</head>
+
+<body>
+    <main class="mainWrap">
+        <header class="mainHeader">
+            <div class="mainHeader-container">
+                <button id="btn-back" class="btn circle"><img src="../../src/assets/ic-arrow-left.svg"
+                        alt="뒤로" /></button>
+                <img alt="Pleisure" class="header-logo" src="../../src/logo-mono.svg" />
+                <button class="btn transparent title grey" id="btnEdit" style="margin-top: 4px;">수정</button>
+            </div>
+        </header>
+        <div class="content-container withHeader" id="commentDetail">
+            <div class="title-container pd24">
+                <p class="title big black" id="coachName">정재권 코치</p>
+                <p class="text small black" id="date">2021/02/07</p>
+                <p class="text small black" id="lessonTime">오전 레슨 09:00 ~ 11:00</p>
+            </div>
+
+            <div class="comment-container pd24">
+                <p class="text medium black" id="comment">
+                    항상 하중에 신경을 쓰시고 그외에 상체 너무 굽히지 않으시면 좋을 것 같습니다. 프리 스키잉 하시면서 발바닥 느끼시면서 타보시는거 추천드려요!</p>
+            </div>
+
+            <div class="image-container pd24">
+                <ul>
+                    <li>
+                        <img src="../../src/content/comment.png" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="bottom-container">
+            <button class="btn theme" id="confirm">확인</button>
+    </main>
+</body>
+<script>
+    $('#confirm').click(function() {
+       window.location.href="./mylesson_home.html" 
+    });
+</script>
+</html>

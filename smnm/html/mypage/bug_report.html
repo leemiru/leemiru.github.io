@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플레저</title>
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="./js/background.js"></script> -->
+    <!-- <script src="./js/header.js"></script> -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+</head>
+
+<body>
+    <main class="mainWrap">
+        <header class="mainHeader">
+            <div class="mainHeader-container">
+                <button id="btn-back" class="btn circle"><img src="../../src/assets/ic-arrow-left.svg"
+                        alt="뒤로" /></button>
+                <img alt="Pleisure" class="header-logo" src="../../src/logo-mono.svg" />
+                <button class="btn transparent title big grey">보내기</button>
+            </div>
+        </header>
+        <div class="content-container withHeader" id="postWrite">
+            <div class="content-container" id="lesson">
+                <!-- <div class="filter">
+                    <ul class="horiList pd24">
+                        <input type="radio" name="itemType" id="ski" />
+                        <label for="ski" class="filter-listitem">
+                            스키
+                        </label>
+                        <input type="radio" name="itemType" id="snowboard" />
+                        <label for="snowboard" class="filter-listitem">
+                            스노우보드
+                        </label>
+                        <input type="radio" name="itemType" id="jujitsu" />
+                        <label for="jujitsu" class="filter-listitem">
+                            주짓수
+                        </label>
+                        <input type="radio" name="itemType" id="bowling" />
+                        <label for="bowling" class="filter-listitem">
+                            볼링
+                        </label>
+                        <input type="radio" name="itemType" id="tennis" />
+                        <label for="tennis" class="filter-listitem">
+                            테니스
+                        </label>
+                        <input type="radio" name="itemType" id="boxing" />
+                        <label for="boxing" class="filter-listitem">
+                            복싱
+                        </label>
+                        <input type="radio" name="itemType" id="waterski" />
+                        <label for="waterski" class="filter-listitem">
+                            수상스키
+                        </label>
+                        <input type="radio" name="itemType" id="golf" />
+                        <label for="golf" class="filter-listitem">
+                            골프
+                        </label>
+                    </ul>
+                </div> -->
+
+                <div class="content-container" id="category" style="margin-top: 20px;">
+                    <!-- <p class="title big black pd24">카테고리</p> -->
+                    <div class="filter">
+                        <ul class="horiList pd24" style="margin-top: 8px;">
+                            <input type="radio" checked="true" name="filterCategory" id="function" />
+                            <label for="function" class="filter-listitem">
+                                기능문제
+                            </label>
+                            <input type="radio" name="filterCategory" id="error" />
+                            <label for="error" class="filter-listitem">
+                                오류사항
+                            </label>
+                            <input type="radio" name="filterCategory" id="suggestion" />
+                            <label for="suggestion" class="filter-listitem">
+                                제안
+                            </label>
+                            <input type="radio" name="filterCategory" id="other" />
+                            <label for="other" class="filter-listitem">
+                                +
+                            </label>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-container pd24" id="postInfoInput" style="margin-top: 12px;">
+                    <input placeholder="제목" type="text" class="input" id="inputTitle"/>
+                    <input placeholder="이메일" type="email" class="input" id="inputTitle"/>
+                    <input placeholder="전화번호" type="tel" class="input" id="inputTitle"/>
+                </div>
+
+                <div class="input-container" id="postContent">
+                    <textarea placeholder="내용을 입력해주세요"></textarea>
+                </div>
+            </div>
+
+            <div class="bottom-container">
+                <ul class="horiList pd24" id="imageList">
+                    <li>
+                        <img id="thumbnail" src="../../src/content/comment.png"/>
+                        <button class="btn white" id="btnDelete"><img src="../../src/assets/ic-trash.svg"/></button>
+                    </li>
+                    <li>
+                        <img id="thumbnail" src="../../src/content/comment.png"/>
+                        <button class="btn white" id="btnDelete"><img src="../../src/assets/ic-trash.svg"/></button>
+                    </li>
+                    <li>
+                        <img id="thumbnail" src="../../src/content/comment.png"/>
+                        <button class="btn white" id="btnDelete"><img src="../../src/assets/ic-trash.svg"/></button>
+                    </li>
+                    <li>
+                        <img id="thumbnail" src="../../src/content/comment.png"/>
+                        <button class="btn white" id="btnDelete"><img src="../../src/assets/ic-trash.svg"/></button>
+                    </li>
+                    <li>
+                        <img id="thumbnail" src="../../src/content/comment.png"/>
+                        <button class="btn white" id="btnDelete"><img src="../../src/assets/ic-trash.svg"/></button>
+                    </li>
+                    
+                </ul>
+                <button class="btn theme" id="btnAddPhoto"><img src="../../src/assets/ic-add-photo.svg" alt="사진 추가" /></button>
+            </div>
+            
+        </div>
+
+    </main>
+</body>
+
+</html>

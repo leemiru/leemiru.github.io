@@ -1,0 +1,9 @@
+<svg id="그룹_25" data-name="그룹 25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <linearGradient id="linear-gradient" x2="1" y2="0.984" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#0acf83"/>
+      <stop offset="1" stop-color="#10ff26"/>
+    </linearGradient>
+  </defs>
+  <path id="합치기_1" data-name="합치기 1" d="M9.091,20V18.127a8.177,8.177,0,0,1-7.218-7.218H0V9.091H1.873A8.178,8.178,0,0,1,9.091,1.873V0h1.818V1.873a8.177,8.177,0,0,1,7.218,7.218H20v1.818H18.127a8.175,8.175,0,0,1-7.218,7.218V20Zm0-3.7V13.94h1.818V16.3a6.361,6.361,0,0,0,5.39-5.39H13.94V9.091H16.3a6.361,6.361,0,0,0-5.39-5.39V6.06H9.091V3.7A6.36,6.36,0,0,0,3.7,9.091H6.06v1.818H3.7A6.361,6.361,0,0,0,9.091,16.3Z" fill="url(#linear-gradient)"/>
+</svg>

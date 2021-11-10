@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플레저</title>
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="./js/background.js"></script> -->
+    <!-- <script src="./js/header.js"></script> -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+</head>
+
+<body>
+    <header class="mainHeader">
+        <div class="mainHeader-container">
+            <button id="btn-back" class="btn circle"><img src="../../src/assets/ic-arrow-left.svg" alt="뒤로" /></button>
+            <img alt="Pleisure" class="header-logo" src="../../src/logo-mono.svg" />
+            <span style="opacity: 0;"></span>
+        </div>
+    </header>
+    <main class="mainWrap">
+        <div class="home-container withHeader" id="community">
+            <div class="content-container">
+
+
+                <div class="content-container" id="hotContents">
+                    <div class="section-header pd24">
+                        <p class="title big darkgrey">인기컨텐츠</p>
+                        <!-- <button class="btn transparent title medium mint" id="btnViewHots">더보기</button> -->
+                    </div>
+                    <ul class="card-list pd24">
+                        <li>
+                            <img src="../../src/content/comment.png" alt="썸네일" id="contentThumbnail" />
+                            <div>
+                                <p class="title black small bold" id="contentTitle">분명 1월인데..너무더우시죠? 이럴땐 달리는거죠!!</p>
+                                <div class="flex center"><span class="text bold tiny mint" id="authorName">박창근
+                                        SKICLASS</span> <img src="../../src/assets/ic-arrow-right.svg" /></div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="../../src/content/comment.png" alt="썸네일" id="contentThumbnail" />
+                            <div>
+                                <p class="title black small bold" id="contentTitle">분명 1월인데..너무더우시죠? 이럴땐 달리는거죠!!</p>
+                                <div class="flex center"><span class="text bold tiny mint" id="authorName">박창근
+                                        SKICLASS</span> <img src="../../src/assets/ic-arrow-right.svg" /></div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="../../src/content/comment.png" alt="썸네일" id="contentThumbnail" />
+                            <div>
+                                <p class="title black small bold" id="contentTitle">분명 1월인데..너무더우시죠? 이럴땐 달리는거죠!!</p>
+                                <div class="flex center"><span class="text bold tiny mint" id="authorName">박창근
+                                        SKICLASS</span> <img src="../../src/assets/ic-arrow-right.svg" /></div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+    <!-- <div class="modalWrap">
+        <div class="bottom-modal">
+            <div class="modal-container">
+                <div class="title-container pd24">
+                    <p class="title huge bold black">필터</p>
+                    <button id="close-modal" class="btn transparent"><img
+                            src="../../src/assets/ic-close.svg" /></button>
+                </div>
+
+                <div class="content-container" id="category">
+                    <p class="title big black pd24">카테고리</p>
+                    <div class="filter">
+                        <ul class="horiList pd24">
+                            <input type="checkbox" checked="true" name="filterCategory" id="ftCommunity" />
+                            <label for="ftCommunity" class="filter-listitem">
+                                커뮤니티
+                            </label>
+                            <input type="checkbox" name="filterCategory" id="ftJoonggo" />
+                            <label for="ftJoonggo" class="filter-listitem">
+                                중고거래
+                            </label>
+                            <input type="checkbox" name="filterCategory" id="ftNotice" />
+                            <label for="ftNotice" class="filter-listitem">
+                                공지사항
+                            </label>
+                            <input type="checkbox" name="filterCategory" id="ftPost" />
+                            <label for="ftPost" class="filter-listitem">
+                                내 포스트
+                            </label>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="content-container" id="theme">
+                    <p class="title big black pd24">주제</p>
+
+                    <div class="filter">
+                        <ul class="horiList pd24">
+                            <input type="radio" name="itemType" id="ski" />
+                            <label for="ski" class="filter-listitem">
+                                스키
+                            </label>
+                            <input type="radio" name="itemType" id="snowboard" />
+                            <label for="snowboard" class="filter-listitem">
+                                스노우보드
+                            </label>
+                            <input type="radio" name="itemType" id="jujitsu" />
+                            <label for="jujitsu" class="filter-listitem">
+                                주짓수
+                            </label>
+                            <input type="radio" name="itemType" id="bowling" />
+                            <label for="bowling" class="filter-listitem">
+                                볼링
+                            </label>
+                            <input type="radio" name="itemType" id="tennis" />
+                            <label for="tennis" class="filter-listitem">
+                                테니스
+                            </label>
+                            <input type="radio" name="itemType" id="boxing" />
+                            <label for="boxing" class="filter-listitem">
+                                복싱
+                            </label>
+                            <input type="radio" name="itemType" id="waterski" />
+                            <label for="waterski" class="filter-listitem">
+                                수상스키
+                            </label>
+                            <input type="radio" name="itemType" id="golf" />
+                            <label for="golf" class="filter-listitem">
+                                골프
+                            </label>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-container" id="align">
+                    <p class="title big black pd24">정렬</p>
+
+                    <div class="filter pd24">
+                        <ul class="horiList" style="overflow-x: visible;">
+                            <input type="radio" checked="true" name="alignType" id="latest" />
+                            <label for="latest" class="filter-listitem">
+                                새로운순
+                            </label>
+                            <input type="radio" name="alignType" id="oldest" />
+                            <label for="oldest" class="filter-listitem">
+                                오래된순
+                            </label>
+                            <input type="radio" name="alignType" id="hottest" />
+                            <label for="hottest" class="filter-listitem">
+                                인기순
+                            </label>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-container pd24">
+                    <button class="btn dark theme">필터 적용</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <nav class="mainTab">
+        <div class="mainTab-container">
+            <ul class="mainTab-list">
+                <input type="radio" name="mainNav" id="navHome" class="mainTab-listitem" />
+                <label for="navHome"><img class="mainTab-icon" alt="홈"
+                        src="../../src/assets/tabbar/ic-home.svg" /></label>
+
+                <input type="radio" name="mainNav" id="navShop" class="mainTab-listitem" />
+                <label for="navShop"><img class="mainTab-icon" alt="샵"
+                        src="../../src/assets/tabbar/ic-shop.svg" /></label>
+
+                <input type="radio" name="mainNav" id="navSearch" class="mainTab-listitem" />
+                <label for="navSearch"><img class="mainTab-icon" alt="검색"
+                        src="../../src/assets/tabbar/ic-search.svg" /></label>
+
+                <input type="radio" name="mainNav" id="navCommunity" checked="true" class="mainTab-listitem" />
+                <label for="navCommunity"><img class="mainTab-icon" alt="커뮤니티"
+                        src="../../src/assets/tabbar/ic-community.svg" /></label>
+
+                <input type="radio" name="mainNav" id="navMypage" class="mainTab-listitem" />
+                <label for="navMypage"><img class="mainTab-icon" alt="마이페이지"
+                        src="../../src/assets/tabbar/ic-mypage.svg" /></label>
+
+            </ul>
+        </div>
+    </nav>
+</body>
+
+<script>
+    $('#filter').click(function () {
+        $('.modalWrap').fadeIn('fast');
+    });
+
+    $('#close-modal').click(function () {
+        $('.modalWrap').fadeOut('fast');
+    });
+
+    $("#search-bar").click(function () {
+        $('.search-history').css('display', 'block');
+    }).focusout(function () {
+        $('.search-history').css('display', 'none');
+    })
+
+    $('.mainTab-listitem#navHome').click(function() {
+        window.location.href="../home/home.html";
+    });
+
+    $('.mainTab-listitem#navShop').click(function() {
+        window.location.href="../shop/shop_home.html";
+    });
+
+    $('.mainTab-listitem#navSearch').click(function() {
+        window.location.href="../home/search.html";
+    });
+
+    $('.mainTab-listitem#navCommunity').click(function() {
+        window.location.href="../cmnty/home.html";
+    });
+
+    $('.mainTab-listitem#navMypage').click(function() {
+        window.location.href="../mypage/mypage_home.html";
+    });
+</script>
+
+</html>

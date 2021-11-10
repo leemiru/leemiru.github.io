@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플레저</title>
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="./js/background.js"></script> -->
+    <!-- <script src="./js/header.js"></script> -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+</head>
+
+<body class="whitebg">
+    <header class="mainHeader">
+        <div class="mainHeader-container">
+            <button id="btn-back" class="btn circle"><img src="../../src/assets/ic-arrow-left.svg" alt="뒤로" /></button>
+            <img alt="Pleisure" class="header-logo" src="../../src/logo-mono.svg" />
+            <span style="opacity: 0;"></span>
+        </div>
+    </header>
+    <main class="mainWrap">
+        <div class="content-container pd24 withHeader" id="lessonSchedule">
+            <!-- 회차 선택 게이지 -->
+            <div class="content-container" id="automatch">
+                <div class="gauge">
+                    <div class="gauge-active" style="width: calc(50%);"></div>
+                </div>
+                <p class="text grey small medium" style="text-align: center; color: #4f4f4f;">2/4</p>
+                <p class="text small mint" style="text-align: center; margin-top: 12px; margin-bottom: 16px;">레슨 수정은
+                    마이페이지에서
+                    조정 가능합니다.</p>
+            </div>
+
+
+            <p class="text small mint" style="text-align: center; margin-top: 12px; margin-bottom: 16px;">레슨을 시작할 요일과
+                시간을 알려주세요.<br>첫 레슨만 등록 후 마이페이지에서 남은 회차는 등록가능합니다.</p>
+            <div class="title-container calendar">
+                <button id="btnPrev" class="btn transparent"><img src="../../src/assets/ic-bracket-left-theme.svg"
+                        alt="이전" /></button>
+                <span class="title darkgrey bold big" id="month">12월</span>
+                <button id="btnNext" class="btn transparent"><img src="../../src/assets/ic-bracket-right-theme.svg"
+                        alt=다음 /></button>
+            </div>
+            <div class="calendar-container">
+                <div id="divCal"></div>
+            </div>
+
+            <div class="content-container" id="lessonList">
+                <ul>
+                    <li>
+                        <div class="flex spacebetween">
+                            <div>
+                                <div class="flex center spacebetween">
+                                    <div>
+                                        <p class="title eighteen bold darkgrey" id="lessonType">포인트레슨</p>
+                                        <p class="title eighteen bold darkgrey" id="lessonTime">오후 2:00 - 4:00</p>
+                                    </div>
+                                </div>
+                                <div class="flex" style="margin-top: 8px;">
+                                    <div style="margin-right: 8px;">
+                                        <p class="text bold grey small">장소</p>
+                                        <p class="text bold grey small">금액</p>
+                                        <p class="text bold grey small">시간</p>
+                                        <p class="text bold grey small">자리</p>
+                                    </div>
+                                    <div>
+                                        <p class="text grey small" id="lessonPlace">리조트</p>
+                                        <p class="text grey small" id="lessonPrice">000,000</p>
+                                        <p class="text grey small" id="lessonPeriod">00:00-00:00</p>
+                                        <p class="text grey small" id="lessonMember">3/4</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex" style="flex-direction: column;">
+                                <button id="btnSelect" class="btn theme">선택 <img
+                                        src="../../src/assets/ic-arrow-right.svg" /></button>
+                                <button id="btnRepeat" class="btn theme" style="margin-top: 8px;">매주반복 <img
+                                        src="../../src/assets/ic-arrow-right.svg" /></button>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="flex spacebetween">
+                            <div>
+                                <div class="flex center spacebetween">
+                                    <div>
+                                        <p class="title eighteen bold darkgrey" id="lessonType">포인트레슨</p>
+                                        <p class="title eighteen bold darkgrey" id="lessonTime">오후 2:00 - 4:00</p>
+                                    </div>
+                                </div>
+                                <div class="flex" style="margin-top: 8px;">
+                                    <div style="margin-right: 8px;">
+                                        <p class="text bold grey small">장소</p>
+                                        <p class="text bold grey small">금액</p>
+                                        <p class="text bold grey small">시간</p>
+                                        <p class="text bold grey small">자리</p>
+                                    </div>
+                                    <div>
+                                        <p class="text grey small" id="lessonPlace">리조트</p>
+                                        <p class="text grey small" id="lessonPrice">000,000</p>
+                                        <p class="text grey small" id="lessonPeriod">00:00-00:00</p>
+                                        <p class="text grey small" id="lessonMember">3/4</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex" style="flex-direction: column;">
+                                <button id="btnSelect" class="btn theme white">선택 <img
+                                        src="../../src/assets/ic-arrow-right.svg" /></button>
+                                <button id="btnRepeat" class="btn theme white" style="margin-top: 8px;">매주반복 <img
+                                        src="../../src/assets/ic-arrow-right.svg" /></button>
+                            </div>
+                        </div>
+
+
+                    </li>
+
+                    <li>
+                        <div class="flex spacebetween">
+                            <div>
+                                <div class="flex center spacebetween">
+                                    <div>
+                                        <p class="title eighteen bold darkgrey" id="lessonType">포인트레슨</p>
+                                        <p class="title eighteen bold darkgrey" id="lessonTime">오후 2:00 - 4:00</p>
+                                    </div>
+                                </div>
+                                <div class="flex" style="margin-top: 8px;">
+                                    <div style="margin-right: 8px;">
+                                        <p class="text bold grey small">장소</p>
+                                        <p class="text bold grey small">금액</p>
+                                        <p class="text bold grey small">시간</p>
+                                        <p class="text bold grey small">자리</p>
+                                    </div>
+                                    <div>
+                                        <p class="text grey small" id="lessonPlace">리조트</p>
+                                        <p class="text grey small" id="lessonPrice">000,000</p>
+                                        <p class="text grey small" id="lessonPeriod">00:00-00:00</p>
+                                        <p class="text grey small" id="lessonMember">3/4</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex" style="flex-direction: column;">
+                                <button id="btnSelect" class="btn theme white">선택 <img
+                                        src="../../src/assets/ic-arrow-right.svg" /></button>
+                                <button id="btnRepeat" class="btn theme white" style="margin-top: 8px;">매주반복 <img
+                                        src="../../src/assets/ic-arrow-right.svg" /></button>
+                            </div>
+                        </div>
+
+
+                    </li>
+                </ul>
+
+                <button class="btn transparent title mint bold" style="width: 100%; margin-top: 8px;"
+                    id="btnSkip">건너뛰기</button>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+
+<script>
+
+    $('#btnSelect.btn.theme').click(function () {
+        window.location.href = "./automatch_payment.html"
+    });
+
+    var Cal = function (divId) {
+
+        //Store div id
+        this.divId = divId;
+
+        // Days of week, starting on Sunday
+        this.DaysOfWeek = [
+            'S',
+            'M',
+            'T',
+            'W',
+            'T',
+            'F',
+            'S'
+        ];
+
+        // Months, stating on January
+        this.Months = ['January', 'Feburary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+        // Set the current month, year
+        var d = new Date();
+
+        this.currMonth = d.getMonth();
+        this.currYear = d.getFullYear();
+        this.currDay = d.getDate();
+
+    };
+
+    // Goes to next month
+    Cal.prototype.nextMonth = function () {
+        if (this.currMonth == 11) {
+            this.currMonth = 0;
+            this.currYear = this.currYear + 1;
+        }
+        else {
+            this.currMonth = this.currMonth + 1;
+        }
+        this.showcurr();
+    };
+
+    // Goes to previous month
+    Cal.prototype.previousMonth = function () {
+        if (this.currMonth == 0) {
+            this.currMonth = 11;
+            this.currYear = this.currYear - 1;
+        }
+        else {
+            this.currMonth = this.currMonth - 1;
+        }
+        this.showcurr();
+    };
+
+    // Show current month
+    Cal.prototype.showcurr = function () {
+        this.showMonth(this.currYear, this.currMonth);
+    };
+
+    // Show month (year, month)
+    Cal.prototype.showMonth = function (y, m) {
+
+        var d = new Date()
+            // First day of the week in the selected month
+            , firstDayOfMonth = new Date(y, m, 1).getDay()
+            // Last day of the selected month
+            , lastDateOfMonth = new Date(y, m + 1, 0).getDate()
+            // Last day of the previous month
+            , lastDayOfLastMonth = m == 0 ? new Date(y - 1, 11, 0).getDate() : new Date(y, m, 0).getDate();
+
+
+        var html = '<table>';
+
+        // Write selected month and year
+        $('#month').text(this.Months[m]);
+
+
+        // Write the header of the days of the week
+        html += '<tr class="days">';
+        for (var i = 0; i < this.DaysOfWeek.length; i++) {
+            html += '<td>' + this.DaysOfWeek[i] + '</td>';
+        }
+        html += '</tr>';
+
+        // Write the days
+        var i = 1;
+        do {
+
+            var dow = new Date(y, m, i).getDay();
+
+            // If Sunday, start new row
+            if (dow == 0) {
+                html += '<tr>';
+            }
+            // If not Sunday but first day of the month
+            // it will write the last days from the previous month
+            else if (i == 1) {
+                html += '<tr>';
+                var k = lastDayOfLastMonth - firstDayOfMonth + 1;
+                for (var j = 0; j < firstDayOfMonth; j++) {
+                    html += '<td class="not-current">' + k + '</td>';
+                    k++;
+                }
+            }
+
+            // Write the current day in the loop
+            var chk = new Date();
+            var chkY = chk.getFullYear();
+            var chkM = chk.getMonth();
+            if (chkY == this.currYear && chkM == this.currMonth && i == this.currDay) {
+                html += '<td class="today"' + 'id="' + i + '">' + i + '</td>';
+            } else {
+                html += '<td class="normal"' + 'id="' + i + '">' + i + '</td>';
+            }
+            // If Saturday, closes the row
+            if (dow == 6) {
+                html += '</tr>';
+            }
+            // If not Saturday, but last day of the selected month
+            // it will write the next few days from the next month
+            else if (i == lastDateOfMonth) {
+                var k = 1;
+                for (dow; dow < 6; dow++) {
+                    html += '<td class="not-current">' + k + '</td>';
+                    k++;
+                }
+            }
+
+            i++;
+        } while (i <= lastDateOfMonth);
+
+        // Closes table
+        html += '</table>';
+
+        // Write HTML to the div
+        document.getElementById(this.divId).innerHTML = html;
+        var cw = $("td").width();
+        $('td').css({ 'height': cw + 'px' });
+
+        $('td').click(function () {
+            $(this).toggleClass('is-active');
+        })
+    };
+
+    // On Load of the window
+    window.onload = function () {
+
+        // Start calendar
+        var c = new Cal("divCal");
+        c.showcurr();
+
+        // Bind next and previous button clicks
+        getId('btnNext').onclick = function () {
+            c.nextMonth();
+        };
+        getId('btnPrev').onclick = function () {
+            c.previousMonth();
+        };
+    }
+
+    // Get element by id
+    function getId(id) {
+        return document.getElementById(id);
+    }
+</script>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플레저</title>
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="./js/background.js"></script> -->
+    <!-- <script src="./js/header.js"></script> -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+</head>
+
+<body>
+    <main class="mainWrap">
+
+        <div class="content-container pd24" id="login">
+            <img src="../../src/logotype.svg" alt="Pleisure" class="register-logo" />
+
+            <div class="login-container" id="login">
+                <div class="register-input-container">
+                    <input class="input" type="text" placeholder="이름">
+                    <!-- <img class="regi-checked" src="../../src/assets/ic-regi-check.svg" alt="확인" /> -->
+                </div>
+                <div class="register-input-container">
+                    <input class="input" type="email" placeholder="이메일">
+                    <img class="regi-checked" id="indi-email" src="../../src/assets/ic-regi-check-red.svg" alt="확인" />
+                </div>
+                <p class="text caution">이미 사용중인 메일입니다.</p>
+
+                <div class="register-input-container">
+                    <input class="input" id="phone" type="text" placeholder="핸드폰번호를 입력하세요">
+                    <button class="inputbtn btn theme"
+                        style="width: 69px; height: 48px; border-radius: 9px; margin-left: -70px;">전송</button>
+                </div>
+                <div class="register-input-container">
+                    <input class="input" id="authCode" type="text" placeholder="인증번호를 입력하세요">
+                    <div class="flex spacebetween">
+                        <p class="text caution" style="width: 64px; margin-left: -128px; margin-top: 12px;">2:52</p>
+                    <button id="btnAuth" class="inputbtn btn theme notactive"
+                        style="width: 69px; height: 48px; border-radius: 9px; margin-left: -70px;">인증</button>
+                    </div>
+                    
+                </div>
+
+                <div class="register-input-container">
+                    <input class="input" type="password" placeholder="비밀번호">
+                    <img class="regi-checked" id="indi-pw" src="../../src/assets/ic-regi-check.svg" alt="확인" />
+                </div>
+
+                <div class="register-input-container">
+                    <input class="input" type="password" id="checkPw" placeholder="비밀번호 확인">
+                    <img class="regi-checked" id="indi-pwre" src="../../src/assets/ic-regi-check.svg" alt="확인" />
+                </div>
+                <p class="text caution">비밀번호가 일치하지 않습니다.</p>
+
+
+
+                <button class="btn dark" id="btn-register">회원가입</button>
+                <div class="bottom-content">
+                    <div>
+                        <button class="social-login" id="google"><img src="../../src/assets/ic-google.svg"
+                                alt="구글"></button>
+                        <button class="social-login" id="apple"><img src="../../src/assets/ic-apple.svg"
+                                alt="애플"></button>
+                        <button class="social-login" id="kakao"><img src="../../src/assets/ic-kakao.svg"
+                                alt="카카오"></button>
+                    </div>
+
+                    <button id="signin" class="btn transparent mint">이미 가입하셨나요?<br><b>로그인</b></button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+<script>
+    $('#authCode').keyup(function () {
+        if ($('#authCode').val()) {
+            $('#btnAuth').removeClass('notactive');
+        } else {
+            $('#btnAuth').addClass('notactive');
+        };
+    });
+
+    $('#signin').click(function() {
+       window.location.href="./login.html" 
+    });
+
+    $('#btn-register').click(function() {
+       window.location.href="./sport_select.html" 
+    });
+</script>
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플레저</title>
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="./js/background.js"></script> -->
+    <!-- <script src="./js/header.js"></script> -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+</head>
+
+<body class="whitebg">
+    <header class="mainHeader">
+        <div class="mainHeader-container">
+            <button id="btn-back" class="btn circle" style="opacity: 0;"><img src="../../src/assets/ic-arrow-left.svg"
+                    alt="뒤로" /></button>
+            <img alt="Pleisure" class="header-logo" src="../../src/logo-mono.svg" />
+            <span style="opacity: 0;"></span>
+        </div>
+    </header>
+    <main class="mainWrap">
+        <div class="content-container pd24 withHeader" id="automatch">
+            <div class="gauge">
+                <div class="gauge-active" style="width: calc(75%);"></div>
+            </div>
+            <p class="text grey small medium" style="text-align: center; color: #4f4f4f;">3/4</p>
+            <div>
+                <p class="title twenty bold darkgrey" style="text-align: center;">레슨받을 요일을 알려주세요.</p>
+                <p class="text small mint" style="text-align: center; margin-top: 4px;">중복선택 가능</p>
+
+                <div class="content-container" id="chooseDay" style="margin-top: 16px;">
+
+                    <div class="filter search">
+                        <ul class="horiList" style="display:flex; flex-wrap: wrap; margin-top: 0;">
+                            <input type="checkbox" class="radioBar" name="day" id="mon" />
+                            <label for="mon" class="filter-listitem">
+                                월
+                            </label>
+                            <input type="checkbox" class="radioBar" name="day" id="tue" />
+                            <label for="tue" class="filter-listitem">
+                                화
+                            </label>
+                            <input type="checkbox" class="radioBar" name="day" id="wed" />
+                            <label for="wed" class="filter-listitem">
+                                수
+                            </label>
+                            <input type="checkbox" class="radioBar" name="day" id="thu" />
+                            <label for="thu" class="filter-listitem">
+                                목
+                            </label>
+                            <input type="checkbox" class="radioBar" name="day" id="fri" />
+                            <label for="fri" class="filter-listitem">
+                                금
+                            </label>
+                            <input type="checkbox" class="radioBar" name="day" id="sat" />
+                            <label for="sat" class="filter-listitem">
+                                토
+                            </label>
+                            <input type="checkbox" class="radioBar" name="day" id="sun" />
+                            <label for="sun" class="filter-listitem">
+                                일
+                            </label>
+                            <input type="checkbox" class="radioBar" name="day" id="dayFree" />
+                            <label for="dayFree" class="filter-listitem">
+                                무관
+                            </label>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <p class="title twenty bold darkgrey" style="text-align: center; margin-top: 40px;">레슨받을 시간대를 알려주세요.</p>
+                <p class="text small mint" style="text-align: center; margin-top: 4px;">중복선택 가능</p>
+
+                <div class="content-container" id="chooseTime" style="margin-top: 16px;">
+
+                    <div class="filter search">
+                        <ul class="horiList"
+                            style="display:flex; justify-content: space-between; flex-wrap: wrap; margin-top: 0;">
+                            <input type="checkbox" class="radioBar" name="time" id="0508" />
+                            <label for="0508" class="filter-listitem">
+                                05:00 - 08:00
+                            </label>
+                            <input type="checkbox" class="radioBar" name="time" id="1518" />
+                            <label for="1518" class="filter-listitem">
+                                15:00 - 18:00
+                            </label>
+                            <input type="checkbox" class="radioBar" name="time" id="0812" />
+                            <label for="0812" class="filter-listitem">
+                                08:00 - 12:00
+                            </label>
+                            <input type="checkbox" class="radioBar" name="time" id="1821" />
+                            <label for="1821" class="filter-listitem">
+                                12:00 - 21:00
+                            </label>
+                            <input type="checkbox" class="radioBar" name="time" id="1315" />
+                            <label for="1315" class="filter-listitem">
+                                13:00 - 15:00
+                            </label>
+                            <input type="checkbox" class="radioBar" name="time" id="2124" />
+                            <label for="2124" class="filter-listitem">
+                                21:00 - 24:00
+                            </label>
+                            <input type="checkbox" class="radioBar" name="time" id="timeFree" />
+                            <label for="timeFree" class="filter-listitem" style="width: 100% !important; max-width: 100%;">
+                                시간대 무관
+                            </label>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-container" style="background: none;">
+                <a href="../automatch/automatch_done.html"><button class="btn dark is-active"
+                        id="confirm">확인</button></a>
+            </div>
+
+        </div>
+    </main>
+</body>
+
+<script>
+    $('.btnInfo').click(function () {
+        $('.modalWrap').fadeIn('fast');
+    });
+
+    $('.btnClose').click(function () {
+        $('.modalWrap').fadeOut('fast');
+    })
+</script>
+
+</html>

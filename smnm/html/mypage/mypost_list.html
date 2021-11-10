@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플레저</title>
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="./js/background.js"></script> -->
+    <!-- <script src="./js/header.js"></script> -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+</head>
+
+<body class="whitebg">
+    <header class="mainHeader">
+        <div class="mainHeader-container">
+            <button id="btn-back" class="btn circle"><img src="../../src/assets/ic-arrow-left.svg" alt="뒤로" /></button>
+            <img alt="Pleisure" class="header-logo" src="../../src/logo-mono.svg" />
+            <span style="opacity: 0;"></span>
+        </div>
+    </header>
+    <main class="mainWrap">
+        <div class="content-container withHeader" id="myPost">
+
+            <p class="title huge darkgrey pd24 bold" style="padding-top: 24px;">내가 작성한 글</p>
+
+            <div class="content-container">
+                <div class="filter">
+                    <ul class="horiList pd24" style="margin-top: 12px;">
+                        <input type="radio" name="itemType" id="post" />
+                        <label for="post" class="filter-listitem">
+                            작성글
+                        </label>
+                        <input type="radio" name="itemType" id="comment" />
+                        <label for="comment" class="filter-listitem">
+                            작성댓글
+                        </label>
+                        <input type="radio" name="itemType" id="commentedPost" />
+                        <label for="commentedPost" class="filter-listitem">
+                            댓글단 글
+                        </label>
+                    </ul>
+                </div>
+
+                <ul class="postList" id="post">
+                    <li>
+                        <div class="postContainer">
+                            <div class="postCategory"><span>[스키]</span><span>[중고거래]</span></div>
+                            <div class="postTitle">초보는 어떤 스키를 사야하죠?</div>
+                            <div class="postTime">2021/03/08 11:22</div>
+                        </div>
+                        <img src="../../src/assets/ic-bracket-right.svg" />
+                    </li>
+                    <li>
+                        <div class="postContainer">
+                            <div class="postCategory"><span>[스키]</span><span>[중고거래]</span></div>
+                            <div class="postTitle">초보는 어떤 스키를 사야하죠?</div>
+                            <div class="postTime">2021/03/08 11:22</div>
+                        </div>
+                        <img src="../../src/assets/ic-bracket-right.svg" />
+                    </li>
+                    <li>
+                        <div class="postContainer">
+                            <div class="postCategory"><span>[스키]</span><span>[중고거래]</span></div>
+                            <div class="postTitle">초보는 어떤 스키를 사야하죠?</div>
+                            <div class="postTime">2021/03/08 11:22</div>
+                        </div>
+                        <img src="../../src/assets/ic-bracket-right.svg" />
+                    </li>
+                    <li>
+                        <div class="postContainer">
+                            <div class="postCategory"><span>[스키]</span><span>[중고거래]</span></div>
+                            <div class="postTitle">초보는 어떤 스키를 사야하죠?</div>
+                            <div class="postTime">2021/03/08 11:22</div>
+                        </div>
+                        <img src="../../src/assets/ic-bracket-right.svg" />
+                    </li>
+
+                </ul>
+
+                <ul class="postList" id="comment" style="display: none;">
+                    <li>
+                        <div class="flex">
+                            <img class="smallProfileImg" src="../../src/content/profile.png" />
+                            <div class="postContainer">
+                                <div class="postTime" style="color: #4f4f4f;">2021/03/08 11:22</div>
+                                <div class="postTitle">초보는 어떤 스키를 사야하죠?</div>
+                            </div>
+                        </div>
+
+                        <buttom class="btn transparent" style="margin-right: -12px;"><img
+                                src="../../src/assets/ic-menu.svg" /></buttom>
+
+                    </li>
+
+                    <li>
+                        <div class="flex">
+                            <img class="smallProfileImg" src="../../src/content/profile.png" />
+                            <div class="postContainer">
+                                <div class="postTime" style="color: #4f4f4f;">2021/03/08 11:22</div>
+                                <div class="postTitle">초보는 어떤 스키를 사야하죠?</div>
+                            </div>
+                        </div>
+
+                        <buttom class="btn transparent" style="margin-right: -12px;"><img
+                                src="../../src/assets/ic-menu.svg" /></buttom>
+
+                    </li>
+
+                    <li>
+                        <div class="flex">
+                            <img class="smallProfileImg" src="../../src/content/profile.png" />
+                            <div class="postContainer">
+                                <div class="postTime" style="color: #4f4f4f;">2021/03/08 11:22</div>
+                                <div class="postTitle">초보는 어떤 스키를 사야하죠?</div>
+                            </div>
+                        </div>
+
+                        <buttom class="btn transparent" style="margin-right: -12px;"><img
+                                src="../../src/assets/ic-menu.svg" /></buttom>
+
+                    </li>
+
+                    <li>
+                        <div class="flex">
+                            <img class="smallProfileImg" src="../../src/content/profile.png" />
+                            <div class="postContainer">
+                                <div class="postTime" style="color: #4f4f4f;">2021/03/08 11:22</div>
+                                <div class="postTitle">초보는 어떤 스키를 사야하죠?</div>
+                            </div>
+                        </div>
+
+                        <buttom class="btn transparent" style="margin-right: -12px;"><img
+                                src="../../src/assets/ic-menu.svg" /></buttom>
+
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플레저</title>
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="./js/background.js"></script> -->
+    <!-- <script src="./js/header.js"></script> -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+</head>
+
+<body>
+    <main class="mainWrap">
+
+        <div class="content-container pd24" id="login">
+            <img src="../../src/logotype.svg" alt="Pleisure" class="login-logo" />
+
+            <div class="login-container" id="login">
+                <input class="input" type="text" placeholder="이메일">
+                <input class="input" type="password" placeholder="비밀번호">
+                <button class="btn dark" id="btn-login">로그인</button>
+
+                <button class="btn transparent" id="forgot">아이디/암호를 잃어버렸나요?</button>
+
+                <div class="bottom-content">
+                    <div>
+                        <button class="social-login" id="google"><img src="../../src/assets/ic-google.svg" alt="구글"></button>
+                        <button class="social-login" id="kakao"><img src="../../src/assets/ic-kakao.svg" alt="카카오"></button>
+                    </div>
+
+                    <button id="registration" class="btn transparent mint">처음이세요?<br><b>가입해보세요!</b></button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+<script>
+    $('#registration').click(function() {
+       window.location.href="./register.html" 
+    });
+
+    $('#forgot').click(function() {
+       window.location.href="./forgot.html" 
+    });
+
+    $('#btn-login').click(function() {
+       window.location.href="../home/home.html" 
+    });
+</script>
+</html>
