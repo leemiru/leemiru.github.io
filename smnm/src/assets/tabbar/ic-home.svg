@@ -1,9 +1,14 @@
-<svg width="35" height="36" viewBox="0 0 35 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M24.1409 28H9.07606C8.48177 28 8 27.5182 8 26.9239V16.6088C8 16.3234 8.11347 16.0498 8.31529 15.848L15.8477 8.31559C16.0496 8.11353 16.3234 8 16.609 8C16.8946 8 17.1685 8.11353 17.3703 8.31559L24.9028 15.848C25.1048 16.0496 25.2179 16.3235 25.217 16.6088V26.9239C25.217 27.5182 24.7352 28 24.1409 28ZM14.4564 20.4676H18.7606V25.8479H23.0649V17.0543L16.6085 10.5979L10.1521 17.0543V25.8479H14.4564V20.4676Z" fill="url(#paint0_linear)"/>
-<defs>
-<linearGradient id="paint0_linear" x1="8.68657" y1="6.79518" x2="35.4844" y2="16.8538" gradientUnits="userSpaceOnUse">
-<stop stop-color="#0ACF83"/>
-<stop offset="1" stop-color="#10FF26"/>
-</linearGradient>
-</defs>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 35 36" style="enable-background:new 0 0 35 36;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FEFCE8;}
+</style>
+<g>
+	<polygon class="st0" points="17.5,6 17.5,6 25.7,13.7 	"/>
+	<rect x="3.3" y="11.6" transform="matrix(0.731 -0.6823 0.6823 0.731 -4.8221 10.9665)" class="st0" width="16.4" height="0"/>
+	<polygon class="st0" points="25.7,13.7 29.5,17.2 29.5,17.2 	"/>
+	<path class="st0" d="M17.5,6l-12,11.2V30h24V17.2l-3.8-3.5L17.5,6z M26.5,27h-18v-8.5l9-8.4l9,8.4V27z"/>
+</g>
 </svg>

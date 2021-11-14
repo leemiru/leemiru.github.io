@@ -1,11 +1,11 @@
 :root {
   --body-font: "NotoSans" "Noto Sans KR" sans-serif;
   --bg-color: #fff;
-  --dark-color: rgb(37, 37, 37);
+  --dark-color: #01283B;
   --mint-color: #46ffa2;
-  --theme-color: #27f03b;
-  --theme-gradient: linear-gradient(45deg, #46ff42, #3fffa3);
-  --theme-light-gradient: linear-gradient(to top, #46ff42, #3fffa3);
+  --theme-color: #EC582C;
+  --theme-gradient: linear-gradient(45deg, #00608F, #00608F);
+  --theme-light-gradient: linear-gradient(to bottom, #00608F, #00608F);
   --border-color: #bababa;
   --orange-color: #fe7448;
   --red-color: #eb5757;
@@ -824,7 +824,7 @@ nav.mainTab > .mainTab-container > .mainTab-list {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 15px;
 
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
@@ -839,10 +839,17 @@ nav.mainTab > .mainTab-container > .mainTab-list > .mainTab-listitem + label {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 36px;
   border-radius: 10px;
   color: #fff;
   filter: brightness(9999%);
+  opacity: 0.2;
+}
+
+nav.mainTab > .mainTab-container > .mainTab-list > .mainTab-listitem + label > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 nav.mainTab > .mainTab-container > .mainTab-list > .mainTab-listitem:active {
@@ -855,6 +862,7 @@ nav.mainTab
   > .mainTab-listitem:checked
   + label {
   filter: brightness(1);
+  opacity: 1;
 }
 
 div.modalWrap > .popupContainer {
@@ -1104,6 +1112,9 @@ div.content-container#splash {
 
 div.content-container#splash > img {
   margin-top: -84px;
+  width: 96px;
+  height: auto;
+  object-fit: contain;
 }
 
 /* 홈화면 */
@@ -1116,7 +1127,8 @@ main.mainWrap > div.home-container {
 main.mainWrap > div.home-container > .profile-container {
   margin-top: 26px;
   display: flex;
-  justify-content: left;
+  justify-content: space-between;
+  align-items: center;
 }
 
 main.mainWrap > div.home-container > .profile-container > .alert-badge {
@@ -1157,16 +1169,15 @@ main.mainWrap > div.home-container > .profile-container > .profile-info {
 }
 
 main.mainWrap > div.home-container > .profile-container > .app-logo {
-  width: 76px;
-  height: 18.4px;
+  width: 121px;
+  height: auto;
   object-fit: cover;
-  margin-left: auto;
   margin-top: auto;
   margin-bottom: auto;
 }
 
 div.content-container#lesson-view {
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 div.content-container#lesson-type {
@@ -1280,7 +1291,7 @@ div.content-container#lesson-type
 div.content-container#lesson-view > .welcome-banner {
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
 div.content-container#lesson-view > .welcome-banner span {
@@ -1288,12 +1299,13 @@ div.content-container#lesson-view > .welcome-banner span {
 }
 
 div.content-container#lesson-view > .welcome-banner #lesson-name {
-  background-image: linear-gradient(to top, #46ff42, #3fffa3);
+  background-image: var(--theme-gradient);
   border-radius: 56px;
   padding: 5px;
   padding-left: 16px;
   padding-right: 16px;
   margin-right: 4px;
+  color: #fff;
 }
 
 div.content-container#lesson-view > .welcome-banner #btn-matchnow {
@@ -1462,6 +1474,7 @@ div.content-container#lesson-view > .welcome-banner #btn-matchnow > img {
   align-items: baseline;
   justify-content: space-between;
   flex-direction: column;
+  filter: drop-shadow(0px 2px 5px black);
 }
 
 .medium-banner-renew .banner-image {
@@ -1470,6 +1483,10 @@ div.content-container#lesson-view > .welcome-banner #btn-matchnow > img {
   object-position: center;
   object-fit: cover;
   border-radius: 15px;
+}
+
+.medium-banner-renew .text.white.medium {
+  line-height: 1.7;
 }
 
 /* card banner renewal */
@@ -1876,7 +1893,7 @@ input#myLocation:checked + #myLocation > img {
 .filter > .horiList > .filter-listitem:active,
 .filter > .horiList > input:checked + .filter-listitem {
   background: var(--theme-gradient);
-  color: #272d2e;
+  color: #fff;
   border-color: rgba(0, 0, 0, 0);
 }
 
@@ -1954,7 +1971,7 @@ input#myLocation:checked + #myLocation > img {
 .filter.light > .horiList > .filter-listitem:active,
 .filter.light > .horiList > input:checked + .filter-listitem {
   background: var(--theme-gradient);
-  color: #272d2e !important;
+  color: #fff !important;
   border-color: rgba(0, 0, 0, 0);
 }
 
