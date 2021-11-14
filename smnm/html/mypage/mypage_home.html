@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>플레저</title>
+    <title>삼목야시장</title>
     <!-- <link rel="icon" href="/favicon.ico" /> -->
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -20,37 +20,43 @@
 
 <body>
     <main class="mainWrap">
-        <header class="mainHeader">
-            <div class="mainHeader-container">
-                <button id="btn-back" class="btn circle"><img src="../../src/assets/ic-arrow-left.svg"
-                        alt="뒤로" /></button>
-                <img alt="Pleisure" class="header-logo" src="../../src/logo-mono.svg" />
-                <span style="opacity: 0;"></span>
+        <div class="home-container" style="background-color: #fff;">
+            <div class="profile-container" style="height: 60px; background-color: #fff;">
+                <!-- <div class="alert-badge">1</div>
+                <img class="profile-img" alt="프로필 이미지" src="../../src/content/profile.png" />
+                <div class="profile-info">
+                    <p id="name" class="title medium darkgrey bold"></p>
+                </div> -->
+                <img class="app-logo" alt="삼목야시장" src="../../src/logo-dark.svg" />
+                <a href="../automatch/automatch_calendar.html"><img src="../../src/assets/ic-calendar.svg" /></a>
             </div>
-        </header>
-        <div class="content-container withHeader" id="myPage">
+        </div>
+        <div class="content-container" id="myPage">
             <div class="profile-container pd24">
                 <div class="flex center spacebetween">
                     <div>
-                        <p class="title darkgrey big" id="userName">삼목야시장</p>
-                        <p class="title darkgrey huge bold">0</p>
+                        <p class="title darkgrey big" id="userName">삼목포인트</p>
+                        <p class="title darkgrey huge bold">12,000P</p>
                     </div>
                     <div class="flex center">
-                        <a href="javascript:void(0);"><button class="btn transparent noti _notification"><img src="../../src/assets/ic-noti.svg" />
-                            <div class="alert"></div>
-                        </button></a>
-                        <img alt="프로필" src="../../src/content/profile.png" class="profileImg" />
+                        <a href="javascript:void(0);"><button class="btn transparent noti _notification"><img
+                                    src="../../src/assets/ic-noti.svg" />
+                                <div class="alert"></div>
+                            </button></a>
+                        <!-- <img alt="프로필" src="../../src/content/profile.png" class="profileImg" /> -->
                     </div>
                 </div>
-                <p class="text mint small">플레저 포인트는 다음 레슨 또는 스토어에서 사용하실 수 있어요.</p>
+                <p class="text mint small">삼목야시장 포인트는 삼목야시장 내의 점포들에서 할인용도로만 사용하실 수 있어요.</p>
 
                 <ul class="horiList">
                     <li>
-                        <button class="btn white" onclick="openCharged()"><img src="../../src/assets/ic-chargehistory.svg" /></button>
-                        <p class="title small bold">충전내역</p>
+                        <button class="btn white" onclick="openCharged()"><img
+                                src="../../src/assets/ic-chargehistory.svg" /></button>
+                        <p class="title small bold">적립내역</p>
                     </li>
                     <li>
-                        <button class="btn white" onclick="openUsed()"><img src="../../src/assets/ic-usage.svg" /></button>
+                        <button class="btn white" onclick="openUsed()"><img
+                                src="../../src/assets/ic-usage.svg" /></button>
                         <p class="title small bold">사용내역</p>
                     </li>
                 </ul>
@@ -59,28 +65,20 @@
             <div class="content-container pd24" style="margin-bottom: 50px;" id="preference">
 
                 <ul>
-                    <a href="javascript: void(0)" id="myLesson">
-                        마이 레슨
-                    </a>
-
-                    <a href="javascript: void(0)" id="myChat">
-                        마이 채팅
-                    </a>
-                    
-                    <a  id="myCart">
-                        마이 찜 목록
+                    <a id="myCart">
+                        음식 주문현황
                     </a>
                     <a href="./payment_select.html" id="mgmt">
-                        결제 및 배송관리
+                        시설 예약현황
                     </a>
                     <a href="javascript: void(0)" id="myPost">
-                        내가 작성한 글
+                        보유 쿠폰
                     </a>
                     <a href="./payment_select.html" id="purchaseHistory">
-                        구매내역
+                        주문내역
                     </a>
                     <a href="./mypage_editprofile.html" id="editProfile">
-                        마이 정보 관리
+                        내 정보 관리
                     </a>
                     <a href="./settings.html" id="settings">
                         설정
@@ -90,7 +88,8 @@
 
         </div>
 
-        <div id="charged_popup" style=" position: absolute; width: 100%; top: 0; z-index: 9999; background-color: white; height: 110%; display: none;">
+        <div id="charged_popup"
+            style=" position: absolute; width: 100%; top: 0; z-index: 9999; background-color: white; height: 110%; display: none;">
             <header class="mainHeader">
                 <div class="mainHeader-container">
                     <button class="btn circle" onclick="closeCharged()"><img src="../../src/assets/ic-arrow-left.svg"
@@ -102,7 +101,7 @@
             <div class="content-container withHeader" id="creditList" style=" padding-top: 62px; ">
 
                 <p class="title huge darkgrey pd24 bold" style="padding-top: 24px;">충전내역</p>
-    
+
                 <div class="content-container pd24" id="preference">
                     <ul style="margin-top: 12px;">
                         <li class="flex spacebetween" style="height: 72px;" id="credit_id">
@@ -110,7 +109,7 @@
                                 <p class="title" style="color: #10ff26;">충전금액</p>
                                 <p class="title" id="bill" style="color: #10ff26;">200,000원</p>
                             </div>
-    
+
                             <div style="width: 100%; text-align: left; color: #4f4f4f;">
                                 <p class="text medium" id="usedDate">2021/03/08 11:22</p>
                                 <p class="text medium">충전 후 잔액: <span id="usedLeft">1,000원</span></p>
@@ -121,7 +120,7 @@
                                 <p class="title" style="color: #10ff26;">충전금액</p>
                                 <p class="title" id="bill" style="color: #10ff26;">200,000원</p>
                             </div>
-    
+
                             <div style="width: 100%; text-align: left; color: #4f4f4f;">
                                 <p class="text medium" id="usedDate">2021/03/08 11:22</p>
                                 <p class="text medium">충전 후 잔액: <span id="usedLeft">1,000원</span></p>
@@ -132,19 +131,20 @@
                                 <p class="title" style="color: #10ff26;">충전금액</p>
                                 <p class="title" id="bill" style="color: #10ff26;">200,000원</p>
                             </div>
-    
+
                             <div style="width: 100%; text-align: left; color: #4f4f4f;">
                                 <p class="text medium" id="usedDate">2021/03/08 11:22</p>
                                 <p class="text medium">충전 후 잔액: <span id="usedLeft">1,000원</span></p>
                             </div>
                         </li>
-                        
+
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div id="used_popup" style=" position: absolute; width: 100%; top: 0; z-index: 9999; background-color: white; height: 110%; display: none;">
+        <div id="used_popup"
+            style=" position: absolute; width: 100%; top: 0; z-index: 9999; background-color: white; height: 110%; display: none;">
             <header class="mainHeader">
                 <div class="mainHeader-container">
                     <button class="btn circle" onclick="closeUsed()"><img src="../../src/assets/ic-arrow-left.svg"
@@ -164,7 +164,7 @@
                                 <p class="title" style="color: #eb5757;">사용</p>
                                 <p class="title" id="bill" style="color: #eb5757;">200,000원</p>
                             </div>
-    
+
                             <div style="width: 100%; text-align: left; color: #4f4f4f;">
                                 <p class="text medium" id="usedDate">2021/03/08 11:22</p>
                                 <p class="text medium">사용 후 잔액: <span id="usedLeft">1,000원</span></p>
@@ -175,7 +175,7 @@
                                 <p class="title" style="color: #eb5757;">사용</p>
                                 <p class="title" id="bill" style="color: #eb5757;">200,000원</p>
                             </div>
-    
+
                             <div style="width: 100%; text-align: left; color: #4f4f4f;">
                                 <p class="text medium" id="usedDate">2021/03/08 11:22</p>
                                 <p class="text medium">사용 후 잔액: <span id="usedLeft">1,000원</span></p>
@@ -186,13 +186,13 @@
                                 <p class="title" style="color: #eb5757;">사용</p>
                                 <p class="title" id="bill" style="color: #eb5757;">200,000원</p>
                             </div>
-    
+
                             <div style="width: 100%; text-align: left; color: #4f4f4f;">
                                 <p class="text medium" id="usedDate">2021/03/08 11:22</p>
                                 <p class="text medium">사용 후 잔액: <span id="usedLeft">1,000원</span></p>
                             </div>
                         </li>
-                        
+
                     </ul>
                 </div>
             </div>
@@ -205,9 +205,9 @@
                 <label for="navHome" class="_navHome"><img class="mainTab-icon" alt="홈"
                         src="../../src/assets/tabbar/ic-home.svg" /></label>
 
-                <!-- <input type="radio" name="mainNav" id="navShop" class="mainTab-listitem" />
+                <input type="radio" name="mainNav" id="navShop" class="mainTab-listitem" />
                 <label for="navShop" class="_navShop"><img class="mainTab-icon" alt="샵"
-                        src="../../src/assets/tabbar/ic-shop.svg" /></label> -->
+                        src="../../src/assets/tabbar/ic-shop.svg" /></label>
 
                 <input type="radio" name="mainNav" id="navSearch" class="mainTab-listitem" />
                 <label for="navSearch" class="_navSearch"><img class="mainTab-icon" alt="검색"
@@ -227,24 +227,24 @@
 </body>
 
 <script>
-    $('.mainTab-listitem#navHome').click(function() {
-        window.location.href="../home/home.html";
+    $('.mainTab-listitem#navHome').click(function () {
+        window.location.href = "../home/home.html";
     });
 
-    $('.mainTab-listitem#navShop').click(function() {
-        window.location.href="../shop/shop_home.html";
+    $('.mainTab-listitem#navShop').click(function () {
+        window.location.href = "../shop/shop_home.html";
     });
 
-    $('.mainTab-listitem#navSearch').click(function() {
-        window.location.href="../home/search.html";
+    $('.mainTab-listitem#navSearch').click(function () {
+        window.location.href = "../home/search.html";
     });
 
-    $('.mainTab-listitem#navCommunity').click(function() {
-        window.location.href="../community/community_home.html";
+    $('.mainTab-listitem#navCommunity').click(function () {
+        window.location.href = "../community/community_home.html";
     });
 
-    $('.mainTab-listitem#navMypage').click(function() {
-        window.location.href="../mypage/mypage_home.html";
+    $('.mainTab-listitem#navMypage').click(function () {
+        window.location.href = "../mypage/mypage_home.html";
     });
 </script>
 

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>플레저</title>
+    <title>삼목야시장</title>
     <!-- <link rel="icon" href="/favicon.ico" /> -->
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -21,147 +21,150 @@
 <body>
     <main class="mainWrap">
         <div class="home-container">
-            <div class="profile-container">
-                <div class="alert-badge">1</div>
+            <div class="profile-container" style="height: 60px;">
+                <!-- <div class="alert-badge">1</div>
                 <img class="profile-img" alt="프로필 이미지" src="../../src/content/profile.png" />
                 <div class="profile-info">
-                    <p id="name" class="title big bold darkgrey">황정윤 lv.1</p>
-                </div>
-                <button style="margin-left: auto;" id="btnCart" class="btn transparent">
-                    <div class="alert-badge" id="cart">1</div><img alt="장바구니" src="../../src/assets/ic-cart.svg" />
-                </button>
-            </div>
-
-            <div class="content-container" id="lesson-view">
-
-                <div class="content-container" id="lesson-type">
-
-
-                    <ul class="horiList" style="margin-bottom: 0px;" id="lesson-type-list">
-                        <input type="radio" name="lessonType" id="myLocation" />
-                        <label for="myLocation" class="text big" id="myLocation"
-                            style="white-space: nowrap; display: inline-flex; flex-direction: row; align-items: center; justify-content: center;"><img
-                                src="../../src/assets/ic-mylocation.svg"
-                                style="width: 20px; height: 20px; object-fit: contain; margin-right: 4px; margin-top: -2px;" />내
-                            위치</label>
-                        <input type="radio" name="lessonType" id="ski" />
-                        <label for="ski" class="text big" id="type-ski">스키</label>
-
-                        <input type="radio" name="lessonType" id="snowboard" />
-                        <label for="snowboard" class="text big" id="type-snowboard">스노우보드</label>
-
-                        <input type="radio" name="lessonType" id="jujitsu" />
-                        <label for="jujitsu" class="text big" id="type-jujitsu">주짓수</label>
-
-                        <input type="radio" name="lessonType" id="bowling" />
-                        <label for="bowling" class="text big" id="type-bowling">볼링</label>
-
-                        <input type="radio" name="lessonType" id="tennis" />
-                        <label for="tennis" class="text big" id="type-tennis">테니스</label>
-                    </ul>
-                </div>
-
-                <ul class="horiList">
-                    <li class="medium-banner">
-                        <div class="left">
-                            <div class="text big bold">Rossignol Hero<br>World Cup 110<br>W320,000</div>
-                            <button class="btn transparent text big">지금구매 ></button>
-                        </div>
-                        <img alt="상품이미지" src="../../src/content/boots.png" class="banner-product" />
-                    </li>
-
-                    <li class="medium-banner">
-                        <div class="left">
-                            <div class="text big bold">Rossignol Hero<br>World Cup 110<br>W320,000</div>
-                            <button class="btn transparent text big">지금구매 ></button>
-                        </div>
-                        <img alt="상품이미지" src="../../src/content/boots.png" class="banner-product" />
-                    </li>
-
-                    <li class="medium-banner">
-                        <div class="left">
-                            <div class="text big bold">Rossignol Hero<br>World Cup 110<br>W320,000</div>
-                            <button class="btn transparent text big">지금구매 ></button>
-                        </div>
-                        <img alt="상품이미지" src="../../src/content/boots.png" class="banner-product" />
-                    </li>
-                </ul>
-
-
-
-                <div class="content-container" id="recommend-brand">
-                    <div class="section-header">
-                        <p class="title big darkgrey">브랜드</p>
-                        <!-- <button class="btn transparent title medium">더보기</button> -->
-                    </div>
-
-                    <ul class="card-list">
-                        <li>
-                            <img alt="이미지" src="../../src/content/brand.png" class="circle-profile" />
-                            <p class="title black bold">로시뇰</p>
-                            <p class="text black medium">상품 31개</p>
-                            <div class="rate-container">
-                                <p class="text tiny" id="star-rate"><img src="../../src/assets/ic-star-yellow.svg" />
-                                    4.6</p>
-                                <p class="text tiny" id="reviews">34 Reviews</p>
-                            </div>
-                        </li>
-
-                        <li>
-                            <img alt="이미지" src="../../src/content/brand.png" class="circle-profile" />
-                            <p class="title black bold">로시뇰</p>
-                            <p class="text black medium">상품 31개</p>
-                            <div class="rate-container">
-                                <p class="text tiny" id="star-rate"><img src="../../src/assets/ic-star-yellow.svg" />
-                                    4.6</p>
-                                <p class="text tiny" id="reviews">34 Reviews</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="content-container" id="recommend-school">
-                    <div class="section-header">
-                        <p class="title big darkgrey">품목</p>
-                        <!-- <button class="btn transparent title medium">더보기</button> -->
-                    </div>
-
-                    <ul class="card-list">
-                        <li>
-                            <img alt="이미지" src="../../src/content/boots.png" class="circle-profile" />
-                            <p class="title black">부츠</p>
-                            <p class="text small bold black ">상품 31개</p>
-                        </li>
-                        <li>
-                            <img alt="이미지" src="../../src/content/boots.png" class="circle-profile" />
-                            <p class="title black">부츠</p>
-                            <p class="text small bold black ">상품 31개</p>
-                        </li>
-                        <li>
-                            <img alt="이미지" src="../../src/content/boots.png" class="circle-profile" />
-                            <p class="title black">부츠</p>
-                            <p class="text small bold black ">상품 31개</p>
-                        </li>
-                        <li>
-                            <img alt="이미지" src="../../src/content/boots.png" class="circle-profile" />
-                            <p class="title black">부츠</p>
-                            <p class="text small bold black ">상품 31개</p>
-                        </li>
-                        <li>
-                            <img alt="이미지" src="../../src/content/boots.png" class="circle-profile" />
-                            <p class="title black">부츠</p>
-                            <p class="text small bold black ">상품 31개</p>
-                        </li>
-                        <li>
-                            <img alt="이미지" src="../../src/content/boots.png" class="circle-profile" />
-                            <p class="title black">부츠</p>
-                            <p class="text small bold black ">상품 31개</p>
-                        </li>
-                    </ul>
-                </div>
+                    <p id="name" class="title medium darkgrey bold"></p>
+                </div> -->
+                <img class="app-logo" alt="삼목야시장" src="../../src/logo-dark.svg" />
+                <a href="../automatch/automatch_calendar.html"><img src="../../src/assets/ic-calendar.svg" /></a>
             </div>
         </div>
+        <div class="content-container" id="myPage">
+            <div class="content-container pd24" id="preference">
+                <p class="title huge darkgrey bold">진행중인 이벤트</p>
+                <br>
+                <div class="bannerSwiper" id="_mLessonBannerListNew">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <li class="medium-banner-renew">
+                                <a>
+                                    <img alt="상품이미지"
+                                        src="https://lh3.googleusercontent.com/proxy/XVHbvJdN7TgIzsn5XHStthDUqLNp4AzHqJp57XqJUpefCX-KB6pnlgeB16gzxqYmiYQ6BkO51k3w28wwjQZ1RKEAF3gazBWFiDxJd01_l1PmgsRPeK5qAJyDBuaBmL6i4ulN_RKYFxXRF9fKmsOnXQYukgcvqmclLVIEAMWy3AMMOr-qybYVQQvK2mm8VOO05YwP1k3OsHM7VC5N88aVP9cd4DilIioohcUw_2aYFmiukXjr2VaOHrl2BNPm7N6t3os7tLlwLbBngYLEGg"
+                                        class="banner-image" />
+                                    <div class="desc-container">
+                                        <div class="title huge white bold">삼목야시장<br>방문이벤트
+                                        </div>
 
+                                        <div class="text white medium">2021. 11. 15 ~ <br>2021. 12. 31
+                                        </div>
+                                    </div>
+
+                                </a>
+
+                            </li>
+                        </div>
+                        <br>
+                        <div class="swiper-slide">
+                            <li class="medium-banner-renew">
+                                <a>
+                                    <img alt="상품이미지"
+                                        src="http://www.thedrive.co.kr/news/data/20210629/p1065596638511763_273_thum.jpg"
+                                        class="banner-image" />
+                                    <div class="desc-container">
+                                        <div class="title huge white bold">삼목야시장<br>방문이벤트
+                                        </div>
+
+                                        <div class="text white medium">2021. 11. 15 ~ <br>2021. 12. 31
+                                        </div>
+                                    </div>
+
+                                </a>
+
+                            </li>
+                        </div>
+                        <br>
+                        <div class="swiper-slide">
+                            <li class="medium-banner-renew">
+                                <a>
+                                    <img alt="상품이미지"
+                                        src="https://cdn.kihoilbo.co.kr/news/photo/201807/760839_227998_4521.jpg"
+                                        class="banner-image" />
+                                    <div class="desc-container">
+                                        <div class="title huge white bold">삼목야시장<br>방문이벤트
+                                        </div>
+
+                                        <div class="text white medium">2021. 11. 15 ~ <br>2021. 12. 31
+                                        </div>
+                                    </div>
+
+                                </a>
+
+                            </li>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-container pd24" id="preference">
+                <p class="title huge darkgrey bold">지난 이벤트</p>
+                <br>
+                <div class="bannerSwiper" style="filter: saturate(0);" id="_mLessonBannerListNew">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <li class="medium-banner-renew">
+                                <a>
+                                    <img alt="상품이미지"
+                                        src="https://lh3.googleusercontent.com/proxy/XVHbvJdN7TgIzsn5XHStthDUqLNp4AzHqJp57XqJUpefCX-KB6pnlgeB16gzxqYmiYQ6BkO51k3w28wwjQZ1RKEAF3gazBWFiDxJd01_l1PmgsRPeK5qAJyDBuaBmL6i4ulN_RKYFxXRF9fKmsOnXQYukgcvqmclLVIEAMWy3AMMOr-qybYVQQvK2mm8VOO05YwP1k3OsHM7VC5N88aVP9cd4DilIioohcUw_2aYFmiukXjr2VaOHrl2BNPm7N6t3os7tLlwLbBngYLEGg"
+                                        class="banner-image" />
+                                    <div class="desc-container">
+                                        <div class="title huge white bold">삼목야시장<br>방문이벤트
+                                        </div>
+
+                                        <div class="text white medium">2021. 11. 15 ~ <br>2021. 12. 31
+                                        </div>
+                                    </div>
+
+                                </a>
+
+                            </li>
+                        </div>
+                        <br>
+                        <div class="swiper-slide">
+                            <li class="medium-banner-renew">
+                                <a>
+                                    <img alt="상품이미지"
+                                        src="http://www.thedrive.co.kr/news/data/20210629/p1065596638511763_273_thum.jpg"
+                                        class="banner-image" />
+                                    <div class="desc-container">
+                                        <div class="title huge white bold">삼목야시장<br>방문이벤트
+                                        </div>
+
+                                        <div class="text white medium">2021. 11. 15 ~ <br>2021. 12. 31
+                                        </div>
+                                    </div>
+
+                                </a>
+
+                            </li>
+                        </div>
+                        <br>
+                        <div class="swiper-slide">
+                            <li class="medium-banner-renew">
+                                <a>
+                                    <img alt="상품이미지"
+                                        src="https://cdn.kihoilbo.co.kr/news/photo/201807/760839_227998_4521.jpg"
+                                        class="banner-image" />
+                                    <div class="desc-container">
+                                        <div class="title huge white bold">삼목야시장<br>방문이벤트
+                                        </div>
+
+                                        <div class="text white medium">2021. 11. 15 ~ <br>2021. 12. 31
+                                        </div>
+                                    </div>
+
+                                </a>
+
+                            </li>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </main>
     <nav class="mainTab">
         <div class="mainTab-container">

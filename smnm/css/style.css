@@ -1791,7 +1791,9 @@ main.mainWrap > div.alert-container > ul > li:active {
 
 /* 레슨 검색 */
 .searchbar {
-  border: 1px solid #bababa;
+  /* border: 1px solid #bababa; */
+background-color: #fff;
+box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.075);
   border-radius: 10px;
   padding-left: 14px;
   padding-right: 14px;
@@ -1804,13 +1806,14 @@ main.mainWrap > div.alert-container > ul > li:active {
 }
 
 .search-history {
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
   margin-top: 10px;
   display: none;
 }
 
 .search-history > .title.section.pd24 {
   height: 28px;
+  margin-top: 8px;
   display: flex;
   align-items: center;
 }
@@ -1819,7 +1822,7 @@ main.mainWrap > div.alert-container > ul > li:active {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   height: 54px;
   padding-left: 24px;
   padding-right: 24px;
@@ -2097,7 +2100,6 @@ input#myLocation:checked + #myLocation > img {
 }
 
 .search-container > .result {
-  padding-top: 23px;
 }
 
 .search-container > .result > ul.card-list {
