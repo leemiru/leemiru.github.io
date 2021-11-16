@@ -28,20 +28,7 @@
     </header>
     <main class="mainWrap">
         <div class="content-container pd24 withHeader" id="lessonSchedule">
-            <!-- 회차 선택 게이지 -->
-            <div class="content-container" id="automatch">
-                <div class="gauge">
-                    <div class="gauge-active" style="width: calc(50%);"></div>
-                </div>
-                <p class="text grey small medium" style="text-align: center; color: #4f4f4f;">2/4</p>
-                <p class="text small mint" style="text-align: center; margin-top: 12px; margin-bottom: 16px;">레슨 수정은
-                    마이페이지에서
-                    조정 가능합니다.</p>
-            </div>
 
-
-            <p class="text small mint" style="text-align: center; margin-top: 12px; margin-bottom: 16px;">레슨을 시작할 요일과
-                시간을 알려주세요.<br>첫 레슨만 등록 후 마이페이지에서 남은 회차는 등록가능합니다.</p>
             <div class="title-container calendar">
                 <button id="btnPrev" class="btn transparent"><img src="../../src/assets/ic-bracket-left-theme.svg"
                         alt="이전" /></button>
@@ -51,116 +38,6 @@
             </div>
             <div class="calendar-container">
                 <div id="divCal"></div>
-            </div>
-
-            <div class="content-container" id="lessonList">
-                <ul>
-                    <li>
-                        <div class="flex spacebetween">
-                            <div>
-                                <div class="flex center spacebetween">
-                                    <div>
-                                        <p class="title eighteen bold darkgrey" id="lessonType">포인트레슨</p>
-                                        <p class="title eighteen bold darkgrey" id="lessonTime">오후 2:00 - 4:00</p>
-                                    </div>
-                                </div>
-                                <div class="flex" style="margin-top: 8px;">
-                                    <div style="margin-right: 8px;">
-                                        <p class="text bold grey small">장소</p>
-                                        <p class="text bold grey small">금액</p>
-                                        <p class="text bold grey small">시간</p>
-                                        <p class="text bold grey small">자리</p>
-                                    </div>
-                                    <div>
-                                        <p class="text grey small" id="lessonPlace">리조트</p>
-                                        <p class="text grey small" id="lessonPrice">000,000</p>
-                                        <p class="text grey small" id="lessonPeriod">00:00-00:00</p>
-                                        <p class="text grey small" id="lessonMember">3/4</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex" style="flex-direction: column;">
-                                <button id="btnSelect" class="btn theme">선택 <img
-                                        src="../../src/assets/ic-arrow-right.svg" /></button>
-                                <button id="btnRepeat" class="btn theme" style="margin-top: 8px;">매주반복 <img
-                                        src="../../src/assets/ic-arrow-right.svg" /></button>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="flex spacebetween">
-                            <div>
-                                <div class="flex center spacebetween">
-                                    <div>
-                                        <p class="title eighteen bold darkgrey" id="lessonType">포인트레슨</p>
-                                        <p class="title eighteen bold darkgrey" id="lessonTime">오후 2:00 - 4:00</p>
-                                    </div>
-                                </div>
-                                <div class="flex" style="margin-top: 8px;">
-                                    <div style="margin-right: 8px;">
-                                        <p class="text bold grey small">장소</p>
-                                        <p class="text bold grey small">금액</p>
-                                        <p class="text bold grey small">시간</p>
-                                        <p class="text bold grey small">자리</p>
-                                    </div>
-                                    <div>
-                                        <p class="text grey small" id="lessonPlace">리조트</p>
-                                        <p class="text grey small" id="lessonPrice">000,000</p>
-                                        <p class="text grey small" id="lessonPeriod">00:00-00:00</p>
-                                        <p class="text grey small" id="lessonMember">3/4</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex" style="flex-direction: column;">
-                                <button id="btnSelect" class="btn theme white">선택 <img
-                                        src="../../src/assets/ic-arrow-right.svg" /></button>
-                                <button id="btnRepeat" class="btn theme white" style="margin-top: 8px;">매주반복 <img
-                                        src="../../src/assets/ic-arrow-right.svg" /></button>
-                            </div>
-                        </div>
-
-
-                    </li>
-
-                    <li>
-                        <div class="flex spacebetween">
-                            <div>
-                                <div class="flex center spacebetween">
-                                    <div>
-                                        <p class="title eighteen bold darkgrey" id="lessonType">포인트레슨</p>
-                                        <p class="title eighteen bold darkgrey" id="lessonTime">오후 2:00 - 4:00</p>
-                                    </div>
-                                </div>
-                                <div class="flex" style="margin-top: 8px;">
-                                    <div style="margin-right: 8px;">
-                                        <p class="text bold grey small">장소</p>
-                                        <p class="text bold grey small">금액</p>
-                                        <p class="text bold grey small">시간</p>
-                                        <p class="text bold grey small">자리</p>
-                                    </div>
-                                    <div>
-                                        <p class="text grey small" id="lessonPlace">리조트</p>
-                                        <p class="text grey small" id="lessonPrice">000,000</p>
-                                        <p class="text grey small" id="lessonPeriod">00:00-00:00</p>
-                                        <p class="text grey small" id="lessonMember">3/4</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex" style="flex-direction: column;">
-                                <button id="btnSelect" class="btn theme white">선택 <img
-                                        src="../../src/assets/ic-arrow-right.svg" /></button>
-                                <button id="btnRepeat" class="btn theme white" style="margin-top: 8px;">매주반복 <img
-                                        src="../../src/assets/ic-arrow-right.svg" /></button>
-                            </div>
-                        </div>
-
-
-                    </li>
-                </ul>
-
-                <button class="btn transparent title mint bold" style="width: 100%; margin-top: 8px;"
-                    id="btnSkip">건너뛰기</button>
             </div>
 
         </div>
@@ -181,17 +58,17 @@
 
         // Days of week, starting on Sunday
         this.DaysOfWeek = [
-            'S',
-            'M',
-            'T',
-            'W',
-            'T',
-            'F',
-            'S'
+            '일',
+            '월',
+            '화',
+            '수',
+            '목',
+            '금',
+            '토'
         ];
 
         // Months, stating on January
-        this.Months = ['January', 'Feburary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        this.Months = ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'];
 
         // Set the current month, year
         var d = new Date();
@@ -336,6 +213,11 @@
     function getId(id) {
         return document.getElementById(id);
     }
+
+    $('#btn-back').click(function() {
+        history.go(-1);
+    })
+
 </script>
 
 </html>

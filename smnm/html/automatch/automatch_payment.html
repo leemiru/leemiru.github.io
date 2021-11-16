@@ -80,12 +80,12 @@
                 </li> -->
                 <li>
                     <div>
-                        <p class="title darkgrey bold" id="coachName" style="font-size: 24px;">양우영 데몬스트레이터</p>
-                        <p class="text eleven" id="lessonTime">오전 레슨 2시간 09:00 - 11:00</p>
-                        <p class="title darkgrey bold" style="font-size: 18px; margin-top: 10px;" id="price">W680,000</p>
+                        <p class="title darkgrey bold" id="coachName" style="font-size: 24px;">논머리횟집</p>
+                        <p class="text eleven" id="lessonTime">예상 소요시간 : 20분</p>
+                        <p class="title darkgrey bold" style="font-size: 18px; margin-top: 10px;" id="price">W55,000</p>
                     </div>
 
-                    <div class="productInfo" style="justify-content: left; max-width: 100%; margin-top: 16px;">
+                    <!-- <div class="productInfo" style="justify-content: left; max-width: 100%; margin-top: 16px;">
                         <div class="infoTitle" style="margin-right: 14px;">
                             <p class="title darkgrey bold" style="font-size: 15px;">시간</p>
                             <p class="title darkgrey bold" style="font-size: 15px;">위치</p>
@@ -100,7 +100,6 @@
                                     <option value="3">용평리조트</option>
                                     <option value="4">용평리조트</option>
                                 </select>
-                                <!-- <img src="../../src/assets/ic-bracket-down.svg" alt="펼치기" /> -->
                             </div>
                             <div class="select-container" style="width: fit-content;">
                                 <select class="select" style="margin-right: 8px;"  id="place">
@@ -109,7 +108,6 @@
                                     <option value="3">용평리조트</option>
                                     <option value="4">용평리조트</option>
                                 </select>
-                                <!-- <img src="../../src/assets/ic-bracket-down.svg" alt="펼치기" /> -->
                             </div>
                             <div class="select-container" style="width: fit-content;">
                                 <select class="select" style="margin-right: 8px;"  id="quantity">
@@ -118,20 +116,93 @@
                                     <option value="3">3명</option>
                                     <option value="4">4명</option>
                                 </select>
-                                <!-- <img src="../../src/assets/ic-bracket-down.svg" alt="펼치기" /> -->
                             </div>
                         </div>
 
+                    </div> -->
+
+                    <div class="content-container" id="regularLesson" style="margin-bottom: 20px;">
+                        <br>
+    
+                        <style>
+                            .LessonSwiper > .swiper-wrapper {
+                                flex-direction: column;
+                            }
+                        </style>
+    
+                        <ul class="lesson-list">
+                            <div class="LessonSwiper" id="couponLessonList1">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <li>
+                                            <div class="flex center spacebetween">
+                                                <div>
+                                                    <span class="title eighteen bold darkgrey"
+                                                        id="lessonType">대방어+참숭어막회</span>
+                                                    <span class="title eighteen bold mint"
+                                                        id="lessonDay">(추천)</span>
+                                                </div>
+                                                <button id="btnSelect" class="btnSelect btn theme white">지우기</button>
+                                            </div>
+                                            <div class="flex" style="margin-top: 8px;">
+                                                <div style="margin-right: 8px;">
+                                                    <p class="text bold small">양</p>
+                                                    <p class="text bold small">가격</p>
+                                                    <!-- <p class="text bold small">매주</p>
+                                                    <p class="text bold small">자리</p> -->
+                                                </div>
+                                                <div>
+                                                    <p class="text small" id="lessonDateTime">3인분
+                                                    </p>
+                                                    <p class="text small" id="lessonPrice">₩25,000 ~ 45,000</p>
+                                                    <!-- <p class="text small" id="lessonWeek">2회</p>
+                                                    <p class="text small" id="lessonMember">3/4</p> -->
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <li>
+                                            <div class="flex center spacebetween">
+                                                <div>
+                                                    <span class="title eighteen bold darkgrey"
+                                                        id="lessonType">연어</span>
+                                                    <span class="title eighteen bold mint"
+                                                        id="lessonDay">(추천)</span>
+                                                </div>
+                                                <button id="btnSelect" class="btnSelect btn theme white">지우기</button>
+                                            </div>
+                                            <div class="flex" style="margin-top: 8px;">
+                                                <div style="margin-right: 8px;">
+                                                    <p class="text bold small">양</p>
+                                                    <p class="text bold small">가격</p>
+                                                    <!-- <p class="text bold small">매주</p>
+                                                    <p class="text bold small">자리</p> -->
+                                                </div>
+                                                <div>
+                                                    <p class="text small" id="lessonDateTime">3인분
+                                                    </p>
+                                                    <p class="text small" id="lessonPrice">₩25,000 ~ 45,000</p>
+                                                    <!-- <p class="text small" id="lessonWeek">2회</p>
+                                                    <p class="text small" id="lessonMember">3/4</p> -->
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </div>
+                                    <br>
+                                </div>
+                            </div>
+                        </ul>
                     </div>
                 </li>
             </div>
 
             <div class="content-container pd24" id="paymentInfo">
                 <div class="section">
-                    <p class="title small darkgrey bold">스포츠보험</p>
+                    <p class="title small darkgrey bold">쿠폰 적용</p>
                     <div class="input-container">
                         <div>
-                            <p class="title small darkgrey" id="protect">보호하기</p>
+                            <p class="title small darkgrey" id="protect">삼목야시장 첫방문 10% 할인 쿠폰</p>
                         </div>
                         <img src="../../src/assets/ic-plus-circle.svg" alt="펼치기" />
                     </div>
@@ -158,17 +229,17 @@
                 <div class="ordered-total">
                     <div class="total-listitem">
                         <p class="title darkgrey">금액</p>
-                        <p class="title darkgrey italic" id="total-price">W3,580,000</p>
+                        <p class="title darkgrey italic" id="total-price">W55,000</p>
                     </div>
 
                     <div class="total-listitem">
-                        <p class="title darkgrey">보험</p>
-                        <p class="title darkgrey italic" id="insurance_price">W3,580,000</p>
+                        <p class="title darkgrey">부가세</p>
+                        <p class="title darkgrey italic" id="insurance_price">W5,500</p>
                     </div>
 
                     <div class="total-listitem">
                         <p class="title darkgrey">할인</p>
-                        <p class="title darkgrey italic" id="sale-price">W3,580,000</p>
+                        <p class="title darkgrey italic" id="sale-price">- W5,500</p>
                     </div>
                 </div>
 
@@ -184,9 +255,9 @@
                 <div class="totalInfo pd24">
                     <span>
                         <p class="title darkgrey small">총합</p>
-                        <p class="title darkgrey big bold">₩3,580,000</p>
+                        <p class="title darkgrey big bold">₩55,000</p>
                     </span>
-                    <a href="./automatch_complete.html"><button class="btn dark" id="btnPayment">결제</button></a>
+                    <a href="../shop/product_checkout.html"><button class="btn dark" id="btnPayment">결제</button></a>
                 </div>
                 <p class="text small pd24 lightgrey">마지막단계 입니다. 결제버튼 선택 후 결제가 진행 됩니다.</p>
             </div>
@@ -231,6 +302,10 @@
         }
     }
 
+    $('.btnSelect').click(function () {
+        $(this).parent().parent().parent().fadeOut();
+    })
+
     $('input').keyup(function () {
         $('input').each(function () {
             if (!$(this).val()) {
@@ -240,6 +315,10 @@
             }
         });
     });
+
+    $('#btn-back').click(function() {
+        history.go(-1);
+    })
 
 </script>
 

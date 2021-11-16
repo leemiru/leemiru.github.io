@@ -105,21 +105,25 @@
                         <img src="../../src/assets/ic-filter.svg" />
                         필터
                     </label>
+                    <input type="radio" name="itemType" checked="true" id="all" />
+                    <label for="all" class="filter-listitem">
+                        전체
+                    </label>
                     <input type="radio" name="itemType" id="ski" />
                     <label for="ski" class="filter-listitem">
-                        인기순
+                        삼목별미
                     </label>
                     <input type="radio" name="itemType" id="snowboard" />
                     <label for="snowboard" class="filter-listitem">
-                        거리순
+                        인천로컬
                     </label>
                     <input type="radio" name="itemType" id="jujitsu" />
                     <label for="jujitsu" class="filter-listitem">
-                        후기순
+                        프랜차이즈
                     </label>
                     <input type="radio" name="itemType" id="bowling" />
                     <label for="bowling" class="filter-listitem">
-                        별점순
+                        K-FOOD
                     </label>
                 </ul>
             </div>
@@ -403,6 +407,10 @@
     $('.mainTab-listitem#navMypage').click(function() {
         window.location.href="../mypage/mypage_home.html";
     });
+
+    $('.card-list li').click(function () {
+            window.location.href = "../instructor/instructor_teampage.html";
+        });
 </script>
 
 </html>

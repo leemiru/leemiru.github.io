@@ -2,7 +2,7 @@
   --body-font: "NotoSans" "Noto Sans KR" sans-serif;
   --bg-color: #fff;
   --dark-color: #01283B;
-  --mint-color: #46ffa2;
+  --mint-color: #00608F;
   --theme-color: #EC582C;
   --theme-gradient: linear-gradient(45deg, #00608F, #00608F);
   --theme-light-gradient: linear-gradient(to bottom, #00608F, #00608F);
@@ -1360,7 +1360,7 @@ div.content-container#lesson-view > .welcome-banner #btn-matchnow > img {
   background: linear-gradient(
     to right,
     rgba(255, 255, 255) 60%,
-    rgba(16, 255, 38, 0.2)
+    rgba(254, 116, 72, 0.2)
   );
 }
 
@@ -4417,11 +4417,7 @@ ul.lesson-list #btnSelect:active {
 }
 
 #divCal > table > tbody > tr > td.prevLesson {
-  background: linear-gradient(
-    125deg,
-    rgba(255, 255, 255),
-    rgba(16, 255, 38, 0.3)
-  ) !important;
+  background: var(--theme-gradient)!important;
   border-color: var(--theme-light);
   color: #333 !important;
   font-weight: 600;
@@ -4463,7 +4459,8 @@ ul.lesson-list #btnSelect:active {
 #divCal > table > tbody > tr > td.today {
   font-weight: 600;
   color: white;
-  /* background: var(--theme-gradient); */
+  border-radius: 50%;
+  background: var(--theme-gradient);
 }
 
 #divCal > table > tbody > tr > td > p {
