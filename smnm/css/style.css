@@ -800,8 +800,8 @@ nav.mainTab > .mainTab-container > .mainTab-list {
   padding-left: 24px;
   padding-right: 24px;
   padding-bottom: calc(env(safe-area-inset-bottom));
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
   box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -1184,6 +1184,11 @@ main.mainWrap > div.home-container > .profile-container > .profile-img {
 main.mainWrap > div.home-container > .profile-container > a {
   z-index: 999;
   filter: brightness(2000%);
+}
+
+main.mainWrap > div.home-container > .profile-container > a > img {
+  width: 24px;
+  height: 24px;
 }
 
 main.mainWrap > div.home-container > .profile-container > .profile-info {
@@ -5141,7 +5146,7 @@ input[type="checkbox"].switch:checked + label::after {
   padding-right: 24px;
   height: 54px;
   background: var(--white-bg-opacity);
-  border-radius: 5px;
+  border-radius: 10px;
   color: #fff;
   filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.05));
   /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
