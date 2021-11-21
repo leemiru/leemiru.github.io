@@ -1,9 +1,9 @@
-<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M10 1L12.781 6.92429L19 7.88013L14.5 12.489L15.562 19L10 15.9243L4.438 19L5.5 12.489L1 7.88013L7.219 6.92429L10 1Z" stroke="url(#paint0_linear)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<defs>
-<linearGradient id="paint0_linear" x1="2.60714" y1="3.025" x2="20.483" y2="7.16509" gradientUnits="userSpaceOnUse">
-<stop stop-color="#46FF42"/>
-<stop offset="1" stop-color="#3FFFA3"/>
-</linearGradient>
-</defs>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+<path class="st0" d="M10,1l2.8,5.9l6.2,1l-4.5,4.6l1.1,6.5L10,15.9L4.4,19l1.1-6.5L1,7.9l6.2-1L10,1z"/>
 </svg>
