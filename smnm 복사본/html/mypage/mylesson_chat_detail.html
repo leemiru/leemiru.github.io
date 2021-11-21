@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼목야시장</title>
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="./js/background.js"></script> -->
+    <!-- <script src="./js/header.js"></script> -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+</head>
+
+<body>
+    <main class="mainWrap">
+        <header class="mainHeader">
+            <div class="mainHeader-container">
+                <button id="btn-back" class="btn circle"><img src="../../src/assets/ic-bracket-left.svg"
+                        alt="뒤로" /></button>
+                <div class="alert-badge">1</div>
+                <div class="chatInfo">
+                    <p class="title bold black">정재권 코치</p>
+                    <p class="text small grey">seen 1 hour ago</p>
+                </div>
+                <button class="btn circle" id="btn-call"><img src="../../src/assets/ic-phone.svg" /></button>
+            </div>
+        </header>
+        <div class="message-container withHeader">
+            <ul class="messageList">
+                <li class="timeDivider">May 7</li>
+                <li class="receive">
+                    <div>
+                        <img class="receiveProfile" src="../../src/content/profile.png" />
+                        <div class="chatBubble-container">
+                            <ul class="chatBubble">
+                                <li>
+                                    <div class="messageContent">
+                                        채팅관련
+                                        채팅관련
+                                        채팅관련
+                                        채팅관련
+                                        채팅관련
+                                        채팅관련
+                                        채팅관련
+                                        채팅관련
+                                        채팅관련
+                                        채팅관련
+                                        채팅관련
+                                        채팅관련
+                                    </div>
+                                    <img class="reactionMine" src="../../src/assets/ic-reaction-mine.svg" />
+                                </li>
+
+                                <li>
+                                    <div class="messageContent">
+                                        채팅관련
+                                        채팅관련
+                                        채팅관련
+                                    </div>
+                                    <img class="reactionMine" src="../../src/assets/ic-reaction-mine.svg" />
+                                </li>
+                            </ul>
+                            <p class="text medium grey" id="receiptTime">3:00PM</p>
+                        </div>
+
+                    </div>
+                </li>
+
+                <li class="sent">
+                    <div>
+                        <div class="chatBubble-container">
+                            <ul class="chatBubble">
+                                <li>
+                                    <img class="reaction" src="../../src/assets/ic-reaction.svg" />
+                                    <div class="messageContent">
+                                        채팅관련
+                                        채팅관련
+                                        채팅관련
+                                        채팅관련
+                                        채팅관련
+                                        채팅관련
+                                        채팅관련
+                                        채팅관련
+                                        채팅관련
+                                        채팅관련
+                                        채팅관련
+                                        채팅관련
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <img class="reaction" src="../../src/assets/ic-reaction.svg" />
+                                    <div class="messageContent">
+                                        채팅관련
+                                        채팅관련
+                                        채팅관련
+                                    </div>
+                                </li>
+                                <li class="imageBubble">
+                                    <img class="reaction" src="../../src/assets/ic-reaction.svg" />
+                                    <div class="imageContent">
+                                        <img src="../../src/content/comment.png">
+                                        <img src="../../src/content/comment.png">
+                                        <img src="../../src/content/comment.png">
+                                        <img src="../../src/content/comment.png">
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="flex center" id="sentInfo">
+                                <img class="checked" src="../../src/assets/ic-check-all.svg" /><span
+                                    class="text medium grey" id="sentTime">3:00PM</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </li>
+            </ul>
+
+
+            <div class="bottom-container">
+                <button class="btn transparent"><img src="../../src/assets/ic-attach.svg" /></button>
+                <button class="btn transparent"><img src="../../src/assets/ic-lightning.svg" /></button>
+                <input type="text" class="input" placeholder="Send a message" />
+                <button class="btn transparent"><img src="../../src/assets/ic-send.svg" /></button>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

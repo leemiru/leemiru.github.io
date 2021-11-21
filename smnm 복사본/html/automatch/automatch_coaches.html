@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼목야시장</title>
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="./js/background.js"></script> -->
+    <!-- <script src="./js/header.js"></script> -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+</head>
+
+<body class="whitebg">
+    <header class="mainHeader">
+        <div class="mainHeader-container">
+            <button id="btn-back" class="btn circle"><img src="../../src/assets/ic-arrow-left.svg" alt="뒤로" /></button>
+            <img alt="Pleisure" class="header-logo" src="../../src/logo-mono.svg" />
+            <span style="opacity: 0;"></span>
+        </div>
+    </header>
+    <main class="mainWrap">
+        <div class="content-container pd24 withHeader" id="automatch">
+            <p class="title twenty bold darkgrey" style="text-align: center; margin-top: 16px;">고객님의 실력을 책임질<br>코치분들입니다.</p>
+            <p class="text small mint" style="text-align: center; margin-top: 16px;">코치님을 선택해 주세요.</p>
+
+            <div class="content-container" id="coachList">
+                <div class="contentTab mint">
+                    <ul class="contentTab-list">
+                        <li class="contentTab-listitem is-active" id="tab-personal">개인</li>
+                        <li class="contentTab-listitem" id="tab-team">팀</li>
+                    </ul>
+                </div>
+                <ul id="personalList">
+                    <li class="flex center spacebetween">
+                        <div class="flex center">
+                            <img alt="코치이미지" src="../../src/content/coachprofile.png" class="coachImg"/>
+                            <div class="info-container">
+                                <p class="title bold darkgrey small" id="coachName">양우영</p>
+                                <p class="text darkgrey tiny" id="coachPosition">데몬스트레이터</p>
+                                <p class="text darkgrey tiny" id="coachPlace">곤지암리조트 67km</p>
+                            </div>
+                        </div>
+
+                        <button class="btn white" id="btnSelect">
+                            <p class="title mint small">선택</p>
+                            <img src="../../src/assets/ic-arrow-right.svg" alt="선택"/>
+                        </button>
+                    </li>
+
+                    <li class="flex center spacebetween">
+                        <div class="flex center">
+                            <img alt="코치이미지" src="../../src/content/coachprofile.png" class="coachImg"/>
+                            <div class="info-container">
+                                <p class="title bold darkgrey small" id="coachName">양우영</p>
+                                <p class="text darkgrey tiny" id="coachPosition">데몬스트레이터</p>
+                                <p class="text darkgrey tiny" id="coachPlace">곤지암리조트 67km</p>
+                            </div>
+                        </div>
+
+                        <button class="btn white" id="btnSelect">
+                            <p class="title mint small">선택</p>
+                            <img src="../../src/assets/ic-arrow-right.svg" alt="선택"/>
+                        </button>
+                    </li>
+
+                    <li class="flex center spacebetween">
+                        <div class="flex center">
+                            <img alt="코치이미지" src="../../src/content/coachprofile.png" class="coachImg"/>
+                            <div class="info-container">
+                                <p class="title bold darkgrey small" id="coachName">양우영</p>
+                                <p class="text darkgrey tiny" id="coachPosition">데몬스트레이터</p>
+                                <p class="text darkgrey tiny" id="coachPlace">곤지암리조트 67km</p>
+                            </div>
+                        </div>
+
+                        <button class="btn white" id="btnSelect">
+                            <p class="title mint small">선택</p>
+                            <img src="../../src/assets/ic-arrow-right.svg" alt="선택"/>
+                        </button>
+                    </li>
+
+                    <li class="flex center spacebetween">
+                        <div class="flex center">
+                            <img alt="코치이미지" src="../../src/content/coachprofile.png" class="coachImg"/>
+                            <div class="info-container">
+                                <p class="title bold darkgrey small" id="coachName">양우영</p>
+                                <p class="text darkgrey tiny" id="coachPosition">데몬스트레이터</p>
+                                <p class="text darkgrey tiny" id="coachPlace">곤지암리조트 67km</p>
+                            </div>
+                        </div>
+
+                        <button class="btn white" id="btnSelect">
+                            <p class="title mint small">선택</p>
+                            <img src="../../src/assets/ic-arrow-right.svg" alt="선택"/>
+                        </button>
+                    </li>
+
+                    <li class="flex center spacebetween">
+                        <div class="flex center">
+                            <img alt="코치이미지" src="../../src/content/coachprofile.png" class="coachImg"/>
+                            <div class="info-container">
+                                <p class="title bold darkgrey small" id="coachName">양우영</p>
+                                <p class="text darkgrey tiny" id="coachPosition">데몬스트레이터</p>
+                                <p class="text darkgrey tiny" id="coachPlace">곤지암리조트 67km</p>
+                            </div>
+                        </div>
+
+                        <button class="btn white" id="btnSelect">
+                            <p class="title mint small">선택</p>
+                            <img src="../../src/assets/ic-arrow-right.svg" alt="선택"/>
+                        </button>
+                    </li>
+
+                    <li class="flex center spacebetween">
+                        <div class="flex center">
+                            <img alt="코치이미지" src="../../src/content/coachprofile.png" class="coachImg"/>
+                            <div class="info-container">
+                                <p class="title bold darkgrey small" id="coachName">양우영</p>
+                                <p class="text darkgrey tiny" id="coachPosition">데몬스트레이터</p>
+                                <p class="text darkgrey tiny" id="coachPlace">곤지암리조트 67km</p>
+                            </div>
+                        </div>
+
+                        <button class="btn white" id="btnSelect">
+                            <p class="title mint small">선택</p>
+                            <img src="../../src/assets/ic-arrow-right.svg" alt="선택"/>
+                        </button>
+                    </li>
+            
+                </ul>
+
+            </div>
+            <ul class="pagebtn-list" style="width: 100%;">
+                <li class="pagebtn"><a href="#"><img src="../../src/assets/ic-bracket-left.svg"></a></li>
+                <li class="pagebtn is-active"><a href="#">1</a></li>
+                <li class="pagebtn"><a href="#">2</a></li>
+                <li class="pagebtn"><a href="#">3</a></li>
+                <li class="pagebtn"><a href="#">4</a></li>
+                <li class="pagebtn"><a href="#">5</a></li>
+                <li class="pagebtn"><a href="#"><img src="../../src/assets/ic-bracket-right.svg"></a></li>
+            </ul>
+        </div>
+    </main>
+
+</body>
+
+<script>
+    $('.btnInfo').click(function() {
+        $('.modalWrap').fadeIn('fast');
+    });
+
+    $('.btnClose').click(function() {
+        $('.modalWrap').fadeOut('fast');
+    })
+
+    $('#btnSelect').click(function() { 
+        window.location.href = "./automatch_coachprofile.html";
+    })
+</script>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼목야시장</title>
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="./js/background.js"></script> -->
+    <!-- <script src="./js/header.js"></script> -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+</head>
+
+<body class="whitebg">
+    <header class="mainHeader">
+        <div class="mainHeader-container">
+            <button id="btn-back" class="btn circle"><img src="../../src/assets/ic-arrow-left.svg" alt="뒤로" /></button>
+            <img alt="Pleisure" class="header-logo" src="../../src/logo-mono.svg" />
+            <span style="opacity: 0;"></span>
+        </div>
+    </header>
+    <main class="mainWrap">
+        <div class="content-container pd24 withHeader" id="coachProfile">
+            <div class="content-container" id="coachInfo">
+                <div class="flex center spacebetween">
+                    <div class="flex center" style="width: 100%;">
+                        <img alt="코치이미지" class="coachImg" src="../../src/content/coachprofile.png" />
+                        <div class="info-container" style="width: 100%;">
+                            <div class="flex spacebetween" style="width: 100%;">
+                                <div>
+                                    <p class="title bold darkgrey small" id="coachName">양우영</p>
+                                    <p class="text darkgrey tiny" id="coachPosition">데몬스트레이터</p>
+                                    <p class="text darkgrey tiny" id="coachPlace">곤지암리조트 67km</p>
+                                </div>
+                                <!-- <div class="flex spacebetween">
+                                    <button class="btn theme circle" id="btnCall"
+                                        style="width: 36px; height: 36px;"><img
+                                            src="../../src/assets/ic-phone.svg"></button>
+                                    <button class="btn theme circle" id="btnShare"
+                                        style="width: 36px; height: 36px;"><img
+                                            src="../../src/assets/ic-share.svg"></button>
+                                </div> -->
+
+                            </div>
+
+
+                            <div class="flex center">
+                                <img class="stars" id="star1" src="../../src/assets/ic-star-filled.svg" />
+                                <img class="stars" id="star2" src="../../src/assets/ic-star-filled.svg" />
+                                <img class="stars" id="star3" src="../../src/assets/ic-star-filled.svg" />
+                                <img class="stars" id="star4" src="../../src/assets/ic-star-filled.svg" />
+                                <img class="stars" id="star4" src="../../src/assets/ic-star-normal.svg" />
+
+                                <p class="title grey small" id="starPoint" style="margin-left: 8px; margin-top: 3px;">
+                                    4.0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="reserve-container">
+                    <div class="flex center">
+                        <button class="btn theme social"><img src="../../src/assets/ic-instagram.svg"></button>
+                        <div>
+                            <p class="title bold darkgrey small">레슨예약</p>
+                            <p class="title grey tiny">2021 - 2022</p>
+                        </div>
+                    </div>
+
+                    <a href="../automatch/automatch_calendar.html"><button class="btn theme" id="btnReserve">예약 <img
+                                src="../../src/assets/ic-arrow-right.svg" />
+                        </button></a>
+                </div> -->
+
+                <ul class="horiList school-list">
+                    <li> <img alt="자격증" src="http://api.pleisure.co:8080/img/5b056e87f2af4d4794281b53053a9e9f.jpeg"
+                            class="teamContents"></li>
+                    <li> <img alt="자격증" src="http://api.pleisure.co:8080/img/5b056e87f2af4d4794281b53053a9e9f.jpeg"
+                            class="teamContents"></li>
+                    <li> <img alt="자격증" src="http://api.pleisure.co:8080/img/5b056e87f2af4d4794281b53053a9e9f.jpeg"
+                            class="teamContents"></li>
+                </ul>
+
+                <p class="title bold darkgrey">프로필</p>
+                <p class="text small darkgrey" id="coachInfo">양우영 데몬스트레이터는 레벨3 티칭3 자격증 보유.
+                    기술선수권대회 입상 및 12년의 스키 교육자로써 인정받고있는 한국 대표 여성 코치입니다.</p>
+
+                <p class="title bold darkgrey">레슨정보</p>
+                <p class="text small darkgrey" id="lessonInfo">레슨소개 및 맞는 레벨 기초, 중급, 상급, 또는 정확한 레슨
+                    카빙, 페러렐, 플라우, 스템, 보겐, 모글 등등 또는 레벨 1 검정, 레벨 2 검정, 레벨 3 검정</p>
+
+
+                <ul class="horiList">
+                    <li>
+                        <img alt="자격증" src="../../src/content/prove.png" class="coachContents" />
+                    </li>
+                    <li>
+                        <img alt="자격증" src="../../src/content/prove.png" class="coachContents" />
+                    </li>
+                    <li>
+                        <img alt="자격증" src="../../src/content/prove.png" class="coachContents" />
+                    </li>
+                    <li>
+                        <img alt="자격증" src="../../src/content/prove.png" class="coachContents" />
+                    </li>
+                </ul>
+
+                <button id="btnReserve" class="btn light white" style="width: 100%; color: #4f4f4f !important; border-color: #e0e0e0; font-weight: normal; margin-top: 8px;">예약하기</button>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+
+<script>
+    $('.btnInfo').click(function () {
+        $('.modalWrap').fadeIn('fast');
+    });
+
+    $('.btnClose').click(function () {
+        $('.modalWrap').fadeOut('fast');
+    })
+</script>
+
+</html>

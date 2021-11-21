@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼목야시장</title>
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="./js/background.js"></script> -->
+    <!-- <script src="./js/header.js"></script> -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+</head>
+
+<body class="whitebg">
+    <header class="mainHeader">
+        <div class="mainHeader-container">
+            <button id="btn-back" class="btn circle"><img src="../../src/assets/ic-arrow-left.svg" alt="뒤로" /></button>
+            <img alt="Pleisure" class="header-logo" src="../../src/logo-mono.svg" />
+            <span style="opacity: 0;"></span>
+        </div>
+    </header>
+    <main class="mainWrap">
+        <div class="content-container  withHeader" id="insurance">
+
+            <p class="title big darkgrey pd24 bold">상품 상세보기</p>
+
+            <div class="contentTab pd24">
+                <ul class="contentTab-list">
+                    <input type="radio" name="contentTab" id="tabDesc"/>
+                    <label for="tabDesc" class="contentTab-listitem" id="tab-desc">상품설명</label>
+
+                    <input type="radio" name="contentTab" id="tabInsurance"/>
+                    <label for="tabInsurance" class="contentTab-listitem" id="tab-insurance">보장내용</label>
+
+                    <input type="radio" name="contentTab" id="tabMust"/>
+                    <label for="tabMust" class="contentTab-listitem" id="tab-must">알아두실 내용</label>
+                </ul>
+            </div>
+
+            <div class="content-container" id="insuranceInfo">
+                <p class="title darkgrey pd24 bold">DB손해보험(주)</p>
+
+                <div class="divider"></div>
+
+                <p class="title big darkgrey pd24 bold">스마트 레저상해보험</p>
+
+                <div class="divider"></div>
+
+                <div class="insuranceSection">
+                    <p class="title darkgrey bold">보험료안내사항</p>
+
+                    <p class="text medium darkgrey">스마트 레저상해보험은 연령, 성별에 따라 보험료가 변하지 않는
+                        상품입니다.</p>
+
+                    <div class="flex">
+                        <div>
+                            <p class="text big bold grey">납입기간</p>
+                            <p class="text big bold grey">보험기간</p>
+                            <p class="text big bold grey">상품종류</p>
+                            <p class="text big bold grey">가입연령</p>
+                        </div>
+                        <div>
+                            <p class="text medium darkgrey">일시납</p>
+                            <p class="text medium darkgrey">1개월</p>
+                            <p class="text medium darkgrey">순수보장형</p>
+                            <p class="text medium darkgrey">20세부터 80세까지</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+
+                <div class="insuranceSection">
+                    <p class="title darkgrey bold">보험약관 및 상품설명서</p>
+
+                    <p class="text medium darkgrey">본 내용은 요약된 내용이므로 자세한 사항은 반드시 아래 약관과 설명서를 참조해 주세요.</p>
+
+                    <ul class="fileList">
+                        <li>상품설명서 <button class="btn transparent"><img src="../../src/assets/file/ic-file-pdf.svg" /></button></li>
+                        <li>보험약관 <button class="btn transparent"><img src="../../src/assets/file/ic-file-pdf.svg" /></button></li>
+                    </ul>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="insuranceSection">
+                    <p class="title darkgrey bold">상품설명</p>
+
+                    <p class="text medium darkgrey">1회 가입으로 1개월동안 무제한 레저상해보험 보장.
+                        (보험기간중 1회한)<br>
+                        레저인들의 로망! 레저의 기쁨은 더 크게!<br>
+                        레저 중 발생한 대인, 대물사고로 타인에게 피해를 입힌 경우 손해비용을 보상해드립니다.
+                        (자기부담금 2만원 / 비례보상)</p>
+                </div>
+
+                <div class="divider"></div>
+                <br>
+                <br>
+                <br>
+                <p class="text small darkgrey pd24">
+                    심의필<br>
+                    준법감시인확인필_제2021-1051(2021.01.07)
+                </p>
+
+            </div>
+        </div>
+
+        <div class="bottom-container" style="background: none;">
+            <button class="btn theme" id="confirm">가입하기</button>
+        </div>
+
+        </div>
+    </main>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼목야시장</title>
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="./js/background.js"></script> -->
+    <!-- <script src="./js/header.js"></script> -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+</head>
+
+<body class="whitebg">
+    <header class="mainHeader">
+        <div class="mainHeader-container">
+            <button id="btn-back" class="btn circle"><img src="../../src/assets/ic-arrow-left.svg" alt="뒤로" /></button>
+            <img alt="Pleisure" class="header-logo" src="../../src/logo-mono.svg" />
+            <span style="opacity: 0;"></span>
+        </div>
+    </header>
+    <main class="mainWrap">
+        <div class="content-container pd24 withHeader" id="card">
+
+            <p class="title huge darkgrey bold">카드선택</p>
+
+            <div class="content-container" id="addCard">
+                <p class="title bold darkgrey">카드번호</p>
+                <div class="input-container">
+                    <input class="transparent" id="input_cardNum" placeholder="0000 0000 0000 0000">
+                    <img src="../../src/assets/ic-scan-card.svg" alt="스캔" />
+                </div>
+
+                <p class="title bold darkgrey">소유자명</p>
+                <div class="input-container">
+                    <input class="transparent" id="input_cardOwner" placeholder="예: 황 정윤">
+                </div>
+
+                <div class="flex center spacebetween">
+                    <div>
+                        <p class="title bold darkgrey">유효기간</p>
+                        <div class="input-container">
+                            <input class="transparent" id="input_cardExpire" placeholder="MM / YYYY">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex spacebetween">
+                            <p class="title bold darkgrey">CVV / CVC</p><button class="btn transparent" style="max-height: 18px; margin-top: -2px;"><img
+                                    src="../../src/assets/ic-hint.svg" alt="도움말" /></button>
+                        </div>
+
+                        <div class="input-container">
+                            <input class="transparent" id="input_cvvcvc" placeholder="3-4 digits">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-container" style="background: none;">
+                <button class="btn dark" id="confirm">추가</button>
+            </div>
+
+        </div>
+    </main>
+
+</html>

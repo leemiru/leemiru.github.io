@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼목야시장</title>
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="./js/background.js"></script> -->
+    <!-- <script src="./js/header.js"></script> -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+</head>
+
+<body class="whitebg">
+    <header class="mainHeader">
+        <div class="mainHeader-container">
+            <button id="btn-back" class="btn circle" style="opacity: 0;"><img src="../../src/assets/ic-arrow-left.svg"
+                    alt="뒤로" /></button>
+            <img alt="Pleisure" class="header-logo" src="../../src/logo-mono.svg" />
+            <span style="opacity: 0;"></span>
+        </div>
+    </header>
+    <main class="mainWrap">
+        <div class="content-container pd24 withHeader"
+            style="height: 80vh; display: flex; align-items: center; flex-wrap: wrap; justify-content: center; flex-direction: column;"
+            id="automatch">
+            <p class="title twenty bold darkgrey" style="text-align: center;">고객님께 맞는 코치님<br>매칭중입니다!</p>
+            <p class="text small mint" style="text-align: center; margin-top: 12px;">최대 3분까지 소요될 수 있습니다.</p>
+
+            <div class="bottom-container" style="background: none;">
+                <a href="../automatch/automatch_coaches.html"><button class="btn light" id="confirm">확인</button></a>
+            </div>
+
+        </div>
+    </main>
+</body>
+
+<script>
+    $('.btnInfo').click(function () {
+        $('.modalWrap').fadeIn('fast');
+    });
+
+    $('.btnClose').click(function () {
+        $('.modalWrap').fadeOut('fast');
+    })
+</script>
+
+</html>

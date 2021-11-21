@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼목야시장</title>
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="./js/background.js"></script> -->
+    <!-- <script src="./js/header.js"></script> -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+</head>
+
+<body class="whitebg">
+    <header class="mainHeader">
+        <div class="mainHeader-container">
+            <button id="btn-back" class="btn circle"><img src="../../src/assets/ic-arrow-left.svg" alt="뒤로" /></button>
+            <img alt="Pleisure" class="header-logo" src="../../src/logo-mono.svg" />
+            <span style="opacity: 0;"></span>
+        </div>
+    </header>
+    <main class="mainWrap">
+        <div class="payment-container withHeader pd16">
+
+            <div class="title-container">
+                <img src="../../src/assets/ic-check-big.svg" alt="완료" />
+                <span>
+                    <p class="title big darkgrey" style="color: #212529 !important">주문해주셔서 감사합니다!</p>
+                    <span class="title big darkgrey" style="color: #212529 !important">주문번호는 </span>
+                    <span id="order-number" class="title big darkgrey" style="color: #212529 !important; font-weight: bold;">120</span>
+                    <span class="title big darkgrey" style="color: #212529 !important"> 입니다.</span>
+                </span>
+            </div>
+
+            <div class="desc-container">
+                <p id="order-email" class="text medium sdneo">주문하신 가게에서 주문내역을 확인하고 있습니다..</p>
+                <p id="order-time" class="text medium bold darkgrey sdneo">주문시간: 2021/11/17 12:45 CEST</p>
+            </div>
+
+            <!-- <div class="delivery-place" >
+                <p class="title big">결제내역</p>
+                <div class="info-container">
+                    <p id="receiver-name" class="title bold darkgrey">황 정윤</p>
+                    <p id="receiver-email" class="title darkgrey">order@gmail.com</p>
+                    <p id="receiver-phone" class="title darkgrey">+82 10 5476 1588</p>
+                    <p id="receiver-address" class="title tiny darkgrey">서울특별시 강남구 청담동 101-1번지 102호<br>대한민국</p>
+                </div>
+            </div> -->
+
+            <div class="ordered-item">
+                <p class="title big">주문내역</p>
+
+                <div class="small-banner" style="width: calc(100% - 32px);">
+                    <img class="icon" src="../../src/assets/ic-shipping.svg">
+                    <p class="text sfpro" style="font-size: 13px;" id="estimate-ship">음식이 20분 내 준비될 예정입니다.</p>
+                </div>
+
+                <div class="content-container" id="regularLesson" style="margin-bottom: 20px;">
+                    <br>
+
+                    <style>
+                        .LessonSwiper > .swiper-wrapper {
+                            flex-direction: column;
+                        }
+                    </style>
+
+                    <ul class="lesson-list">
+                        <div class="LessonSwiper" id="couponLessonList1">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <li>
+                                        <div class="flex center spacebetween">
+                                            <div>
+                                                <span class="title eighteen bold darkgrey"
+                                                    id="lessonType">대방어+참숭어막회</span>
+                                                <span class="title eighteen bold mint"
+                                                    id="lessonDay">(추천)</span>
+                                            </div>
+                                
+                                        </div>
+                                        <div class="flex" style="margin-top: 8px;">
+                                            <div style="margin-right: 8px;">
+                                                <p class="text bold small">양</p>
+                                                <p class="text bold small">가격</p>
+                                                <!-- <p class="text bold small">매주</p>
+                                                <p class="text bold small">자리</p> -->
+                                            </div>
+                                            <div>
+                                                <p class="text small" id="lessonDateTime">3인분
+                                                </p>
+                                                <p class="text small" id="lessonPrice">₩25,000 ~ 45,000</p>
+                                                <!-- <p class="text small" id="lessonWeek">2회</p>
+                                                <p class="text small" id="lessonMember">3/4</p> -->
+                                            </div>
+                                        </div>
+                                    </li>
+                                </div>
+                                <div class="swiper-slide">
+                                    <li>
+                                        <div class="flex center spacebetween">
+                                            <div>
+                                                <span class="title eighteen bold darkgrey"
+                                                    id="lessonType">연어</span>
+                                                <span class="title eighteen bold mint"
+                                                    id="lessonDay">(추천)</span>
+                                            </div>
+                                
+                                        </div>
+                                        <div class="flex" style="margin-top: 8px;">
+                                            <div style="margin-right: 8px;">
+                                                <p class="text bold small">양</p>
+                                                <p class="text bold small">가격</p>
+                                                <!-- <p class="text bold small">매주</p>
+                                                <p class="text bold small">자리</p> -->
+                                            </div>
+                                            <div>
+                                                <p class="text small" id="lessonDateTime">3인분
+                                                </p>
+                                                <p class="text small" id="lessonPrice">₩25,000 ~ 45,000</p>
+                                                <!-- <p class="text small" id="lessonWeek">2회</p>
+                                                <p class="text small" id="lessonMember">3/4</p> -->
+                                            </div>
+                                        </div>
+                                    </li>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+
+                <!-- <ul class="ordered-list">
+                    <li>
+                        <img src="../../src/content/boots.png" alt="상품이미지">
+                        <span class="item-info">
+                            <p class="text medium darkgrey" id="item-brand">Rossignol Hero</p>
+                            <p class="text medium grey" id="item-name">World Cup 110 Sc. 24.5</p>
+                            <p class="text medium grey" id="item-color">색상: 화이트 / 레드</p>
+                            <p class="text medium grey" id="item-size">사이즈: 275mm</p>
+                            <p class="text medium grey" id="item-quantity">수량: 1</p>
+                        </span>
+
+                        <span class="item-price">
+                            <p class="text small grey" id="item-og-price">W1,970,000</p>
+                            <p class="text dark-grey bold" id="item-real-price">W680,000</p>
+                        </span>
+                    </li>
+                    <li>
+                        <img src="../../src/content/boots.png" alt="상품이미지">
+                        <span class="item-info">
+                            <p class="text medium darkgrey" id="item-brand">Rossignol Hero</p>
+                            <p class="text medium grey" id="item-name">World Cup 110 Sc. 24.5</p>
+                            <p class="text medium grey" id="item-color">색상: 화이트 / 레드</p>
+                            <p class="text medium grey" id="item-size">사이즈: 275mm</p>
+                            <p class="text medium grey" id="item-quantity">수량: 1</p>
+                        </span>
+
+                        <span class="item-price">
+                            <p class="text small grey" id="item-og-price">W1,970,000</p>
+                            <p class="text dark-grey bold" id="item-real-price">W680,000</p>
+                        </span>
+                    </li>
+                    <li>
+                        <img src="../../src/content/boots.png" alt="상품이미지">
+                        <span class="item-info">
+                            <p class="text medium darkgrey" id="item-brand">Rossignol Hero</p>
+                            <p class="text medium grey" id="item-name">World Cup 110 Sc. 24.5</p>
+                            <p class="text medium grey" id="item-color">색상: 화이트 / 레드</p>
+                            <p class="text medium grey" id="item-size">사이즈: 275mm</p>
+                            <p class="text medium grey" id="item-quantity">수량: 1</p>
+                        </span>
+
+                        <span class="item-price">
+                            <p class="text small grey" id="item-og-price">W1,970,000</p>
+                            <p class="text dark-grey bold" id="item-real-price">W680,000</p>
+                        </span>
+                    </li>
+                    <li>
+                        <img src="../../src/content/boots.png" alt="상품이미지">
+                        <span class="item-info">
+                            <p class="text medium darkgrey" id="item-brand">Rossignol Hero</p>
+                            <p class="text medium grey" id="item-name">World Cup 110 Sc. 24.5</p>
+                            <p class="text medium grey" id="item-color">색상: 화이트 / 레드</p>
+                            <p class="text medium grey" id="item-size">사이즈: 275mm</p>
+                            <p class="text medium grey" id="item-quantity">수량: 1</p>
+                        </span>
+
+                        <span class="item-price">
+                            <p class="text small grey" id="item-og-price">W1,970,000</p>
+                            <p class="text dark-grey bold" id="item-real-price">W680,000</p>
+                        </span>
+                    </li>
+                </ul> -->
+
+                <div class="ordered-total" style="padding-left: 8px; padding-right: 8px;">
+                    <div class="total-listitem">
+                        <p class="title darkgrey">금액</p>
+                        <p class="title darkgrey italic" id="total-price">W55,000</p>
+                    </div>
+
+                    <div class="total-listitem">
+                        <p class="title darkgrey">부가세</p>
+                        <p class="title darkgrey italic" id="ship-price">W5,500</p>
+                    </div>
+
+                    <div class="total-listitem">
+                        <p class="title darkgrey">할인</p>
+                        <p class="title darkgrey italic" id="sale-price">- W5,500</p>
+                    </div>
+                </div>
+
+                <div class="flex center spacebetween" style="padding: 8px;">
+                    <p class="title big darkgrey">총 금액</p>
+                    <p class="title big darkgrey italic" id="total-price">W55,000</p>
+                </div>
+            </div>
+
+            <a href="../home/home.html"><button class="btn dark" id="confirm">확인</button></a>
+        </div>
+    </main>
+</body>
+
+<script>
+
+</script>
+</html>

@@ -28,7 +28,14 @@
                     <p id="name" class="title medium darkgrey bold"></p>
                 </div> -->
                 <img class="app-logo" alt="삼목야시장" src="../../src/logo-dark.svg" />
-                <a href="../automatch/automatch_calendar.html"><img src="../../src/assets/ic-calendar.svg" /></a>
+                <a class="btnSchedule" href="../automatch/automatch_calendar.html"><img
+                        src="../../src/assets/ic-calendar.svg" /></a>
+
+                <div class="page-mast__border">
+                    <!-- I left this with the SVG tag because I didn't want to create any conflicts with Tailwind -->
+                    <img src="https://assets.codepen.io/2895033/border.svg"
+                        alt="A wavy border leading to the next section." />
+                </div>
             </div>
 
             <div class="content-container" id="lesson-view">
@@ -89,239 +96,7 @@
                             삼목야시장<br>오픈까지<br></span>
                         <span class="title huge bold lesson-name" style="max-height: 40px;" id="lesson-name">D-7</span>
                     </div>
-
-                    <!-- <div class="content-container" style="margin-bottom: 15px; display:none" id="ticketDetail">
-
-                        <div class="ticketSwiper" style="margin-top: 8px;" id="lesson-ticket-list-renew">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="ticket-infoContainer">
-                                        <div class="flex">
-                                            <span class="title huge bold" id="lesson-sport-name">내곡테니스장</span>
-                                            <p class="text medium" style="margin-left: 8px;" id="lessonType">1:1 화/목</p>
-                                        </div>
-                                        <div class="flex" style="gap: 8px; margin-top: 12px;">
-                                            <p class="remainCount">잔여횟수</p>
-                                            <p id="remainCount">3/8</p>
-                                        </div>
-                                        <div class="ticketSchedule" style="margin-top: 12px;">
-                                            <div class="flex spacebetween">
-                                                <span>
-                                                    <span class="text small">시간:</span>
-                                                    <span class="text small" id="lessonTime">09:40 -
-                                                        10:00</span>
-                                                </span>
-
-                                                <span>
-                                                    <span class="text small mint">시작일 </span>
-                                                    <span class="text small" id="dateStart">2021/05/24</span>
-                                                </span>
-
-                                            </div>
-                                            <div class="flex spacebetween">
-                                                <span>
-                                                    <span class="text small">위치:</span>
-                                                    <span class="text small" id="lessonLocation">서울시 서초구
-                                                        내곡동 171</span>
-                                                </span>
-
-                                                <span>
-                                                    <span class="text small mint">만료일 </span>
-                                                    <span class="text small" id="dateExp">2021/06/30</span>
-                                                </span>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="ticket-actionContainer">
-                                        <button class="btn theme white">채팅</button>
-                                        <button class="btn theme white">레슨변경</button>
-                                        <button class="btn theme white">취소</button>
-                                        <button class="btn theme white">전체취소</button>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="ticket-infoContainer">
-                                        <div class="flex spacebetween">
-                                            <div>
-                                                <div class="flex">
-                                                    <span class="title huge bold" id="lesson-sport-name">테크닉스</span>
-                                                    <p class="text medium" style="margin-left: 8px;" id="lessonType">1:1
-                                                        화/목</p>
-                                                </div>
-                                                <div class="flex" style="gap: 8px; margin-top: 12px;">
-                                                    <p class="remainCount">잔여횟수</p>
-                                                    <p id="remainCount">3/8</p>
-                                                </div>
-                                            </div>
-
-
-
-                                        </div>
-
-                                        <div class="ticketSchedule" style="margin-top: 12px;">
-                                            <div class="flex spacebetween">
-                                                <span>
-                                                    <span class="text small">시간:</span>
-                                                    <span class="text small" id="lessonTime">09:40 -
-                                                        10:00</span>
-                                                </span>
-
-                                                <span>
-                                                    <span class="text small mint">시작일 </span>
-                                                    <span class="text small" id="dateStart">2021/05/24</span>
-                                                </span>
-
-                                            </div>
-                                            <div class="flex spacebetween">
-                                                <span>
-                                                    <span class="text small">위치:</span>
-                                                    <span class="text small" id="lessonLocation">서울시 서초구
-                                                        내곡동 171</span>
-                                                </span>
-
-                                                <span>
-                                                    <span class="text small mint">만료일 </span>
-                                                    <span class="text small" id="dateExp">2021/06/30</span>
-                                                </span>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="ticket-actionContainer">
-                                        <button class="btn theme white">채팅</button>
-                                        <button class="btn theme white">레슨변경</button>
-                                        <button class="btn theme white">취소</button>
-                                        <button class="btn theme white">전체취소</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-
-                    <!-- <div class="content-container" style="margin-bottom: 15px;" id="ticket">
-
-                        <div class="ticketSwiper" style="margin-top: 8px" id="lesson-ticket-list-renew">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <input type="checkbox" checked="true" name="ticket"
-                                        class="sport-listitem" id="first">
-                                    <label id="first" for="first"><img
-                                            src="../../src/category/ic-tennis.svg"
-                                            alt="테니스" />
-                                        <p id="count">1회</p>
-                                    </label>
-                                </div>
-                                <div class="swiper-slide">
-                                    <input type="checkbox" name="ticket" class="sport-listitem"
-                                        id="second">
-                                    <label id="second" for="second"><img
-                                            src="../../src/category/ic-tennis.svg"
-                                            alt="테니스" />
-                                        <p id="count">2회</p>
-                                    </label>
-                                </div>
-                                <div class="swiper-slide">
-                                    <input type="checkbox" name="ticket" class="sport-listitem"
-                                        id="third">
-                                    <label id="third" for="third"><img
-                                            src="../../src/category/ic-tennis.svg"
-                                            alt="테니스" />
-                                        <p id="count">3회</p>
-                                    </label>
-                                </div>
-                                <div class="swiper-slide">
-                                    <input type="checkbox" name="ticket" class="sport-listitem"
-                                        id="fourth">
-                                    <label id="fourth" for="fourth"><img
-                                            src="../../src/category/ic-tennis.svg"
-                                            alt="테니스" />
-                                        <p id="count">4회</p>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- 
-                    <a href="javascript: void(0)" style="margin-bottom: 15px;"><button id="btn-matchnow"
-                            class="btn theme title black bold big flex spacebetween"
-                            style="color: #272d2e !important; margin-bottom: 15px;">프로그램 바로 추천 <img
-                                src="../../src/assets/ic-arrow-right.svg" /></button></a> -->
                 </div>
-
-
-
-                <!-- <div class="horiList escpd24 _sBannerList" >
-    <div class="small-banner">
-        <div class="text big bold mint">안전하게 스포츠를 즐기는<br>스포츠보험!</div>
-        <button id="btn-sports-insrances" class="btn transparent text big bold mint">지금 바로 확인 ></button>
-    </div>
-</div> -->
-
-                <!-- <ul class="horiList _mBannerListNew">
-
-                    <li class="medium-banner-renew">
-                        <a>
-                            <img alt="상품이미지"
-                                src="../../src/content/medium-banner-img.png"
-                                class="banner-image" />
-                            <div class="desc-container">
-                                <div class="title huge white bold">지금 가장 HOT🔥한<br>
-                                    레슨을 나도 한번 도전?
-                                </div>
-
-                                <div class="text white medium" style="margin-bottom: 6px;">전화하고
-                                    기다리고.<br>
-                                    마음대로 스케줄에 맞추기 힘들죠?<br>
-                                    지금바로 핫한 코치님들에게 배워보자구요.
-                                </div>
-                            </div>
-
-                        </a>
-
-                    </li>
-
-                    <li class="medium-banner-renew">
-                        <a>
-                            <img alt="상품이미지"
-                                src="../../src/content/medium-banner-img.png"
-                                class="banner-image" />
-                            <div class="desc-container">
-                                <div class="title huge white bold">지금 가장 HOT🔥한<br>
-                                    레슨을 나도 한번 도전?
-                                </div>
-
-                                <div class="text white medium">전화하고 기다리고.<br>
-                                    마음대로 스케줄에 맞추기 힘들죠?<br>
-                                    지금바로 핫한 코치님들에게 배워보자구요.
-                                </div>
-                            </div>
-
-                        </a>
-
-                    </li>
-
-                    <li class="medium-banner-renew">
-                        <a>
-                            <img alt="상품이미지"
-                                src="../../src/content/medium-banner-img.png"
-                                class="banner-image" />
-                            <div class="desc-container">
-                                <div class="title huge white bold">지금 가장 HOT🔥한<br>
-                                    레슨을 나도 한번 도전?
-                                </div>
-
-                                <div class="text white medium">전화하고 기다리고.<br>
-                                    마음대로 스케줄에 맞추기 힘들죠?<br>
-                                    지금바로 핫한 코치님들에게 배워보자구요.
-                                </div>
-                            </div>
-
-                        </a>
-
-                    </li>
-
-                </ul> -->
 
                 <div class="bannerSwiper" id="_mLessonBannerListNew">
                     <div class="swiper-wrapper">
@@ -889,9 +664,17 @@
         // });
 
         $('.app-logo').click(function () {
-            $('.content-container#ticketDetail').fadeToggle('fast');
-            $('#lesson-name-div').fadeToggle('fast');
-        })
+            $(this).toggleClass('is-active');
+
+            if ($(this).hasClass('is-active')) {
+                $('#lesson-name-info').html('삼목야시장은<br>현재 운영 중!');
+                $('#lesson-name').text('D-Day');
+            } else {
+                $('#lesson-name-info').html('다음 삼목야시장<br>오픈까지');
+                $('#lesson-name').text('D-7');
+            }
+
+        });
 
 
     </script>
@@ -910,6 +693,7 @@
             spaceBetween: 10,
             slidesPerView: "auto",
         });
+
     </script>
 
 </html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼목야시장</title>
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="./js/background.js"></script> -->
+    <!-- <script src="./js/header.js"></script> -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+</head>
+
+<body>
+
+    <div class="modalWrap">
+        <div class="popupContainer">
+            <div class="popup">
+            <div class="titleContainer">
+                <p class="title bold big" id="title">알림메시지</p>
+            </div>
+            <div class="contentContainer">
+                <p class="title small" id="content">서브텍스트</p>
+            </div>
+            <div class="buttonContainer">
+                <button class="btn transparent" id="btnConfirm">확인</button>
+                <button class="btn transparent" style="font-weight: normal;" id="btnConfirm">취소</button>
+                </div>
+            
+        </div>
+        </div>
+        
+    </div>
+</body>
+
+<script>
+    $('.mainTab-listitem#navHome').click(function () {
+        window.location.href = "../home/home.html";
+    });
+
+    $('.mainTab-listitem#navShop').click(function () {
+        window.location.href = "../shop/shop_home.html";
+    });
+
+    $('.mainTab-listitem#navSearch').click(function () {
+        window.location.href = "../home/search.html";
+    });
+
+    $('.mainTab-listitem#navCommunity').click(function () {
+        window.location.href = "../community/community_home.html";
+    });
+
+    $('.mainTab-listitem#navMypage').click(function () {
+        window.location.href = "../mypage/mypage_home.html";
+    });
+
+    $('.medium-banner').click(function () {
+        window.location.href = "../shop/product_detail.html";
+    });
+
+    $('.small-banner').click(function () {
+        window.location.href = "../mypage/insurance_select.html";
+    });
+
+    $('#recommend-coach > ul > li').click(function () {
+        window.location.href = "../automatch/automatch_coachprofile.html";
+    });
+
+    $('#recommend-coach .btn.transparent.title.medium').click(function () {
+        window.location.href = "../instructor/coach_home.html";
+    });
+
+    $('#recommend-school > ul > li').click(function () {
+        window.location.href = "../instructor/instructor_teampage.html";
+    });
+
+    $('#recommend-school .btn.transparent.title.medium').click(function () {
+        window.location.href = "../instructor/instructor_home.html";
+    });
+</script>
+
+</html>

@@ -1,9 +1,10 @@
-<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M13.5418 13.9731C13.7371 14.1684 14.002 14.2782 14.2783 14.2783H14.8887C15.1649 14.2782 15.4298 14.1684 15.6251 13.9731L20.5283 9.06995L22.9168 11.4585V5.2085H16.6668L19.0553 7.59704L14.5835 12.0689L11.4585 8.94391C11.2632 8.74855 10.9982 8.63876 10.722 8.6387H10.1116C9.83534 8.63876 9.57043 8.74855 9.37513 8.94391L2.38867 15.9304L3.86159 17.4033L10.4168 10.8481L13.5418 13.9731Z" fill="url(#paint0_linear)"/>
-<defs>
-<linearGradient id="paint0_linear" x1="3.20728" y1="4.47387" x2="26.8976" y2="21.8622" gradientUnits="userSpaceOnUse">
-<stop stop-color="#0ACF83"/>
-<stop offset="1" stop-color="#10FF26"/>
-</linearGradient>
-</defs>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 25 25" style="enable-background:new 0 0 25 25;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#EC582C;}
+</style>
+<path class="st0" d="M13.7,14.6c0.2,0.2,0.6,0.4,0.9,0.4h0.7c0.3,0,0.7-0.1,0.9-0.4l5.9-5.9l2.9,2.9V4h-7.6l2.9,2.9l-5.4,5.4
+	l-3.8-3.8c-0.2-0.2-0.6-0.4-0.9-0.4H9.5c-0.3,0-0.7,0.1-0.9,0.4l-8.4,8.4L2,18.7l7.9-7.9L13.7,14.6z"/>
 </svg>

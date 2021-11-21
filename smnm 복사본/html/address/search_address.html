@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼목야시장</title>
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="./js/background.js"></script> -->
+    <!-- <script src="./js/header.js"></script> -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+</head>
+
+<body class="whitebg">
+    <header class="mainHeader">
+        <div class="mainHeader-container">
+            <button id="btn-back" class="btn circle"><img src="../../src/assets/ic-arrow-left.svg" alt="뒤로" /></button>
+            <img alt="Pleisure" class="header-logo" src="../../src/logo-mono.svg" />
+            <span style="opacity: 0;"></span>
+        </div>
+    </header>
+    <main class="mainWrap">
+        <div class="content-container withHeader" id="addressSearch">
+            <div class="pd24">
+                <p class="title huge darkgrey bold">지번, 도로명, 건물명을 <br>입력하세요.</p>
+
+                <div class="input-container">
+                    <input class="input transparent" type="address" placeholder="예) 플민동 88-1 또는 삼목야시장 아파트">
+                    <img src="../../src/assets/ic-search.svg" />
+                </div>
+
+                <button id="btnMylocation" class="btn light is-active"><img src="../../src/assets/ic-location.svg" />현 위치로 주소 설정</button>
+            </div>
+
+            <div class="sectionDivider"></div>
+
+            <div>
+                <p class="title big darkgrey bold pd24">최근주소</p>
+
+                <ul>
+                    <li>
+                        <p class="title black">강남구 세곡동 111 아파트 109동 204호</p>
+                        <button class="btn transparent"><img src="../../src/assets/ic-close-big.svg" /></button>
+                    </li>
+                    <li>
+                        <p class="title black">강남구 세곡동 111 아파트 109동 204호</p>
+                        <button class="btn transparent"><img src="../../src/assets/ic-close-big.svg" /></button>
+                    </li>
+                    <li>
+                        <p class="title black">강남구 세곡동 111 아파트 109동 204호</p>
+                        <button class="btn transparent"><img src="../../src/assets/ic-close-big.svg" /></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+
+<script>
+
+    $('.input.transparent').click(function () {
+        window.location.href = "./search_result.html"
+    });
+
+    $('#btnMylocation').click(function () {
+        window.location.href = "../address/map_detail.html"
+    });
+</script>
+
+</html>
