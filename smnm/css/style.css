@@ -402,10 +402,10 @@ input.transparent {
 }
 
 .alert-badge {
-  background-color: rgb(255, 2, 2);
-  min-width: 20px;
+  background-color: var(--theme-color);
+  min-width: 14px;
   padding: 2px;
-  height: 20px;
+  height: 14px;
   border-radius: 20px;
   font-size: 14px;
   text-align: center;
@@ -980,15 +980,22 @@ header.mainHeader {
   width: 100%;
   z-index: 999;
   transition: all 200ms;
-  background: var(--bg-color);
+  background: #01283baf;
 }
 
 body.whitebg .mainHeader {
   /* background: #fff; */
 }
 
+.mainHeader {
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+}
+
 .mainHeader.transparent {
-  background: transparent !important;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  background: linear-gradient(to bottom, #01283b, #01283b00) !important;
 }
 
 .mainHeader.transparent > .mainHeader-container > .header-logo {
@@ -1165,9 +1172,9 @@ main.mainWrap > div.home-container > .profile-container {
 
 main.mainWrap > div.home-container > .profile-container > .alert-badge {
   position: absolute;
-  margin-left: -6px;
-  margin-top: -6px;
-  z-index: 2;
+  right: 0%;
+  margin-right: 16px;
+  margin-bottom: 24px;
   z-index: 999;
 }
 
@@ -1451,11 +1458,7 @@ div.content-container#lesson-view > .welcome-banner #btn-matchnow > img {
   padding: 14px;
   border-radius: 10px;
   margin-top: 20px;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255) 60%,
-    rgba(254, 116, 72, 0.2)
-  );
+  border: 1px solid var(--white-bg-opacity);
 }
 
 .home-container .small-banner {
@@ -1470,6 +1473,7 @@ div.content-container#lesson-view > .welcome-banner #btn-matchnow > img {
   max-height: calc(100% + 28px);
   object-fit: contain;
   border-radius: 10px;
+  filter: brightness(1000%);
 }
 
 .small-banner > img.icon {
@@ -1869,11 +1873,15 @@ main.mainWrap > div.alert-container > ul > li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  margin-bottom: 8px;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.125);
+  /* border-bottom: 1px solid var(--white-bg-opacity); */
   height: 83px;
   opacity: 0.3;
-  padding-left: 24px;
-  padding-right: 24px;
+  background: var(--white-bg-opacity);
+  border-radius: 10px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 main.mainWrap > div.alert-container > ul > li.is-active {
@@ -1881,13 +1889,19 @@ main.mainWrap > div.alert-container > ul > li.is-active {
 }
 
 main.mainWrap > div.alert-container > ul > li:active {
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: var(--theme-color);
+}
+
+main.mainWrap > div.alert-container .btn.transparent > img {
+  width: 8px;
+  height: auto;
 }
 
 /* 레슨 검색 */
 .searchbar {
   /* border: 1px solid #bababa; */
-  background-color: rgba(255, 255, 255, 0.125);
+  /* background-color: rgba(255, 255, 255, 0.125); */
+  background-color: var(--lightdark-color);
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.075);
   border-radius: 10px;
   padding-left: 14px;
@@ -2026,7 +2040,8 @@ input#myLocation:checked + #myLocation > img {
 
 .filter.light > .horiList > .filter-listitem {
   /* border: 1px solid var(--border-color); */
-  background: rgba(255, 255, 255, 0.25);
+  /* background: rgba(255, 255, 255, 0.25); */
+  background-color: #455e6d;
   border: none;
   color: #fff;
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.05);
@@ -3311,7 +3326,7 @@ input#myLocation:checked + #myLocation > img {
 }
 
 .bottom-container {
-  background: #fff;
+  background: var(--lightdark-color);
   width: 100%;
   position: fixed !important;
   bottom: 0;
@@ -3368,8 +3383,15 @@ input#myLocation:checked + #myLocation > img {
   border-radius: 10px;
   padding-left: 16px;
   padding-right: 16px;
-  border: 1px solid #e3e9e9;
+  border: 1px solid var(--white-bg-opacity);
   margin-top: 4px;
+}
+.content-container#productPayment .input-container > img {
+  filter: brightness(1000%);
+}
+
+.content-container#productPayment .input-container > img.bracket {
+  width: 8px;
 }
 
 .content-container#productPayment .input-container:active {
@@ -3428,11 +3450,15 @@ input#myLocation:checked + #myLocation > img {
   height: 100px;
   resize: none;
   padding: 0;
-  color: #333;
+  color: #fff;
   background: transparent;
   border: none;
   padding-top: 12px;
   padding-bottom: 12px;
+}
+
+.content-container#productPayment .input-container textarea.input.transparent::placeholder {
+  color: #aaa;
 }
 
 .content-container#productPayment .ordered-total {
@@ -5184,7 +5210,7 @@ input[type="checkbox"].switch:checked + label::after {
 
 .content-container#preference > ul > li:active,
 .content-container#preference > ul > label:active {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(255,255,255,0.25);
 }
 
 .content-container#preference input {

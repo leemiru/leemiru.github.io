@@ -29,29 +29,29 @@
     <main class="mainWrap">
         <div class="content-container withHeader" id="creditList">
 
-            <p class="title huge darkgrey pd24 bold" style="padding-top: 24px;">충전내역</p>
+            <p class="title huge darkgrey pd24 bold" style="padding-top: 24px;">적립내역</p>
 
             <div class="content-container pd24" id="preference">
                 <ul style="margin-top: 12px;">
                     <li class="flex spacebetween" style="height: 72px;" id="credit_id">
-                        <p class="title" style="width: 100%; color:#46ff42;">충전</p>
+                        <p class="title" style="width: 100%;">삼목단골<br>환영기념</p>
                         <div style="width: 100%; text-align: left; color: #4f4f4f;">
-                            <p class="text medium" id="usedDate">2021/03/08 11:22</p>
-                            <p class="text medium">충전 후 잔액: <span id="usedLeft">1,000원</span></p>
+                            <p class="text medium" id="usedDate">2021/11/08 11:22</p>
+                            <p class="text medium">적립 후 포인트: <span id="usedLeft">1,000P</span></p>
                         </div>
                     </li>
                     <li class="flex spacebetween" style="height: 72px;" id="credit_id">
-                        <p class="title" style="width: 100%; color:#46ff42;">충전</p>
+                        <p class="title" style="width: 100%;">두 번째 주문<br>달성 이벤트</p>
                         <div style="width: 100%; text-align: left; color: #4f4f4f;">
-                            <p class="text medium" id="usedDate">2021/03/08 11:22</p>
-                            <p class="text medium">충전 후 잔액: <span id="usedLeft">1,000원</span></p>
+                            <p class="text medium" id="usedDate">2021/11/08 11:22</p>
+                            <p class="text medium">적립 후 포인트: <span id="usedLeft">1,000P</span></p>
                         </div>
                     </li>
                     <li class="flex spacebetween" style="height: 72px;" id="credit_id">
-                        <p class="title" style="width: 100%; color:#46ff42;">충전</p>
+                        <p class="title" style="width: 100%;">첫 방문 이벤트<br>천 포인트 적립</p>
                         <div style="width: 100%; text-align: left; color: #4f4f4f;">
-                            <p class="text medium" id="usedDate">2021/03/08 11:22</p>
-                            <p class="text medium">충전 후 잔액: <span id="usedLeft">1,000원</span></p>
+                            <p class="text medium" id="usedDate">2021/11/08 11:22</p>
+                            <p class="text medium">적립 후 포인트: <span id="usedLeft">1,000P</span></p>
                         </div>
                     </li>
                     
@@ -61,5 +61,11 @@
         </div>
     </main>
 </body>
+
+<script>
+    $('#btn-back').click(function () {
+        history.go(-1);
+    })
+</script>
 
 </html>

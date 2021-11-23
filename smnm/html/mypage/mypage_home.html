@@ -38,7 +38,8 @@
                     <p id="name" class="title medium darkgrey bold"></p>
                 </div> -->
                 <img class="app-logo is-active" alt="삼목야시장" src="../../src/logo-dark.svg" />
-                <a href="../automatch/automatch_calendar.html"><img src="../../src/assets/ic-calendar.svg" /></a>
+                <a href="../home/home_alert.html"><img src="../../src/assets/ic-noti.svg" /></a>
+                <div class="alert-badge">1</div>
 
                 <div class="page-mast__border">
                     <!-- I left this with the SVG tag because I didn't want to create any conflicts with Tailwind -->
@@ -53,24 +54,17 @@
                         <p class="title darkgrey big" id="userName">삼목포인트</p>
                         <p class="title darkgrey huge bold">12,000P</p>
                     </div>
-                    <div class="flex center">
-                        <a href="javascript:void(0);"><button class="btn transparent noti _notification"><img
-                                    src="../../src/assets/ic-noti.svg" />
-                                <div class="alert"></div>
-                            </button></a>
-                        <!-- <img alt="프로필" src="../../src/content/profile.png" class="profileImg" /> -->
-                    </div>
                 </div>
                 <p class="text mint small">삼목야시장 포인트는 삼목야시장 내의 점포들에서 할인용도로만 사용하실 수 있어요.</p>
 
                 <ul class="horiList">
                     <li>
-                        <button class="btn white" onclick="openCharged()"><img
+                        <button class="btn white" id="btnCharged"><img
                                 src="../../src/assets/ic-chargehistory.svg" /></button>
                         <p class="title small bold">적립내역</p>
                     </li>
                     <li>
-                        <button class="btn white" onclick="openUsed()"><img
+                        <button class="btn white" id="btnUsed"><img
                                 src="../../src/assets/ic-usage.svg" /></button>
                         <p class="title small bold">사용내역</p>
                     </li>
@@ -86,10 +80,10 @@
                     <a href="./payment_select.html" id="mgmt">
                         시설 예약현황
                     </a>
-                    <a href="javascript: void(0)" id="myPost">
+                    <a href="./mycoupon.html" id="myCoupon">
                         보유 쿠폰
                     </a>
-                    <a href="./payment_select.html" id="purchaseHistory">
+                    <a href="../shop/purchase_history.html" id="purchaseHistory">
                         주문내역
                     </a>
                     <a href="./mypage_editprofile.html" id="editProfile">
@@ -260,6 +254,14 @@
 
     $('.mainTab-listitem#navMypage').click(function () {
         window.location.href = "../mypage/mypage_home.html";
+    });
+
+    $('#btnCharged').click(function () {
+        window.location.href = "../mypage/credit_charged.html";
+    });
+
+    $('#btnUsed').click(function () {
+        window.location.href = "../mypage/credit_used.html";
     });
 </script>
 
