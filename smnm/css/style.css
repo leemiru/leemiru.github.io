@@ -1902,6 +1902,7 @@ main.mainWrap > div.alert-container > ul > li:active {
 
 .searchbar > #search-bar.transparent {
   color: #fff;
+  width: 100%;
 }
 
 .searchbar > #search-bar.transparent::placeholder {
@@ -2011,7 +2012,7 @@ input#myLocation:checked + #myLocation > img {
 }
 
 .filter > .horiList > input:checked + .filter-listitem > img {
-  filter: invert(1);
+  /* filter: invert(1); */
 }
 
 /* 레슽타입 필터 뉴모피즘 */
@@ -2137,7 +2138,7 @@ input#myLocation:checked + #myLocation > img {
 }
 
 .filter.listFilter > .horiList > input:checked + .filter-listitem > img {
-  filter: invert(1);
+  /* filter: invert(1); */
 }
 
 /* 티켓 */
