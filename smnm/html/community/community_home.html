@@ -23,6 +23,8 @@
     <meta property="og:image" content="/src/og-logo.png">
     <meta property="og:description" content="삼대가 함께 오는 삼목야시장">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d2aad6466b96861de37fe4fe7aea36c8"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../../css/style.css" />
@@ -41,13 +43,32 @@
                 <a href="../automatch/automatch_calendar.html"><img src="../../src/assets/ic-calendar.svg" /></a>
                 <div class="page-mast__border">
                     <!-- I left this with the SVG tag because I didn't want to create any conflicts with Tailwind -->
-                    <img src="https://assets.codepen.io/2895033/border.svg" alt="A wavy border leading to the next section." />
-                  </div>
+                    <img src="https://assets.codepen.io/2895033/border.svg"
+                        alt="A wavy border leading to the next section." />
+                </div>
             </div>
 
-            <div class="mapContainer">
-                
+            <div class="filter light" style="margin-bottom: 30px;">
+                <ul class="horiList escpd24 theme-type"
+                    style="overflow-x: scroll; margin-top: 0px; padding-bottom: 8px; margin-bottom: -8px !important;">
+                    <input type="radio" name="mapType" checked="true" id="11" />
+                    <label for="11" class="filter-listitem">
+                        푸드트럭
+                    </label>
+                    <input type="radio" name="mapType" id="12" />
+                    <label for="12" class="filter-listitem">
+                        편의시설
+                    </label>
+                    <input type="radio" name="mapType" id="13" />
+                    <label for="13" class="filter-listitem">
+                        교통시설
+                    </label>
+                </ul>
             </div>
+        </div>
+
+        <div class="mapContainer">
+            <div id="map" style="width:500px;height:400px;"></div>
         </div>
 
     </main>
@@ -80,6 +101,14 @@
 </body>
 
 <script>
+    var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+    var options = { //지도를 생성할 때 필요한 기본 옵션
+        center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+        level: 3 //지도의 레벨(확대, 축소 정도)
+    };
+
+    var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+
     $('#filter').click(function () {
         $('.modalWrap').fadeIn('fast');
     });
