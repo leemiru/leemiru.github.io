@@ -137,33 +137,33 @@ $(window).scroll(function () {
 
   //header는 스크롤을 바닥에 닿자마자 반전
   if ($height >= $bodyHeights - 48) {
-    $contHeader.css("filter", "invert(1) hue-rotate(180deg)");
+    // $contHeader.css("filter", "invert(1) hue-rotate(180deg)");
     $header.addClass("blur");
-    $mainNav.addClass("blur");
+    // $mainNav.addClass("blur");
 
     $gallery.css("opacity", "1");
 
-    $mainTab.css("display", "inline-block");
-    $body.css("background-color", "#fff");
+    // $mainTab.css("display", "inline-block");
+    // $body.css("background-color", "#fff");
     //화면이 펼쳐지면 인디케이터가 멈춤
     stopBounce();
   } else {
-    $body.css("background-color", "#111");
-    $contHeader.css("filter", "invert(0)");
+    // $body.css("background-color", "#111");
+    // $contHeader.css("filter", "invert(0)");
 
     $btnGallery.text("⍗");
     $header.removeClass("blur");
-    $mainNav.removeClass("blur");
-    $mainTab.css("display", "none");
+    // $mainNav.removeClass("blur");
+    // $mainTab.css("display", "none");
   }
 
   //footer는 스크롤을 시작하자마자 반전
   if ($height >= 48) {
-    $contFooter.css("filter", "invert(1)  hue-rotate(180deg)");
+    // $contFooter.css("filter", "invert(1)  hue-rotate(180deg)");
     $footer.addClass("blur");
     $btnGallery.text("⍐");
   } else {
-    $contFooter.css("filter", "invert(0)");
+    // $contFooter.css("filter", "invert(0)");
     $footer.removeClass("blur");
   }
 

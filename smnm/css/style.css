@@ -97,7 +97,7 @@ body {
   word-break: keep-all;
   letter-spacing: -0.125px;
   font-family: "NotoSans", "Noto Sans KR", sans-serif;
-  transition: background-color 100ms, width 100ms, background 100ms, color 100ms;
+  /* transition: background-color 100ms, width 100ms, background 100ms, color 100ms; */
 }
 
 html {
@@ -621,6 +621,7 @@ main.mainWrap {
 }
 
 main.mainWrap.withTab {
+  padding-top: 94px;
   padding-bottom: 128px;
 }
 
@@ -1140,10 +1141,25 @@ main.mainWrap > div.home-container > .profile-container::before {
 } */
 
 main.mainWrap > div.home-container > .profile-container {
-  margin-top: 26px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  width: calc(100% - 48px);
+  padding-left: 24px;
+  top: 0;
+  left: 0;
+  padding-right: 24px;
+  padding-top: 24px;
+  z-index: 99999;
+  backdrop-filter: blur(30px) brightness(150%);
+  -webkit-backdrop-filter: blur(30px) brightness(150%);
+  background: linear-gradient(to bottom, #01283b, #01283b00) !important;
+  transition: top 200ms ease;
+}
+
+main.mainWrap > div.home-container > .profile-container.hide {
+  top: -86px;
 }
 
 .mainHeader .page-mast__border {
