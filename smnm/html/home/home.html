@@ -12,11 +12,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
-    <link rel="apple-touch-icon-precomposed" sizes="300x300" href="/src/app-logo.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="300x300" href="../../src/app-logo.png" />
     <meta property="og:url" content="https://www.leemiru.com/smnm/index.html">
     <meta property="og:title" content="삼목야시장">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="/src/og-logo.png">
+    <meta property="og:image" content="../../src/og-logo.png">
     <meta property="og:description" content="삼대가 함께 오는 삼목야시장">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -29,13 +29,10 @@
 </head>
 
 <body>
+
     <main class="mainWrap withTab">
         <div class="home-container">
             <div class="profile-container" style="height: 60px;">
-                <!-- <img class="profile-img" alt="프로필 이미지" src="../../src/content/profile.png" />
-                <div class="profile-info">
-                    <p id="name" class="title medium darkgrey bold"></p>
-                </div> -->
                 <img class="app-logo" alt="삼목야시장" src="../../src/logo-dark.svg" />
                 <a href="../home/home_alert.html"><img src="../../src/assets/ic-noti.svg" /></a>
                 <div class="alert-badge">1</div>
@@ -48,56 +45,6 @@
             </div>
 
             <div class="content-container" id="lesson-view">
-                <!-- 
-                <div class="content-container" id="lesson-type-renew">
-                    <div class="filter light">
-                        <ul class="horiList escpd24 sports-type"
-                            style="overflow-x: scroll; margin-top: 0; padding-bottom: 8px; margin-bottom: -8px !important;">
-                            <input type="radio" name="itemType" id="myLocationHome" />
-                            <label for="myLocationHome" class="filter-listitem">
-                                <img src="../../src/assets/ic-mylocation.svg"
-                                    style="width: 20px; height: 20px; object-fit: contain;" />
-                                내 위치
-                            </label>
-                            <input type="radio" name="itemType" id="tennis" value="테니스" />
-                            <label for="tennis" class="filter-listitem">
-                                테니스
-                            </label>
-                            <input type="radio" name="itemType" id="snowboard" value="스노우보드" />
-                            <label for="snowboard" class="filter-listitem">
-                                스노우보드
-                            </label>
-                            <input type="radio" name="itemType" id="jujitsu" value="주짓수" />
-                            <label for="jujitsu" class="filter-listitem">
-                                주짓수
-                            </label>
-                            <input type="radio" name="itemType" id="ski" value="볼링" />
-                            <label for="ski" class="filter-listitem">
-                                볼링
-                            </label>
-                            <input type="radio" name="itemType" id="golf" value="골프" />
-                            <label for="golf" class="filter-listitem">
-                                골프
-                            </label>
-                            <input type="radio" name="itemType" id="waterski" value="수상스키" />
-                            <label for="waterski" class="filter-listitem">
-                                수상스키
-                            </label>
-                            <input type="radio" name="itemType" id="wakeboard" value="웨이크보드" />
-                            <label for="wakeboard" class="filter-listitem">
-                                웨이크보드
-                            </label>
-                            <input type="radio" name="itemType" id="wakesurfing" value="웨이크서핑" />
-                            <label for="wakesurfing" class="filter-listitem">
-                                웨이크서핑
-                            </label>
-                        </ul>
-                    </div>
-
-
-                </div> -->
-
-
                 <div class="welcome-banner" style="margin-bottom: 5px;">
                     <div style="min-height: 88px; margin-bottom: 5px; display: flex; justify-content: space-between; align-items: center;"
                         id="lesson-name-div">
@@ -168,13 +115,13 @@
                     </div>
                 </div>
 
-                <div class="content-container" id="recommend-lesson-renew" style="margin-top: 30px;">
+                <div class="content-container" id="recommend-menu-renew" style="margin-top: 30px;">
                     <div class="section-header">
                         <p class="title huge bold darkgrey">인기메뉴 바로주문🥡</p>
                         <button class="btn theme title big" id="btn-match-lessons">더보기</button>
                     </div>
 
-                    <div class="itemSwiper" style="margin-top: 15px" id="_mLessonListNew">
+                    <div class="itemSwiper" style="margin-top: 15px" id="_mMenuListNew">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide" id="lesson-1">
                                 <li class="card-listitem-renew">
@@ -200,7 +147,39 @@
                                             <p class="text small bold" id="nameCoach">삼목점포명</p>
                                         </div>
 
-                                        <button class="btn btnDirectorder">18,000원 ~</button>
+                                        <a style="width: 100%" href="../automatch/automatch_payment.html"><button
+                                                class="btn btnDirectorder">18,000원 ~</button></a>
+
+                                    </div>
+
+                                </li>
+                            </div>
+                            <div class="swiper-slide" id="lesson-1">
+                                <li class="card-listitem-renew">
+                                    <img class="content-image"
+                                        src="https://search.pstatic.net/common/?autoRotate=true&quality=95&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210520_159%2F1621477604605TpTAU_JPEG%2Fm000584_286.jpg&type=h166"
+                                        alt="추천 맛집" />
+                                    <div class="desc-container">
+                                        <div class="filter listFilter">
+                                            <ul class="horiList"
+                                                style="overflow-x: scroll; margin-top: 0; padding-bottom: 8px; margin-bottom: -8px !important;">
+                                                <input type="checkbox" name="listFilter" id="tag1" />
+                                                <label for="tag1" class="filter-listitem">
+                                                    인천로컬
+                                                </label>
+                                                <input type="checkbox" name="listFilter" id="tag2" />
+                                                <label for="tag2" class="filter-listitem">
+                                                    이집맛집
+                                                </label>
+                                            </ul>
+                                        </div>
+                                        <p class="title small normal" id="titleLesson">닭강정(대)</p>
+                                        <div class="flex center spacebetween" style="width: 100%;">
+                                            <p class="text small bold" id="nameCoach">신포닭강정</p>
+                                        </div>
+
+                                        <a style="width: 100%" href="../automatch/automatch_payment.html"><button
+                                                class="btn btnDirectorder">18,000원</button></a>
 
                                     </div>
 
@@ -230,7 +209,8 @@
                                             <p class="text small bold" id="nameCoach">삼목점포명</p>
                                         </div>
 
-                                        <button class="btn btnDirectorder">6,000원 ~</button>
+                                        <a style="width: 100%" href="../automatch/automatch_payment.html"><button
+                                                class="btn btnDirectorder">13,000원 ~</button></a>
 
                                     </div>
 
@@ -260,37 +240,8 @@
                                             <p class="text small bold" id="nameCoach">삼목점포명</p>
                                         </div>
 
-                                        <button class="btn btnDirectorder">13,000원 ~</button>
-
-                                    </div>
-
-                                </li>
-                            </div>
-                            <div class="swiper-slide" id="lesson-1">
-                                <li class="card-listitem-renew">
-                                    <img class="content-image"
-                                        src="https://png.pngtree.com/png-vector/20190830/ourlarge/pngtree-food-icon-design-vector-png-image_1708316.jpg"
-                                        alt="추천 맛집" />
-                                    <div class="desc-container">
-                                        <div class="filter listFilter">
-                                            <ul class="horiList"
-                                                style="overflow-x: scroll; margin-top: 0; padding-bottom: 8px; margin-bottom: -8px !important;">
-                                                <input type="checkbox" name="listFilter" id="tag1" />
-                                                <label for="tag1" class="filter-listitem">
-                                                    해쉬태그
-                                                </label>
-                                                <input type="checkbox" name="listFilter" id="tag2" />
-                                                <label for="tag2" class="filter-listitem">
-                                                    해쉬태그
-                                                </label>
-                                            </ul>
-                                        </div>
-                                        <p class="title small normal" id="titleLesson">인기메뉴<br>이름</p>
-                                        <div class="flex center spacebetween" style="width: 100%;">
-                                            <p class="text small bold" id="nameCoach">삼목점포명</p>
-                                        </div>
-
-                                        <button class="btn btnDirectorder">28,000원 ~</button>
+                                        <a style="width: 100%" href="../automatch/automatch_payment.html"><button
+                                                class="btn btnDirectorder">28,000원 ~</button></a>
 
                                     </div>
 
@@ -754,6 +705,10 @@
             window.location.href = "../instructor/instructor_teampage.html";
         });
 
+        $('#_mMenuListNew .swiper-slide').click(function () {
+            window.location.href = "../instructor/instructor_teampage.html";
+        });
+
         $('#_mLessonBannerListNew .swiper-slide').click(function () {
             window.location.href = "../instructor/instructor_teampage.html";
         });
@@ -811,44 +766,44 @@
         });
 
         // Hide Header on on scroll down
-var didScroll;
-var lastScrollTop = 0;
-var delta = 5;
-// var navbarHeight = $('main.mainWrap > div.home-container > .profile-container').outerHeight();
-var navbarHeight = 0;
+        var didScroll;
+        var lastScrollTop = 0;
+        var delta = 5;
+        // var navbarHeight = $('main.mainWrap > div.home-container > .profile-container').outerHeight();
+        var navbarHeight = 0;
 
-$(window).scroll(function(event){
-    didScroll = true;
-});
+        $(window).scroll(function (event) {
+            didScroll = true;
+        });
 
-setInterval(function() {
-    if (didScroll) {
-        hasScrolled();
-        didScroll = false;
-    }
-}, 250);
+        setInterval(function () {
+            if (didScroll) {
+                hasScrolled();
+                didScroll = false;
+            }
+        }, 250);
 
-function hasScrolled() {
-    var st = $(this).scrollTop();
-    
-    // Make sure they scroll more than delta
-    if(Math.abs(lastScrollTop - st) <= delta)
-        return;
-    
-    // If they scrolled down and are past the navbar, add class .nav-up.
-    // This is necessary so you never see what is "behind" the navbar.
-    if (st > lastScrollTop && st > navbarHeight){
-        // Scroll Down
-        $('main.mainWrap > div.home-container > .profile-container').addClass('hide');
-    } else {
-        // Scroll Up
-        if(st + $(window).height() < $(document).height()) {
-            $('main.mainWrap > div.home-container > .profile-container').removeClass('hide');
+        function hasScrolled() {
+            var st = $(this).scrollTop();
+
+            // Make sure they scroll more than delta
+            if (Math.abs(lastScrollTop - st) <= delta)
+                return;
+
+            // If they scrolled down and are past the navbar, add class .nav-up.
+            // This is necessary so you never see what is "behind" the navbar.
+            if (st > lastScrollTop && st > navbarHeight) {
+                // Scroll Down
+                $('main.mainWrap > div.home-container > .profile-container').addClass('hide');
+            } else {
+                // Scroll Up
+                if (st + $(window).height() < $(document).height()) {
+                    $('main.mainWrap > div.home-container > .profile-container').removeClass('hide');
+                }
+            }
+
+            lastScrollTop = st;
         }
-    }
-    
-    lastScrollTop = st;
-}
 
     </script>
 

@@ -29,210 +29,211 @@
 </head>
 
 <body>
-    <main class="mainWrap withTab">
-        <div class="home-container">
-            <div class="profile-container" style="height: 60px;">
-                <!-- <div class="alert-badge">1</div>
+    <main class="mainWrap withTab" style="padding-bottom: 20px; padding-top: 0;">
+        <main class="mainWrap withTab" style="padding-bottom: 20px;">
+            <div class="home-container">
+                <div class="profile-container" style="height: 60px;">
+                    <!-- <div class="alert-badge">1</div>
                 <img class="profile-img" alt="프로필 이미지" src="../../src/content/profile.png" />
                 <div class="profile-info">
                     <p id="name" class="title medium darkgrey bold"></p>
                 </div> -->
-                <img class="app-logo is-active" alt="삼목야시장" src="../../src/logo-dark.svg" />
-                <a href="../home/home_alert.html"><img src="../../src/assets/ic-noti.svg" /></a>
-                <div class="alert-badge">1</div>
+                    <img class="app-logo is-active" alt="삼목야시장" src="../../src/logo-dark.svg" />
+                    <a href="../home/home_alert.html"><img src="../../src/assets/ic-noti.svg" /></a>
+                    <div class="alert-badge">1</div>
 
-                <div class="page-mast__border">
-                    <!-- I left this with the SVG tag because I didn't want to create any conflicts with Tailwind -->
-                    <img src="https://assets.codepen.io/2895033/border.svg" alt="A wavy border leading to the next section." />
-                  </div>
-            </div>
-        </div>
-        <div class="content-container" id="myPage">
-            <div class="profile-container pd24">
-                <div class="flex center spacebetween">
-                    <div>
-                        <p class="title darkgrey big" id="userName">삼목포인트</p>
-                        <p class="title darkgrey huge bold">12,000P</p>
+                    <div class="page-mast__border">
+                        <!-- I left this with the SVG tag because I didn't want to create any conflicts with Tailwind -->
+                        <img src="https://assets.codepen.io/2895033/border.svg"
+                            alt="A wavy border leading to the next section." />
                     </div>
                 </div>
-                <p class="text mint small">삼목야시장 포인트는 삼목야시장 내의 점포들에서 할인용도로만 사용하실 수 있어요.</p>
-
-                <ul class="horiList">
-                    <li>
-                        <button class="btn white" id="btnCharged"><img
-                                src="../../src/assets/ic-chargehistory.svg" /></button>
-                        <p class="title small bold">적립내역</p>
-                    </li>
-                    <li>
-                        <button class="btn white" id="btnUsed"><img
-                                src="../../src/assets/ic-usage.svg" /></button>
-                        <p class="title small bold">사용내역</p>
-                    </li>
-                </ul>
             </div>
+            <div class="content-container" id="myPage">
+                <div class="profile-container pd24">
+                    <div class="flex center spacebetween">
+                        <div>
+                            <p class="title darkgrey big" id="userName">삼목포인트</p>
+                            <p class="title darkgrey huge bold">12,000P</p>
+                        </div>
+                    </div>
+                    <p class="text mint small">삼목야시장 포인트는 삼목야시장 내의 점포들에서 할인용도로만 사용하실 수 있어요.</p>
 
-            <div class="content-container pd24" style="margin-bottom: 50px;" id="preference">
-
-                <ul>
-                    <a id="myCart">
-                        음식 주문현황
-                    </a>
-                    <a href="./payment_select.html" id="mgmt">
-                        시설 예약현황
-                    </a>
-                    <a href="./mycoupon.html" id="myCoupon">
-                        보유 쿠폰
-                    </a>
-                    <a href="../shop/purchase_history.html" id="purchaseHistory">
-                        주문내역
-                    </a>
-                    <a href="./mypage_editprofile.html" id="editProfile">
-                        내 정보 관리
-                    </a>
-                    <a href="./settings.html" id="settings">
-                        설정
-                    </a>
-                </ul>
-            </div>
-
-        </div>
-
-        <div id="charged_popup"
-            style=" position: absolute; width: 100%; top: 0; z-index: 9999; background-color: white; height: 110%; display: none;">
-            <header class="mainHeader">
-                <div class="mainHeader-container">
-                    <button class="btn circle" onclick="closeCharged()"><img src="../../src/assets/ic-arrow-left.svg"
-                            alt="뒤로" /></button>
-                    <img alt="Pleisure" class="header-logo" src="../../src/logo-mono.svg" />
-                    <span style="opacity: 0;"></span>
-                </div>
-            </header>
-            <div class="content-container withHeader" id="creditList" style=" padding-top: 62px; ">
-
-                <p class="title huge darkgrey pd24 bold" style="padding-top: 24px;">충전내역</p>
-
-                <div class="content-container pd24" id="preference">
-                    <ul style="margin-top: 12px;">
-                        <li class="flex spacebetween" style="height: 72px;" id="credit_id">
-                            <div style="width: 100%;">
-                                <p class="title" style="color: #10ff26;">충전금액</p>
-                                <p class="title" id="bill" style="color: #10ff26;">200,000원</p>
-                            </div>
-
-                            <div style="width: 100%; text-align: left; color: #4f4f4f;">
-                                <p class="text medium" id="usedDate">2021/03/08 11:22</p>
-                                <p class="text medium">충전 후 잔액: <span id="usedLeft">1,000원</span></p>
-                            </div>
+                    <ul class="horiList">
+                        <li>
+                            <button class="btn white" id="btnCharged"><img
+                                    src="../../src/assets/ic-chargehistory.svg" /></button>
+                            <p class="title small bold">적립내역</p>
                         </li>
-                        <li class="flex spacebetween" style="height: 72px;" id="credit_id">
-                            <div style="width: 100%;">
-                                <p class="title" style="color: #10ff26;">충전금액</p>
-                                <p class="title" id="bill" style="color: #10ff26;">200,000원</p>
-                            </div>
-
-                            <div style="width: 100%; text-align: left; color: #4f4f4f;">
-                                <p class="text medium" id="usedDate">2021/03/08 11:22</p>
-                                <p class="text medium">충전 후 잔액: <span id="usedLeft">1,000원</span></p>
-                            </div>
+                        <li>
+                            <button class="btn white" id="btnUsed"><img src="../../src/assets/ic-usage.svg" /></button>
+                            <p class="title small bold">사용내역</p>
                         </li>
-                        <li class="flex spacebetween" style="height: 72px;" id="credit_id">
-                            <div style="width: 100%;">
-                                <p class="title" style="color: #10ff26;">충전금액</p>
-                                <p class="title" id="bill" style="color: #10ff26;">200,000원</p>
-                            </div>
-
-                            <div style="width: 100%; text-align: left; color: #4f4f4f;">
-                                <p class="text medium" id="usedDate">2021/03/08 11:22</p>
-                                <p class="text medium">충전 후 잔액: <span id="usedLeft">1,000원</span></p>
-                            </div>
-                        </li>
-
                     </ul>
                 </div>
-            </div>
-        </div>
 
-        <div id="used_popup"
-            style=" position: absolute; width: 100%; top: 0; z-index: 9999; background-color: white; height: 110%; display: none;">
-            <header class="mainHeader">
-                <div class="mainHeader-container">
-                    <button class="btn circle" onclick="closeUsed()"><img src="../../src/assets/ic-arrow-left.svg"
-                            alt="뒤로" /></button>
-                    <img alt="Pleisure" class="header-logo" src="../../src/logo-mono.svg" />
-                    <span style="opacity: 0;"></span>
-                </div>
-            </header>
-            <div class="content-container withHeader" id="creditList" style=" padding-top: 62px; ">
+                <div class="content-container pd24" style="margin-bottom: 50px;" id="preference">
 
-                <p class="title huge darkgrey pd24 bold" style="padding-top: 24px;">사용내역</p>
-
-                <div class="content-container pd24" id="preference">
-                    <ul style="margin-top: 12px;">
-                        <li class="flex spacebetween" style="height: 72px;" id="credit_id">
-                            <div style="width: 100%;">
-                                <p class="title" style="color: #eb5757;">사용</p>
-                                <p class="title" id="bill" style="color: #eb5757;">200,000원</p>
-                            </div>
-
-                            <div style="width: 100%; text-align: left; color: #4f4f4f;">
-                                <p class="text medium" id="usedDate">2021/03/08 11:22</p>
-                                <p class="text medium">사용 후 잔액: <span id="usedLeft">1,000원</span></p>
-                            </div>
-                        </li>
-                        <li class="flex spacebetween" style="height: 72px;" id="credit_id">
-                            <div style="width: 100%;">
-                                <p class="title" style="color: #eb5757;">사용</p>
-                                <p class="title" id="bill" style="color: #eb5757;">200,000원</p>
-                            </div>
-
-                            <div style="width: 100%; text-align: left; color: #4f4f4f;">
-                                <p class="text medium" id="usedDate">2021/03/08 11:22</p>
-                                <p class="text medium">사용 후 잔액: <span id="usedLeft">1,000원</span></p>
-                            </div>
-                        </li>
-                        <li class="flex spacebetween" style="height: 72px;" id="credit_id">
-                            <div style="width: 100%;">
-                                <p class="title" style="color: #eb5757;">사용</p>
-                                <p class="title" id="bill" style="color: #eb5757;">200,000원</p>
-                            </div>
-
-                            <div style="width: 100%; text-align: left; color: #4f4f4f;">
-                                <p class="text medium" id="usedDate">2021/03/08 11:22</p>
-                                <p class="text medium">사용 후 잔액: <span id="usedLeft">1,000원</span></p>
-                            </div>
-                        </li>
-
+                    <ul>
+                        <a id="myCart">
+                            음식 주문현황
+                        </a>
+                        <a href="./payment_select.html" id="mgmt">
+                            시설 예약현황
+                        </a>
+                        <a href="./mycoupon.html" id="myCoupon">
+                            보유 쿠폰
+                        </a>
+                        <a href="../shop/purchase_history.html" id="purchaseHistory">
+                            주문내역
+                        </a>
+                        <a href="./mypage_editprofile.html" id="editProfile">
+                            내 정보 관리
+                        </a>
+                        <a href="./settings.html" id="settings">
+                            설정
+                        </a>
                     </ul>
                 </div>
+
             </div>
-        </div>
-    </main>
-    <nav class="mainTab">
-        <div class="mainTab-container">
-            <ul class="mainTab-list">
-                <input type="radio" name="mainNav" id="navHome" class="mainTab-listitem" />
-                <label for="navHome" class="_navHome"><img class="mainTab-icon" alt="홈"
-                        src="../../src/assets/tabbar/ic-home.svg" /></label>
 
-                <input type="radio" name="mainNav" id="navShop" class="mainTab-listitem" />
-                <label for="navShop" class="_navShop"><img class="mainTab-icon" alt="샵"
-                        src="../../src/assets/tabbar/ic-shop.svg" /></label>
+            <div id="charged_popup"
+                style=" position: absolute; width: 100%; top: 0; z-index: 9999; background-color: white; height: 110%; display: none;">
+                <header class="mainHeader">
+                    <div class="mainHeader-container">
+                        <button class="btn circle" onclick="closeCharged()"><img
+                                src="../../src/assets/ic-arrow-left.svg" alt="뒤로" /></button>
+                        <img alt="Pleisure" class="header-logo" src="../../src/logo-mono.svg" />
+                        <span style="opacity: 0;"></span>
+                    </div>
+                </header>
+                <div class="content-container withHeader" id="creditList" style=" padding-top: 62px; ">
 
-                <input type="radio" name="mainNav" id="navSearch" class="mainTab-listitem" />
-                <label for="navSearch" class="_navSearch"><img class="mainTab-icon" alt="검색"
-                        src="../../src/assets/tabbar/ic-search.svg" /></label>
+                    <p class="title huge darkgrey pd24 bold" style="padding-top: 24px;">충전내역</p>
 
-                <input type="radio" name="mainNav" id="navCommunity" class="mainTab-listitem" />
-                <label for="navCommunity" class="_navCommunity"><img class="mainTab-icon" alt="커뮤니티"
-                        src="../../src/assets/tabbar/ic-community.svg" /></label>
+                    <div class="content-container pd24" id="preference">
+                        <ul style="margin-top: 12px;">
+                            <li class="flex spacebetween" style="height: 72px;" id="credit_id">
+                                <div style="width: 100%;">
+                                    <p class="title" style="color: #10ff26;">충전금액</p>
+                                    <p class="title" id="bill" style="color: #10ff26;">200,000원</p>
+                                </div>
 
-                <input type="radio" name="mainNav" id="navMypage" checked="true" class="mainTab-listitem" />
-                <label for="navMypage" class="_navMypage"><img class="mainTab-icon" alt="마이페이지"
-                        src="../../src/assets/tabbar/ic-mypage.svg" /></label>
+                                <div style="width: 100%; text-align: left; color: #4f4f4f;">
+                                    <p class="text medium" id="usedDate">2021/03/08 11:22</p>
+                                    <p class="text medium">충전 후 잔액: <span id="usedLeft">1,000원</span></p>
+                                </div>
+                            </li>
+                            <li class="flex spacebetween" style="height: 72px;" id="credit_id">
+                                <div style="width: 100%;">
+                                    <p class="title" style="color: #10ff26;">충전금액</p>
+                                    <p class="title" id="bill" style="color: #10ff26;">200,000원</p>
+                                </div>
 
-            </ul>
-        </div>
-    </nav>
+                                <div style="width: 100%; text-align: left; color: #4f4f4f;">
+                                    <p class="text medium" id="usedDate">2021/03/08 11:22</p>
+                                    <p class="text medium">충전 후 잔액: <span id="usedLeft">1,000원</span></p>
+                                </div>
+                            </li>
+                            <li class="flex spacebetween" style="height: 72px;" id="credit_id">
+                                <div style="width: 100%;">
+                                    <p class="title" style="color: #10ff26;">충전금액</p>
+                                    <p class="title" id="bill" style="color: #10ff26;">200,000원</p>
+                                </div>
+
+                                <div style="width: 100%; text-align: left; color: #4f4f4f;">
+                                    <p class="text medium" id="usedDate">2021/03/08 11:22</p>
+                                    <p class="text medium">충전 후 잔액: <span id="usedLeft">1,000원</span></p>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="used_popup"
+                style=" position: absolute; width: 100%; top: 0; z-index: 9999; background-color: white; height: 110%; display: none;">
+                <header class="mainHeader">
+                    <div class="mainHeader-container">
+                        <button class="btn circle" onclick="closeUsed()"><img src="../../src/assets/ic-arrow-left.svg"
+                                alt="뒤로" /></button>
+                        <img alt="Pleisure" class="header-logo" src="../../src/logo-mono.svg" />
+                        <span style="opacity: 0;"></span>
+                    </div>
+                </header>
+                <div class="content-container withHeader" id="creditList" style=" padding-top: 62px; ">
+
+                    <p class="title huge darkgrey pd24 bold" style="padding-top: 24px;">사용내역</p>
+
+                    <div class="content-container pd24" id="preference">
+                        <ul style="margin-top: 12px;">
+                            <li class="flex spacebetween" style="height: 72px;" id="credit_id">
+                                <div style="width: 100%;">
+                                    <p class="title" style="color: #eb5757;">사용</p>
+                                    <p class="title" id="bill" style="color: #eb5757;">200,000원</p>
+                                </div>
+
+                                <div style="width: 100%; text-align: left; color: #4f4f4f;">
+                                    <p class="text medium" id="usedDate">2021/03/08 11:22</p>
+                                    <p class="text medium">사용 후 잔액: <span id="usedLeft">1,000원</span></p>
+                                </div>
+                            </li>
+                            <li class="flex spacebetween" style="height: 72px;" id="credit_id">
+                                <div style="width: 100%;">
+                                    <p class="title" style="color: #eb5757;">사용</p>
+                                    <p class="title" id="bill" style="color: #eb5757;">200,000원</p>
+                                </div>
+
+                                <div style="width: 100%; text-align: left; color: #4f4f4f;">
+                                    <p class="text medium" id="usedDate">2021/03/08 11:22</p>
+                                    <p class="text medium">사용 후 잔액: <span id="usedLeft">1,000원</span></p>
+                                </div>
+                            </li>
+                            <li class="flex spacebetween" style="height: 72px;" id="credit_id">
+                                <div style="width: 100%;">
+                                    <p class="title" style="color: #eb5757;">사용</p>
+                                    <p class="title" id="bill" style="color: #eb5757;">200,000원</p>
+                                </div>
+
+                                <div style="width: 100%; text-align: left; color: #4f4f4f;">
+                                    <p class="text medium" id="usedDate">2021/03/08 11:22</p>
+                                    <p class="text medium">사용 후 잔액: <span id="usedLeft">1,000원</span></p>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <nav class="mainTab">
+            <div class="mainTab-container">
+                <ul class="mainTab-list">
+                    <input type="radio" name="mainNav" id="navHome" class="mainTab-listitem" />
+                    <label for="navHome" class="_navHome"><img class="mainTab-icon" alt="홈"
+                            src="../../src/assets/tabbar/ic-home.svg" /></label>
+
+                    <input type="radio" name="mainNav" id="navShop" class="mainTab-listitem" />
+                    <label for="navShop" class="_navShop"><img class="mainTab-icon" alt="샵"
+                            src="../../src/assets/tabbar/ic-shop.svg" /></label>
+
+                    <input type="radio" name="mainNav" id="navSearch" class="mainTab-listitem" />
+                    <label for="navSearch" class="_navSearch"><img class="mainTab-icon" alt="검색"
+                            src="../../src/assets/tabbar/ic-search.svg" /></label>
+
+                    <input type="radio" name="mainNav" id="navCommunity" class="mainTab-listitem" />
+                    <label for="navCommunity" class="_navCommunity"><img class="mainTab-icon" alt="커뮤니티"
+                            src="../../src/assets/tabbar/ic-community.svg" /></label>
+
+                    <input type="radio" name="mainNav" id="navMypage" checked="true" class="mainTab-listitem" />
+                    <label for="navMypage" class="_navMypage"><img class="mainTab-icon" alt="마이페이지"
+                            src="../../src/assets/tabbar/ic-mypage.svg" /></label>
+
+                </ul>
+            </div>
+        </nav>
 </body>
 
 <script>

@@ -24,11 +24,8 @@
 <body>
     <header class="mainHeader transparent">
         <div class="mainHeader-container">
-            <button id="btn-back" class="btn circle"><img
-                    src="../../src/assets/ic-arrow-left.svg"
-                    alt="뒤로" /></button>
-            <img alt="Pleisure" class="header-logo"
-                src="../../src/logo-mono.svg" />
+            <button id="btn-back" class="btn circle"><img src="../../src/assets/ic-arrow-left.svg" alt="뒤로" /></button>
+            <img alt="Pleisure" class="header-logo" src="../../src/logo-mono.svg" />
             <span style="opacity: 0;"></span>
         </div>
     </header>
@@ -48,7 +45,7 @@
                         </label>
                         <input type="radio" name="itemType" id="jujitsu" />
                         <label for="jujitsu" class="filter-listitem">
-                            프랜차이즈
+                            청년푸드
                         </label>
                         <input type="radio" name="itemType" id="ski" />
                         <label for="ski" checked="true" class="filter-listitem">
@@ -59,11 +56,12 @@
 
 
             </div>
-            <img class="bigImg" alt="코치 이미지"
-                src="http://image.auction.co.kr/itemimage/20/ac/8b/20ac8b6bb6.jpg" />
+            <img class="bigImg" alt="코치 이미지" src="http://image.auction.co.kr/itemimage/20/ac/8b/20ac8b6bb6.jpg" />
             <div style="width: 100%; z-index: 1;">
-                <div class="desc-container" style="line-height: 1.8; margin-bottom: 24px; filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 1));">
-                    <p class="title huge bold white" id="titleLesson" style="margin-bottom: 10px;">서울에서도 맛볼 수 없는<br>완벽한 고등어 구이
+                <div class="desc-container"
+                    style="line-height: 1.8; margin-bottom: 24px; filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 1));">
+                    <p class="title huge bold white" id="titleLesson" style="margin-bottom: 10px;">서울에서도 맛볼 수 없는<br>완벽한
+                        고등어 구이
                     </p>
                     <p class="text medium white" id="descLesson" style="margin-bottom: 10px;">대중교통으로도
                         이동이 편하고 주차까지 가능한
@@ -608,7 +606,7 @@
         </div>
 
     </main>
-<script>
+    <script>
         var bannerSwiper = new Swiper(".bannerSwiper", {
             spaceBetween: 15,
         });
@@ -655,7 +653,7 @@
         window.location.href = "../instructor/instructor_teampage.html";
     });
 
-    $('#btn-back').click(function() {
+    $('#btn-back').click(function () {
         history.go(-1);
     })
 </script>

@@ -1,0 +1,84 @@
+<nav class="mainTab">
+    <div class="mainTab-container">
+        <ul class="mainTab-list">
+            <input type="radio" name="mainNav" checked="true" id="navHome" class="mainTab-listitem" />
+            <label for="navHome" class="_navHome"><img class="mainTab-icon" alt="홈"
+                    src="../../src/assets/tabbar/ic-home.svg" /></label>
+
+            <input type="radio" name="mainNav" id="navShop" class="mainTab-listitem" />
+            <label for="navShop" class="_navShop"><img class="mainTab-icon" alt="샵"
+                    src="../../src/assets/tabbar/ic-shop.svg" /></label>
+
+            <input type="radio" name="mainNav" id="navSearch" class="mainTab-listitem" />
+            <label for="navSearch" class="_navSearch"><img class="mainTab-icon" alt="검색"
+                    src="../../src/assets/tabbar/ic-search.svg" /></label>
+
+            <input type="radio" name="mainNav" id="navCommunity" class="mainTab-listitem" />
+            <label for="navCommunity" class="_navCommunity"><img class="mainTab-icon" alt="커뮤니티"
+                    src="../../src/assets/tabbar/ic-community.svg" /></label>
+
+            <input type="radio" name="mainNav" id="navMypage" class="mainTab-listitem" />
+            <label for="navMypage" class="_navMypage"><img class="mainTab-icon" alt="마이페이지"
+                    src="../../src/assets/tabbar/ic-mypage.svg" /></label>
+
+        </ul>
+    </div>
+
+    <script>
+        $('.mainTab-listitem#navHome').click(function () {
+            // window.location.href = "../home/home.html"
+            $('main#block-events').css('display', 'none');
+            $('main#block-search').css('display', 'none');
+            $('main#block-map').css('display', 'none');
+            $('main#block-mypage').css('display', 'none');
+
+            $('main#block-home').css('display', 'block');
+        });
+
+        $('.mainTab-listitem#navShop').click(function () {
+            // window.location.href = "../shop/shop_home.html";
+            $('main#block-home').css('display', 'none');
+            $('main#block-search').css('display', 'none');
+            $('main#block-map').css('display', 'none');
+            $('main#block-mypage').css('display', 'none');
+
+
+            $('main#block-events').css('display', 'block');
+        });
+
+        $('.mainTab-listitem#navSearch').click(function () {
+            // window.location.href = "../home/search.html";
+
+            $('main#block-events').css('display', 'none');
+            $('main#block-home').css('display', 'none');
+            $('main#block-map').css('display', 'none');
+            $('main#block-mypage').css('display', 'none');
+
+
+            $('main#block-search').css('display', 'block');
+        });
+
+        $('.mainTab-listitem#navCommunity').click(function () {
+            // window.location.href = "../community/community_home.html";
+            $('main#block-events').css('display', 'none');
+            $('main#block-search').css('display', 'none');
+            $('main#block-home').css('display', 'none');
+            $('main#block-mypage').css('display', 'none');
+
+
+            $('main#block-community').css('display', 'block');
+        });
+
+        $('.mainTab-listitem#navMypage').click(function () {
+            // window.location.href = "../mypage/mypage_home.html";
+            $('main#block-events').css('display', 'none');
+            $('main#block-search').css('display', 'none');
+            $('main#block-map').css('display', 'none');
+            $('main#block-home').css('display', 'none');
+
+
+            $('main#block-mypage').css('display', 'block');
+        });
+
+    </script>
+</nav>
