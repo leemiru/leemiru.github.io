@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼목야시장</title>
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#315066" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <link rel="apple-touch-icon-precomposed" sizes="300x300" href="../../src/app-logo.png" />
+    <meta property="og:url" content="https://www.leemiru.com/smnm/index.html">
+    <meta property="og:title" content="삼목야시장">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../../src/og-logo.png">
+    <meta property="og:description" content="삼대가 함께 오는 삼목야시장">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+    <!-- Swiper JS -->
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+</head>
+
+<body>
+    <header class="mainHeader">
+        <div class="mainHeader-container">
+            <button id="btn-back" class="btn circle"><img src="../../src/assets/ic-arrow-left.svg" alt="뒤로" /></button>
+            <img alt="Pleisure" class="header-logo" src="../../src/logo-mono.svg" />
+            <span style="opacity: 0;"></span>
+        </div>
+    </header>
+    <main class="mainWrap">
+        <div class="alert-container pd24 withHeader">
+            <br>
+            <div class="section-header">
+                <p class="title huge bold darkgrey">시설 예약현황</p>
+                <!-- <button class="btn theme title big" id="btn-match-lessons">모두 지우기</button> -->
+            </div>
+
+            <div class="LessonSwiper" id="lessonInfoList">
+                <div class="search-container">
+                    <div class="result">
+                        <ul class="card-list" style="background-color: var(--white-bg-opacity); border-radius: 10px;">
+                            <li class="restaurant sammok" style="background: none !important;">
+                                <div>
+                                    <p class="title black">캠핑 B-1</p>
+                                    <p class="text bold black medium">캠핑장</p>
+                                </div>
+                            </li>
+
+                            <div class="content-container"
+                                style="display: block; padding-bottom: 16px; text-align: center;">
+                                <div class="content">
+                                    <div class="process-line">
+                                        <div class="process-pointer done"></div>
+                                        <div class="process-pointer"></div>
+                                        <div class="process-pointer"></div>
+
+                                    </div>
+                                </div>
+                                <p class="title medium">예약 순번 대기중입니다.</p>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="LessonSwiper" id="lessonInfoList">
+                <div class="search-container">
+                    <div class="result">
+                        <ul class="card-list" style="background-color: var(--white-bg-opacity); border-radius: 10px;">
+                            <li class="restaurant sammok" style="background: none !important;">
+                                <div>
+                                    <p class="title black">캠핑 C-1</p>
+                                    <p class="text bold black medium">캠핑장</p>
+                                </div>
+                            </li>
+
+                            <div class="content-container"
+                                style="display: block; padding-bottom: 16px; text-align: center;">
+                                <div class="content">
+                                    <div class="process-line">
+                                        <div class="process-pointer fas fa-check checked"></div>
+                                        <div class="process-pointer done"></div>
+                                        <div class="process-pointer"></div>
+
+                                    </div>
+                                </div>
+                                <p class="title medium">예약하신 순서가 되었습니다!<br>시설 이용가능합니다.</p>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="LessonSwiper" id="lessonInfoList">
+                <div class="search-container">
+                    <div class="result">
+                        <ul class="card-list" style="background-color: var(--white-bg-opacity); border-radius: 10px;">
+                            <li class="restaurant sammok" style="background: none !important;">
+                                <div>
+                                    <p class="title black">글램핑 A-3</p>
+                                    <p class="text bold black medium">글램핑장</p>
+                                </div>
+                            </li>
+
+                            <div class="content-container"
+                                style="display: block; padding-bottom: 16px; text-align: center;">
+                                <div class="content">
+                                    <div class="process-line">
+                                        <div class="process-pointer fas fa-check checked"></div>
+                                        <div class="process-pointer fas fa-check checked"></div>
+                                        <div class="process-pointer done"></div>
+
+                                    </div>
+                                </div>
+                                <p class="title medium">사용 시간이 다 되었습니다.<br>이용해주셔서 감사합니다!</p>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+</body>
+
+
+<script>
+    $('#btn-back').click(function () {
+        history.go(-1);
+    });
+
+    // $('li.restaurant.sammok').click(function () {
+    //     window.location.href = "../reserve/sinpo.html";
+    // });
+
+</script>
+
+</html>

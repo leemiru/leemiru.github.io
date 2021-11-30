@@ -85,11 +85,11 @@
                     <div>
                         <div class="flex center spacebetween">
                             <p class="title bolder black huge" style="font-size: 32px;" id="teamName">
-                                신포닭강정</p>
+                                논머리횟집</p>
                             <div style="text-align: right;">
-                                <p class="title bolder black small" id="category">치킨
+                                <p class="title bolder black small" id="category">수산
                                 </p>
-                                <p class="title black tiny" id="category">인천로컬
+                                <p class="title black tiny" id="category">삼목별미
                                 </p>
                             </div>
 
@@ -107,10 +107,11 @@
                             <p id="reviews">825 평가</p>
                         </div>
                     </div>
+
                     <div class="content-container" style="margin-top: 5px;">
 
                         <p class="text medium darkgrey" id="lessonInfo" style="margin-bottom: 20px; line-height: 1.5;">
-                            인천 매콤 닭강정, 줄서서 먹는 닭강정
+                            삼목항 제일 가는 횟집, 논머리횟집!
                         </p>
                     </div>
                 </div>
@@ -140,20 +141,9 @@
                         <div class="swiper-slide">
                             <div class="content-container lessonInfo" id="lesson-info">
                                 <div>
-                                    <p class="title dark small">20,000원 이상 주문시</p>
                                     <p class="title dark huge bold">3,000원 할인</p>
-                                    <p class="title dark tiny">2021/12/31 까지</p>
-                                </div>
-                                <img src="../../src/assets/ic-usage.svg" />
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="content-container lessonInfo" id="lesson-info">
-                                <div>
-                                    <p class="title dark small">40,000원 이상 주문시</p>
-                                    <p class="title dark huge bold">8,000원 할인</p>
-                                    <p class="title dark tiny">2021/12/31 까지</p>
+                                    <span class="title dark tiny">20,000원 이상 주문시 / </span><span
+                                        class="title dark tiny">2021. 12. 31. 까지</span>
                                 </div>
                                 <img src="../../src/assets/ic-usage.svg" />
                             </div>
@@ -459,7 +449,7 @@
             })
 
             $('button#btnSelect').click(function () {
-                window.location.href = "../automatch/automatch_payment.html";
+                window.location.href = "../automatch/payment.html";
             });
 
             var itemSwiper = new Swiper(".itemSwiper", {
@@ -478,12 +468,12 @@
 </body>
 
 <script>
-    $('.btnInfo').click(function () {
-        $('.modalWrap').fadeIn('fast');
-    });
-
     $('.lessonInfo').click(function () {
         alert('쿠폰이 발급되었습니다!\n[마이페이지] - [보유 쿠폰]을 확인하세요.');
+    });
+
+    $('.btnInfo').click(function () {
+        $('.modalWrap').fadeIn('fast');
     });
 
     $('.btnClose').click(function () {

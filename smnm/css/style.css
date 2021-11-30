@@ -286,7 +286,7 @@ input.transparent {
 }
 
 .text {
-  color: #aaa;
+  color: #fff;
 }
 
 .text.tiny {
@@ -617,7 +617,7 @@ main.mainWrap {
   margin: 0 auto;
   overflow: initial;
   overflow-x: hidden;
-  padding-bottom: 80px;
+  padding-bottom: calc(env(safe-area-inset-bottom) + 96px);
   /* padding-bottom: 128px; */
 }
 
@@ -2278,11 +2278,17 @@ input#myLocation:checked + #myLocation > img {
 .search-container > .result > ul.card-list > li > .product {
   width: 75px;
   height: 75px;
+  min-width: 75px;
+  min-height: 75px;
   max-width: 75px;
   max-height: 75px;
   display: block;
   border-radius: 10px;
-  background-color: var(--bg-color);
+  background-color: var(--dark-color);
+  background-image: url("../src/logotype-symbol.svg");
+  background-size: scale-down;
+  background-repeat: no-repeat;
+  object-fit: cover;
   margin-right: 16px;
 }
 
@@ -4227,11 +4233,12 @@ h1 {
   background-blend-mode: overlay;
 }
 
-.content-container.lessonInfo p {
+.content-container.lessonInfo p,
+.content-container.lessonInfo span {
   color: var(--dark-color) !important;
 }
 
-.content-container.lessonInfo p.title.dark.tiny {
+.content-container.lessonInfo span.title.dark.tiny {
   opacity: 0.75;
 }
 
@@ -5308,6 +5315,66 @@ input[type="checkbox"].switch:checked + label::after {
   margin-bottom: 10px;
 }
 
+/* 프로세스 */
+
+.process-line {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 16px;
+}
+
+.process-line .process-pointer {
+  height: 20px;
+  width: 20px;
+  border: 2px solid var(--yellow-color);
+  border-radius: 20px;
+  position: relative;
+  background-color: var(--lightdark-color);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.process-line::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 3px;
+  width: 100%;
+  opacity: 0.5;
+  background-color: var(--yellow-color);
+}
+
+.process-point.done {
+  border-color: var(--yellow-color);
+}
+.process-pointer.done:after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  display: block;
+  background-color: var(--yellow-color);
+  border-radius: 50%;
+}
+
+.process-pointer.done {
+  border-color: var(--yellow-color);
+}
+
+.process-pointer.checked {
+  font-size: 14px;
+  color: var(--dark-color);
+  font-size: 24px;
+  font-weight: bold;
+  background-image: url("../src/assets/ic-check-basic.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: difference;
+  background-color: var(--yellow-color);
+}
+
 /* 커뮤니티 */
 .home-container#community {
   padding-left: 0;
@@ -5339,12 +5406,12 @@ input[type="checkbox"].switch:checked + label::after {
 
 .postCategory > span,
 .postTime {
-  color: #4f4f4f;
+  color: #aaa;
   font-size: 12px;
 }
 
 .postTitle {
-  color: #4f4f4f;
+  color: #fff;
   font-size: 16px;
 }
 
@@ -5362,12 +5429,12 @@ input[type="checkbox"].switch:checked + label::after {
 
 .postCategory > span,
 .postTime {
-  color: #4f4f4f;
+  color: #aaa;
   font-size: 12px;
 }
 
 .postList .postTitle {
-  color: #4f4f4f;
+  color: #fff;
   font-size: 16px;
 }
 
@@ -5531,6 +5598,7 @@ input[type="checkbox"].switch:checked + label::after {
 
 .content-container#postDetail p {
   margin-top: 12px;
+  line-height: 1.7;
 }
 
 .content-container#postWrite .image-container,
@@ -5549,7 +5617,6 @@ input[type="checkbox"].switch:checked + label::after {
   height: auto;
   object-fit: contain;
   margin-top: -12px;
-  z-index: -2;
   border-radius: 5px;
 }
 

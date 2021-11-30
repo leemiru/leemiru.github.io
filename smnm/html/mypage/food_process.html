@@ -40,7 +40,7 @@
         <div class="alert-container pd24 withHeader">
             <br>
             <div class="section-header">
-                <p class="title huge bold darkgrey">보유 쿠폰</p>
+                <p class="title huge bold darkgrey">음식 주문현황</p>
                 <!-- <button class="btn theme title big" id="btn-match-lessons">모두 지우기</button> -->
             </div>
 
@@ -67,30 +67,17 @@
                                 </div>
                             </li>
 
-                            <div class="swiper-wrapper"
-                                style="padding-left: 8px; padding-right: 8px; padding-bottom: 8px;">
-                                <div class="swiper-slide">
-                                    <div class="content-container lessonInfo" id="lesson-info">
-                                        <div>
-                                            <p class="title dark huge bold">3,000원 할인</p>
-                                            <span class="title dark tiny">20,000원 이상 주문시 / </span><span
-                                                class="title dark tiny">2021. 12. 31. 까지</span>
-                                        </div>
-                                        <img src="../../src/assets/ic-usage.svg" />
-                                    </div>
-                                </div>
+                            <div class="content-container"
+                                style="display: block; padding-bottom: 16px; text-align: center;">
+                                <div class="content">
+                                    <div class="process-line">
+                                        <div class="process-pointer fas fa-check checked"></div>
+                                        <div class="process-pointer done"></div>
+                                        <div class="process-pointer"></div>
 
-                                <div class="swiper-slide">
-                                    <div class="content-container lessonInfo" id="lesson-info"
-                                        style="margin-bottom: 0;">
-                                        <div>
-                                            <p class="title dark huge bold">8,000원 할인</p>
-                                            <span class="title dark tiny">40,000원 이상 주문시 / </span><span
-                                                class="title dark tiny">2021. 12. 31. 까지</span>
-                                        </div>
-                                        <img src="../../src/assets/ic-usage.svg" />
                                     </div>
                                 </div>
+                                <p class="title medium">음식점에서 음식을 조리하는 중입니다.</p>
                             </div>
                         </ul>
                     </div>
@@ -120,19 +107,17 @@
                                 </div>
                             </li>
 
-                            <div class="swiper-wrapper"
-                                style="padding-left: 8px; padding-right: 8px; padding-bottom: 8px;">
-                                <div class="swiper-slide">
-                                    <div class="content-container lessonInfo" id="lesson-info"
-                                        style="margin-bottom: 0;">
-                                        <div>
-                                            <p class="title dark huge bold">3,000원 할인</p>
-                                            <span class="title dark tiny">40,000원 이상 주문시 / </span><span
-                                                class="title dark tiny">2021. 12. 31. 까지</span>
-                                        </div>
-                                        <img src="../../src/assets/ic-usage.svg" />
+                            <div class="content-container"
+                                style="display: block; padding-bottom: 16px; text-align: center;">
+                                <div class="content">
+                                    <div class="process-line">
+                                        <div class="process-pointer fas fa-check checked"></div>
+                                        <div class="process-pointer fas fa-check checked"></div>
+                                        <div class="process-pointer done"></div>
+
                                     </div>
                                 </div>
+                                <p class="title medium">음식 조리가 완료되었습니다! 픽업해주세요!</p>
                             </div>
                         </ul>
                     </div>
@@ -150,7 +135,7 @@
     });
 
     $('li.restaurant.sammok').click(function () {
-        window.location.href = "../reserve/sinpo.html";
+        window.location.href = "../event/product_checkout.html";
     });
 
 </script>

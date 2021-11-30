@@ -29,7 +29,7 @@
 </head>
 
 <body>
-    <main class="mainWrap withTab" style="padding-bottom: 20px; padding-top: 0;">
+    <main class="mainWrap withTab" style="padding-bottom: calc(env(safe-area-inset-bottom) + 20px); padding-top: 0;">
         <main class="mainWrap withTab" style="padding-bottom: 20px;">
             <div class="home-container">
                 <div class="profile-container" style="height: 60px;">
@@ -75,16 +75,16 @@
                 <div class="content-container pd24" style="margin-bottom: 50px;" id="preference">
 
                     <ul>
-                        <a id="myCart">
+                        <a href="./food_process.html" id="myCart">
                             음식 주문현황
                         </a>
-                        <a href="./payment_select.html" id="mgmt">
+                        <a href="./place_process.html" id="mgmt">
                             시설 예약현황
                         </a>
                         <a href="./mycoupon.html" id="myCoupon">
                             보유 쿠폰
                         </a>
-                        <a href="../shop/purchase_history.html" id="purchaseHistory">
+                        <a href="../event/purchase_history.html" id="purchaseHistory">
                             주문내역
                         </a>
                         <a href="./mypage_editprofile.html" id="editProfile">
@@ -242,7 +242,7 @@
     });
 
     $('.mainTab-listitem#navShop').click(function () {
-        window.location.href = "../shop/shop_home.html";
+        window.location.href = "../event/events.html";
     });
 
     $('.mainTab-listitem#navSearch').click(function () {
@@ -250,7 +250,7 @@
     });
 
     $('.mainTab-listitem#navCommunity').click(function () {
-        window.location.href = "../community/community_home.html";
+        window.location.href = "../map/map.html";
     });
 
     $('.mainTab-listitem#navMypage').click(function () {

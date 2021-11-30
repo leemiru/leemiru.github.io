@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼목야시장</title>
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="./js/background.js"></script> -->
+    <!-- <script src="./js/header.js"></script> -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <header class="mainHeader transparent">
+        <div class="mainHeader-container">
+            <button id="btn-back" class="btn circle"><img src="../../src/assets/ic-arrow-left.svg" alt="뒤로" /></button>
+            <img alt="Pleisure" class="header-logo" src="../../src/logo-mono.svg" />
+            <span style="opacity: 0;"></span>
+        </div>
+    </header>
+    <main class="mainWrap">
+        <div class="content-container pd24" id="big-banner">
+            <div class="content-container" style="margin-top: 62px; z-index: 20;" id="lesson-type-renew">
+                <div class="filter light">
+                    <ul class="horiList escpd24 sports-type"
+                        style="overflow-x: scroll; margin-top: 0; padding-bottom: 8px; margin-bottom: -8px !important;">
+                        <input type="radio" name="itemType" id="tennis" />
+                        <label for="tennis" class="filter-listitem">
+                            삼목별미
+                        </label>
+                        <input type="radio" name="itemType" id="snowboard" />
+                        <label for="snowboard" class="filter-listitem">
+                            인천로컬
+                        </label>
+                        <input type="radio" name="itemType" id="jujitsu" />
+                        <label for="jujitsu" class="filter-listitem">
+                            청년푸드
+                        </label>
+                        <input type="radio" name="itemType" id="ski" />
+                        <label for="ski" class="filter-listitem">
+                            K-FOOD
+                        </label>
+                    </ul>
+                </div>
+
+
+            </div>
+            <img class="bigImg" alt="코치 이미지"
+                src="https://www.ummakitchen.com/wp-content/uploads/2021/07/4fa28c_bc632f4a3ddf4bbc8b49b3d86f0df827mv2.jpg" />
+            <div style="width: 100%; z-index: 1;">
+                <div class="desc-container"
+                    style="line-height: 1.8; margin-bottom: 24px; filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 1));">
+                    <p class="title huge bold white" id="titleLesson" style="margin-bottom: 10px;">삼목항에서만 맛볼 수 있는<br>완벽한
+                        고등어 구이
+                    </p>
+                    <p class="text medium white" id="descLesson" style="margin-bottom: 10px;">그 어디에서도 맛볼 수 없습니다.<br>오로지
+                        영종도의 삼목야시장에서만🔥</p>
+                    <div class="flex spacebetween" style="align-items: center; width: 100%;">
+                        <p class="text medium mint" id="distance">에디터 선정</p>
+                        <p class="text medium white" id="pay"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-container">
+            <div class="content-container" id="instructor-view">
+                <!-- <div class="filter light">
+
+                    <ul class="horiList escpd24 theme-type"
+                        style="overflow-x: scroll; margin-top: 20px; padding-bottom: 8px; margin-bottom: -8px !important;">
+                        <input type="radio" name="sortFilter" id="1" />
+                        <label for="1" class="filter-listitem">
+                            삼목맛집
+                        </label>
+                        <input type="radio" name="sortFilter" id="2" />
+                        <label for="2" class="filter-listitem">
+                            인스타맛집
+                        </label>
+                        <input type="radio" name="sortFilter" id="3" />
+                        <label for="3" class="filter-listitem">
+                            할인중
+                        </label>
+                        <input type="radio" name="sortFilter" id="4" />
+                        <label for="1" class="filter-listitem">
+                            마감임박
+                        </label>
+                    </ul>
+                </div> -->
+
+                <div class="content-container" id="recommend-lesson-renew" style="margin-top: 30px;">
+                    <div class="section-header">
+                        <p class="title huge bold darkgrey">지금 이 순간 🔥</p>
+                    </div>
+
+                    <div class="itemSwiper" style="margin-top: 15px" id="_mMenuListNew">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" id="lesson-1">
+                                <li class="card-listitem-renew">
+                                    <img class="content-image"
+                                        src="https://recipe1.ezmember.co.kr/cache/recipe/2016/02/17/3b7000de04251fc683a622cbeea8c6f51.jpg"
+                                        alt="추천 맛집" />
+                                    <div class="desc-container">
+                                        <div class="filter listFilter">
+                                            <ul class="horiList"
+                                                style="overflow-x: scroll; margin-top: 0; padding-bottom: 8px; margin-bottom: -8px !important;">
+                                                <input type="checkbox" name="listFilter" id="tag1" />
+                                                <label for="tag1" class="filter-listitem">
+                                                    삼목별미
+                                                </label>
+                                                <input type="checkbox" name="listFilter" id="tag2" />
+                                                <label for="tag2" class="filter-listitem">
+                                                    횟집
+                                                </label>
+                                            </ul>
+                                        </div>
+                                        <p class="title small normal" id="titleLesson">회덮밥</p>
+                                        <div class="flex center spacebetween" style="width: 100%;">
+                                            <p class="text small bold" id="nameCoach">논머리횟집</p>
+                                        </div>
+
+                                        <a style="width: 100%" href="../automatch/payment.html"><button
+                                                class="btn btnDirectorder">20,000원</button></a>
+
+                                    </div>
+
+                                </li>
+                            </div>
+                            <div class="swiper-slide" id="lesson-1">
+                                <li class="card-listitem-renew">
+                                    <img class="content-image"
+                                        src="https://search.pstatic.net/common/?autoRotate=true&quality=95&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210520_159%2F1621477604605TpTAU_JPEG%2Fm000584_286.jpg&type=h166"
+                                        alt="추천 맛집" />
+                                    <div class="desc-container">
+                                        <div class="filter listFilter">
+                                            <ul class="horiList"
+                                                style="overflow-x: scroll; margin-top: 0; padding-bottom: 8px; margin-bottom: -8px !important;">
+                                                <input type="checkbox" name="listFilter" id="tag1" />
+                                                <label for="tag1" class="filter-listitem">
+                                                    인천로컬
+                                                </label>
+                                                <input type="checkbox" name="listFilter" id="tag2" />
+                                                <label for="tag2" class="filter-listitem">
+                                                    이집맛집
+                                                </label>
+                                            </ul>
+                                        </div>
+                                        <p class="title small normal" id="titleLesson">닭강정(대)</p>
+                                        <div class="flex center spacebetween" style="width: 100%;">
+                                            <p class="text small bold" id="nameCoach">신포닭강정</p>
+                                        </div>
+
+                                        <a style="width: 100%" href="../automatch/payment.html"><button
+                                                class="btn btnDirectorder">18,000원</button></a>
+
+                                    </div>
+
+                                </li>
+                            </div>
+                            <div class="swiper-slide" id="lesson-1">
+                                <li class="card-listitem-renew">
+                                    <img class="content-image"
+                                        src="http://www.ourhometfs.co.kr/file/recom_menu/20150421/1429611022864.jpg"
+                                        alt="추천 맛집" />
+                                    <div class="desc-container">
+                                        <div class="filter listFilter">
+                                            <ul class="horiList"
+                                                style="overflow-x: scroll; margin-top: 0; padding-bottom: 8px; margin-bottom: -8px !important;">
+                                                <input type="checkbox" name="listFilter" id="tag1" />
+                                                <label for="tag1" class="filter-listitem">
+                                                    청년푸드
+                                                </label>
+                                                <input type="checkbox" name="listFilter" id="tag2" />
+                                                <label for="tag2" class="filter-listitem">
+                                                    순식간
+                                                </label>
+                                            </ul>
+                                        </div>
+                                        <p class="title small normal" id="titleLesson">수제눈꽃치즈메쉬함박</p>
+                                        <div class="flex center spacebetween" style="width: 100%;">
+                                            <p class="text small bold" id="nameCoach">064 공육사</p>
+                                        </div>
+
+                                        <a style="width: 100%" href="../automatch/payment.html"><button
+                                                class="btn btnDirectorder">9,900원</button></a>
+
+                                    </div>
+
+                                </li>
+                            </div>
+                            <div class="swiper-slide" id="lesson-1">
+                                <li class="card-listitem-renew">
+                                    <img class="content-image"
+                                        src="https://dimg.donga.com/wps/NEWS/IMAGE/2020/02/19/99785044.1.jpg"
+                                        alt="추천 맛집" />
+                                    <div class="desc-container">
+                                        <div class="filter listFilter">
+                                            <ul class="horiList"
+                                                style="overflow-x: scroll; margin-top: 0; padding-bottom: 8px; margin-bottom: -8px !important;">
+                                                <input type="checkbox" name="listFilter" id="tag1" />
+                                                <label for="tag1" class="filter-listitem">
+                                                    K-FOOD
+                                                </label>
+                                                <input type="checkbox" name="listFilter" id="tag2" />
+                                                <label for="tag2" class="filter-listitem">
+                                                    바로그거
+                                                </label>
+                                            </ul>
+                                        </div>
+                                        <p class="title small normal" id="titleLesson">짜파구리</p>
+                                        <div class="flex center spacebetween" style="width: 100%;">
+                                            <p class="text small bold" id="nameCoach">라면24</p>
+                                        </div>
+
+                                        <a style="width: 100%" href="../automatch/payment.html"><button
+                                                class="btn btnDirectorder">4,000원</button></a>
+
+                                    </div>
+
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-container" id="recommend-lesson-renew" style="margin-top: 30px;">
+                    <div class="section-header">
+                        <p class="title huge bold darkgrey">이 집 국수 맛집🍜</p>
+                    </div>
+
+                    <div class="itemSwiper" style="margin-top: 15px" id="_mMenuListNew">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" id="lesson-1">
+                                <li class="card-listitem-renew">
+                                    <img class="content-image"
+                                        src="https://mblogthumb-phinf.pstatic.net/MjAyMDAzMTdfMTA2/MDAxNTg0MzcxNjA2NTYz.u-P0nNv06CT8QMtvt8SLht_5ojIim4WJ0LdR9nKFfewg.YlXjPuoCU33ZMM-Ccs28dDfyK8r3KdaEoKKAybe76fsg.JPEG.lsj920910/1584371607521.jpg?type=w800"
+                                        alt="추천 맛집" />
+                                    <div class="desc-container">
+                                        <div class="filter listFilter">
+                                            <ul class="horiList"
+                                                style="overflow-x: scroll; margin-top: 0; padding-bottom: 8px; margin-bottom: -8px !important;">
+                                                <input type="checkbox" name="listFilter" id="tag1" />
+                                                <label for="tag1" class="filter-listitem">
+                                                    삼목별미
+                                                </label>
+                                                <input type="checkbox" name="listFilter" id="tag2" />
+                                                <label for="tag2" class="filter-listitem">
+                                                    횟집
+                                                </label>
+                                            </ul>
+                                        </div>
+                                        <p class="title small normal" id="titleLesson">해물칼국수</p>
+                                        <div class="flex center spacebetween" style="width: 100%;">
+                                            <p class="text small bold" id="nameCoach">해랑</p>
+                                        </div>
+
+                                        <a style="width: 100%" href="../automatch/payment.html"><button
+                                                class="btn btnDirectorder">10,000원</button></a>
+
+                                    </div>
+
+                                </li>
+                            </div>
+                            <div class="swiper-slide" id="lesson-1">
+                                <li class="card-listitem-renew">
+                                    <img class="content-image"
+                                        src="http://th2.tmon.kr/thumbs/image/b11/cd3/4d5/3b06e73f5_700x700_95_FIT.jpg"
+                                        alt="추천 맛집" />
+                                    <div class="desc-container">
+                                        <div class="filter listFilter">
+                                            <ul class="horiList"
+                                                style="overflow-x: scroll; margin-top: 0; padding-bottom: 8px; margin-bottom: -8px !important;">
+                                                <input type="checkbox" name="listFilter" id="tag1" />
+                                                <label for="tag1" class="filter-listitem">
+                                                    인천로컬
+                                                </label>
+                                                <input type="checkbox" name="listFilter" id="tag2" />
+                                                <label for="tag2" class="filter-listitem">
+                                                    이집맛집
+                                                </label>
+                                            </ul>
+                                        </div>
+                                        <p class="title small normal" id="titleLesson">정은국수</p>
+                                        <div class="flex center spacebetween" style="width: 100%;">
+                                            <p class="text small bold" id="nameCoach">정은국수</p>
+                                        </div>
+
+                                        <a style="width: 100%" href="../automatch/payment.html"><button
+                                                class="btn btnDirectorder">4,000원</button></a>
+
+                                    </div>
+
+                                </li>
+                            </div>
+                            <div class="swiper-slide" id="lesson-1">
+                                <li class="card-listitem-renew">
+                                    <img class="content-image"
+                                        src="https://www.0410noodle.com/wp-content/uploads/2018/11/5_%EA%B0%84%EB%B9%84%EA%B5%AD%EC%88%98.jpg"
+                                        alt="추천 맛집" />
+                                    <div class="desc-container">
+                                        <div class="filter listFilter">
+                                            <ul class="horiList"
+                                                style="overflow-x: scroll; margin-top: 0; padding-bottom: 8px; margin-bottom: -8px !important;">
+                                                <input type="checkbox" name="listFilter" id="tag1" />
+                                                <label for="tag1" class="filter-listitem">
+                                                    청년푸드
+                                                </label>
+                                                <input type="checkbox" name="listFilter" id="tag2" />
+                                                <label for="tag2" class="filter-listitem">
+                                                    순식간
+                                                </label>
+                                            </ul>
+                                        </div>
+                                        <p class="title small normal" id="titleLesson">간비국수</p>
+                                        <div class="flex center spacebetween" style="width: 100%;">
+                                            <p class="text small bold" id="nameCoach">미정국수</p>
+                                        </div>
+
+                                        <a style="width: 100%" href="../automatch/payment.html"><button
+                                                class="btn btnDirectorder">6,500원</button></a>
+
+                                    </div>
+
+                                </li>
+                            </div>
+                            <div class="swiper-slide" id="lesson-1">
+                                <li class="card-listitem-renew">
+                                    <img class="content-image"
+                                        src="https://sjnfzdfjrjgl1655541.cdn.ntruss.com/goods/3/2019/10/280_tmp_23f4144d6804df4d7412f7e5022605ec6966view.jpg"
+                                        alt="추천 맛집" />
+                                    <div class="desc-container">
+                                        <div class="filter listFilter">
+                                            <ul class="horiList"
+                                                style="overflow-x: scroll; margin-top: 0; padding-bottom: 8px; margin-bottom: -8px !important;">
+                                                <input type="checkbox" name="listFilter" id="tag1" />
+                                                <label for="tag1" class="filter-listitem">
+                                                    K-FOOD
+                                                </label>
+                                                <input type="checkbox" name="listFilter" id="tag2" />
+                                                <label for="tag2" class="filter-listitem">
+                                                    바로그거
+                                                </label>
+                                            </ul>
+                                        </div>
+                                        <p class="title small normal" id="titleLesson">얼큰칼국수</p>
+                                        <div class="flex center spacebetween" style="width: 100%;">
+                                            <p class="text small bold" id="nameCoach">라면24</p>
+                                        </div>
+
+                                        <a style="width: 100%" href="../automatch/payment.html"><button
+                                                class="btn btnDirectorder">6,000원</button></a>
+
+                                    </div>
+
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="content-container" id="recommend-lesson-renew" style="margin-top: 30px;">
+                    <div class="section-header">
+                        <p class="title huge bold darkgrey">매운탕이 기가막히는🥘</p>
+                    </div>
+
+                    <div class="itemSwiper" style="margin-top: 15px" id="_mMenuListNew">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" id="lesson-1">
+                                <li class="card-listitem-renew">
+                                    <img class="content-image"
+                                        src="https://recipe1.ezmember.co.kr/cache/recipe/2016/02/17/3b7000de04251fc683a622cbeea8c6f51.jpg"
+                                        alt="추천 맛집" />
+                                    <div class="desc-container">
+                                        <div class="filter listFilter">
+                                            <ul class="horiList"
+                                                style="overflow-x: scroll; margin-top: 0; padding-bottom: 8px; margin-bottom: -8px !important;">
+                                                <input type="checkbox" name="listFilter" id="tag1" />
+                                                <label for="tag1" class="filter-listitem">
+                                                    삼목별미
+                                                </label>
+                                                <input type="checkbox" name="listFilter" id="tag2" />
+                                                <label for="tag2" class="filter-listitem">
+                                                    횟집
+                                                </label>
+                                            </ul>
+                                        </div>
+                                        <p class="title small normal" id="titleLesson">회덮밥</p>
+                                        <div class="flex center spacebetween" style="width: 100%;">
+                                            <p class="text small bold" id="nameCoach">논머리횟집</p>
+                                        </div>
+
+                                        <a style="width: 100%" href="../automatch/payment.html"><button
+                                                class="btn btnDirectorder">20,000원</button></a>
+
+                                    </div>
+
+                                </li>
+                            </div>
+                            <div class="swiper-slide" id="lesson-1">
+                                <li class="card-listitem-renew">
+                                    <img class="content-image"
+                                        src="https://search.pstatic.net/common/?autoRotate=true&quality=95&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210520_159%2F1621477604605TpTAU_JPEG%2Fm000584_286.jpg&type=h166"
+                                        alt="추천 맛집" />
+                                    <div class="desc-container">
+                                        <div class="filter listFilter">
+                                            <ul class="horiList"
+                                                style="overflow-x: scroll; margin-top: 0; padding-bottom: 8px; margin-bottom: -8px !important;">
+                                                <input type="checkbox" name="listFilter" id="tag1" />
+                                                <label for="tag1" class="filter-listitem">
+                                                    인천로컬
+                                                </label>
+                                                <input type="checkbox" name="listFilter" id="tag2" />
+                                                <label for="tag2" class="filter-listitem">
+                                                    이집맛집
+                                                </label>
+                                            </ul>
+                                        </div>
+                                        <p class="title small normal" id="titleLesson">닭강정(대)</p>
+                                        <div class="flex center spacebetween" style="width: 100%;">
+                                            <p class="text small bold" id="nameCoach">신포닭강정</p>
+                                        </div>
+
+                                        <a style="width: 100%" href="../automatch/payment.html"><button
+                                                class="btn btnDirectorder">18,000원</button></a>
+
+                                    </div>
+
+                                </li>
+                            </div>
+                            <div class="swiper-slide" id="lesson-1">
+                                <li class="card-listitem-renew">
+                                    <img class="content-image"
+                                        src="http://www.ourhometfs.co.kr/file/recom_menu/20150421/1429611022864.jpg"
+                                        alt="추천 맛집" />
+                                    <div class="desc-container">
+                                        <div class="filter listFilter">
+                                            <ul class="horiList"
+                                                style="overflow-x: scroll; margin-top: 0; padding-bottom: 8px; margin-bottom: -8px !important;">
+                                                <input type="checkbox" name="listFilter" id="tag1" />
+                                                <label for="tag1" class="filter-listitem">
+                                                    청년푸드
+                                                </label>
+                                                <input type="checkbox" name="listFilter" id="tag2" />
+                                                <label for="tag2" class="filter-listitem">
+                                                    순식간
+                                                </label>
+                                            </ul>
+                                        </div>
+                                        <p class="title small normal" id="titleLesson">수제눈꽃치즈메쉬함박</p>
+                                        <div class="flex center spacebetween" style="width: 100%;">
+                                            <p class="text small bold" id="nameCoach">064 공육사</p>
+                                        </div>
+
+                                        <a style="width: 100%" href="../automatch/payment.html"><button
+                                                class="btn btnDirectorder">9,900원</button></a>
+
+                                    </div>
+
+                                </li>
+                            </div>
+                            <div class="swiper-slide" id="lesson-1">
+                                <li class="card-listitem-renew">
+                                    <img class="content-image"
+                                        src="https://dimg.donga.com/wps/NEWS/IMAGE/2020/02/19/99785044.1.jpg"
+                                        alt="추천 맛집" />
+                                    <div class="desc-container">
+                                        <div class="filter listFilter">
+                                            <ul class="horiList"
+                                                style="overflow-x: scroll; margin-top: 0; padding-bottom: 8px; margin-bottom: -8px !important;">
+                                                <input type="checkbox" name="listFilter" id="tag1" />
+                                                <label for="tag1" class="filter-listitem">
+                                                    K-FOOD
+                                                </label>
+                                                <input type="checkbox" name="listFilter" id="tag2" />
+                                                <label for="tag2" class="filter-listitem">
+                                                    바로그거
+                                                </label>
+                                            </ul>
+                                        </div>
+                                        <p class="title small normal" id="titleLesson">짜파구리</p>
+                                        <div class="flex center spacebetween" style="width: 100%;">
+                                            <p class="text small bold" id="nameCoach">라면24</p>
+                                        </div>
+
+                                        <a style="width: 100%" href="../automatch/payment.html"><button
+                                                class="btn btnDirectorder">4,000원</button></a>
+
+                                    </div>
+
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-container" id="recommend-lesson-renew" style="margin-top: 30px;">
+                    <div class="section-header">
+                        <p class="title huge bold darkgrey">치킨에 맥주 한 잔?🍺</p>
+                    </div>
+
+                    <div class="itemSwiper" style="margin-top: 15px" id="_mMenuListNew">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" id="lesson-1">
+                                <li class="card-listitem-renew">
+                                    <img class="content-image"
+                                        src="https://recipe1.ezmember.co.kr/cache/recipe/2016/02/17/3b7000de04251fc683a622cbeea8c6f51.jpg"
+                                        alt="추천 맛집" />
+                                    <div class="desc-container">
+                                        <div class="filter listFilter">
+                                            <ul class="horiList"
+                                                style="overflow-x: scroll; margin-top: 0; padding-bottom: 8px; margin-bottom: -8px !important;">
+                                                <input type="checkbox" name="listFilter" id="tag1" />
+                                                <label for="tag1" class="filter-listitem">
+                                                    삼목별미
+                                                </label>
+                                                <input type="checkbox" name="listFilter" id="tag2" />
+                                                <label for="tag2" class="filter-listitem">
+                                                    횟집
+                                                </label>
+                                            </ul>
+                                        </div>
+                                        <p class="title small normal" id="titleLesson">회덮밥</p>
+                                        <div class="flex center spacebetween" style="width: 100%;">
+                                            <p class="text small bold" id="nameCoach">논머리횟집</p>
+                                        </div>
+
+                                        <a style="width: 100%" href="../automatch/payment.html"><button
+                                                class="btn btnDirectorder">20,000원</button></a>
+
+                                    </div>
+
+                                </li>
+                            </div>
+                            <div class="swiper-slide" id="lesson-1">
+                                <li class="card-listitem-renew">
+                                    <img class="content-image"
+                                        src="https://search.pstatic.net/common/?autoRotate=true&quality=95&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210520_159%2F1621477604605TpTAU_JPEG%2Fm000584_286.jpg&type=h166"
+                                        alt="추천 맛집" />
+                                    <div class="desc-container">
+                                        <div class="filter listFilter">
+                                            <ul class="horiList"
+                                                style="overflow-x: scroll; margin-top: 0; padding-bottom: 8px; margin-bottom: -8px !important;">
+                                                <input type="checkbox" name="listFilter" id="tag1" />
+                                                <label for="tag1" class="filter-listitem">
+                                                    인천로컬
+                                                </label>
+                                                <input type="checkbox" name="listFilter" id="tag2" />
+                                                <label for="tag2" class="filter-listitem">
+                                                    이집맛집
+                                                </label>
+                                            </ul>
+                                        </div>
+                                        <p class="title small normal" id="titleLesson">닭강정(대)</p>
+                                        <div class="flex center spacebetween" style="width: 100%;">
+                                            <p class="text small bold" id="nameCoach">신포닭강정</p>
+                                        </div>
+
+                                        <a style="width: 100%" href="../automatch/payment.html"><button
+                                                class="btn btnDirectorder">18,000원</button></a>
+
+                                    </div>
+
+                                </li>
+                            </div>
+                            <div class="swiper-slide" id="lesson-1">
+                                <li class="card-listitem-renew">
+                                    <img class="content-image"
+                                        src="http://www.ourhometfs.co.kr/file/recom_menu/20150421/1429611022864.jpg"
+                                        alt="추천 맛집" />
+                                    <div class="desc-container">
+                                        <div class="filter listFilter">
+                                            <ul class="horiList"
+                                                style="overflow-x: scroll; margin-top: 0; padding-bottom: 8px; margin-bottom: -8px !important;">
+                                                <input type="checkbox" name="listFilter" id="tag1" />
+                                                <label for="tag1" class="filter-listitem">
+                                                    청년푸드
+                                                </label>
+                                                <input type="checkbox" name="listFilter" id="tag2" />
+                                                <label for="tag2" class="filter-listitem">
+                                                    순식간
+                                                </label>
+                                            </ul>
+                                        </div>
+                                        <p class="title small normal" id="titleLesson">수제눈꽃치즈메쉬함박</p>
+                                        <div class="flex center spacebetween" style="width: 100%;">
+                                            <p class="text small bold" id="nameCoach">064 공육사</p>
+                                        </div>
+
+                                        <a style="width: 100%" href="../automatch/payment.html"><button
+                                                class="btn btnDirectorder">9,900원</button></a>
+
+                                    </div>
+
+                                </li>
+                            </div>
+                            <div class="swiper-slide" id="lesson-1">
+                                <li class="card-listitem-renew">
+                                    <img class="content-image"
+                                        src="https://dimg.donga.com/wps/NEWS/IMAGE/2020/02/19/99785044.1.jpg"
+                                        alt="추천 맛집" />
+                                    <div class="desc-container">
+                                        <div class="filter listFilter">
+                                            <ul class="horiList"
+                                                style="overflow-x: scroll; margin-top: 0; padding-bottom: 8px; margin-bottom: -8px !important;">
+                                                <input type="checkbox" name="listFilter" id="tag1" />
+                                                <label for="tag1" class="filter-listitem">
+                                                    K-FOOD
+                                                </label>
+                                                <input type="checkbox" name="listFilter" id="tag2" />
+                                                <label for="tag2" class="filter-listitem">
+                                                    바로그거
+                                                </label>
+                                            </ul>
+                                        </div>
+                                        <p class="title small normal" id="titleLesson">짜파구리</p>
+                                        <div class="flex center spacebetween" style="width: 100%;">
+                                            <p class="text small bold" id="nameCoach">라면24</p>
+                                        </div>
+
+                                        <a style="width: 100%" href="../automatch/payment.html"><button
+                                                class="btn btnDirectorder">4,000원</button></a>
+
+                                    </div>
+
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+
+    </main>
+    <script>
+        var bannerSwiper = new Swiper(".bannerSwiper", {
+            spaceBetween: 15,
+        });
+
+        var itemSwiper = new Swiper(".itemSwiper", {
+            spaceBetween: 15,
+            slidesPerView: "auto",
+        });
+    </script>
+</body>
+<script>
+    $('.mainTab-listitem#navHome').click(function () {
+        window.location.href = "../home/home.html";
+    });
+
+    $('.mainTab-listitem#navShop').click(function () {
+        window.location.href = "../event/events.html";
+    });
+
+    $('.mainTab-listitem#navSearch').click(function () {
+        window.location.href = "../home/search.html";
+    });
+
+    $('.mainTab-listitem#navCommunity').click(function () {
+        window.location.href = "../map/map.html";
+    });
+
+    $('.mainTab-listitem#navMypage').click(function () {
+        window.location.href = "../mypage/mypage_home.html";
+    });
+    $(window).scroll(function () {
+        var $height = $(window).scrollTop();
+        var $body = $(".body").height();
+
+        //footer는 스크롤을 시작하자마자 반전
+        if ($height >= 720) {
+            $('.mainHeader').removeClass('transparent');
+        } else {
+            $('.mainHeader').addClass('transparent');
+        }
+    });
+
+    $('#recommend-school > ul > li').click(function () {
+        window.location.href = "../reserve/sinpo.html";
+    });
+
+    $('#btn-back').click(function () {
+        history.go(-1);
+    })
+</script>
+
+</html>

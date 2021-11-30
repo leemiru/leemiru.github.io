@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼목야시장</title>
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+
+    <!-- Demo styles -->
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: var(--bg-color);
+            color: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slide-container {
+            padding: 16px;
+            padding-top: 72px;
+            text-align: left;
+        }
+
+        .slide-container .text {
+            line-height: 1.5;
+        }
+
+        .slide-container .title {
+            color: var(--yellow-color);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="mainHeader" style="background: none;">
+        <div class="mainHeader-container">
+            <button id="btn-back" class="btn circle"><img src="../../src/assets/ic-arrow-left.svg" alt="뒤로" /></button>
+            <img alt="Pleisure" class="header-logo" src="../../src/logo-mono.svg" />
+            <span style="opacity: 0;"></span>
+        </div>
+    </header>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"
+                style=" background-image: url('../../src/content/landing/one_background.svg'); background-repeat: no-repeat; background-size: cover; background-position: center;">
+                <div class="slide-container">
+                    <p class="title bold" style="font-size: 36px;">반갑삼!</p>
+                    <p class="text">랜딩페이지 제작 준비 중입니다.</p>
+                </div>
+
+            </div>
+
+            <div class="swiper-slide"
+                style=" background-image: url('../../src/content/landing/one_background.svg'); background-repeat: no-repeat; background-size: cover; background-position: center;">
+                <div class="slide-container">
+                    <p class="title bold" style="font-size: 36px;">반갑삼!</p>
+                </div>
+
+            </div>
+
+            <div class="swiper-slide"
+                style=" background-image: url('../../src/content/landing/one_background.svg'); background-repeat: no-repeat; background-size: cover; background-position: center;">
+                <div class="slide-container">
+                    <p class="title bold" style="font-size: 36px;">반갑삼!</p>
+                </div>
+
+            </div>
+
+            <div class="swiper-slide"
+                style=" background-image: url('../../src/content/landing/one_background.svg'); background-repeat: no-repeat; background-size: cover; background-position: center;">
+                <div class="slide-container">
+                    <p class="title bold" style="font-size: 36px;">반갑삼!</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="swiper-pagination" style="filter: invert(1);"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            direction: "horizontal",
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+
+        $('#btn-back').click(function () {
+            history.go(-1);
+        });
+    </script>
+</body>
+
+</html>
