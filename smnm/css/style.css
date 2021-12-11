@@ -2956,6 +2956,7 @@ input#myLocation:checked + #myLocation > img {
   position: fixed;
   bottom: 0;
   left: 0%;
+  z-index: 999;
   margin-bottom: 28px;
   margin-left: 24px;
   margin-right: 24px;
