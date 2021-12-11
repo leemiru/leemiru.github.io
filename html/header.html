@@ -19,8 +19,7 @@
 				</svg>
 			</a>
 		</div>
-		<div class="cont-header-center">
-			<!-- <p id="word">Scroll Down to more contents</p> -->
+		<!-- <div class="cont-header-center">
 			<div class="mainTab" style="display: none;">
 				<ul class="mainTab-list">
 					<input type="radio" name="galleryType" id="coverflow" checked="true" class="mainTab-listitem" />
@@ -30,17 +29,21 @@
 					<label onclick="showGrids();" for="grids"><img src="/assets/ic-grids.svg" /></label>
 				</ul>
 			</div>
-		</div>
+		</div> -->
 		<div class="cont-header-right">
 			<div class="btn action" id="btn-close" onclick="closePost()">✕</div>
+			<div class="btn action" id="btn-menu"
+				onclick="$(this).toggleClass('is-active'); $('.mainNav').toggleClass('is-active')"
+				style="color: #fff !important;">
+				MENU</div>
 
 
-			<div class="hamburger" onclick="$(this).toggleClass('is-active'); $('.mainNav').toggleClass('is-active')">
+			<!-- <div class="hamburger" onclick="$(this).toggleClass('is-active'); $('.mainNav').toggleClass('is-active')">
 				<div class="_layer -top"></div>
 				<div class="_layer -mid"></div>
 				<div class="_layer -bottom"></div>
-			</div>
-	
+			</div> -->
+
 		</div>
 	</div>
 </header>

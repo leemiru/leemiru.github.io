@@ -1037,6 +1037,7 @@ header.mainHeader > .mainHeader-container > .header-logo {
   object-fit: contain;
   position: absolute;
   left: 50%;
+  opacity: 0.5;
   margin-left: -39px;
   /* filter: brightness(1.05); */
 }

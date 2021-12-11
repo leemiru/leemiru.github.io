@@ -133,7 +133,7 @@ $(window).scroll(function () {
 
   //gallery Parallax;
   // $("#swiper-gallery").css("transform", "translateY(-" + $height / 3 + "px)");
-  $gallery.css("opacity", 0 + $height / 10 + "%");
+  $gallery.css("opacity", 0 + $height / 5 + "%");
 
   //header는 스크롤을 바닥에 닿자마자 반전
   if ($height >= $bodyHeights - 48) {

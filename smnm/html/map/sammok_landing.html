@@ -99,7 +99,7 @@
 </head>
 
 <body>
-    <header class="mainHeader" style="background: none; backdrop-filter: none; -webkit-backdrop-filter: none;">
+    <header class="mainHeader" style="background-color: rgba(49, 80, 102, 0.4);">
         <div class="mainHeader-container">
             <button id="btn-back" class="btn circle"><img src="../../src/assets/ic-arrow-left.svg" alt="뒤로" /></button>
             <img alt="Pleisure" class="header-logo" src="../../src/logo-mono.svg" />
@@ -112,8 +112,9 @@
             <div class="swiper-slide"
                 style="min-height: 100%; background-image: url('../../src/content/landing/one_background.svg'); background-repeat: no-repeat; background-size: cover; background-position: center;">
                 <div class="slide-container" style="position: absolute; bottom: 24px;">
-                    <p class="title bold" style="font-size: 28px; margin-bottom: 8px;">삼대가 함께오는<br>
-                        삼목야시장🚚</p>
+                    <p class="title bold" style="font-size: 24px; margin-bottom: 16px;">삼대가 함께오는<br>
+                        <img style="width: 256px; margin-top: -8px;" src="../../src/logo-green.svg">
+                    </p>
                     <p class="text" style="color: var(--sail-color);">삼목야시장에 오신 것을 환영합니다!<br>옆으로 넘겨 삼목야시장에 대해 알아볼까요?<br>
                     </p>
                 </div>
@@ -125,9 +126,10 @@
                     style="width: 100%; height: auto; object-fit: contain; position: static;" />
                 <div class="slide-container">
                     <p class="title bold" style="font-size: 28px; margin-bottom: 8px;">삼목항이 선보이는<br>새로운 발자취</p>
-                    <p class="text" style="color: var(--sail-color);">삼목야시장은 점점 낙후되어가는 인천어촌이 옛날처럼 다시 살아나길 바라는 바람에서
+                    <p class="text" style="color: var(--sail-color);"><span style="font-weight: 700;">"삼목에서 즐기는 바다여행,
+                            새로운 추억을 담은 야시장"</span><br><br>삼목야시장은 점점 낙후되어가는 인천어촌이 옛날처럼 다시 살아나길 바라는 바람에서
                         시작되었습니다.<br><br>기존의 어촌이 갖고 있는 모습을 탈피하고, 남녀노소 다양한 세대들이 드나들 수 있는 곳으로 재탄생하기 위해 생업의 근원지였던 이 곳을 새롭게
-                        다시 조성하였습니다.<br><br>삼목야시장은 인천광역시가 시행하는<br>
+                        다시 조성하였습니다.<br><br>삼목야시장은 해양수산부가 시행하는<br>
                         '인천어촌 뉴딜 300' 사업과 연계하여 젊은이에겐 <span style="color: var(--yellow-color)">'새로움'</span>을,
                         어른들에겐
                         <span style="color: var(--yellow-color)">'추억'</span>을, 외국인에겐 <span
@@ -193,6 +195,7 @@
 
     <!-- Initialize Swiper -->
     <script>
+
         var swiper = new Swiper(".mySwiper", {
             direction: "vertical",
             slidesPerView: "auto",
