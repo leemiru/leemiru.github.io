@@ -666,6 +666,12 @@
                         src="../../src/assets/tabbar/ic-mypage.svg" /></label>
 
             </ul>
+
+            <p
+                style="width: 100%; background-color: #274152; text-align: center; color: #fff; font-size: 8px; padding-bottom: 4px; padding-top: 4px;">
+                해당 앱은
+                <span style="color: var(--yellow-color); font-weight: 700;">시연용</span>입니다. 각종 기능이 실제로 작동하지 않습니다.
+            </p>
         </div>
     </nav>
     <script>
@@ -701,17 +707,22 @@
             window.location.href = "../reserve/nonmuri.html";
         });
 
-        $('#_mLessonListNew .swiper-slide').click(function () {
+        $('#_mLessonListNew .swiper-slide:nth-of-type(odd)').click(function () {
             window.location.href = "../reserve/sinpo.html";
         });
 
-        $('#_mMenuListNew .swiper-slide').click(function () {
-            window.location.href = "../reserve/sinpo.html";
+        $('#_mLessonListNew .swiper-slide:nth-of-type(even)').click(function () {
+            window.location.href = "../reserve/nonmuri.html";
         });
 
-        // $('#_mLessonBannerListNew .swiper-slide').click(function () {
-        //     window.location.href = "../reserve/sinpo.html";
-        // });
+
+        $('#_mMenuListNew .swiper-slide:nth-of-type(odd)').click(function () {
+            window.location.href = "../reserve/nonmuri.html";
+        });
+
+        $('#_mMenuListNew .swiper-slide:nth-of-type(even)').click(function () {
+            window.location.href = "../reserve/sinpo.html";
+        });
 
         $('#btn-match-lessons').click(function () {
             window.location.href = "../reserve/foods.html";
