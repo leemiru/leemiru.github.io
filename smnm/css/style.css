@@ -811,10 +811,13 @@ nav.mainTab > .mainTab-container > .mainTab-list {
   align-items: center;
   padding-left: 24px;
   padding-right: 24px;
-  padding-bottom: calc(env(safe-area-inset-bottom));
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.15);
+}
+
+nav.mainTab > .mainTab-container > p {
+  padding-bottom: calc(env(safe-area-inset-bottom) + 4px) !important;
 }
 
 nav.mainTab > .mainTab-container > .mainTab-list > .mainTab-listitem {
