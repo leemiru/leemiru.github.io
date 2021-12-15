@@ -818,6 +818,7 @@ nav.mainTab > .mainTab-container > .mainTab-list {
 
 nav.mainTab > .mainTab-container > p {
   padding-bottom: calc(env(safe-area-inset-bottom) + 4px) !important;
+  margin-top: -2px;
 }
 
 nav.mainTab > .mainTab-container > .mainTab-list > .mainTab-listitem {
