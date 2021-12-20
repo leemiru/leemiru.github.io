@@ -135,6 +135,11 @@ $(window).scroll(function () {
   // $("#swiper-gallery").css("transform", "translateY(-" + $height / 3 + "px)");
   $gallery.css("opacity", 0 + $height / 5 + "%");
 
+  $("#main-contents > div > div > iframe").css(
+    "opacity",
+    100 - $height / 2 + "%"
+  );
+
   //header는 스크롤을 바닥에 닿자마자 반전
   if ($height >= $bodyHeights - 48) {
     // $contHeader.css("filter", "invert(1) hue-rotate(180deg)");

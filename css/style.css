@@ -670,6 +670,10 @@ nav.mainTab {
   height: max-content;
 }
 
+#gallery-contents > div {
+  opacity: 0;
+}
+
 .contents-container {
   /* max-width: 2560px; */
   margin: 0 auto;
