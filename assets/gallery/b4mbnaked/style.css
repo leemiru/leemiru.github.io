@@ -11,7 +11,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -49,8 +51,8 @@ body {
 canvas {
   display: block;
   width: 90vw;
-  max-width: 33vh;
-  height: 120vw;
+  max-width: 620px;
+  height: auto;
   aspect-ratio: 3 / 4;
   max-height: 44vh;
 }
@@ -78,7 +80,8 @@ canvas {
   margin-top: 16px;
 }
 
-@supports (-webkit-clip-path: circle(300px at center)) or (clip-path: circle(300px at center)) {
+@supports (-webkit-clip-path: circle(300px at center)) or
+  (clip-path: circle(300px at center)) {
   .mask-container {
     display: block;
     position: absolute;
@@ -108,7 +111,8 @@ canvas::after {
   position: absolute;
 }
 
-footer, article {
+footer,
+article {
   font-family: monospace;
   width: 100%;
   color: white;

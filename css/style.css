@@ -2,7 +2,7 @@
   font-family: aktiv-grotesk-extended, sans-serif;
   font-weight: 300;
   letter-spacing: -0.75px;
-  color: var(--dark-color);
+  color: var(--light-color);
   font-style: normal;
   list-style-type: none;
   margin: 0;
@@ -13,6 +13,7 @@
 
 :root {
   --dark-color: #333;
+  --light-color: #fff;
   --theme-color: #00f;
 }
 
@@ -34,7 +35,7 @@ a {
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(0, 0, 0, 1);
   backdrop-filter: invert(0); 
 }
 
@@ -45,24 +46,7 @@ a {
 }
 
 .body {
-  /* background-color: #111; */
   background-color: #fff;
-}
-
-.logo-layer {
-  transition: all 350ms;
-}
-
-.logo-layer:hover,
-.logo-layer:focus {
-  fill: slategray;
-}
-
-.body.lock-position {
-  overflow: hidden;
-  position: fixed;
-  touch-action: none;
-  -ms-touch-action: none;
 }
 
 .white {
@@ -179,6 +163,7 @@ a {
     transform: rotate(360deg);
   }
 }
+
 .loading-spinner {
   -webkit-animation-duration: 0.75s;
   -moz-animation-duration: 0.75s;
@@ -194,10 +179,11 @@ a {
   animation-timing-function: linear;
   height: 30px;
   width: 30px;
-  border: 8px solid #fff;
+  border: 8px solid #000;
   border-right-color: transparent;
   border-radius: 50%;
   display: inline-block;
+  filter: box-shadow(0px 0px 30px #fff);
 }
 
 #loadingModal {
@@ -304,6 +290,7 @@ a {
   transition: all 250ms !important;
   width: 100%;
   z-index: 999;
+  cursor: pointer;
 }
 
 .footer {
@@ -311,22 +298,14 @@ a {
   padding-bottom: calc(env(safe-area-inset-bottom) - 20px);
 }
 
-.header.onPost {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+#postHeader {
+  position: fixed;
+  top: 0;
+  left: 0%;
 }
 
-.header.onPost div,
-.footer.onPost div {
-  backdrop-filter: none !important;
-  filter: none !important;
-}
-
-.footer.onPost {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
-}
-
-.header.onPost .mainTab {
-  display: none !important;
+#postHeader .cont-header {
+  filter: none;
 }
 
 
@@ -549,10 +528,10 @@ nav.mainTab {
 
 .btn#btn-close {
   align-items: center;
-  backdrop-filter: blur(400px);
   background-color: rgba(0, 0, 0, 0);
   display: flex;
-  display: none;
+  color: #fff !important;
+  /* display: none; */
   font-size: 20px;
   font-weight: bold;
   height: 100%;
@@ -621,7 +600,7 @@ nav.mainTab {
 }
 
 .cont-header > div:hover {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 1) !important;
 }
 
 .cont-header > div:hover > * {
@@ -671,7 +650,7 @@ nav.mainTab {
 }
 
 #gallery-contents > div {
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 .contents-container {
@@ -694,6 +673,7 @@ nav.mainTab {
 }
 
 .swiper-container#swiper-gallery {
+  display: none;
   animation-name: listInit;
   animation-duration: 0.25s;
   animation-timing-function: ease-in-out;
@@ -857,6 +837,7 @@ nav.mainTab {
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;
   border-top: 0.5px solid #000;
+  border-bottom: 0.5px solid #000;
 }
 
 .grids-list .item {
@@ -874,6 +855,7 @@ nav.mainTab {
   border-right: 1px solid #000;
   border-collapse: collapse;
   margin: 0;
+  margin-bottom: -1px;
 }
 
 .grids-list .item:nth-of-type(4n) {
@@ -920,7 +902,6 @@ nav.mainTab {
   height: 100%;
   aspect-ratio: 3 / 4.25;
   object-fit: contain;
-  margin-bottom: 4px;
   padding-left: 24px;
   padding-right: 24px;
   padding-top: 24px;
@@ -947,9 +928,10 @@ nav.mainTab {
 }
 
 .grids-list .item-desc .item-name{
-  line-height: 1.15;
+  line-height: 1.35;
   white-space: pre;
-  min-height: 36px;
+  min-height: 40px;
+  max-height: 40px;
   display: flex;
   align-items: center;
   font-weight: 400;
@@ -1119,8 +1101,8 @@ svg {
   .cont-header,
   .cont-footer {
     height: 100%;
-    padding-left: 16px;
-    padding-right: 16px;
+    /* padding-left: 16px;
+    padding-right: 16px; */
   }
 
   .main-logo #main-logo-image {
@@ -1252,6 +1234,14 @@ svg {
 
   .project-title {
     font-size: 11px;
+  }
+
+  #swiper-gallery {
+    display: block !important;
+  }
+
+  #grids-gallery {
+    display: none !important;
   }
 
   /* .post-container > .post {

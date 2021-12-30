@@ -2,7 +2,7 @@ let $close;
 var $pagination;
 var $header = $(".header");
 var $footer = $(".footer");
-var $hamburger = $(".hamburger");
+var $menubtn = $("#main-header #btn-menu");
 var $gallery = $("#gallery-contents > div");
 var $main;
 var $postframe = $("#postframe");
@@ -54,23 +54,15 @@ function openPost(url) {
 function upPost() {
   $header = $(".header");
   $footer = $(".footer");
-  $hamburger = $(".hamburger");
+  $menubtn = $("#main-header #btn-menu");
   $postmodal = $("#postModal");
   $btnGallery = $("#btn-gallery");
 
   $("#loadingModal").removeClass("active");
 
-  $header.addClass("onPost");
-  $header.removeClass("blur");
-  $footer.addClass("onPost");
-  $footer.removeClass("blur");
-
   $postmodal.css("animation-name", "postModalopen");
-  $postmodal.css("z-index", "99");
+  $postmodal.css("z-index", "99999");
   $postmodal.css("opacity", "1");
-
-  $("#btn-close").css("display", "flex");
-  $hamburger.css("display", "none");
 
   $btnGallery.css("display", "none");
 }
@@ -79,7 +71,7 @@ function closePost() {
   $body = $("body");
   $header = $(".header");
   $footer = $(".footer");
-  $hamburger = $(".hamburger");
+  $menubtn = $("#main-header #btn-menu");
   $postframe = $("#postframe");
   $postmodal = $("#postModal");
   $btnGallery = $("#btn-gallery");
@@ -87,15 +79,7 @@ function closePost() {
   $postmodal.css("animation-name", "postModalclose");
   $postmodal.css("opacity", "0");
 
-  $("#btn-close").css("display", "none");
-  $hamburger.css("display", "flex");
-
   $btnGallery.css("display", "inline-block");
-
-  $header.removeClass("onPost");
-  $header.addClass("blur");
-  $footer.removeClass("onPost");
-  $footer.addClass("blur");
 
   $body.css("overflow", "auto");
 
@@ -143,7 +127,7 @@ $(window).scroll(function () {
   //header는 스크롤을 바닥에 닿자마자 반전
   if ($height >= $bodyHeights - 48) {
     // $contHeader.css("filter", "invert(1) hue-rotate(180deg)");
-    $header.addClass("blur");
+    // $header.addClass("blur");
     // $mainNav.addClass("blur");
 
     $gallery.css("opacity", "1");
@@ -157,7 +141,7 @@ $(window).scroll(function () {
     // $contHeader.css("filter", "invert(0)");
 
     $btnGallery.text("⍗");
-    $header.removeClass("blur");
+    // $header.removeClass("blur");
     // $mainNav.removeClass("blur");
     // $mainTab.css("display", "none");
   }
@@ -165,11 +149,11 @@ $(window).scroll(function () {
   //footer는 스크롤을 시작하자마자 반전
   if ($height >= 48) {
     // $contFooter.css("filter", "invert(1)  hue-rotate(180deg)");
-    $footer.addClass("blur");
+    // $footer.addClass("blur");
     $btnGallery.text("⍐");
   } else {
     // $contFooter.css("filter", "invert(0)");
-    $footer.removeClass("blur");
+    // $footer.removeClass("blur");
   }
 
   $mainLogoImage.css("transform", "rotateX(" + deg + "deg)");
