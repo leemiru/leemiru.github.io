@@ -1,0 +1,277 @@
+:root {
+  --drftn-black: #111111;
+  --laser-green: #74f892;
+  --ash-gray: #666666;
+  --buy-red: #ff6161;
+  --sell-green: #2ecc71;
+  --subtle-gray: #f2f2f2;
+  --dim-gray: #999999;
+  --royal-blue: #3478bc;
+}
+
+/**
+ * http://applemusic.tumblr.com/
+ * https://jsfiddle.net/xq56dmrh/
+ */
+
+/** Ultra Light */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 100;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff");
+}
+
+/** Thin */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 200;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff");
+}
+
+/** Regular */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+/** Medium */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 500;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff");
+}
+
+/** Semi Bold */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 600;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff");
+}
+
+/** Bold */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 700;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
+}
+.bodyWrap {
+  width: calc(100% - 40px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+html {
+  background-color: var(--drftn-black);
+}
+
+* {
+  font-family: "San Francisco", sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 0;
+}
+
+/* custom scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--drftn-black);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.125);
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--laser-green);
+}
+
+.mainNav {
+  width: calc(100% - 40px);
+  height: 80px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 99999;
+  max-width: 1440px;
+  justify-content: space-between;
+}
+
+.mainNav > a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 32px;
+  filter: brightness(1000%);
+  transition: filter 150ms;
+}
+
+.mainNav > a:hover {
+  filter: brightness(100%) drop-shadow(0 5px 5px rgba(255, 255, 255, 0.5));
+}
+
+.mainNav > ul {
+  display: flex;
+  list-style: none;
+  color: #fff;
+  justify-content: center;
+}
+
+.mainNav > ul > li {
+  display: flex;
+  justify-content: center;
+  min-width: 144px;
+  max-width: 144px;
+  cursor: pointer;
+}
+
+.mainNav > ul > li > p {
+  width: fit-content;
+  border-bottom: 3px solid transparent;
+  transition: all 150ms;
+  letter-spacing: 1pt;
+  padding-bottom: 2px;
+}
+
+.mainNav > ul > li > p:hover,
+.mainNav > ul > li.is-active > p {
+  border-color: var(--laser-green);
+  color: var(--laser-green);
+}
+
+#homeContainer {
+  min-width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-image: url(./src/static/one_pattern.svg);
+  background-size: 176px;
+  background-repeat: repeat-x;
+}
+
+#homeContainer > .contentFrame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.frontMockupContainer {
+  width: 390px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 38px;
+  background-image: url(./src/static/device_front.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.75));
+}
+
+.frontMockupContainer > .shot {
+  /* width: 390px;
+  height: 100%;
+  display: inline-block;
+  position: absolute;
+  z-index: -1;
+  background-color: #fff; */
+  width: 256px;
+  -webkit-mask-image: url(./src/static/device_front_mask.png);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+}
+
+.frontMockupContainer > .outerFrame {
+  width: 100%;
+  object-fit: contain;
+}
+
+#homeContainer > .contentFrame > p {
+  min-width: 390px;
+  font-size: 32px;
+  color: #fff;
+  font-weight: bold;
+  max-width: 390px;
+  letter-spacing: 5pt;
+}
+
+#homeContainer > .contentFrame > p:first-child {
+  margin-bottom: 256pt;
+  text-align: right;
+}
+
+#homeContainer > .contentFrame > p:last-child {
+  margin-top: 256pt;
+}
+
+#homeContainer > .contentFrame > p > img {
+  width: 350px;
+  object-fit: contain;
+}
+
+#homeContainer > .guide {
+  position: fixed;
+  bottom: 10px;
+  color: var(--laser-green);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  /* animation properties */
+  animation-name: bounce;
+  animation-duration: 0.575s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.6, 0.08, 0.8, 0.6);
+  animation-iteration-count: infinite;
+}
+
+#homeContainer > .guide > p {
+  background-color: var(--laser-green);
+  border-radius: 50px;
+  padding: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: var(--drftn-black);
+  font-weight: 700;
+  letter-spacing: -0.75px;
+  font-size: 16px;
+}
+
+#homeContainer > .guide > span {
+  width: 20px;
+}
+
+#homeContainer > .guide > span > svg {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes bounce {
+  from {
+    transform: translate3d(0, -20px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
