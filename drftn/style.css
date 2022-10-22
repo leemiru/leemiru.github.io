@@ -55,6 +55,7 @@
   font-weight: 700;
   src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
 }
+
 .bodyWrap {
   width: calc(100% - 40px);
   height: 100%;
@@ -66,12 +67,13 @@
   padding-right: 20px;
 }
 
-html {
+html,
+body {
   background-color: var(--drftn-black);
 }
 
 * {
-  font-family: "San Francisco", sans-serif;
+  font-family: "San Francisco", "Apple SD Neo Gothic", sans-serif;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -99,6 +101,64 @@ html {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: var(--laser-green);
+}
+
+.contentFrame {
+  padding: 40px;
+  min-height: 65vh;
+  max-width: 1440px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 120px auto;
+}
+
+.contentFrame#serviceOrigin {
+  align-items: center;
+}
+
+.contentFrame > .descContainer {
+  width: 100%;
+  min-height: 200px;
+}
+
+#descStart {
+  /* opacity: 0; */
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 1px;
+  line-height: 2;
+  font-family: aktiv-grotesk-extended, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.para {
+  font-size: 17px;
+  font-weight: 300;
+  color: var(--subtle-gray);
+  letter-spacing: 0.25px;
+  line-height: 1.6;
+}
+
+.para b {
+  color: var(--laser-green);
+}
+
+.block {
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--laser-green);
+  letter-spacing: 0.25px;
+  line-height: 1.6;
+  font-weight: 500;
+  border: 2px solid var(--laser-green);
+  padding: 12px 20px;
+  border-radius: 50px;
 }
 
 .mainNav {
@@ -162,13 +222,24 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: bgAni infinite 30s linear;
   background-position: center;
   background-image: url(./src/static/one_pattern.svg);
   background-size: 176px;
   background-repeat: repeat-x;
 }
 
-#homeContainer > .contentFrame {
+@keyframes bgAni {
+  0% {
+    background-position-x: -100%;
+  }
+
+  100% {
+    background-position-x: 100%;
+  }
+}
+
+.contentFrame {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -204,6 +275,14 @@ html {
 .frontMockupContainer > .outerFrame {
   width: 100%;
   object-fit: contain;
+}
+
+#mainMockup {
+  transition: transform 200ms ease-in-out;
+}
+
+#mainMockup:hover {
+  transform: scale(105%);
 }
 
 #homeContainer > .contentFrame > p {
@@ -244,6 +323,11 @@ html {
   animation-direction: alternate;
   animation-timing-function: cubic-bezier(0.6, 0.08, 0.8, 0.6);
   animation-iteration-count: infinite;
+  z-index: 99998;
+}
+
+#homeContainer > .guide.hide {
+  display: none;
 }
 
 #homeContainer > .guide > p {

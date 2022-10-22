@@ -10,6 +10,16 @@
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./style.css" />
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'nzy6ngm',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
 
 </head>
 
@@ -20,35 +30,35 @@
                 <img src="./src/static/logo_drftn.svg" />
             </a>
             <ul>
-                <li>
+                <li id="toOverview">
                     <p>
                         overview
                     </p>
                 </li>
-                <li>
+                <li id="toApplication">
                     <p>
                         application
                     </p>
 
                 </li>
-                <li>
+                <li id="toPrototype">
                     <p>prototype
                     </p>
 
                 </li>
-                <li>
+                <li id="toMerchandise">
                     <p>merchandise
                     </p>
 
                 </li>
-                <li>
+                <li id="toLeemiru">
                     <p>leemiru
                     </p>
 
                 </li>
             </ul>
             <a id="linkKhu" href="https://www.instagram.com/khvd_graduation/">
-                <img src="./src/static/logo_khu.svg" />
+                <img style="width: 42px; height: auto;" src="./src/static/logo_khu.svg" />
             </a>
         </nav>
     </div>
@@ -58,7 +68,7 @@
             <p>
                 세상의 모든 한정판
             </p>
-            <div class="frontMockupContainer">
+            <div class="frontMockupContainer" id="mainMockup">
                 <!-- <img class="shot" src="./src/screen/main.gif"> -->
                 <video autoplay loop muted class="shot">
                     <source src="./src/screen/main.mp4" type="video/mp4">
@@ -81,6 +91,167 @@
                 </svg></span>
         </div>
     </main>
+
+    <div id="descStart">
+        <main class="contentContainer" id="overview">
+            <div class="contentFrame" id="serviceOrigin"
+                style="background: url(./src/static/ball_center_gray.svg) no-repeat center top; background-size: contain;">
+                <div class=" descContainer">
+                    <p class="title">Overview</p>
+                    <p class="para">드리프틴은 <b>스니커즈, 의류, 주얼리, 시계, 일렉트로닉스 등</b><br>전 세계에서 거래되는
+                        모든 한정판 컬렉터블 아이템을<br>한 곳에 모아
+                        환율,
+                        배송, 수수료 등의 모든 요소를 조합하여<br>사용자에게 최적의 거래 솔루션을
+                        제안하는 서비스입니다.
+                    </p>
+                </div>
+                <div class="descContainer">
+                    <p class="title">Project Goal</p>
+                    <p class="para">드리프틴은 전 세계 정품 한정판 거래 플랫폼들의 가격 정보들을 모아<br>환율과 관세, 서비스 수수료 등을 포함한 정보들을 총합하여<br>사용자에게
+                        가장
+                        도움이
+                        되는 거래 솔루션을 제공합니다.<br>또한 사용자 간의 트레이딩 기록을 공유하여 투자 및 재테크의 수단으로<br>활용할 수도 있는 다방면의 경험을 제공합니다.
+                    </p>
+                </div>
+            </div>
+
+            <div class="contentFrame" id="identity">
+                <div id="descContainer" style="text-align:center;">
+                    <img style="width: 90%; margin-bottom: 60px;" src="./src/static/shots_overview.png" />
+                    <p class="title" style="line-height: 1.4;"><img
+                            style="width: 48px; height: 48px; border: 2px solid var(--laser-green); background-color: var(--drftn-black); border-radius: 22px; padding: 10px; filter: brightness(100%) drop-shadow(0 -75px 75px var(--laser-green));"
+                            src="./src/static/logo_drftn.svg"></p>
+                    <div style="margin-top: 24px">
+                        <p class="para" style="line-height: 1; letter-spacing: 2px;"><strong>DRIFTIN</strong> CAME FROM
+                        </p>
+                        <span class="title" style="font-size: 32px; font-weight: 300; color: var(--laser-green);">" The
+                            Liftin "
+                        </span>
+                        <p class="para">드리프틴은 사전적으로 상승을 의미하는 <b>‘Lift’</b>와<br>그것과 동음의 레이싱 경주의 거칠게 방향을 꺾는
+                            <b>드리프트</b> 행위를<br>
+                            서로
+                            연결하는데에서
+                            그 이름을 기인하였습니다.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="contentFrame" id="features">
+                <div id="descContainer" style="text-align:center;">
+                    <p class="title" style="line-height: 1.4;"><img src="./src/static/logotype_drftn.svg"
+                            style="height: 32px; width: auto;" /><br>FEATURES</p>
+                    <div style="margin-top: 24px">
+                        <span class="block">전 세계 플랫폼 최적가 비교
+                        </span>
+                        <span
+                            style="font-size: 30px; font-weight: 700; color: var(--laser-green); margin: 0 12px;">+</span>
+                        <span class="block">컬렉터블 자산 포트폴리오
+                        </span>
+                        <span
+                            style="font-size: 30px; font-weight: 700; color: var(--laser-green); margin: 0 12px;">+</span>
+                        <span class="block">전문 매거진 및 칼럼
+                        </span>
+                        <span
+                            style="font-size: 30px; font-weight: 700; color: var(--laser-green); margin: 0 12px;">+</span>
+                        <span class="block">트레이딩 포트폴리오 커뮤니티
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+        <main class="contentContainer" id="overview">
+            <div class="contentFrame">
+                <div id="descContainer">
+                    <p class="title">Let's DRIFTIN!</p>
+                    <p class="para">드리프틴은 <b>스니커즈, 의류, 주얼리, 시계, 일렉트로닉스 등</b><br>전 세계에서 거래되는
+                        모든 한정판 컬렉터블 아이템을<br>한 곳에 모아
+                        환율,
+                        배송, 수수료 등의 모든 요소를 조합하여<br>사용자에게 최적의 거래 솔루션을
+                        제안하는 서비스입니다.
+                    </p>
+                </div>
+                <img src="./src/static/ball_right.svg" />
+            </div>
+        </main>
+
+        <main class="contentContainer" id="overview">
+            <div class="contentFrame">
+                <div id="descContainer">
+                    <p class="title">Let's DRIFTIN!</p>
+                    <p class="para">드리프틴은 <b>스니커즈, 의류, 주얼리, 시계, 일렉트로닉스 등</b><br>전 세계에서 거래되는
+                        모든 한정판 컬렉터블 아이템을<br>한 곳에 모아
+                        환율,
+                        배송, 수수료 등의 모든 요소를 조합하여<br>사용자에게 최적의 거래 솔루션을
+                        제안하는 서비스입니다.
+                    </p>
+                </div>
+                <img src="./src/static/ball_right.svg" />
+            </div>
+        </main>
+
+        <main class="contentContainer" id="overview">
+            <div class="contentFrame">
+                <div id="descContainer">
+                    <p class="title">Let's DRIFTIN!</p>
+                    <p class="para">드리프틴은 <b>스니커즈, 의류, 주얼리, 시계, 일렉트로닉스 등</b><br>전 세계에서 거래되는
+                        모든 한정판 컬렉터블 아이템을<br>한 곳에 모아
+                        환율,
+                        배송, 수수료 등의 모든 요소를 조합하여<br>사용자에게 최적의 거래 솔루션을
+                        제안하는 서비스입니다.
+                    </p>
+                </div>
+                <img src="./src/static/ball_right.svg" />
+            </div>
+        </main>
+    </div>
+
 </body>
+
+<script>
+    $(window).scroll(function () {
+        var $body = $("body");
+        var $height = $(window).scrollTop();
+        var $bodyHeights = $body.height();
+        var result = ($bodyHeights / $height) * 100;
+        var deg = (360 / result) * 100;
+
+        if (deg < 0) {
+            deg == 0;
+        } else if (deg >= 360) {
+            deg == 360;
+        }
+
+        $('#toOverview').click(function () {
+            $('html,body').animate({
+                scrollTop: $(".contentContainer#overview").offset().top
+            });
+        });
+
+        if ($height < 0) {
+            height == 0;
+        }
+
+        //footer는 스크롤을 시작하자마자 반전
+        if ($height >= 48) {
+            $('#homeContainer > .guide').fadeOut('fast');
+        } else {
+            $('#homeContainer > .guide').fadeIn('fast');
+        }
+
+        // //footer는 스크롤을 시작하자마자 반전
+        // if ($height >= 48) {
+        //     // $contFooter.css("filter", "invert(1)  hue-rotate(180deg)");
+        //     // $footer.addClass("blur");
+        //     $btnGallery.text("⍐");
+        // } else {
+        //     // $contFooter.css("filter", "invert(0)");
+        //     // $footer.removeClass("blur");
+        // }
+    });
+</script>
 
 </html>
