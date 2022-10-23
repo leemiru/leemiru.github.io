@@ -133,15 +133,8 @@
 
             <div class="contentFrame" id="identity">
                 <div id="descContainer" style="text-align:center;">
-                    <p class="title" style="line-height: 1.4;"><img
-                            style="width: 48px; height: 48px; border: 2px solid var(--laser-green); background-color: var(--drftn-black); border-radius: 22px; padding: 10px; filter: brightness(100%) drop-shadow(0 75px 75px var(--laser-green)); box-shadow: 0px -75px 250px 0 #74f89250;"
-                            src="./src/static/logo_drftn.svg"></p>
-                    <!-- <img style="width: 100%; margin: 60px 0; z-index: 1; position: relative;"
-                        src="./src/static/shots_overview.png" /> -->
-                    <video autoplay loop muted style="width: 100%; margin: 30px 0; mix-blend-mode: lighten;">
-                        <source src="./src/static/shots_overview.mp4" type="video/mp4">
-                    </video>
-                    <div style="margin-top: 24px; display:flex; justify-content: center;">
+
+                    <div style="margin-bottom: 24px; display:flex; justify-content: center;">
                         <div style="text-align: left; width: 100%;">
                             <p class="title" style="font-size: 32px; line-height: 1.25; font-weight: 600;"><span
                                     style="font-weight: 300; font-family: aktiv-grotesk-extended, sans-serif;">DRFTN
@@ -158,10 +151,18 @@
                             그 이름을 기인하였습니다.
                         </p>
                     </div>
-
+                    <!-- <p class="title" style="line-height: 1.4;"><img
+                            style="width: 48px; height: 48px; border: 2px solid var(--laser-green); background-color: var(--drftn-black); border-radius: 22px; padding: 10px; filter: brightness(100%) drop-shadow(0 75px 75px var(--laser-green)); box-shadow: 0px -75px 250px 0 #74f89250;"
+                            src="./src/static/logo_drftn.svg"></p> -->
+                    <!-- <img style="width: 100%; margin: 60px 0; z-index: 1; position: relative;"
+                    src="./src/static/shots_overview.png" /> -->
+                    <video autoplay loop muted style="width: 100%; margin: 30px 0; mix-blend-mode: lighten;">
+                        <source src="./src/static/shots_overview.mp4" type="video/mp4">
+                    </video>
                 </div>
-            </div>
 
+            </div>
+            <!-- 
             <div class="contentFrame" id="features">
                 <div id="descContainer" style="text-align:left; width: 100%;">
                     <p class="title" style="line-height: 1.4;">FEATURES</p>
@@ -183,17 +184,17 @@
                     </div>
 
                 </div>
-            </div>
+            </div> -->
 
             <div class="contentFrame" id="visualidentity">
                 <div id="descContainer" style="text-align:center; width: 100%;">
-                    <p class="title" style="line-height: 1.4; text-align: left;">Visual Identity</p>
-                    <div style="margin-top: 24px; display: flex; justify-content: left;">
+                    <p class="title" style="line-height: 1.2; text-align: left;">Visual Identity</p>
+                    <div style="display: flex; margin-top: 20px; justify-content: left;">
                         <div
                             style="display: flex; flex-direction: column; text-align: left; width: 100%; height: 100%;">
-                            <div style="display: flex; gap: 40px; align-items: center;">
+                            <div style="margin-top: 8px; display: flex; gap: 20px; align-items: center;">
                                 <video autoplay loop muted style="width: 50%; mix-blend-mode: lighten;">
-                                    <source src="./src/static/motif.mp4" type="video/mp4">
+                                    <source src="./src/static/motif2.mp4" type="video/mp4">
                                 </video>
                                 <div
                                     style="width: 100%; height: 100%; display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start;">
@@ -204,7 +205,7 @@
                                         <p class="para">
                                             레이싱 그랑프리 깃발에서 영감을 받은<br>체커보드 그래픽 양식으로부터 착안한 박스들의 유연한 연결은<br>
                                             <b>편리, 직관, 단순, 연결</b>을
-                                            상징하는<br>
+                                            상징하는
                                             드리프틴 정신을 표현합니다.
                                         </p>
                                     </div>
@@ -222,7 +223,7 @@
                 <div id="descContainer" style="text-align:center; width: 100%;">
                     <p class="title" style="line-height: 1.4; text-align: left;">Design System</p>
 
-                    <div class="drftnLayout" style="margin-top: 40px;">
+                    <div class="drftnLayout" style="margin-top: 20px;">
                         <div class="row">
                             <div class="column">
                                 <div class="container">
@@ -276,10 +277,20 @@
                 <p class="bigTitle">Application</p>
                 <hr>
             </div>
-            <div class="contentFrame" id="flowchart" style="margin-top: 60px;">
-                <div id="descContainer" style="text-align:center; width: 100%;">
+            <div class="contentFrame" id="flowchart" style="margin-top: 60px; align-items: flex-start; gap: 20px;">
+                <div id="descContainer" style="text-align: center;">
                     <p class="title" style="line-height: 1.4; text-align: left;">Structure</p>
-                    <img src="./src/static/flowchart.svg" style="width: 100%; max-width: 1440px; margin-top: 24px;" />
+                    <p class="para" style="text-align: left;">크게보려면 마우스를 가져다 대세요.</p>
+                    <div class="magnifierWrap">
+                        <div class="magnifier"></div>
+                        <img class="smallImg" src="./src/static/flowchart.svg"
+                            style="width: 100%; max-width: 1440px; margin-top: 30px;" />
+                    </div>
+                </div>
+
+                <div id="descContainer" style="text-align: center;">
+                    <p class="title" style="line-height: 1.4; text-align: left;">Wireframe</p>
+                    <img src="./src/static/wireframe.png" style="width: 100%; max-width: 1440px; margin-top: 24px;" />
                 </div>
             </div>
         </main>
@@ -384,6 +395,76 @@
         //     // $footer.removeClass("blur");
         // }
     });
+
+    $(document).ready(function () {
+
+        var nativeWidth = 0;
+        var nativeHeight = 0;
+
+        $(".magnifierWrap").mousemove(function (e) {
+            if (!nativeWidth && !nativeHeight) {
+                var imgObject = new Image();
+                imgObject.src = $(".smallImg").attr("src");
+                nativeWidth = imgObject.width;
+                nativeHeight = imgObject.height;
+            }
+            else {
+                var magnifyOffset = $(this).offset();
+                var mouseX = e.pageX - magnifyOffset.left;
+                var mouseY = e.pageY - magnifyOffset.top;
+
+                if (mouseX < $(this).width() && mouseY < $(this).height() && mouseX > 0 && mouseY > 0) {
+                    $(".magnifier").fadeIn(100);
+                }
+                else {
+                    $(".magnifier").fadeOut(100);
+                }
+                if ($(".magnifier").is(":visible")) {
+                    var smallImgX = Math.round(mouseX / $(".smallImg").width() * nativeWidth - $(".magnifier").width() / 2) * -1;
+                    var smallImgY = Math.round(mouseY / $(".smallImg").height() * nativeHeight - $(".magnifier").height() / 2) * -1;
+                    var bgp = smallImgX + "px " + smallImgY + "px";
+
+                    var largeImgX = mouseX - $(".magnifier").width() / 2;
+                    var largeImgY = mouseY - $(".magnifier").height() / 2;
+
+                    $(".magnifier").css({ left: largeImgX, top: largeImgY, backgroundPosition: bgp });
+                }
+            }
+        });
+
+        // Logout Timer 객체 정의
+        var LogOutTimer = function () {
+            var S = {
+                timer: null,
+                limit: 1000 * 60 * 5,
+                fnc: function () { },
+                start: function () {
+                    S.timer = window.setTimeout(S.fnc, S.limit);
+                },
+                reset: function () {
+                    window.clearTimeout(S.timer);
+                    S.start();
+                }
+            };
+
+            document.onmousemove = function () { S.reset(); };
+
+            return S;
+        }();
+
+        // 로그아웃 체크시간 설정
+        LogOutTimer.limit = 1000 * 60 * 3;
+        // LogOutTimer.limit = 5000;
+
+        // 로그아웃 함수 설정
+        LogOutTimer.fnc = function () {
+            $('html, body').animate({ scrollTop: 0 }, 400);
+        }
+
+        // 로그아웃 타이머 실행
+        LogOutTimer.start();
+    });
+
 </script>
 
 </html>

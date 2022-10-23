@@ -139,6 +139,8 @@ body {
 .contentFrame#serviceOrigin {
   align-items: center;
   justify-content: center;
+  margin-bottom: 80vh;
+  margin-top: 40vh;
 }
 
 .contentFrame > .descContainer {
@@ -160,6 +162,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   gap: 30px;
+  margin-top: 40vh;
 }
 
 .chapterContainer > hr {
@@ -320,8 +323,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 60vh auto;
-  margin-top: 120px;
+  margin: 160px auto;
 }
 
 .frontMockupContainer {
@@ -556,4 +558,20 @@ body {
 
 .drftnLayout > .row:nth-of-type(even) > .column:last-child > .container {
   border-top-right-radius: 40px;
+}
+
+.magnifierWrap {
+  width: calc(100% - 40px);
+  position: relative;
+}
+.magnifier {
+  width: 384px;
+  height: 384px;
+  position: absolute;
+  border-radius: 100%;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.85),
+    0 0 7px 7px rgba(0, 0, 0, 0.25), inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
+  background: url("./src/static/flowchart.svg") no-repeat;
+  background-color: var(--drftn-black);
+  display: none;
 }
