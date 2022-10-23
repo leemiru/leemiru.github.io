@@ -4,7 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <link rel="apple-touch-icon-precomposed" sizes="300x300" href="/assets/logo_black.png" />
     <title>DRFTN: Prototype</title>
     <script src="/javascript/jquery-3.5.1.min.js"></script>
     <!-- Link Swiper's CSS -->
@@ -24,34 +29,36 @@
 </head>
 
 <body>
+    <!-- <div class='cursor'></div>
+    <div class='cursor second-cursor'></div> -->
     <div class="bodyWrap">
         <nav class="mainNav">
             <a id="mainLogo" href="#">
                 <img src="./src/static/logo_drftn.svg" />
             </a>
             <ul>
-                <li id="toOverview">
+                <li id="toOverview" onclick="fnMove(0)">
                     <p>
                         overview
                     </p>
                 </li>
-                <li id="toApplication">
+                <li id="toApplication" onclick="fnMove(1)">
                     <p>
                         application
                     </p>
 
                 </li>
-                <li id="toPrototype">
+                <li id="toPrototype" onclick="fnMove(2)">
                     <p>prototype
                     </p>
 
                 </li>
-                <li id="toMerchandise">
+                <li id="toMerchandise" onclick="fnMove(3)">
                     <p>merchandise
                     </p>
 
                 </li>
-                <li id="toLeemiru">
+                <li id="toLeemiru" onclick="fnMove(4)">
                     <p>leemiru
                     </p>
 
@@ -93,11 +100,20 @@
     </main>
 
     <div id="descStart">
-        <main class="contentContainer" id="overview">
-            <div class="contentFrame" id="serviceOrigin"
-                style="background: url(./src/static/ball_center_gray.svg) no-repeat center top; background-size: contain;">
-                <div class=" descContainer">
-                    <p class="title">Overview</p>
+        <main class="contentContainer" id="slide0">
+
+            <div class="chapterContainer">
+                <p class="bigTitle">Overview</p>
+                <hr>
+            </div>
+
+            <div class="contentFrame" id="serviceOrigin">
+                <video autoplay loop muted
+                    style="width: 100%; max-width: 1080px; margin: 0 auto; position: absolute; z-index: 0; mix-blend-mode: lighten;">
+                    <source src="./src/static/rotating_ball.mp4" type="video/mp4">
+                </video>
+                <div class="descContainer" style="z-index: 1;">
+                    <p class="title">Let's DRFTN!</p>
                     <p class="para">드리프틴은 <b>스니커즈, 의류, 주얼리, 시계, 일렉트로닉스 등</b><br>전 세계에서 거래되는
                         모든 한정판 컬렉터블 아이템을<br>한 곳에 모아
                         환율,
@@ -105,7 +121,7 @@
                         제안하는 서비스입니다.
                     </p>
                 </div>
-                <div class="descContainer">
+                <div class="descContainer" style="z-index: 1;">
                     <p class="title">Project Goal</p>
                     <p class="para">드리프틴은 전 세계 정품 한정판 거래 플랫폼들의 가격 정보들을 모아<br>환율과 관세, 서비스 수수료 등을 포함한 정보들을 총합하여<br>사용자에게
                         가장
@@ -117,17 +133,25 @@
 
             <div class="contentFrame" id="identity">
                 <div id="descContainer" style="text-align:center;">
-                    <img style="width: 90%; margin-bottom: 60px;" src="./src/static/shots_overview.png" />
                     <p class="title" style="line-height: 1.4;"><img
-                            style="width: 48px; height: 48px; border: 2px solid var(--laser-green); background-color: var(--drftn-black); border-radius: 22px; padding: 10px; filter: brightness(100%) drop-shadow(0 -75px 75px var(--laser-green));"
+                            style="width: 48px; height: 48px; border: 2px solid var(--laser-green); background-color: var(--drftn-black); border-radius: 22px; padding: 10px; filter: brightness(100%) drop-shadow(0 75px 75px var(--laser-green)); box-shadow: 0px -75px 250px 0 #74f89250;"
                             src="./src/static/logo_drftn.svg"></p>
-                    <div style="margin-top: 24px">
-                        <p class="para" style="line-height: 1; letter-spacing: 2px;"><strong>DRIFTIN</strong> CAME FROM
-                        </p>
-                        <span class="title" style="font-size: 32px; font-weight: 300; color: var(--laser-green);">" The
-                            Liftin "
-                        </span>
-                        <p class="para">드리프틴은 사전적으로 상승을 의미하는 <b>‘Lift’</b>와<br>그것과 동음의 레이싱 경주의 거칠게 방향을 꺾는
+                    <!-- <img style="width: 100%; margin: 60px 0; z-index: 1; position: relative;"
+                        src="./src/static/shots_overview.png" /> -->
+                    <video autoplay loop muted style="width: 100%; margin: 30px 0; mix-blend-mode: lighten;">
+                        <source src="./src/static/shots_overview.mp4" type="video/mp4">
+                    </video>
+                    <div style="margin-top: 24px; display:flex; justify-content: center;">
+                        <div style="text-align: left; width: 100%;">
+                            <p class="title" style="font-size: 32px; line-height: 1.25; font-weight: 600;"><span
+                                    style="font-weight: 300; font-family: aktiv-grotesk-extended, sans-serif;">DRFTN
+                                    came from</span><br>"THE LIFTIN"
+                            </p>
+                        </div>
+
+                        <p class="para" style="text-align: left; width: 100%;">드리프틴은 사전적으로 상승을 의미하는
+                            <b>‘Lift’</b>와<br>그것과 동음의 레이싱 경주의
+                            거칠게 방향을 꺾는
                             <b>드리프트</b> 행위를<br>
                             서로
                             연결하는데에서
@@ -139,10 +163,9 @@
             </div>
 
             <div class="contentFrame" id="features">
-                <div id="descContainer" style="text-align:center;">
-                    <p class="title" style="line-height: 1.4;"><img src="./src/static/logotype_drftn.svg"
-                            style="height: 32px; width: auto;" /><br>FEATURES</p>
-                    <div style="margin-top: 24px">
+                <div id="descContainer" style="text-align:left; width: 100%;">
+                    <p class="title" style="line-height: 1.4;">FEATURES</p>
+                    <div style="margin-top: 24px; width: 100%; display: flex; align-items: center;">
                         <span class="block">전 세계 플랫폼 최적가 비교
                         </span>
                         <span
@@ -161,20 +184,103 @@
 
                 </div>
             </div>
+
+            <div class="contentFrame" id="visualidentity">
+                <div id="descContainer" style="text-align:center; width: 100%;">
+                    <p class="title" style="line-height: 1.4; text-align: left;">Visual Identity</p>
+                    <div style="margin-top: 24px; display: flex; justify-content: left;">
+                        <div
+                            style="display: flex; flex-direction: column; text-align: left; width: 100%; height: 100%;">
+                            <div style="display: flex; gap: 40px; align-items: center;">
+                                <video autoplay loop muted style="width: 50%; mix-blend-mode: lighten;">
+                                    <source src="./src/static/motif.mp4" type="video/mp4">
+                                </video>
+                                <div
+                                    style="width: 100%; height: 100%; display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start;">
+                                    <p class="subtitle">Design Motif & Concept</p>
+                                    <div style="margin-top: 24px;">
+                                        <p class="title">
+                                            Dot Connected</p>
+                                        <p class="para">
+                                            레이싱 그랑프리 깃발에서 영감을 받은<br>체커보드 그래픽 양식으로부터 착안한 박스들의 유연한 연결은<br>
+                                            <b>편리, 직관, 단순, 연결</b>을
+                                            상징하는<br>
+                                            드리프틴 정신을 표현합니다.
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contentFrame" id="designsystem">
+                <div id="descContainer" style="text-align:center; width: 100%;">
+                    <p class="title" style="line-height: 1.4; text-align: left;">Design System</p>
+
+                    <div class="drftnLayout" style="margin-top: 40px;">
+                        <div class="row">
+                            <div class="column">
+                                <div class="container">
+                                    <p class="subtitle">Symbol</p>
+                                    <div class="groupContainer">
+                                        <img style="height: 100%; width: 60px; filter: brightness(1000%);"
+                                            src="./src/static/logo_drftn.svg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="container" style="border-bottom-right-radius: 0;">
+                                    <p class="subtitle">Logotype</p>
+                                    <div class="groupContainer">
+                                        <img style="width: 100%; height: 40px;" src="./src/static/logotype_drftn.svg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column">
+                                <div class="container">
+                                    <p class="subtitle">Icons</p>
+                                    <div class="groupContainer">
+                                        <img style="width: 100%; height: 100px;" src="./src/static/systemicon.svg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="container">
+                                    <p class="subtitle">Colors</p>
+                                    <div class="groupContainer" style="justify-content: space-evenly;">
+                                        <span class="colorSystem" style="background-color: var(--drftn-black);"></span>
+                                        <span class="colorSystem" style="background-color: var(--subtle-gray);"></span>
+                                        <span class="colorSystem" style="background-color: var(--laser-green);"></span>
+                                        <span class="colorSystem" style="background-color: var(--buy-red);"></span>
+                                        <span class="colorSystem" style="background-color: var(--sell-green);"></span>
+                                        <span class="colorSystem" style="background-color: var(--royal-blue);"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </main>
 
-        <main class="contentContainer" id="overview">
-            <div class="contentFrame">
-                <div id="descContainer">
-                    <p class="title">Let's DRIFTIN!</p>
-                    <p class="para">드리프틴은 <b>스니커즈, 의류, 주얼리, 시계, 일렉트로닉스 등</b><br>전 세계에서 거래되는
-                        모든 한정판 컬렉터블 아이템을<br>한 곳에 모아
-                        환율,
-                        배송, 수수료 등의 모든 요소를 조합하여<br>사용자에게 최적의 거래 솔루션을
-                        제안하는 서비스입니다.
-                    </p>
+        <main class="contentContainer" id="slide1">
+            <div class="chapterContainer">
+                <p class="bigTitle">Application</p>
+                <hr>
+            </div>
+            <div class="contentFrame" id="flowchart" style="margin-top: 60px;">
+                <div id="descContainer" style="text-align:center; width: 100%;">
+                    <p class="title" style="line-height: 1.4; text-align: left;">Structure</p>
+                    <img src="./src/static/flowchart.svg" style="width: 100%; max-width: 1440px; margin-top: 24px;" />
                 </div>
-                <img src="./src/static/ball_right.svg" />
             </div>
         </main>
 
@@ -212,6 +318,30 @@
 </body>
 
 <script>
+    // $(document).mousemove(function (e) {
+    //     $('.cursor')
+    //         .eq(0)
+    //         .css({
+    //             left: e.pageX,
+    //             top: e.pageY,
+    //         });
+    //     setTimeout(function () {
+    //         $('.cursor')
+    //             .eq(1)
+    //             .css({
+    //                 left: e.pageX,
+    //                 top: e.pageY,
+    //             });
+    //     }, 120);
+    // })
+
+
+
+    function fnMove(seq) {
+        var offset = $("#slide" + seq).offset();
+        $('html, body').animate({ scrollTop: offset.top }, 400);
+    }
+
     $(window).scroll(function () {
         var $body = $("body");
         var $height = $(window).scrollTop();
@@ -225,15 +355,17 @@
             deg == 360;
         }
 
-        $('#toOverview').click(function () {
-            $('html,body').animate({
-                scrollTop: $(".contentContainer#overview").offset().top
-            });
-        });
-
         if ($height < 0) {
             height == 0;
         }
+
+        $("#homeContainer").css(
+            "opacity",
+            100 - $height / 7 + "%"
+        );
+
+        $("#homeContainer").css("transform", "translateY(-" + $height / 3 + "px)");
+
 
         //footer는 스크롤을 시작하자마자 반전
         if ($height >= 48) {
