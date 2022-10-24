@@ -166,6 +166,8 @@ body {
   margin-right: auto;
   gap: 30px;
   margin-top: 40vh;
+  position: relative;
+  z-index: 2;
 }
 
 .chapterContainer > hr {
@@ -310,7 +312,8 @@ body {
   background-size: 176px;
   background-repeat: repeat-x;
   position: fixed;
-  z-index: 0;
+  top: 0;
+  z-index: 99;
 }
 
 #descStart {
@@ -399,10 +402,10 @@ body {
   transition: transform 200ms ease-in-out, filter 200ms ease-in-out;
 }
 
-#mainMockup:hover {
+/* #mainMockup:hover {
   transform: scale(105%);
   filter: drop-shadow(0 0px 40px #74f89230);
-}
+} */
 
 #homeContainer > .contentFrame {
   margin: 50vh auto !important;
