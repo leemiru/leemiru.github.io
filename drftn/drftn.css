@@ -663,6 +663,10 @@ body {
     font-size: 15px;
   }
 
+  .mainNav > ul {
+    display: none;
+  }
+
   .contentFrame {
     padding: 16px;
     width: calc(100% - 32px);
