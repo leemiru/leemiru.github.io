@@ -36,31 +36,37 @@
 </head>
 
 <body class="body">
-  <script src="/javascript/background.js"></script>
-  <header role="header" data-include="/html/header.html"></header>
-  <nav role="nav" data-include="/html/nav.html"></nav>
-  <footer role="footer" data-include="/html/footer.html"></footer>
-  <div id="block-main" style="display: block" role="main" data-include="/html/main.html">
-    <script src="/javascript/main.js"></script>
-  </div>
-
-  <div id="postModal">
-    <header id="postHeader" role="header" data-include="/html/postheader.html"></header>
-    <div class="modal-container" style="display: flex; align-items: center; justify-content: center;">
-      <iframe id="postframe"></iframe>
-      <p style="position: absolute; z-index: -3;">Loading</p>
+  <iframe src="/drftn/proto.html" frameborder="0"
+        style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px"
+        height="100%" width="100%"></iframe>
+  <div style="display: none">
+    <script src="/javascript/background.js"></script>
+    <header role="header" data-include="/html/header.html"></header>
+    <nav role="nav" data-include="/html/nav.html"></nav>
+    <footer role="footer" data-include="/html/footer.html"></footer>
+    <div id="block-main" style="display: block" role="main" data-include="/html/main.html">
+      <script src="/javascript/main.js"></script>
     </div>
-    <!-- 
-    <div style="position: fixed; z-index: 99999; background: #fff; top: 30%; left: 0">
-      <p id="postTitle" class="title black">제목</p>
-      <p id="postInfo" class="text small black">2021 / 포스터</p>
-      <p id="postDesc" class="text medium black">설명설명설명설명설명설명설명</p>
-    </div> -->
-  </div>
 
-  <div id="loadingModal">
-    <div class="loading-spinner"></div>
+    <div id="postModal">
+      <header id="postHeader" role="header" data-include="/html/postheader.html"></header>
+      <div class="modal-container" style="display: flex; align-items: center; justify-content: center;">
+        <iframe id="postframe"></iframe>
+        <p style="position: absolute; z-index: -3;">Loading</p>
+      </div>
+      <!-- 
+      <div style="position: fixed; z-index: 99999; background: #fff; top: 30%; left: 0">
+        <p id="postTitle" class="title black">제목</p>
+        <p id="postInfo" class="text small black">2021 / 포스터</p>
+        <p id="postDesc" class="text medium black">설명설명설명설명설명설명설명</p>
+      </div> -->
+    </div>
+
+    <div id="loadingModal">
+      <div class="loading-spinner"></div>
+    </div>
   </div>
+  
 </body>
 
 </html>
