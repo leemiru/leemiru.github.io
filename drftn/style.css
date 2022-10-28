@@ -102,7 +102,7 @@
 html,
 body {
   background-color: var(--drftn-black);
-  padding-bottom: 120px;
+  padding-bottom: 60px;
 }
 
 * {
@@ -710,6 +710,14 @@ body {
 
 .contentFrame.screen {
   justify-content: center;
+  background-position: top right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-blend-mode: luminosity;
+}
+
+.contentFrame.screen.reverse {
+  background-position: left;
 }
 
 .contentFrame.screen > .descContainer {
@@ -730,6 +738,7 @@ body {
   margin-top: 60px;
   border-radius: 50%;
   transition: background 200ms ease-in-out;
+  border: 2px solid var(--laser-green);
 }
 
 #profileImg:hover {
@@ -746,6 +755,55 @@ body {
   margin-bottom: 360px;
 }
 
+.footer {
+  height: 48px;
+}
+
+.cont-footer {
+  height: 100%;
+  /* padding-left: 16px;
+  padding-right: 16px; */
+}
+
+.cont-footer .cont-footer-left {
+  width: 100%;
+}
+
+.cont-footer .cont-footer-right {
+  width: 100%;
+}
+
+.cont-footer .cont-footer-left {
+  align-items: center;
+  display: inline-flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+  gap: 8px;
+}
+
+.cont-footer .cont-footer-left > #copyright {
+  font-size: 11px;
+  width: max-content;
+  color: var(--laser-green);
+  text-align: center;
+  font-family: "aktiv-grotesk-extended", sans-serif;
+}
+
+.footer i {
+  width: 10px;
+  height: 10px;
+  aspect-ratio: 1/1;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: var(--deep-gray);
+  border-radius: 50%;
+}
+
 @media screen and (max-width: 840px) {
   .chapterContainer {
     /* min-height: 720px; */
@@ -759,7 +817,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     gap: 4px;
-    margin-top: 0;
+    margin-top: 120px;
     position: relative;
     z-index: 2;
   }
@@ -882,6 +940,11 @@ body {
   .frontMockupContainer > .outerFrame {
     width: 100%;
     object-fit: contain;
+  }
+
+  .groupContainer#icons > img {
+    width: calc(100% / 3);
+    height: 30px;
   }
 
   #mainMockup {

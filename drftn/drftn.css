@@ -250,6 +250,44 @@ body {
   text-align: center;
 }
 
+.cont-header .cont-header-left,
+.cont-footer .cont-footer-left {
+  align-items: center;
+  display: inline-flex;
+  height: 100%;
+  justify-content: left;
+  width: 100%;
+  padding-left: 24px;
+}
+
+.cont-header .cont-header-center {
+  height: 100%;
+  text-align: center;
+}
+
+.cont-footer .cont-footer-left > #copyright {
+  font-size: 11px;
+  width: max-content;
+}
+
+.cont-header .cont-header-center,
+.cont-footer .cont-footer-center {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  width: 20%;
+}
+
+.cont-header .cont-header-right,
+.cont-footer .cont-footer-right {
+  align-items: center;
+  display: inline-flex;
+  height: 100%;
+  justify-content: flex-end;
+  width: 100%;
+  padding-right: 24px;
+}
+
 .mainNav {
   width: calc(100% - 40px);
   height: 80px;

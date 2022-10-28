@@ -15,6 +15,7 @@
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="/css/font-awesome.min.css" />
     <script>
         (function (d) {
             var config = {
@@ -327,7 +328,9 @@
             </div>
         </main>
 
-        <main class="contentContainer" id="screenMarket">
+        <main class="contentContainer" id="screenMarket" style="background-image:url(./src/static/bg_market.svg); background-position: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;">
             <div class="contentFrame screen reverse" style="justify-content: center; gap: 60px;">
                 <div class="descContainer">
                     <img class="titleImg" src="./src/static/ic_market.svg" />
@@ -346,7 +349,9 @@
             </div>
         </main>
 
-        <main class="contentContainer" id="screenAgora">
+        <main class="contentContainer" id="screenAgora" style="background-image:url(./src/static/bg_agora.svg); background-position: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;">
             <div class="contentFrame screen" style="justify-content: center; gap: 60px;">
                 <div class="descContainer">
                     <img class="titleImg" src="./src/static/ic_agora.svg" />
@@ -365,7 +370,9 @@
             </div>
         </main>
 
-        <main class="contentContainer" id="screenMy">
+        <main class="contentContainer" id="screenMy" style="background-image:url(./src/static/bg_portfolio.svg); background-position: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;">
             <div class="contentFrame screen reverse" style="justify-content: center; gap: 60px;">
                 <div class="descContainer">
                     <img class="titleImg" src="./src/static/ic_my.svg" />
@@ -549,6 +556,35 @@
                     <p class="title">이미루</p>
                     <p class="para">경희대학교 시각디자인학과 재학 중<br>2023년 졸업 예정<br>OZYS 프로덕트 디자이너 재직중
                     </p>
+                    <footer class="footer" id="main-footer" style="width: 100%; margin-top: 30px;">
+                        <div class="cont-footer">
+                            <div class="cont-footer-left">
+                                <div style="display: flex; align-items: center; justify-content: center; gap: 8px"><a
+                                        href="/contact.html" target="_blank" class="social-link"><i
+                                            class="fa fa-envelope"></i></a>
+                                    <a href="https://www.behance.net/leemiru" target="_blank" class="social-link"><i
+                                            class="btn fa fa-behance"></i></a>
+                                    <a href="https://instagram.com/leemiru" target="_blank" class="social-link"><i
+                                            class="fa fa-instagram"></i></a>
+                                </div>
+
+                                <p id="copyright">
+                                    ⓒ MIRU. All rights reserved.
+                                </p>
+                                <p id="copyright"
+                                    style="color: var(--dim-gray); font-weight: 300; line-height: 1.8; margin-top: 30px;">
+                                    All Images are copyrighted by below sites and brands<br>
+                                    www.yeezysupply.com<br>
+                                    www.kream.co.kr<br>
+                                    www.stockx.com<br>
+                                    www.nike.com<br>
+
+                                </p>
+                                <!-- <a href="https://facebook.com/leemiru" target="_blank" class="social-link"><i class="btn fa fa-facebook"></i></a> -->
+
+                            </div>
+                        </div>
+                    </footer>
                 </div>
 
                 <img id="profileImg" />
@@ -556,7 +592,6 @@
         </main>
 
     </div>
-
 </body>
 
 <script>
