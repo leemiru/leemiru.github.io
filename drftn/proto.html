@@ -161,6 +161,9 @@
                     <video playsinline id="shotsOverview" playsinline autoplay loop muted>
                         <source src="./src/static/shots_overview.mp4" type="video/mp4">
                     </video>
+                    <video playsinline id="shotsOverview_m" playsinline autoplay loop muted>
+                        <source src="./src/static/shots_overview_mobile.mp4" type="video/mp4">
+                    </video>
                 </div>
 
             </div>
@@ -248,8 +251,20 @@
                             <div class="column">
                                 <div class="container">
                                     <p class="subtitle">Icons</p>
-                                    <div class="groupContainer">
-                                        <img style="width: 100%; height: 100px;" src="./src/static/systemicon.svg">
+                                    <div class="groupContainer" id="icons">
+                                        <img src="./src/static/icon-1.svg">
+                                        <img src="./src/static/icon-2.svg">
+                                        <img src="./src/static/icon-3.svg">
+                                        <img src="./src/static/icon-4.svg">
+                                        <img src="./src/static/icon-5.svg">
+                                        <img src="./src/static/icon-6.svg">
+                                        <img src="./src/static/icon-7.svg">
+                                        <img src="./src/static/icon-8.svg">
+                                        <img src="./src/static/icon-9.svg">
+                                        <img src="./src/static/icon-10.svg">
+                                        <img src="./src/static/icon-11.svg">
+                                        <img src="./src/static/icon-12.svg">
+
                                     </div>
                                 </div>
                             </div>
@@ -458,54 +473,60 @@
                 <hr>
             </div>
 
-            <div class="contentFrame portrait" id="prototype">
+            <div class="contentFrame portrait" style="height: 60vh; justify-content: center;" id="prototype">
                 <div class="descContainer"
                     style="z-index: 1; text-align: center; justify-content: center; display: flex; flex-direction: column; align-items: center;">
-                    <img class="titleImg" src="./src/static/logo_figma.svg" style="margin-top: 24px; filter: none" />
+                    <a id="prototype_link"
+                        href="https://www.figma.com/proto/mtGdf9UblU8idFpEpZ6CVD?node-id=1282:13646&starting-point-node-id=1227:6307&comments-enabled=1"><img
+                            class="titleImg" src="./src/static/logo_figma.svg"
+                            style="margin-top: 24px; filter: none" /></a>
                     <p class="title">DRFTN PROTO</p>
                     <p class="para">위의 QR 코드를 클릭하거나, 스마트폰 카메라로 비춰서<br>당신도 드리프틴을 체험해보세요.
                     </p>
                 </div>
 
-                <img src="./src/static/qr-code.svg" style="width: 256px; object-fit: contain;" />
+                <a id="prototype_link"
+                    href="https://www.figma.com/proto/mtGdf9UblU8idFpEpZ6CVD?node-id=1282:13646&starting-point-node-id=1227:6307&comments-enabled=1"><img
+                        src="./src/static/qr-code.svg" style="width: 256px; object-fit: contain;" /></a>
             </div>
         </main>
+
+        <img id="studioShot" src="./src/static/studioshot.png" />
 
         <main class="contentContainer light" id="slide3">
 
             <div class="chapterContainer">
-                <p class="bigTitle">merchandise</p>
+                <p class="bigTitle">Merchandise</p>
                 <hr>
             </div>
 
             <div class="contentFrame portrait" style="margin: auto;" id="md_containerParent">
-                <div class="contentFrame" id="md_container"
-                    style="display: flex; width: 100%; height: 100%; align-items: center; justify-content: space-around; margin-top: 24px;">
-                    <div>
-                        <div class="contentFrame portrait" style="justify-content: center;">
+                <div class="contentFrame portrait" style="width: 100%;" id="md_container">
+                    <p class="para" style="font-weight: 400;">모든 상품은 한정수량으로 조기에 소진될 수 있습니다.
+                    </p>
+                    <div style="width: 100%;">
+                        <div class="contentFrame">
                             <div class="descContainer" style="width: 100%;">
-                                <p class="title">슈 케이스 (와이드형)</p>
-                                <p class="para" style="font-weight: 400;">스니커즈, 백, 아트토이 등 나의 소중한 아이템,<br>안전하게 보관하면서 공간 속
-                                    멋진 인테리어 요소로 활용하세요.<br>(*해당 상품은 소량판매 합니다.)
+                                <p class="title">비치 타올 <span style="font-size: 24px;">(130cm × 70cm)</span></p>
+                                <p class="subtitle" style="margin-bottom: 24px;">30,000 ₩</p>
+                                <p class="para" style="font-weight: 400;">스니커즈, 럭셔리 백, 아트토이 등 나의 소중한 아이템,<br>안전하게 보관하면서
+                                    공간 속 멋진 인테리어 요소로 활용하세요.
                                 </p>
-                                <p class="subtitle">20,000 ₩</p>
                             </div>
-
-                            <img class="mdImg"
-                                src="http://m.footsell.co.kr/web/product/extra/big/20200312/31424b12c438f8a630fffb4decfe068a.png" />
+                            <img class="mdImg" src="./src/static/towel.png" />
                         </div>
                     </div>
 
-                    <div>
-                        <div class="contentFrame portrait">
+                    <div style="width: 100%;">
+                        <div class="contentFrame">
                             <div class="descContainer" style="width: 100%;">
-                                <p class="title">비치 타올 (130 × 70)</p>
-                                <p class="para" style="font-weight: 400;">큰 대지에 화려한 옵티컬 아트를 포함한<br>비치타올은 인테리어
-                                    소품으로도,<br>내년
+                                <p class="title">슈케이스 <span style="font-size: 24px;">(5개 한정제작)</span></p>
+                                <p class="subtitle" style="margin-bottom: 24px;">30,000 ₩</p>
+                                <p class="para" style="font-weight: 400;">큰 대지에 화려한 옵티컬 아트를 포함한 비치타올은<br>인테리어
+                                    소품으로도, 내년
                                     여름
                                     물놀이용으로도 제격입니다.
                                 </p>
-                                <p class="subtitle">20,000 ₩</p>
                             </div>
                             <img class="mdImg" src="./src/static/towel.png" />
                         </div>
@@ -521,7 +542,8 @@
                 <hr>
             </div>
 
-            <div class="contentFrame portrait" style="margin: 0 auto;" id="prototype">
+            <div class="contentFrame portrait" style="margin: 0 auto; height: 90vh; justify-content: center;"
+                id="prototype">
                 <div class="descContainer"
                     style="z-index: 1; text-align: center; justify-content: center; display: flex; flex-direction: column; align-items: center;">
                     <p class="title">이미루</p>
