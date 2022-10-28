@@ -710,10 +710,6 @@ body {
 
 .contentFrame.screen {
   justify-content: center;
-  background-position: top right;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-blend-mode: luminosity;
 }
 
 .contentFrame.screen.reverse {
@@ -724,8 +720,9 @@ body {
   width: calc(100% / 3);
 }
 
-#md_Container .contentFrame.portrait {
+#md_Container .contentFrame {
   width: 100%;
+  margin: 30px 0;
 }
 
 #profileImg {
