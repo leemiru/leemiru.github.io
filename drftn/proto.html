@@ -15,7 +15,12 @@
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="/css/font-awesome.min.css" />
+    <!-- <link rel="stylesheet" href="/css/font-awesome.min.css" /> -->
+    <!-- our project just needs Font Awesome Solid + Brands -->
+    <link href="/fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="/fontawesome/css/brands.css" rel="stylesheet">
+    <link href="/fontawesome/css/solid.css" rel="stylesheet">
+
     <script>
         (function (d) {
             var config = {
@@ -114,28 +119,78 @@
                     <source src="./src/static/rotating_ball.mp4" type="video/mp4">
                 </video>
 
-                <div class="descContainer" style="z-index: 1;">
-                    <div>
-                        <p class="title">Let's DRFTN!</p>
-                        <p class="para">드리프틴은 <b>스니커즈, 의류, 주얼리, 시계, 일렉트로닉스 등</b><br>전 세계에서 거래되는
-                            모든 한정판 컬렉터블 아이템을<br>한 곳에 모아
-                            환율,
-                            배송, 수수료 등의 모든 요소를 조합하여<br>사용자에게 최적의 거래 솔루션을
-                            제안하는 서비스입니다.
+                <img id="projectDesc" src="./src/static/project_desc.svg"
+                    style="width: 100%; mix-blend-mode: lighten;" />
+
+                <div class="contentFrame" id="overviewContainer">
+                    <div class="descContainer" style="z-index: 1;">
+                        <div>
+                            <p class="title">Let's DRFTN!</p>
+                            <p class="para">드리프틴은 <b>스니커즈, 의류, 주얼리, 시계, 일렉트로닉스 등</b><br>전 세계에서 거래되는
+                                모든 한정판 컬렉터블 아이템을<br>한 곳에 모아
+                                환율,
+                                배송, 수수료, 할인 등의 모든 요소를 비교하여<br>사용자에게 최적의 거래 솔루션을
+                                제안하는 서비스 플랫폼입니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="descContainer" style="z-index: 1;">
+                        <p class="title">Project Goal</p>
+                        <p class="para">한 발짝 일상으로 다가온 ‘한정판 리셀 문화'의
+                            흐름 속에서 드리프틴은 <br><b>소비자들이 훨씬 더 쉽고 직관적으로
+                                합리적인 소비를 할 수 있는 다리</b>가 됩니다.<br>또한
+                            구매와 판매 사이, 사용자의 액션에 맞게 다양한 데이터 비교를 통해서<br><b>최적의 트레이드 방향을 제시하고 이를 사용자 개인화에 맞춘 통계를 내어<br>자산
+                                투자에 대한
+                                포트폴리오 서비스</b>를 제공합니다.
                         </p>
                     </div>
                 </div>
-                <div class="descContainer" style="z-index: 1;">
-                    <p class="title">Project Goal</p>
-                    <p class="para">한 발짝 일상으로 다가온 ‘한정판 리셀 문화'의
-                        흐름 속에서<br>소비자들이 훨씬 더 쉽고 직관적으로
-                        합리적인 소비를 할 수 있도록 돕습니다.<br>또한
-                        구매를 위함인지, 판매를 위함인지 사용자의 액션에 맞게<br>다양한 데이터 비교를 통해서 최적의 트레이드 방향을 제시하고<br>이를 사용자 개인화에 맞춘 통계를 내어 자산
-                        투자에 대한
-                        포트폴리오 제공합니다.
-                    </p>
-                </div>
             </div>
+
+            <!-- <div class="contentFrame" id="drftnstructure">
+                <div class="descContainer" style="text-align:center; width: 100%;">
+                    <p class="title" style="line-height: 1.2; text-align: left;">Service Feature</p>
+                    <div style="display: flex; margin-top: 20px; justify-content: left;">
+                        <div
+                            style="display: flex; flex-direction: column; text-align: left; width: 100%; height: 100%;">
+                            
+
+                            <div id="featureContainer">
+                                <div class="contentFrame portrait">
+                                    <div class="block">최적가 비교
+                                    </div>
+                                </div>
+
+                                <span style="font-size: 30px; font-weight: 700; color: var(--laser-green);">+
+                                </span>
+
+                                <div class="contentFrame portrait">
+                                    <div class="block">자산 포트폴리오
+                                    </div>
+                                </div>
+
+                                <span style="font-size: 30px; font-weight: 700; color: var(--laser-green);">+
+                                </span>
+
+                                <div class="contentFrame portrait">
+                                    <div class="block">매거진 / 칼럼
+                                    </div>
+                                </div>
+
+                                <span style="font-size: 30px; font-weight: 700; color: var(--laser-green);">+
+                                </span>
+
+                                <div class="contentFrame portrait">
+                                    <div class="block">포트폴리오 쉐어링
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
 
             <div class="contentFrame" id="identity">
                 <div class="descContainer" style="text-align:center;">
@@ -182,7 +237,7 @@
                             <img src="./src/static/ball_center.svg" />
                         </div>
 
-                        <span style="font-size: 30px; font-weight: 700; color: var(--laser-green); margin: 0 12px;">+
+                        <span style="font-size: 30px; font-weight: 700; color: var(--laser-green);">+
                         </span>
 
                         <div class="contentFrame portrait" style="gap: 20px;">
@@ -191,7 +246,7 @@
                             <img src="./src/static/ball_center.svg" />
                         </div>
 
-                        <span style="font-size: 30px; font-weight: 700; color: var(--laser-green); margin: 0 12px;">+
+                        <span style="font-size: 30px; font-weight: 700; color: var(--laser-green);">+
                         </span>
 
                         <div class="contentFrame portrait" style="gap: 20px;">
@@ -200,7 +255,7 @@
                             <img src="./src/static/ball_center.svg" />
                         </div>
 
-                        <span style="font-size: 30px; font-weight: 700; color: var(--laser-green); margin: 0 12px;">+
+                        <span style="font-size: 30px; font-weight: 700; color: var(--laser-green);">+
                         </span>
 
                         <div class="contentFrame portrait" style="gap: 20px;">
@@ -311,19 +366,68 @@
             <div class="contentFrame" id="flowchart" style="align-items: flex-start; gap: 20px;">
                 <div class="descContainer" style="text-align: center;">
                     <p class="title" style="line-height: 1.4; text-align: left;">Structure</p>
+                    <!-- <p class="para" id="mousealert" style="text-align: left;">크게보려면 마우스를 가져다 대세요.</p> -->
+                    <div class="magnifierWrap">
+                        <div class="magnifier"></div>
+                        <img class="smallImg" src="./src/static/flowchart2.svg"
+                            style="width: 100%; max-width: 1440px; margin-top: 30px;" />
+                    </div>
+                </div>
+
+                <!-- <div class="descContainer" style="text-align: center;">
+                    <p class="title" style="line-height: 1.4; text-align: left;">Wireframe</p>
+                    <img src="./src/static/wireframe.png" style="width: 100%; max-width: 1440px; margin-top: 24px;" />
+                </div> -->
+            </div>
+
+            <div class="contentFrame" id="flowchart" style="align-items: center; gap: 40px;">
+                <!-- <div class="descContainer" style="text-align: center;">
+                    <p class="title" style="line-height: 1.4; text-align: left;">Structure</p>
                     <p class="para" style="text-align: left;">크게보려면 마우스를 가져다 대세요.</p>
                     <div class="magnifierWrap">
                         <div class="magnifier"></div>
                         <img class="smallImg" src="./src/static/flowchart.svg"
                             style="width: 100%; max-width: 1440px; margin-top: 30px;" />
                     </div>
-                </div>
+                </div> -->
 
                 <div class="descContainer" style="text-align: center;">
                     <p class="title" style="line-height: 1.4; text-align: left;">Wireframe</p>
                     <img src="./src/static/wireframe.png" style="width: 100%; max-width: 1440px; margin-top: 24px;" />
                 </div>
+
+                <div class="contentFrame" id="structureFeatures">
+                    <div>
+                        <p class="subtitle"><i class="fa-solid fa-globe"></i> Professionally</p>
+                        <p class="para">전 세계 플랫폼의 상품 정보와 환율, 거래정보, 시세 등<br>수치와 관련된 전문적인 정보들을 결코 놓치지 않도록<br>모든 구조를
+                            체계적으로
+                            설계했습니다.
+                        </p>
+                    </div>
+
+                    <div>
+                        <p class="subtitle"><i class="fa-solid fa-shapes"></i> Simplicity</p>
+                        <p class="para">전문적이면서 다소 복잡한 정보들을<br>일반적인 사용자의 입장에서 이해하기 쉽도록<br>핵심적인 요소만 간결하게
+                            설계했습니다.
+                        </p>
+                    </div>
+
+                    <div>
+                        <p class="subtitle"><i class="fa-solid fa-mobile"></i> Convineiently</p>
+                        <p class="para">사용자의 입장에서 가장 필요로 할 것 같은 기능들을<br>적재적소에 배치하여 사용성을 편리하게 설계했습니다.
+                        </p>
+                    </div>
+
+                    <div>
+                        <p class="subtitle"><i class="fa-solid fa-bolt"></i> Interactively</p>
+                        <p class="para">다채롭고 직관적인 정보의 흐름을 설계하기 위해서,<br>드리프틴 속 모든 요소들은 서로의 연결에 집중되어 항시 상호작용합니다.<br>오브젝트의
+                            모션, 전환효과는 앱의 끊김없는 사용성에 큰 역할을 합니다.
+                        </p>
+                    </div>
+                </div>
             </div>
+
+
         </main>
 
         <div id="appshots"
@@ -533,32 +637,51 @@
 
             <div class="contentFrame portrait" style="margin: auto;" id="md_containerParent">
                 <div class="contentFrame portrait" style="width: 100%;" id="md_container">
-                    <p class="para" style="font-weight: 400; margin-top: 60px;">모든 상품은 한정수량으로 조기에 소진될 수 있습니다.
+                    <p class="para" style="font-weight: 400; margin-top: 60px; text-decoration: underline;">* 모든 MD 상품은
+                        한정수량으로 조기에 소진될 수 있습니다 *
                     </p>
                     <div style="width: 100%;">
-                        <div class="contentFrame" style="margin: 0;">
+                        <div class="contentFrame" style="margin: 0; gap: 20px;">
                             <div class="descContainer" style="width: 100%;">
+                                <i class="fa-solid fa-flag-checkered" style="font-size: 36px;"></i>
                                 <p class="title">비치 타올 <span style="font-size: 24px;">(130cm × 70cm)</span></p>
                                 <p class="subtitle" style="margin-bottom: 24px;">25,000 ₩</p>
-                                <p class="para" style="font-weight: 400;">스니커즈, 럭셔리 백, 아트토이 등 나의 소중한 아이템,<br>안전하게 보관하면서
-                                    공간 속 멋진 인테리어 요소로 활용하세요.
-                                </p>
-                            </div>
-                            <img class="mdImg" src="./src/static/md_beachtowel.jpg" />
-                        </div>
-                    </div>
-                    <div style="width: 100%;">
-                        <div class="contentFrame" style="margin: 0; border-bottom: 1px solid rgba(0, 0, 0, 0.2);">
-                            <div class="descContainer" style="width: 100%;">
-                                <p class="title">슈케이스 <span style="font-size: 24px;">(5개 한정제작)</span></p>
-                                <p class="subtitle" style="margin-bottom: 24px;">50,000 ₩</p>
                                 <p class="para" style="font-weight: 400;">큰 대지에 화려한 옵티컬 아트를 포함한 비치타올은<br>인테리어
                                     소품으로도, 내년
                                     여름
                                     물놀이용으로도 제격입니다.
                                 </p>
                             </div>
-                            <img class="mdImg" src="./src/static/md_shoecase.jpg" />
+                            <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                                <img class="mdImg" src="./src/static/md_beachtowel_1.jpg" />
+                                <img class="mdImg" src="./src/static/md_beachtowel_2.jpg" />
+                                <img class="mdImg" src="./src/static/md_beachtowel.jpg" />
+                                <img class="mdImg" src="./src/static/md_beachtowel_4.jpg" />
+                            </div>
+
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div style="width: 100%;">
+                        <div class="contentFrame" style="margin: 0; gap: 20px">
+                            <div style=" display: flex; flex-wrap: wrap; gap: 20px;">
+                                <img class="mdImg" src="./src/static/md_shoecase.jpg" />
+                                <img class="mdImg" src="./src/static/md_shoecase.jpg" />
+                                <img class="mdImg" src="./src/static/md_shoecase.jpg" />
+                                <img class="mdImg" src="./src/static/md_shoecase.jpg" />
+                            </div>
+                            <div class="descContainer" style="width: 100%;">
+                                <img src="./src/static/ic_md_shoecase.svg"
+                                    style="width: 36px; height: 36px; object-fit: contain;" />
+                                <p class=" title">슈케이스 <span style="font-size: 24px;">(5개 한정제작)</span></p>
+                                <p class="subtitle" style="margin-bottom: 24px;">35,000 ₩</p>
+
+                                <p class="para" style="font-weight: 400;">스니커즈, 럭셔리 백, 아트토이 등 나의 소중한 아이템,<br>안전하게 보관하면서
+                                    공간 속 멋진 인테리어 요소로 활용하세요.
+                                </p>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -584,11 +707,11 @@
                             <div class="cont-footer-left">
                                 <div style="display: flex; align-items: center; justify-content: center; gap: 8px"><a
                                         href="/contact.html" target="_blank" class="social-link"><i
-                                            class="fa fa-envelope"></i></a>
+                                            class="fa-solid fa-envelope"></i></a>
                                     <a href="https://www.behance.net/leemiru" target="_blank" class="social-link"><i
-                                            class="btn fa fa-behance"></i></a>
+                                            class="fa-brands fa-behance"></i></a>
                                     <a href="https://instagram.com/leemiru" target="_blank" class="social-link"><i
-                                            class="fa fa-instagram"></i></a>
+                                            class="fa-brands fa-instagram"></i></a>
                                 </div>
 
                                 <p id="copyright">
