@@ -523,7 +523,7 @@
             <div style="display: flex; justify-content: center;">
                 <div style="background-color: var(--deep-gray); border-radius: 40px; border-bottom-right-radius: 0;">
                     <div class="contentFrame portrait" id="itemDetail" style="justify-content: center;">
-                        <div class="descContainer" style="width: 100%;">
+                        <div class="descContainer" style="width: fit-content;">
                             <p class="title">아이템 디테일</p>
                             <p class="para">아이템을 다양한 각도에서 경쾌한 흐름으로 탐색합니다.<b><br>한 눈에 정리된 상품정보와 플랫폼 별 가격비교</b>를
                                 통해<br>사용자는
@@ -544,7 +544,7 @@
                 <div style="background-color: var(--deep-gray);">
                     <div class="contentFrame portrait" id="assetBrief"
                         style="justify-content: center; background-color: var(--drftn-black); border-bottom-left-radius: 40px;">
-                        <div class="descContainer" style="width: 100%;">
+                        <div class="descContainer" style="width: fit-content;">
                             <p class="title">자산 브리핑</p>
                             <p class="para"><b>최근 수익 아이템, 자산 분포도, 수익률 그래프</b>는<br>펀드매니저 부럽지 않게 당신의 아이템을<br>자산으로써 철저히
                                 분석합니다.
@@ -565,7 +565,7 @@
                 <div style="background-color: var(--deep-gray);">
                     <div class="contentFrame portrait" id="shareTrade"
                         style="justify-content: center; background-color: var(--drftn-black); border-top-right-radius: 40px;">
-                        <div class="descContainer" style="width: 100%;">
+                        <div class="descContainer" style="width: fit-content;">
                             <p class="title">트레이딩 공유</p>
                             <p class="para">다른 사람들은 어떻게 거래하고 있는지,<br>지금 이 아이템을 팔았는지 말았는지,<br><b>서로의 투자활동을 공유하고 공감</b>할 수
                                 있습니다.
@@ -583,7 +583,7 @@
 
                 <div style="background-color: var(--deep-gray); border-radius: 40px; border-top-left-radius: 0;">
                     <div class="contentFrame portrait" id="gallery" style="justify-content: center;">
-                        <div class="descContainer" style="width: 100%;">
+                        <div class="descContainer" style="width: fit-content;">
                             <p class="title">갤러리</p>
                             <p class="para">당신이 보유 중인 컬렉터블 아이템을<br>박물관 진열장에 넣어둔 것 처럼 감상하세요.<br><b>다양한 시점의 정렬</b>을
                                 제공합니다.
@@ -641,8 +641,8 @@
                         한정수량으로 조기에 소진될 수 있습니다 *
                     </p>
                     <div style="width: 100%;">
-                        <div class="contentFrame" style="margin: 0; gap: 20px;">
-                            <div class="descContainer" style="width: 100%;">
+                        <div class="contentFrame" style="margin: 0; gap: 80px; justify-content: center;">
+                            <div class="descContainer" style="width: fit-content;">
                                 <i class="fa-solid fa-flag-checkered" style="font-size: 36px;"></i>
                                 <p class="title">비치 타올 <span style="font-size: 24px;">(130cm × 70cm)</span></p>
                                 <p class="subtitle" style="margin-bottom: 24px;">25,000 ₩</p>
@@ -653,10 +653,7 @@
                                 </p>
                             </div>
                             <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-                                <img class="mdImg" src="./src/static/md_beachtowel_1.jpg" />
-                                <img class="mdImg" src="./src/static/md_beachtowel_2.jpg" />
-                                <img class="mdImg" src="./src/static/md_beachtowel.jpg" />
-                                <img class="mdImg" src="./src/static/md_beachtowel_4.jpg" />
+                                <img class="mdImg" src="./src/static/md_beachtowel.png" />
                             </div>
 
                         </div>
@@ -664,14 +661,15 @@
                     <br>
                     <br>
                     <div style="width: 100%;">
-                        <div class="contentFrame" style="margin: 0; gap: 20px">
-                            <div style=" display: flex; flex-wrap: wrap; gap: 20px;">
+                        <div id="mdcontainerreverse" class="contentFrame"
+                            style="margin: 0; gap: 80px; justify-content: center;">
+                            <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                                <img class="mdImg" id="mdShoecase" src="./src/static/md_shoecase_1.png" />
+                                <!-- <img class="mdImg" src="./src/static/md_shoecase.jpg" />
                                 <img class="mdImg" src="./src/static/md_shoecase.jpg" />
-                                <img class="mdImg" src="./src/static/md_shoecase.jpg" />
-                                <img class="mdImg" src="./src/static/md_shoecase.jpg" />
-                                <img class="mdImg" src="./src/static/md_shoecase.jpg" />
+                                <img class="mdImg" src="./src/static/md_shoecase.jpg" /> -->
                             </div>
-                            <div class="descContainer" style="width: 100%;">
+                            <div class="descContainer" style="width: fit-content;">
                                 <img src="./src/static/ic_md_shoecase.svg"
                                     style="width: 36px; height: 36px; object-fit: contain;" />
                                 <p class=" title">슈케이스 <span style="font-size: 24px;">(5개 한정제작)</span></p>
