@@ -862,6 +862,43 @@ body {
   padding: 15px;
 }
 
+.mdBg {
+  width: 100%;
+  /* aspect-ratio: 3/2; */
+  object-fit: contain;
+  object-position: top;
+  opacity: 0.9;
+  margin-bottom: 120px;
+  mix-blend-mode: hard-light;
+  -webkit-mask-image: linear-gradient(
+    to top,
+    transparent 0%,
+    black 100%,
+    black 100%,
+    black 100%
+  );
+  mask-image: linear-gradient(
+    to top,
+    transparent 0%,
+    black 100%,
+    black 100%,
+    black 100%
+  );
+}
+
+#md_containerParent .subtitle {
+  font-weight: 700;
+}
+
+#md_containerParent .para {
+  font-weight: 400;
+  letter-spacing: -3%;
+}
+
+#md_containerParent .para > b {
+  font-weight: 700;
+}
+
 @media screen and (max-width: 840px) {
   .chapterContainer {
     /* min-height: 720px; */
