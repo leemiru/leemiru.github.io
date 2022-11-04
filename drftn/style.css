@@ -1067,7 +1067,7 @@ body {
   }
 
   #shotsOverview_m {
-    display: block;
+    display: block !important;
   }
 
   .frontMockupContainer {
