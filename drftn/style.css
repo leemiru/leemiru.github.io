@@ -105,7 +105,7 @@
   position: fixed;
   top: 0;
   z-index: 999999;
-  filter: contrast(20);
+  filter: contrast(20) saturate(0);
   background-color: black;
   overflow: hidden;
   display: flex;
