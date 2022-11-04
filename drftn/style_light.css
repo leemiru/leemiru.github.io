@@ -1,11 +1,11 @@
 :root {
-  --drftn-black: #111111;
-  --deep-gray: #343234;
-  --laser-green: #74f892;
+  --drftn-black: #ffffff;
+  --deep-gray: #f3f3f3;
+  --laser-green: #0da55e;
   --ash-gray: #666666;
   --buy-red: #ff6161;
   --sell-green: #2ecc71;
-  --subtle-gray: #f2f2f2;
+  --subtle-gray: #333333;
   --dim-gray: #999999;
   --royal-blue: #3478bc;
 }
@@ -97,66 +97,6 @@
   max-width: 1440px;
   padding-left: 20px;
   padding-right: 20px;
-}
-
-.loadingcontainer {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 999999;
-  filter: contrast(20);
-  background-color: black;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.loadingcontainer > h1 {
-  color: white;
-  font-size: 8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  line-height: 1;
-  filter: blur(0.5rem);
-  -webkit-animation: letterspacing 3s infinite alternate
-    cubic-bezier(0.2, 0, 0, 1);
-  animation: letterspacing 3s infinite alternate cubic-bezier(0.2, 0, 0, 1);
-  display: block;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-top: -128px;
-  transform: translate3d(-50%, -50%, 0);
-}
-
-@-webkit-keyframes letterspacing {
-  0% {
-    letter-spacing: -5rem;
-    filter: blur(0.5rem);
-  }
-  50% {
-    filter: blur(0.5rem);
-  }
-  100% {
-    letter-spacing: 1rem;
-    filter: blur(1.5rem);
-  }
-}
-
-@keyframes letterspacing {
-  0% {
-    letter-spacing: -5rem;
-    filter: blur(0.5rem);
-  }
-  50% {
-    filter: blur(0.5rem);
-  }
-  100% {
-    letter-spacing: 1rem;
-    filter: blur(1.5rem);
-  }
 }
 
 html,
@@ -254,7 +194,7 @@ body {
 .title {
   font-size: 36px;
   font-weight: 600;
-  color: #fff;
+  color: #111111;
   letter-spacing: 0px;
   line-height: 2;
   font-family: aktiv-grotesk-extended, sans-serif;
@@ -274,7 +214,7 @@ body {
 .subtitle {
   font-size: 20px;
   font-weight: 600;
-  color: #fff;
+  color: #111111;
   letter-spacing: 0px;
   line-height: 1.5;
   font-family: aktiv-grotesk-extended, sans-serif;
@@ -285,7 +225,7 @@ body {
 
 .para {
   font-size: 17px;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--subtle-gray);
   letter-spacing: -0.25px;
   line-height: 1.6;
@@ -345,7 +285,7 @@ body {
 .mainNav > ul {
   display: flex;
   list-style: none;
-  color: #fff;
+  color: #111111;
   justify-content: center;
 }
 
@@ -439,10 +379,6 @@ body {
   margin-top: 40vh; */
 }
 
-.contentFrame#serviceOrigin p {
-  text-align: left;
-}
-
 #overviewContainer {
   display: flex;
   width: 100%;
@@ -518,7 +454,7 @@ body {
 #homeContainer > .contentFrame > p {
   min-width: 390px;
   font-size: 32px;
-  color: #fff;
+  color: #111111;
   font-weight: bold;
   max-width: 390px;
   letter-spacing: 5pt;
@@ -882,7 +818,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #111111;
   background-color: var(--deep-gray);
   border-radius: 50%;
 }
@@ -1155,7 +1091,7 @@ body {
   #homeContainer > .contentFrame > p {
     min-width: 390px;
     font-size: 24px;
-    color: #fff;
+    color: #111111;
     font-weight: bold;
     max-width: 390px;
     letter-spacing: 5pt;
