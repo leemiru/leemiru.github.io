@@ -1076,7 +1076,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 33px;
+    padding: 31px;
     background-image: url(./src/static/device_front.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -1091,8 +1091,8 @@ body {
       position: absolute;
       z-index: -1;
       background-color: #fff; */
-    width: 216px;
-    min-width: 216px;
+    width: 200px;
+    min-width: 200px;
     -webkit-mask-image: url(./src/static/device_front_mask.png);
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: 100% 100%;
