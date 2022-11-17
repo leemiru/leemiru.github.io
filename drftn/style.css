@@ -417,7 +417,7 @@ body {
 
 .contentFrame.portrait {
   flex-direction: column-reverse;
-  margin: 0;
+  margin: 0 auto;
   padding: 40px;
 }
 
@@ -963,7 +963,20 @@ body {
   font-weight: 700;
 }
 
-@media screen and (max-width: 840px) {
+.prototype {
+  width: 100%;
+  aspect-ratio: 1.8/1;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 1180px) {
+  .prototype {
+    width: 100%;
+    aspect-ratio: 11/24;
+    border-radius: 20px;
+    display: none;
+  }
+  
   .chapterContainer {
     /* min-height: 720px; */
     width: 100%;
@@ -1318,10 +1331,6 @@ body {
     height: 300px;
     object-position: left;
     object-fit: cover;
-    animation: imageSlide 10s ease-in-out infinite;
-  }
-
-  #studioShot {
     animation: imageSlide 10s ease-in-out infinite;
   }
 
