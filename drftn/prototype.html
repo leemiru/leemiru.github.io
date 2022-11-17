@@ -20,8 +20,7 @@
     <!-- our project just needs Font Awesome Solid + Brands -->
 </head>
 
-<body
-    style="background-color: black; display: flex; position: fixed; width: 100%; top: 0; left: 0; height: calc(100% - env(safe-area-inset-top) - env(safe-area-inset-bottom)); align-items: center; justify-content: space-between; gap: 20px; padding-bottom: env(safe-area-inset-bottom); padding-top: env(safe-area-inset-top);">
+<body style="background-color: black; display: flex; align-items: center; justify-content: space-between; gap: 20px;">
     <!-- <nav class="mainNav" style="margin: 0 auto; width: 100%; max-width: none; justify-content: center; padding-top: 30px;">
         <ul>
             <li id="toOverview" onclick="fnMove(0)" style="width: 520px; max-width: none;">
@@ -43,15 +42,17 @@
     </div>
 
     <div id="contentPrototype"
-        style="display: flex; width: max-content; margin: 0 auto; justify-content: center; align-items: center;height: 100%; flex-direction: column; gap: 30px;">
-        <p class="subtitle" style="margin-top: 10px; height: 43px; font-weight: 400;">직접 체험해보세요!</p>
-
+        style="display: flex; width: max-content; margin: 0 auto; justify-content: center; align-items: center; height: 100%; flex-direction: column; gap: 30px;">
+        <div
+            style="width: fit-content; position: absolute; top: env(safe-area-inset-top); background-color: white; padding: 12px 24px; z-index: 9999999; border-radius: 10px; font-size: 15px; font-weight: 400; letter-spacing: -0.25px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 10px;">
+            <b>직접 체험해 보세요!</b>
+        </div>
         <iframe
-            style="height: 100%; aspect-ratio: 9/19.9; margin: 0 auto; border: none; border-radius: 22pt; z-index: 999999; box-shadow: 0 36px 128px 0px rgba(116, 248, 146, 0.25);"
+            style="height: 100%; min-width: 390px; aspect-ratio: 9/19.9; margin: 0 auto; border: none; border-radius: 22pt; z-index: 999999; box-shadow: 0 36px 128px 0px rgba(116, 248, 146, 0.25);"
             src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FmtGdf9UblU8idFpEpZ6CVD%2FDRFTN%3Fpage-id%3D15%253A475%26node-id%3D1282%253A13646%26viewport%3D8473%252C-106%252C1%26scaling%3Dscale-down%26starting-point-node-id%3D1227%253A6307"></iframe>
 
         <div onClick="window.location.href=window.location.href"
-            style="width: fit-content; background-color: var(--laser-green); padding: 12px 24px; z-index: 9999999; border-radius: 10px; font-size: 15px; font-weight: 400; letter-spacing: -0.25px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 10px;">
+            style="width: fit-content; position: absolute; bottom: env(safe-area-inset-bottom); background-color: var(--laser-green); padding: 12px 24px; z-index: 9999999; border-radius: 10px; font-size: 15px; font-weight: 400; letter-spacing: -0.25px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 10px;">
             처음부터 다시 하시겠어요? ⏤ <i class="fa-solid fa-rotate-right"></i> <b>새로고침</b></div>
     </div>
 
