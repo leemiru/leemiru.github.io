@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" style="background-color: black;">
 
 <head>
     <meta charset="UTF-8">
@@ -21,29 +21,29 @@
 </head>
 
 <body
-    style="max-width: 1194px; width: 100%; background-color: black; display: flex; align-items: center; justify-content: center;">
+    style="max-width: 1194px; width: 100%; height: calc(100vh - 25pt); margin-top: 25pt; overflow: hidden; background-color: black; display: flex; align-items: flex-end; justify-content: space-between;">
 
-    <div id="contentInfographics" style="width: fit-content;">
-        <img src="./src/static/infographics.jpg" style="width: 100%; height: 100vh; object-fit: contain;">
+    <div id=" contentInfographics" style="width: fit-content; height: calc(100vh - 25pt)">
+        <img src="./src/static/infographics.jpg"
+            style="width: 100%; height: 100%; object-fit: contain; object-position: left;">
     </div>
 
     <div id="contentPrototype"
-        style="display: flex; margin-left: auto; justify-content: flex-end; align-items: center; height: 100%; flex-direction: column;">
-        <iframe
-            style="height: 806px; min-width: 350px; bottom: 10px; aspect-ratio: 9/19.9; margin: 0 auto; border: none; border-radius: 22pt; z-index: 999999; box-shadow: 0 36px 128px 0px rgba(116, 248, 146, 0.25);"
-            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FmtGdf9UblU8idFpEpZ6CVD%2FDRFTN%3Fpage-id%3D15%253A475%26node-id%3D1282%253A13646%26viewport%3D8473%252C-106%252C1%26scaling%3Dscale-down%26starting-point-node-id%3D1227%253A6307"></iframe>
-
+        style="display: flex; justify-content: flex-end; align-items: center; width: calc(100% - 835px); height: calc(100vh - 25pt); flex-direction: column; margin: 0 auto;">
         <div class="contentFrame"
-            style="width: 363px; gap: 4px; height: fit-content; position: absolute; top: 10px; right: 0; margin: 0;">
+            style="width: 359px; height: 42px; margin: 0; padding: 0; flex-direction: row; justify-content: center; position: absolute; bottom: 0;">
             <div onClick="window.location.href=window.location.href"
-                style="width: 100%; background-color: white; padding: 12px 24px; z-index: 9999999; border-radius: 20px; font-size: 15px; font-weight: 400; letter-spacing: -0.25px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 10px; border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
+                style="width: 100%; height: 100%; background-color: white; padding: 0px 16px; z-index: 9999999; border-bottom-left-radius: 20px; font-size: 15px; font-weight: 400; letter-spacing: -0.25px; cursor: pointer; display: flex; align-items: center; justify-content: center;">
                 <b>DRFTN을 직접 체험해보세요!</b>
             </div>
             <div onClick="window.location.href=window.location.href"
-                style="width: fit-content; background-color: var(--laser-green); padding: 12px 24px; z-index: 9999999; border-radius: 20px; font-size: 15px; font-weight: 400; letter-spacing: -0.25px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 10px; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                style="width: fit-content; height: 100%; background-color: var(--laser-green); padding: 0px 16px; z-index: 9999999; border-bottom-right-radius: 20px; font-size: 15px; font-weight: 400; letter-spacing: -0.25px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;">
                 <i class="fa-solid fa-rotate-right"></i> <b>처음으로</b>
             </div>
         </div>
+        <iframe
+            style="height: 100%; height: 100%; width: 100%; border: none; border-radius: 20px; z-index: 999999; box-shadow: 0 36px 128px 0px rgba(116, 248, 146, 0.25);"
+            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FmtGdf9UblU8idFpEpZ6CVD%2FDRFTN%3Fpage-id%3D15%253A475%26node-id%3D1282%253A13646%26viewport%3D8473%252C-106%252C1%26scaling%3Dscale-down%26starting-point-node-id%3D1227%253A6307"></iframe>
 
     </div>
 
